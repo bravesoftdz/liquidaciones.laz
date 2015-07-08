@@ -15,7 +15,7 @@ uses
   liqRptCuadre, LiqPendieterpt, claseaexcel, liqfaltantesform, DBUtils,
   liqasignareporte, liqbfaltanteform, liqrptFaltanteForm, liqfrmBusuarios,
   LiqfrmDexis, ufrmpsql, ufrmVerDocProcesado, ufrmFC, clfrm, ufrmBVendedor,
-  ufrmMontoTes;
+  ufrmMontoTes, frmCorrelativosVend;
 
 {$IFDEF WINDOWS}{$R liquidaciones.rc}{$ENDIF}
 

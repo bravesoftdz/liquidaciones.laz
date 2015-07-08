@@ -1,0 +1,27 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmCorrelativosVend','FORMDATA',[
+  'TPF0'#20'TfrmCorrelativosVend'#19'frmCorrelativosVend'#4'Left'#3'f'#1#6'Heig'
+  +'ht'#3#10#1#3'Top'#3#151#0#5'Width'#3#199#1#7'Caption'#6#25'Correlativos por'
+  +' Vendedor'#12'ClientHeight'#3#10#1#11'ClientWidth'#3#199#1#10'LCLVersion'#6
+  +#7'1.4.0.2'#0#6'TPanel'#6'Panel1'#4'Left'#2#0#6'Height'#2'I'#3'Top'#2#0#5'Wi'
+  +'dth'#3#199#1#5'Align'#7#5'alTop'#12'ClientHeight'#2'I'#11'ClientWidth'#3#199
+  +#1#8'TabOrder'#2#0#0#6'TLabel'#6'Label2'#4'Left'#2#8#6'Height'#2#13#3'Top'#2
+  +#24#5'Width'#2'.'#7'Caption'#6#8'Vendedor'#11'ParentColor'#8#0#0#7'TBitBtn'#7
+  +'BitBtn1'#4'Left'#3#24#1#6'Height'#2#25#3'Top'#2#24#5'Width'#2'Q'#7'Caption'
+  +#6#3'&Ok'#4'Kind'#7#4'bkOK'#11'ModalResult'#2#1#7'OnClick'#7#12'BitBtn1Click'
+  +#8'TabOrder'#2#0#0#0#7'TBitBtn'#7'BitBtn2'#4'Left'#3'p'#1#6'Height'#2#25#3'T'
+  +'op'#2#24#5'Width'#2'K'#4'Kind'#7#8'bkCancel'#11'ModalResult'#2#2#8'TabOrder'
+  +#2#1#0#0#21'TIBLookupComboEditBox'#21'IBLookupComboEditBox1'#4'Left'#2'8'#6
+  +'Height'#2#21#3'Top'#2#24#5'Width'#3#208#0#14'ListFieldIndex'#2#0#11'LookupC'
+  +'ache'#8#8'TabOrder'#2#2#10'AutoInsert'#8#16'AutoCompleteText'#11#12'cbactEn'
+  +'abled'#22'cbactEndOfLineComplete'#20'cbactSearchAscending'#0#10'ItemHeight'
+  +#2#13#0#0#0#14'TIBDynamicGrid'#14'IBDynamicGrid1'#4'Left'#2#0#6'Height'#3#193
+  +#0#3'Top'#2'I'#5'Width'#3#199#1#5'Align'#7#8'alClient'#5'Color'#7#8'clWindow'
+  +#7'Columns'#14#0#10'Scrollbars'#7#14'ssAutoVertical'#8'TabOrder'#2#1#25'Expa'
+  +'ndEditorPanelBelowRow'#8#10'Descending'#8#17'EditorBorderStyle'#7#8'bsSingl'
+  +'e'#20'DefaultPositionAtEnd'#8#0#0#8'TIBQuery'#10'LstVendQRY'#12'BufferChunk'
+  +'s'#3#232#3#13'CachedUpdates'#8#18'GenerateParamNames'#8#27'GeneratorField.A'
+  +'pplyOnEvent'#7#14'gaeOnNewRecord'#6'Params'#14#0#18'DataSetCloseAction'#7#16
+  +'dcDiscardChanges'#4'left'#2'P'#3'top'#2#8#0#0#0
+]);
