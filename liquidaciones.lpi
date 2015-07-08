@@ -80,7 +80,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="LiqMenuForm"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="323"/>
         <CursorPos X="3" Y="325"/>
         <UsageCount Value="200"/>
@@ -101,7 +101,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="liqLiquidacion"/>
-        <EditorIndex Value="17"/>
+        <EditorIndex Value="18"/>
         <TopLine Value="2227"/>
         <CursorPos Y="2228"/>
         <SyntaxHighlighter Value="Delphi"/>
@@ -127,7 +127,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="liqloginform"/>
-        <EditorIndex Value="18"/>
+        <EditorIndex Value="19"/>
         <TopLine Value="118"/>
         <CursorPos X="89" Y="127"/>
         <UsageCount Value="200"/>
@@ -164,7 +164,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="liqbprodform"/>
-        <EditorIndex Value="15"/>
+        <EditorIndex Value="16"/>
         <TopLine Value="171"/>
         <CursorPos X="62" Y="190"/>
         <SyntaxHighlighter Value="Delphi"/>
@@ -178,7 +178,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="liqasignaform"/>
-        <EditorIndex Value="13"/>
+        <EditorIndex Value="14"/>
         <TopLine Value="195"/>
         <CursorPos X="29" Y="303"/>
         <UsageCount Value="200"/>
@@ -217,7 +217,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="liqdevform"/>
-        <EditorIndex Value="14"/>
+        <EditorIndex Value="15"/>
         <TopLine Value="653"/>
         <CursorPos X="3" Y="655"/>
         <UsageCount Value="200"/>
@@ -277,7 +277,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="liqLreportes"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="10"/>
         <CursorPos X="23" Y="88"/>
         <SyntaxHighlighter Value="Delphi"/>
         <UsageCount Value="200"/>
@@ -321,7 +321,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="liqfpagosform"/>
-        <EditorIndex Value="10"/>
+        <EditorIndex Value="11"/>
         <TopLine Value="114"/>
         <CursorPos X="3" Y="116"/>
         <SyntaxHighlighter Value="Delphi"/>
@@ -331,7 +331,7 @@
       <Unit23>
         <Filename Value="procesos.pas"/>
         <UnitName Value="procesos"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="553"/>
         <CursorPos X="42" Y="574"/>
         <UsageCount Value="107"/>
@@ -421,7 +421,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="LiqPendieterpt"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="9"/>
         <TopLine Value="32"/>
         <CursorPos Y="50"/>
         <SyntaxHighlighter Value="Delphi"/>
@@ -432,7 +432,7 @@
         <Filename Value="claseaexcel.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="claseaexcel"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="7"/>
         <TopLine Value="153"/>
         <CursorPos X="6" Y="11"/>
         <SyntaxHighlighter Value="Delphi"/>
@@ -466,7 +466,7 @@
         <Filename Value="dbutils.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="DBUtils"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="78"/>
         <CursorPos X="5" Y="95"/>
         <SyntaxHighlighter Value="Delphi"/>
@@ -540,9 +540,12 @@
         <ComponentName Value="frmDExisIni"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="LiqfrmDexis"/>
+        <EditorIndex Value="3"/>
         <CursorPos X="42" Y="20"/>
         <SyntaxHighlighter Value="Delphi"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
       </Unit46>
       <Unit47>
         <Filename Value="../componentes/ZEOSDBO-6.6.6/src/component/ZAbstractRODataset.pas"/>
@@ -609,7 +612,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="ufrmFC"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="12"/>
         <TopLine Value="198"/>
         <CursorPos X="5" Y="201"/>
         <UsageCount Value="255"/>
@@ -630,7 +633,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="ufrmBVendedor"/>
-        <EditorIndex Value="12"/>
+        <EditorIndex Value="13"/>
         <TopLine Value="24"/>
         <CursorPos X="3" Y="112"/>
         <UsageCount Value="71"/>
@@ -816,7 +819,7 @@
       <Unit83>
         <Filename Value="../ibx/runtime/IB.pas"/>
         <UnitName Value="IB"/>
-        <EditorIndex Value="16"/>
+        <EditorIndex Value="17"/>
         <TopLine Value="421"/>
         <CursorPos X="67" Y="432"/>
         <UsageCount Value="10"/>
@@ -829,7 +832,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="ufrmMontoTes"/>
-        <EditorIndex Value="19"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="20"/>
         <TopLine Value="34"/>
         <CursorPos X="9" Y="38"/>
         <UsageCount Value="139"/>
@@ -869,7 +873,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="ufrmRptLiquidacionVend"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="8"/>
         <TopLine Value="96"/>
         <CursorPos X="14" Y="100"/>
         <UsageCount Value="54"/>
@@ -881,11 +885,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="ufrmRptLiqVendExis"/>
-        <EditorIndex Value="20"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="116"/>
         <CursorPos X="63" Y="138"/>
         <UsageCount Value="64"/>
-        <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit90>
       <Unit91>
@@ -909,9 +912,9 @@
         <Filename Value="frmcorrelativosvend.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmCorrelativosVend"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="frmCorrelativosVend"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="35"/>
         <CursorPos X="13" Y="39"/>
@@ -920,7 +923,7 @@
         <LoadedDesigner Value="True"/>
       </Unit93>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="liqliquidacion.pas"/>
         <Caret Line="1997" Column="40" TopLine="1988"/>
@@ -942,104 +945,100 @@
         <Caret Line="330" Column="5" TopLine="328"/>
       </Position5>
       <Position6>
-        <Filename Value="ufrmrptliqvendexis.pas"/>
-        <Caret Line="16" Column="3"/>
+        <Filename Value="liqmenuform.pas"/>
+        <Caret Line="331" Column="5" TopLine="329"/>
       </Position6>
       <Position7>
         <Filename Value="liqmenuform.pas"/>
-        <Caret Line="331" Column="5" TopLine="329"/>
+        <Caret Line="383" Column="3" TopLine="381"/>
       </Position7>
       <Position8>
         <Filename Value="liqmenuform.pas"/>
-        <Caret Line="383" Column="3" TopLine="381"/>
+        <Caret Line="325" Column="3" TopLine="323"/>
       </Position8>
       <Position9>
-        <Filename Value="liqmenuform.pas"/>
-        <Caret Line="325" Column="3" TopLine="323"/>
-      </Position9>
-      <Position10>
         <Filename Value="ufrmRptLiquidacionVend.pas"/>
         <Caret Line="23" Column="3" TopLine="8"/>
+      </Position9>
+      <Position10>
+        <Filename Value="liqdevform.pas"/>
+        <Caret Line="917" Column="29" TopLine="739"/>
       </Position10>
       <Position11>
         <Filename Value="liqdevform.pas"/>
-        <Caret Line="917" Column="29" TopLine="739"/>
+        <Caret Line="655" Column="3" TopLine="653"/>
       </Position11>
       <Position12>
-        <Filename Value="liqdevform.pas"/>
-        <Caret Line="655" Column="3" TopLine="653"/>
+        <Filename Value="liqbprodform.pas"/>
+        <Caret Line="101" Column="27" TopLine="77"/>
       </Position12>
       <Position13>
         <Filename Value="liqbprodform.pas"/>
-        <Caret Line="101" Column="27" TopLine="77"/>
+        <Caret Line="444" Column="20" TopLine="417"/>
       </Position13>
       <Position14>
         <Filename Value="liqbprodform.pas"/>
-        <Caret Line="444" Column="20" TopLine="417"/>
+        <Caret Line="359" Column="7" TopLine="341"/>
       </Position14>
       <Position15>
         <Filename Value="liqbprodform.pas"/>
-        <Caret Line="359" Column="7" TopLine="341"/>
+        <Caret Line="376" Column="70" TopLine="356"/>
       </Position15>
       <Position16>
-        <Filename Value="liqbprodform.pas"/>
-        <Caret Line="376" Column="70" TopLine="356"/>
+        <Filename Value="frmcorrelativosvend.pas"/>
       </Position16>
       <Position17>
         <Filename Value="frmcorrelativosvend.pas"/>
+        <Caret Line="39" Column="3" TopLine="18"/>
       </Position17>
       <Position18>
         <Filename Value="frmcorrelativosvend.pas"/>
-        <Caret Line="39" Column="3" TopLine="18"/>
+        <Caret Line="38" Column="3" TopLine="17"/>
       </Position18>
       <Position19>
         <Filename Value="frmcorrelativosvend.pas"/>
-        <Caret Line="38" Column="3" TopLine="17"/>
+        <Caret Line="37" Column="3" TopLine="16"/>
       </Position19>
       <Position20>
         <Filename Value="frmcorrelativosvend.pas"/>
-        <Caret Line="37" Column="3" TopLine="16"/>
+        <Caret Line="38" Column="3" TopLine="16"/>
       </Position20>
       <Position21>
         <Filename Value="frmcorrelativosvend.pas"/>
-        <Caret Line="38" Column="3" TopLine="16"/>
+        <Caret Line="37" Column="3" TopLine="16"/>
       </Position21>
       <Position22>
         <Filename Value="frmcorrelativosvend.pas"/>
-        <Caret Line="37" Column="3" TopLine="16"/>
+        <Caret Line="40" Column="3" TopLine="16"/>
       </Position22>
       <Position23>
         <Filename Value="frmcorrelativosvend.pas"/>
-        <Caret Line="40" Column="3" TopLine="16"/>
+        <Caret Line="46" Column="3" TopLine="25"/>
       </Position23>
       <Position24>
         <Filename Value="frmcorrelativosvend.pas"/>
-        <Caret Line="46" Column="3" TopLine="25"/>
+        <Caret Line="45" Column="3" TopLine="24"/>
       </Position24>
       <Position25>
         <Filename Value="frmcorrelativosvend.pas"/>
-        <Caret Line="45" Column="3" TopLine="24"/>
+        <Caret Line="46" Column="3" TopLine="25"/>
       </Position25>
       <Position26>
         <Filename Value="frmcorrelativosvend.pas"/>
-        <Caret Line="46" Column="3" TopLine="25"/>
+        <Caret Line="45" Column="3" TopLine="24"/>
       </Position26>
       <Position27>
         <Filename Value="frmcorrelativosvend.pas"/>
-        <Caret Line="45" Column="3" TopLine="24"/>
+        <Caret Line="47" Column="3" TopLine="26"/>
       </Position27>
       <Position28>
-        <Filename Value="frmcorrelativosvend.pas"/>
-        <Caret Line="47" Column="3" TopLine="26"/>
-      </Position28>
-      <Position29>
         <Filename Value="ufrmbvendedor.pas"/>
         <Caret Line="94" Column="31" TopLine="92"/>
-      </Position29>
-      <Position30>
+      </Position28>
+      <Position29>
         <Filename Value="frmcorrelativosvend.pas"/>
         <Caret Line="49" Column="3" TopLine="28"/>
-      </Position30>
+      </Position29>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
