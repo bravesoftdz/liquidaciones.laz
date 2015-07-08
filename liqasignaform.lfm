@@ -1,0 +1,1698 @@
+object liqasignafrm: Tliqasignafrm
+  Left = 240
+  Height = 536
+  Top = 59
+  Width = 656
+  ActiveControl = Panel1
+  BorderIcons = [biMinimize, biMaximize]
+  BorderStyle = bsSingle
+  Caption = 'Asignaciones'
+  ClientHeight = 536
+  ClientWidth = 656
+  Font.Height = -9
+  Font.Name = 'Sans'
+  OnShow = FormShow
+  LCLVersion = '1.4.0.2'
+  object Panel1: TPanel
+    Left = 0
+    Height = 272
+    Top = 0
+    Width = 656
+    Align = alTop
+    ClientHeight = 272
+    ClientWidth = 656
+    Color = clWindow
+    ParentColor = False
+    TabOrder = 0
+    OnClick = Panel1Click
+    inline frmtoolsbar1: Tfrmtoolsbar
+      Height = 56
+      ClientHeight = 56
+      inherited ToolBar1: TToolBar
+        Color = 15704146
+        inherited ToolButton1: TToolButton
+          Width = 10
+        end
+        inherited SpeedButton13: TSpeedButton
+          Left = 11
+          OnClick = SpeedButton13Click
+        end
+        inherited SpeedButton12: TSpeedButton
+          Left = 77
+          OnClick = SpeedButton12Click
+        end
+        inherited SpeedButton11: TSpeedButton
+          Left = 143
+          OnClick = SpeedButton11Click
+        end
+        inherited SpeedButton9: TSpeedButton
+          Left = 209
+          Glyph.Data = {
+            36040000424D3604000000000000360000002800000010000000100000000100
+            2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF001D57C4780345B9DF0442BCFE0345B9E30345B87AFFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF001A57
+            C3802564C9FB2177E6FF0579EAFF0164DDFF044DBDFC0345B87AFFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000345
+            B9E3639DF4FF187FFFFF0076F8FF0076EEFF0368E1FF0345B9E4A6A6A6B7A0A0
+            A0FF9A9A9AFF939393FF8D8D8DFF868686FF808080FF7A7A7AFF747474FF0442
+            BCFFAECDFEFFFFFFFFFFFFFFFFFFFFFFFFFF187FEFFF0442BCFFAEAEAEFFE9E9
+            E9FFD3D3D3FFD2D2D2FFD1D1D1FFD0D0D0FFCECECEFFCDCDCDFFCDCDCDFF1E56
+            BBFF8DB5F6FF4D92FFFF1177FFFF2186FFFF408AEBFF0E47ADFFB5B5B5FFD6D6
+            D6FFBBBBBBFFB9B9B9FFB6B6B6FFB4B4B4FFB2B2B2FFB1B1B1FFAEAEAEFF6A84
+            B7FF3B74D0FF8DB5F7FFB8D6FEFF72A8F5FF2F6CCBFF385386FFBCBCBCFFD9D9
+            D9FFBEBEBEFFBBBBBBFF8E8E8EFF8F8F8FFF909090FF909090FF8F8F8FFF8F8F
+            8FFF5974A7FF1D54BAFF0542BCFF1650B7FF6C8BC2FF646464FFC3C3C3FFDDDD
+            DDFFC2C2C2FFBEBEBEFF919191FF929292FF949494FF949494FF939393FF9292
+            92FF919191FF8F8F8FFFADADADFFADADADFFCFCFCFFF696969FFC9C9C9BDDDDD
+            DDFFC8C8C8FFC1C1C1FFC0C0C0FFBEBEBEFFBBBBBBFFB9B9B9FFB8B8B8FFB6B6
+            B6FFB4B4B4FFB1B1B1FFB0B0B0FFB4B4B4FFC0C0C0FF6F6F6FBDCFCFCFBDE8E8
+            E8FFE7E7E7FFE1E1E1FFE0E0E0FFE0E0E0FFDFDFDFFFDFDFDFFFDEDEDEFFDDDD
+            DDFFDDDDDDFFDCDCDCFFDBDBDBFFE0E0E0FFCDCDCDFF757575BDD3D3D33FD9D9
+            D9FFECECECFFDEDEDEFFD8D8D8FFD2D2D2FFCCCCCCFFC8C8C8FFC7C7C7FFC8C8
+            C8FFCBCBCBFFD0D0D0FFDDDDDDFFE8E8E8FFA0A0A0FF7C7C7C42FFFFFF00D4D4
+            D4BDE8E8E8FFDBDBDBFFE2E2E2FFE2E2E2FFE1E1E1FFE0E0E0FFE0E0E0FFE0E0
+            E0FFDFDFDFFFC3C3C3FFD1D1D1FFD2D2D2FF8A8A8ABDFFFFFF00FFFFFF00D8D8
+            D83FDEDEDEFFF3F3F3FFEDEDEDFFEDEDEDFFEDEDEDFFEDEDEDFFEDEDEDFFECEC
+            ECFFECECECFFECECECFFF1F1F1FFB1B1B1FF92929242FFFFFF00FFFFFF00FFFF
+            FF00D8D8D8BDD5D5D5FFD2D2D2FFCECECEFFC9C9C9FFC4C4C4FFBFBFBFFFB9B9
+            B9FFB3B3B3FFADADADFFA6A6A6FFA0A0A0BDFFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+          }
+          OnClick = SpeedButton9Click
+        end
+        inherited SpeedButton3: TSpeedButton
+          Left = 275
+          OnClick = SpeedButton3Click
+        end
+        inherited ToolButton3: TToolButton
+          Left = 341
+          Width = 10
+        end
+        inherited SpeedButton5: TSpeedButton
+          Left = 503
+          OnClick = SpeedButton5Click
+        end
+        inherited ToolButton4: TToolButton
+          Left = 417
+          Width = 10
+        end
+        inherited ToolButton5: TToolButton
+          Left = 569
+          Width = 10
+        end
+        inherited btnSalir: TSpeedButton
+          Left = 579
+          OnClick = btnSalirClick
+        end
+        inherited btnBuscar: TSpeedButton
+          Left = 427
+          OnClick = btnBuscarClick
+        end
+        inherited btnprocesar: TSpeedButton
+          Left = 351
+          OnClick = btnprocesarClick
+        end
+        inherited ToolButton2: TToolButton
+          Left = 493
+          Width = 10
+        end
+      end
+    end
+    object GroupBox4: TGroupBox
+      Left = 16
+      Height = 200
+      Top = 72
+      Width = 616
+      ClientHeight = 181
+      ClientWidth = 612
+      Font.Height = -11
+      Font.Name = 'Sans'
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 1
+      OnClick = GroupBox4Click
+      object Label37: TLabel
+        Left = 376
+        Height = 14
+        Top = 40
+        Width = 33
+        Caption = 'Fecha:'
+        ParentColor = False
+      end
+      object Label4: TLabel
+        Left = 376
+        Height = 14
+        Top = 78
+        Width = 75
+        Caption = 'Bodega Origen:'
+        ParentColor = False
+        OnClick = Label4Click
+      end
+      object Label5: TLabel
+        Left = 8
+        Height = 14
+        Top = -2
+        Width = 36
+        Caption = 'Codigo:'
+        ParentColor = False
+      end
+      object Label6: TLabel
+        Left = 8
+        Height = 14
+        Top = 38
+        Width = 51
+        Caption = 'Vendedor:'
+        ParentColor = False
+      end
+      object Label7: TLabel
+        Left = 8
+        Height = 14
+        Top = 126
+        Width = 77
+        Caption = 'Observaciones:'
+        ParentColor = False
+      end
+      object Label8: TLabel
+        Left = 118
+        Height = 14
+        Top = 38
+        Width = 40
+        Caption = 'Nombre:'
+        ParentColor = False
+      end
+      object btnBuscaVend: TSpeedButton
+        Left = 438
+        Height = 22
+        Top = -105
+        Width = 23
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF003460A71230589B84315EA508FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF003765AA5D335CA5FF4880B9FF3764ABE6325EA514FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF003B6A
+          AD5D5184BCFF7DB5D7FF7FB5D6FF5691C3FF3767ABED325EA50CFFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF003E70B05D588E
+          C1FF8FC5DFFFA0D3E7FF93C7E0FF619BC9FF284887DC335FA60AFFFFFF00FFFF
+          FF004A85BC374A85BCAF4C86BCEB4C86BDFD4B84BCFD477EB7F04C81BBFF87BF
+          DBFFA3D5E8FFA5D7E9FF80BBDAFF3D64ABFD3662A817FFFFFF00FFFFFF004E8C
+          C065508FC2E74D8ABECE4984BC7C467FB928457DB728447AB77C528CC1FD79B4
+          D6FF99CCE3FF8DC4DEFF4F83BCFF3968AC17FFFFFF00FFFFFF005192C3375595
+          C4E74F8FC186F3E2CF1FF3E2CF41F3E2CF57F3E2CF55F3E2CF3CF3E2CF1C5592
+          C3FA6FABD2FF4073BEFF3C6FB059FFFFFF00FFFFFF00FFFFFF005699C6AF5596
+          C6CEF3E2CF20F3E2CF56F3E2CF65F3E2CF64F3E2CF61F3E2CF60F3E2CF4FF3E2
+          CF1C4981B9F74379B6C9FFFFFF00FFFFFF00FFFFFF00FFFFFF005B9FC9EB5497
+          C77CF3E2CF48F3E2CF6BF3E2CF6AF3E2CF68F3E2CF65F3E2CF63F3E2CF60F3E2
+          CF3E457BB77C477FB8EBFFFFFF00FFFFFF00FFFFFF00FFFFFF0061A5CDFD5599
+          C728F3E2CF67F3E2CF6FF3E2CF6EF3E2CF6BF3E2CF68F3E2CF67F3E2CF64F3E2
+          CF57457EB8284C86BDFDFFFFFF00FFFFFF00FFFFFF00FFFFFF0062A7CFFD579C
+          C928F3E2CF6BF3E2CF74F3E2CF71F3E2CF6FF3E2CF6CF3E2CF69F3E2CF67F3E2
+          CF5B4881BB284F8ABEFDFFFFFF00FFFFFF00FFFFFF00FFFFFF0060A6CEEB59A0
+          CC7CF3E2CF52F3E2CF78F3E2CF76F3E2CF73F3E2CF71F3E2CF6CF3E2CF6AF3E2
+          CF444B86BD7C4D89BEEBFFFFFF00FFFFFF00FFFFFF00FFFFFF005EA6CDAF5EA5
+          CDCEF3E2CF28F3E2CF69F3E2CF79F3E2CF76F3E2CF74F3E2CF71F3E2CF5BF3E2
+          CF204F8EC1CE4C89BDAFFFFFFF00FFFFFF00FFFFFF00FFFFFF005CA6CE3761A8
+          CFE75BA4CD86F3E2CF29F3E2CF54F3E2CF6FF3E2CF6CF3E2CF4DF3E2CF225091
+          C3865391C3E74C89BE37FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF005DA7
+          CE6561A8CFE75EA6CECE5AA1CC7C579DC928569BC828559AC87C579AC7CE5797
+          C7E75091C265FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF005CA6CE375EA7CEAF61A7CEEB64A8CFFD62A6CEFD5DA1CCEB579CC8AF5396
+          C637FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+        }
+        OnClick = btnBuscaVendClick
+      end
+      object Label10: TLabel
+        Left = 8
+        Height = 14
+        Top = 78
+        Width = 58
+        Caption = 'Tipo Pedido:'
+        ParentColor = False
+      end
+      object btnBuscaVend1: TSpeedButton
+        Left = 89
+        Height = 22
+        Top = 94
+        Width = 23
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF003460A71230589B84315EA508FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF003765AA5D335CA5FF4880B9FF3764ABE6325EA514FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF003B6A
+          AD5D5184BCFF7DB5D7FF7FB5D6FF5691C3FF3767ABED325EA50CFFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF003E70B05D588E
+          C1FF8FC5DFFFA0D3E7FF93C7E0FF619BC9FF284887DC335FA60AFFFFFF00FFFF
+          FF004A85BC374A85BCAF4C86BCEB4C86BDFD4B84BCFD477EB7F04C81BBFF87BF
+          DBFFA3D5E8FFA5D7E9FF80BBDAFF3D64ABFD3662A817FFFFFF00FFFFFF004E8C
+          C065508FC2E74D8ABECE4984BC7C467FB928457DB728447AB77C528CC1FD79B4
+          D6FF99CCE3FF8DC4DEFF4F83BCFF3968AC17FFFFFF00FFFFFF005192C3375595
+          C4E74F8FC186F3E2CF1FF3E2CF41F3E2CF57F3E2CF55F3E2CF3CF3E2CF1C5592
+          C3FA6FABD2FF4073BEFF3C6FB059FFFFFF00FFFFFF00FFFFFF005699C6AF5596
+          C6CEF3E2CF20F3E2CF56F3E2CF65F3E2CF64F3E2CF61F3E2CF60F3E2CF4FF3E2
+          CF1C4981B9F74379B6C9FFFFFF00FFFFFF00FFFFFF00FFFFFF005B9FC9EB5497
+          C77CF3E2CF48F3E2CF6BF3E2CF6AF3E2CF68F3E2CF65F3E2CF63F3E2CF60F3E2
+          CF3E457BB77C477FB8EBFFFFFF00FFFFFF00FFFFFF00FFFFFF0061A5CDFD5599
+          C728F3E2CF67F3E2CF6FF3E2CF6EF3E2CF6BF3E2CF68F3E2CF67F3E2CF64F3E2
+          CF57457EB8284C86BDFDFFFFFF00FFFFFF00FFFFFF00FFFFFF0062A7CFFD579C
+          C928F3E2CF6BF3E2CF74F3E2CF71F3E2CF6FF3E2CF6CF3E2CF69F3E2CF67F3E2
+          CF5B4881BB284F8ABEFDFFFFFF00FFFFFF00FFFFFF00FFFFFF0060A6CEEB59A0
+          CC7CF3E2CF52F3E2CF78F3E2CF76F3E2CF73F3E2CF71F3E2CF6CF3E2CF6AF3E2
+          CF444B86BD7C4D89BEEBFFFFFF00FFFFFF00FFFFFF00FFFFFF005EA6CDAF5EA5
+          CDCEF3E2CF28F3E2CF69F3E2CF79F3E2CF76F3E2CF74F3E2CF71F3E2CF5BF3E2
+          CF204F8EC1CE4C89BDAFFFFFFF00FFFFFF00FFFFFF00FFFFFF005CA6CE3761A8
+          CFE75BA4CD86F3E2CF29F3E2CF54F3E2CF6FF3E2CF6CF3E2CF4DF3E2CF225091
+          C3865391C3E74C89BE37FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF005DA7
+          CE6561A8CFE75EA6CECE5AA1CC7C579DC928569BC828559AC87C579AC7CE5797
+          C7E75091C265FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF005CA6CE375EA7CEAF61A7CEEB64A8CFFD62A6CEFD5DA1CCEB579CC8AF5396
+          C637FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+        }
+        OnClick = btnBuscaVend1Click
+      end
+      object Label11: TLabel
+        Left = 118
+        Height = 14
+        Top = 78
+        Width = 54
+        Caption = 'Decripcion:'
+        ParentColor = False
+      end
+      object btnBuscaVend2: TSpeedButton
+        Left = 89
+        Height = 22
+        Top = 55
+        Width = 23
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF003460A71230589B84315EA508FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF003765AA5D335CA5FF4880B9FF3764ABE6325EA514FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF003B6A
+          AD5D5184BCFF7DB5D7FF7FB5D6FF5691C3FF3767ABED325EA50CFFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF003E70B05D588E
+          C1FF8FC5DFFFA0D3E7FF93C7E0FF619BC9FF284887DC335FA60AFFFFFF00FFFF
+          FF004A85BC374A85BCAF4C86BCEB4C86BDFD4B84BCFD477EB7F04C81BBFF87BF
+          DBFFA3D5E8FFA5D7E9FF80BBDAFF3D64ABFD3662A817FFFFFF00FFFFFF004E8C
+          C065508FC2E74D8ABECE4984BC7C467FB928457DB728447AB77C528CC1FD79B4
+          D6FF99CCE3FF8DC4DEFF4F83BCFF3968AC17FFFFFF00FFFFFF005192C3375595
+          C4E74F8FC186F3E2CF1FF3E2CF41F3E2CF57F3E2CF55F3E2CF3CF3E2CF1C5592
+          C3FA6FABD2FF4073BEFF3C6FB059FFFFFF00FFFFFF00FFFFFF005699C6AF5596
+          C6CEF3E2CF20F3E2CF56F3E2CF65F3E2CF64F3E2CF61F3E2CF60F3E2CF4FF3E2
+          CF1C4981B9F74379B6C9FFFFFF00FFFFFF00FFFFFF00FFFFFF005B9FC9EB5497
+          C77CF3E2CF48F3E2CF6BF3E2CF6AF3E2CF68F3E2CF65F3E2CF63F3E2CF60F3E2
+          CF3E457BB77C477FB8EBFFFFFF00FFFFFF00FFFFFF00FFFFFF0061A5CDFD5599
+          C728F3E2CF67F3E2CF6FF3E2CF6EF3E2CF6BF3E2CF68F3E2CF67F3E2CF64F3E2
+          CF57457EB8284C86BDFDFFFFFF00FFFFFF00FFFFFF00FFFFFF0062A7CFFD579C
+          C928F3E2CF6BF3E2CF74F3E2CF71F3E2CF6FF3E2CF6CF3E2CF69F3E2CF67F3E2
+          CF5B4881BB284F8ABEFDFFFFFF00FFFFFF00FFFFFF00FFFFFF0060A6CEEB59A0
+          CC7CF3E2CF52F3E2CF78F3E2CF76F3E2CF73F3E2CF71F3E2CF6CF3E2CF6AF3E2
+          CF444B86BD7C4D89BEEBFFFFFF00FFFFFF00FFFFFF00FFFFFF005EA6CDAF5EA5
+          CDCEF3E2CF28F3E2CF69F3E2CF79F3E2CF76F3E2CF74F3E2CF71F3E2CF5BF3E2
+          CF204F8EC1CE4C89BDAFFFFFFF00FFFFFF00FFFFFF00FFFFFF005CA6CE3761A8
+          CFE75BA4CD86F3E2CF29F3E2CF54F3E2CF6FF3E2CF6CF3E2CF4DF3E2CF225091
+          C3865391C3E74C89BE37FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF005DA7
+          CE6561A8CFE75EA6CECE5AA1CC7C579DC928569BC828559AC87C579AC7CE5797
+          C7E75091C265FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+          FF005CA6CE375EA7CEAF61A7CEEB64A8CFFD62A6CEFD5DA1CCEB579CC8AF5396
+          C637FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+        }
+        OnClick = btnBuscaVendClick
+      end
+      object edtcodigo: TDBEdit
+        Left = 8
+        Height = 22
+        Top = 14
+        Width = 104
+        DataField = 'CODIGO'
+        DataSource = MSUCURSALMDS
+        ReadOnly = True
+        CharCase = ecNormal
+        EditMask = '########;0; '
+        MaxLength = 8
+        TabOrder = 0
+        TabStop = False
+        OnEnter = edtcodigoEnter
+        OnExit = edtcodigoExit
+        OnKeyPress = edtcodigoKeyPress
+      end
+      object DBMemo1: TDBMemo
+        Left = 8
+        Height = 35
+        Top = 142
+        Width = 501
+        DataField = 'OBSERVACIONES'
+        DataSource = MSUCURSALMDS
+        OnEnter = edtcodigoEnter
+        OnExit = edtcodigoExit
+        OnKeyPress = edtcodigoKeyPress
+        TabOrder = 6
+      end
+      object edtVendedor: TDBEdit
+        Left = 358
+        Height = 22
+        Top = -105
+        Width = 80
+        DataField = 'CVEND'
+        DataSource = MSUCURSALMDS
+        CharCase = ecNormal
+        MaxLength = 10
+        TabOrder = 7
+        OnEnter = edtcodigoEnter
+        OnExit = edtcodigoExit
+        OnKeyPress = edtcodigoKeyPress
+      end
+      object DBEdit2: TDBEdit
+        Left = 470
+        Height = 22
+        Top = -106
+        Width = 248
+        DataField = 'NOMBRE'
+        DataSource = MSUCURSALMDS
+        ReadOnly = True
+        CharCase = ecNormal
+        MaxLength = 60
+        TabOrder = 8
+        TabStop = False
+        OnEnter = edtcodigoEnter
+        OnExit = edtcodigoExit
+        OnKeyPress = edtcodigoKeyPress
+      end
+      object DBEdit3: TDBEdit
+        Left = 376
+        Height = 22
+        Top = 96
+        Width = 135
+        DataField = 'BODEGA'
+        DataSource = MSUCURSALMDS
+        ReadOnly = True
+        CharCase = ecNormal
+        MaxLength = 60
+        TabOrder = 5
+        TabStop = False
+        OnEnter = edtcodigoEnter
+        OnExit = edtcodigoExit
+        OnKeyPress = edtcodigoKeyPress
+      end
+      object edtTipo: TDBEdit
+        Left = 8
+        Height = 22
+        Top = 94
+        Width = 80
+        DataField = 'PLUTIPO'
+        DataSource = MSUCURSALMDS
+        CharCase = ecNormal
+        MaxLength = 10
+        TabOrder = 3
+        OnEnter = edtcodigoEnter
+        OnExit = edtcodigoExit
+        OnKeyPress = edtcodigoKeyPress
+      end
+      object DBEdit4: TDBEdit
+        Left = 118
+        Height = 22
+        Top = 94
+        Width = 248
+        DataField = 'TIPO_PEDIDO'
+        DataSource = MSUCURSALMDS
+        ReadOnly = True
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 4
+        TabStop = False
+        OnEnter = edtcodigoEnter
+        OnExit = edtcodigoExit
+        OnKeyPress = edtcodigoKeyPress
+      end
+      object edtVendedor1: TDBEdit
+        Left = 8
+        Height = 22
+        Top = 55
+        Width = 80
+        DataField = 'CVEND'
+        DataSource = MSUCURSALMDS
+        CharCase = ecNormal
+        MaxLength = 10
+        TabOrder = 1
+        OnEnter = edtcodigoEnter
+        OnExit = edtcodigoExit
+        OnKeyPress = edtcodigoKeyPress
+      end
+      object DBEdit5: TDBEdit
+        Left = 118
+        Height = 22
+        Top = 55
+        Width = 248
+        DataField = 'NOMBRE'
+        DataSource = MSUCURSALMDS
+        ReadOnly = True
+        CharCase = ecNormal
+        MaxLength = 60
+        TabOrder = 2
+        TabStop = False
+        OnEnter = edtcodigoEnter
+        OnExit = edtcodigoExit
+        OnKeyPress = edtcodigoKeyPress
+      end
+      object Label9: TLabel
+        Left = 438
+        Height = 14
+        Top = 7
+        Width = 39
+        Caption = 'Estatus:'
+        ParentColor = False
+      end
+      object DBText1: TDBText
+        Left = 502
+        Height = 16
+        Top = 7
+        Width = 51
+        DataField = 'estatus'
+        DataSource = MSUCURSALMDS
+        Font.Color = clRed
+        Font.Height = -13
+        Font.Name = 'Sans'
+        Font.Style = [fsBold, fsItalic]
+        ParentColor = False
+        ParentFont = False
+        OnClick = DBText1Click
+      end
+      object EDTFECHA: TDBDateTimePicker
+        Left = 376
+        Height = 22
+        Top = 55
+        Width = 79
+        DataField = 'FECHA'
+        DataSource = MSUCURSALMDS
+        ReadOnly = False
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 9
+        TrailingSeparator = False
+        TextForNullDate = '-'
+        LeadingZeros = True
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 55
+    Top = 481
+    Width = 656
+    Align = alBottom
+    ClientHeight = 55
+    ClientWidth = 656
+    Color = clWindow
+    ParentColor = False
+    TabOrder = 1
+    OnClick = Panel2Click
+    object SpeedButton1: TSpeedButton
+      Left = 536
+      Height = 27
+      Top = 8
+      Width = 111
+      Caption = 'Desprocesar'
+      Font.Height = -13
+      Font.Name = 'Sans'
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+        FF00FFFFFF00D9A6FF06C995FF709682FFFF9D66FF95FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00D2B9FF13CAB9FFDFDDDCFFFF9990FFF8A26EFF81FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00DFB9FF0BD9B9FF9ED7D7FFFFDCD9FFFF9C8CFFF3AA75FF59FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00E2B6FF34CAC5FFFAE6E4FFFFD2D0FFFFA885FFCFBA6F
+        FF2CFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF01FFFFFF04EDD0FF0DD9BAFF81D6D9FFFFE6E4FFFFC0C0FFFFA978
+        FF9AB565FF0AFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00D9B5
+        FF23CCA2FF7EC5A5FFC9C9B0FFEBCCB9FFF4ECE4FFFFECE9FFFFE4E2FFFFBFB3
+        FFFFA07CFFF99D6FFF59C569FF01FFFFFF00FFFFFF00FFFFFF00FFFFFF00DFC6
+        FFBED7D9FFFFE9E9FFFFF1F0FFFFF1F0FFFFEFEDFFFFEDEAFFFFECE9FFFFEAE9
+        FFFFD4D3FFFFB0A2FFFFAA63FF6FAA6FFF2AB07BFF25FFFFFF00FFFFFF00DCD2
+        FFE9F1F0FFFFEFEDFFFFE0DFFFFFCCCCFFFFECEAFFFFEFECFFFFEDECFFFFECEA
+        FFFFEAE9FFFFDAD9FFFFB5B5FFFFA986FFD2A07CFFC9FFFFFF00FFFFFF00D2C2
+        FFC4B2B0FFFFC2C2FFFFDAD9FFFFE7E6FFFFF1F0FFFFF0EDFFFFEFEDFFFFEDEC
+        FFFFECEAFFFFECE9FFFFE7E4FFFFDCD9FFFFA09CFFFFFFFFFF00FFFFFF00E0C3
+        FF55D4D3FFFFF7F6FFFFF0F0FFFFDFDCFFFFF3F3FFFFF1F0FFFFF0EFFFFFEFED
+        FFFFEFECFFFFEDEAFFFFECE9FFFFEAE9FFFFA6A3FFFFFFFFFF00FFFFFF00F0CA
+        FF06D3CAFFF9C3C2FFFFC5C5FFFFDCDCFFFFF3F3FFFFF3F3FFFFF1EFFFFFF0EF
+        FFFFEFEDFFFFEFECFFFFEDECFFFFECEAFFFFAAA6FFFFFFFFFF00FFFFFF00FFFF
+        FF00D0C0FFBACFCDFFFFF4F3FFFFF0EFFFFFF1F0FFFFF6F4FFFFF3F1FFFFF1F0
+        FFFFF0EFFFFFF0EDFFFFEFEDFFFFEDECFFFFAFAAFFFFFFFFFF00FFFFFF00FFFF
+        FF00F6C7FF26E0DDFFFFB9B9FFFFC9C9FFFFE9E9FFFFF7F6FFFFF4F3FFFFF3F0
+        FFFFF1F0FFFFF0EFFFFFF0EFFFFFEDEAFFFFBAADFFF5FFFFFF00FFFFFF00FFFF
+        FF00F6CAFF02EDD0FF54DADAFFFFEFEFFFFFF9F7FFFFF7F6FFFFF6F4FFFFF1F0
+        FFFFEDEAFFFFD4D2FFFED9D7FFFFD7CDFFF0D9C7FFDFFFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00F3CDFF01F1D0FF31E9D7FFC1E4DFFFFEE2E0FFFFDAD9FFFFD9D7
+        FFF7D7D4FFC8D7D4FF83D4D2FF30DCCAFF05DCCAFF05FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF01FFFFFF03FFFFFF06E0DDFF1FFFFFFF01FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+      }
+      OnClick = SpeedButton1Click
+      ParentFont = False
+    end
+  end
+  object GRIDDET: TDBGrid
+    Left = 0
+    Height = 209
+    Top = 272
+    Width = 656
+    Align = alClient
+    AutoAdvance = aaNone
+    BorderStyle = bsNone
+    Color = clWindow
+    Columns = <    
+      item
+        Color = clYellow
+        Title.Caption = 'Còdigo'
+        Title.Color = clSkyBlue
+        Width = 125
+        FieldName = 'CODIGO'
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Descripcion'
+        Title.Color = clSkyBlue
+        Width = 250
+        FieldName = 'DESCRIPCION'
+      end    
+      item
+        Color = clYellow
+        Title.Caption = 'Cantidad'
+        Title.Color = clSkyBlue
+        Width = 75
+        FieldName = 'CANTIDAD'
+        DisplayFormat = '0.00;-0.00'
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Precio'
+        Title.Color = clSkyBlue
+        Width = 75
+        FieldName = 'UNITARIO'
+        DisplayFormat = '$,0.0000;-$,0.0000'
+      end    
+      item
+        Color = 14789290
+        ReadOnly = True
+        Title.Caption = 'Total'
+        Title.Color = clSkyBlue
+        Width = 100
+        FieldName = 'Total'
+        DisplayFormat = '$,0.00;-$,0.00'
+      end>
+    DataSource = MSUCURSALDDS
+    Flat = True
+    Font.Height = -11
+    Font.Name = 'Sans'
+    ParentFont = False
+    TabOrder = 2
+    TitleFont.Height = -11
+    TitleFont.Name = 'Sans'
+    UseXORFeatures = True
+    OnDblClick = GRIDDETDblClick
+    OnEnter = GRIDDETEnter
+  end
+  object MSUCURSALMDS: TDataSource
+    DataSet = MSucursalMQRY
+    left = 240
+    top = 88
+  end
+  object MSUCURSALDDS: TDataSource
+    DataSet = MSUCURSALDQRY
+    left = 248
+    top = 352
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = rptMOVqry
+    OnCheckEOF = frDBDataSet1CheckEOF
+    left = 568
+    top = 208
+  end
+  object rptMovDS: TDataSource
+    DataSet = rptMOVqry
+    left = 568
+    top = 152
+  end
+  object lrpt: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    StoreInForm = True
+    DataType = dtDataSource
+    left = 600
+    top = 264
+    ReportXML = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<CONFIG>'#13#10'  <LazReport>'#13#10'    <Version Value="28"/>'#13#10'    <Title Value=""/>'#13#10'    <Subject Value=""/>'#13#10'    <KeyWords Value=""/>'#13#10'    <Comments Value=""/>'#13#10'    <ReportCreateDate Value="2015-05-20 10:18:40"/>'#13#10'    <ReportLastChange Value="2015-05-26 17:10:16"/>'#13#10'    <ReportVersionBuild Value=""/>'#13#10'    <ReportVersionMajor Value=""/>'#13#10'    <ReportVersionMinor Value=""/>'#13#10'    <ReportVersionRelease Value=""/>'#13#10'    <ReportAutor Value=""/>'#13#10'    <Script Value=""/>'#13#10'    <Pages>'#13#10'      <PrintToDefault Value="False"/>'#13#10'      <DoublePass Value="False"/>'#13#10'      <SelectedPrinter Value="Default printer"/>'#13#10'      <PageCount Value="1"/>'#13#10'      <Page1>'#13#10'        <Name Value="Page1"/>'#13#10'        <ClassName Value="TfrPageReport"/>'#13#10'        <Visible Value="True"/>'#13#10'        <Width Value="2159"/>'#13#10'        <Height Value="2794"/>'#13#10'        <Script Value=""/>'#13#10'        <PgSize Value="1"/>'#13#10'        <Margins>'#13#10'          <left Value="0"/>'#13#10'          <Top Value="0"/>'#13#10'          <Right Value="0"/>'#13#10'          <Bottom Value="0"/>'#13#10'        </Margins>'#13#10'        <Orientation Value="poPortrait"/>'#13#10'        <UseMargins Value="True"/>'#13#10'        <PrintToPrevPage Value="False"/>'#13#10'        <ColCount Value="1"/>'#13#10'        <ColGap Value="0"/>'#13#10'        <LayoutOrder Value="loColumns"/>'#13#10'        <Object1>'#13#10'          <Name Value="EncabezadoDe página1"/>'#13#10'          <ClassName Value="TfrBandView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtBand"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="0"/>'#13#10'            <Top Value="16"/>'#13#10'            <Width Value="773"/>'#13#10'            <Height Value="148"/>'#13#10'          </Size>'#13#10'          <Flags Value="48"/>'#13#10'          <Data>'#13#10'            <Script Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Frames>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <BandType Value="btPageHeader"/>'#13#10'          <Condition Value=""/>'#13#10'          <DatasetStr Value=""/>'#13#10'          <Child Value=""/>'#13#10'        </Object1>'#13#10'        <Object2>'#13#10'          <Name Value="DatosMaestros1"/>'#13#10'          <ClassName Value="TfrBandView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtBand"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="0"/>'#13#10'            <Top Value="188"/>'#13#10'            <Width Value="773"/>'#13#10'            <Height Value="20"/>'#13#10'          </Size>'#13#10'          <Flags Value="48"/>'#13#10'          <Data>'#13#10'            <Script Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Frames>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <BandType Value="btMasterData"/>'#13#10'          <Condition Value=""/>'#13#10'          <DatasetStr Value="frDBDataSet1"/>'#13#10'          <Child Value=""/>'#13#10'        </Object2>'#13#10'        <Object3>'#13#10'          <Name Value="PieMaestro1"/>'#13#10'          <ClassName Value="TfrBandView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtBand"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="0"/>'#13#10'            <Top Value="220"/>'#13#10'            <Width Value="773"/>'#13#10'            <Height Value="420"/>'#13#10'          </Size>'#13#10'          <Flags Value="48"/>'#13#10'          <Data>'#13#10'            <Script Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Frames>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <BandType Value="btMasterFooter"/>'#13#10'          <Condition Value=""/>'#13#10'          <DatasetStr Value=""/>'#13#10'          <Child Value=""/>'#13#10'        </Object3>'#13#10'        <Object4>'#13#10'          <Name Value="Memo1"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="188"/>'#13#10'            <Top Value="20"/>'#13#10'            <Width Value="352"/>'#13#10'            <Height Value="22"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="[rptMovDS.&quot;empresa&quot;]&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="14"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object4>'#13#10'        <Object5>'#13#10'          <Name Value="Memo2"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="12"/>'#13#10'            <Top Value="188"/>'#13#10'            <Width Value="96"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="[rptMovDS.&quot;codprod&quot;]&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="10"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value=""/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taLeftJustify"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object5>'#13#10'        <Object6>'#13#10'          <Name Value="Memo4"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="400"/>'#13#10'            <Top Value="188"/>'#13#10'            <Width Value="96"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="16974382"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="[rptMovDS.&quot;cantidad&quot;]&#xD;&#xA;&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="10"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value=""/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object6>'#13#10'        <Object7>'#13#10'          <Name Value="Memo5"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="116"/>'#13#10'            <Top Value="188"/>'#13#10'            <Width Value="280"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="[rptMovDS.&quot;producto&quot;]&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="10"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value=""/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taLeftJustify"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object7>'#13#10'        <Object8>'#13#10'          <Name Value="Memo8"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="12"/>'#13#10'            <Top Value="84"/>'#13#10'            <Width Value="96"/>'#13#10'            <Height Value="20"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="Doc #:&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="12"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taLeftJustify"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object8>'#13#10'        <Object9>'#13#10'          <Name Value="Memo9"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="72"/>'#13#10'            <Top Value="84"/>'#13#10'            <Width Value="96"/>'#13#10'            <Height Value="20"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="[rptMovDS.&quot;doc&quot;]&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="12"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object9>'#13#10'        <Object10>'#13#10'          <Name Value="Memo10"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="12"/>'#13#10'            <Top Value="104"/>'#13#10'            <Width Value="104"/>'#13#10'            <Height Value="20"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="BODEGA ORIGEN:&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="9"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taLeftJustify"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object10>'#13#10'        <Object11>'#13#10'          <Name Value="Memo11"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="120"/>'#13#10'            <Top Value="104"/>'#13#10'            <Width Value="388"/>'#13#10'            <Height Value="20"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="[rptMovDS.&quot;BODEGA&quot;]&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="8"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taLeftJustify"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object11>'#13#10'        <Object12>'#13#10'          <Name Value="Memo12"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="12"/>'#13#10'            <Top Value="124"/>'#13#10'            <Width Value="84"/>'#13#10'            <Height Value="20"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="VENDEDOR:&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="9"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taLeftJustify"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object12>'#13#10'        <Object13>'#13#10'          <Name Value="Memo13"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="120"/>'#13#10'            <Top Value="124"/>'#13#10'            <Width Value="388"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="[rptMovDS.&quot;VENDEDOR&quot;]&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="8"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taLeftJustify"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object13>'#13#10'        <Object14>'#13#10'          <Name Value="Memo14"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="252"/>'#13#10'            <Top Value="44"/>'#13#10'            <Width Value="252"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="[rptMovDS.&quot;TIPODOC&quot;]&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="11"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object14>'#13#10'        <Object15>'#13#10'          <Name Value="Memo15"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="12"/>'#13#10'            <Top Value="64"/>'#13#10'            <Width Value="96"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="FECHA:&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="10"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taLeftJustify"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object15>'#13#10'        <Object16>'#13#10'          <Name Value="Memo16"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="72"/>'#13#10'            <Top Value="64"/>'#13#10'            <Width Value="96"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="[rptMovDS.&quot;FECHA&quot;]&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="10"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object16>'#13#10'        <Object17>'#13#10'          <Name Value="Memo20"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="8"/>'#13#10'            <Top Value="20"/>'#13#10'            <Width Value="96"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="PAG.[[PAGE#]]&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="10"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taLeftJustify"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object17>'#13#10'        <Object18>'#13#10'          <Name Value="Memo17"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="124"/>'#13#10'            <Top Value="320"/>'#13#10'            <Width Value="148"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="ASIGNADO POR&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="10"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object18>'#13#10'        <Object19>'#13#10'          <Name Value="Memo18"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="372"/>'#13#10'            <Top Value="324"/>'#13#10'            <Width Value="148"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="AUTORIZADO POR&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="10"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object19>'#13#10'        <Object20>'#13#10'          <Name Value="Memo19"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="604"/>'#13#10'            <Top Value="328"/>'#13#10'            <Width Value="128"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="RECIBIDO&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="10"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object20>'#13#10'        <Object21>'#13#10'          <Name Value="Line4"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="8"/>'#13#10'            <Top Value="156"/>'#13#10'            <Width Value="708"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="1"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="2"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object21>'#13#10'        <Object22>'#13#10'          <Name Value="Line1"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="120"/>'#13#10'            <Top Value="316"/>'#13#10'            <Width Value="168"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="1"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="2"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object22>'#13#10'        <Object23>'#13#10'          <Name Value="Line2"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="364"/>'#13#10'            <Top Value="316"/>'#13#10'            <Width Value="168"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="1"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="2"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object23>'#13#10'        <Object24>'#13#10'          <Name Value="Line5"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="584"/>'#13#10'            <Top Value="316"/>'#13#10'            <Width Value="168"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="1"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="2"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object24>'#13#10'        <Object25>'#13#10'          <Name Value="Line6"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="732"/>'#13#10'            <Top Value="356"/>'#13#10'            <Width Value="0"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="1"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="2"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object25>'#13#10'        <Object26>'#13#10'          <Name Value="Memo7"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="540"/>'#13#10'            <Top Value="44"/>'#13#10'            <Width Value="192"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="[rptMovDS.&quot;ESTATUS&quot;]&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="11"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object26>'#13#10'        <Object27>'#13#10'          <Name Value="Line3"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="504"/>'#13#10'            <Top Value="204"/>'#13#10'            <Width Value="212"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="1"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object27>'#13#10'        <Object28>'#13#10'          <Name Value="Memo3"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="252"/>'#13#10'            <Top Value="68"/>'#13#10'            <Width Value="252"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="[rptMovDS.&quot;TIPO_PEDIDO&quot;]&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="12"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object28>'#13#10'        <Object29>'#13#10'          <Name Value="Memo6"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="124"/>'#13#10'            <Top Value="292"/>'#13#10'            <Width Value="148"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="[rptMovDS.&quot;USUARIO&quot;]&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="11"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsItalic"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object29>'#13#10'        <Object30>'#13#10'          <Name Value="Line7"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="68"/>'#13#10'            <Top Value="412"/>'#13#10'            <Width Value="684"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="2"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object30>'#13#10'        <Object31>'#13#10'          <Name Value="Line8"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="324"/>'#13#10'            <Top Value="392"/>'#13#10'            <Width Value="0"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="2"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object31>'#13#10'        <Object32>'#13#10'          <Name Value="Line9"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="316"/>'#13#10'            <Top Value="416"/>'#13#10'            <Width Value="0"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="2"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object32>'#13#10'        <Object33>'#13#10'          <Name Value="Line10"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="264"/>'#13#10'            <Top Value="412"/>'#13#10'            <Width Value="0"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="2"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object33>'#13#10'        <Object34>'#13#10'          <Name Value="Line11"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="68"/>'#13#10'            <Top Value="412"/>'#13#10'            <Width Value="0"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="2"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object34>'#13#10'        <Object35>'#13#10'          <Name Value="Line12"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="264"/>'#13#10'            <Top Value="412"/>'#13#10'            <Width Value="0"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="2"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object35>'#13#10'        <Object36>'#13#10'          <Name Value="Line13"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="208"/>'#13#10'            <Top Value="412"/>'#13#10'            <Width Value="56"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="2"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object36>'#13#10'        <Object37>'#13#10'          <Name Value="Line14"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="100"/>'#13#10'            <Top Value="408"/>'#13#10'            <Width Value="0"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="2"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object37>'#13#10'        <Object38>'#13#10'          <Name Value="Line15"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="68"/>'#13#10'            <Top Value="432"/>'#13#10'            <Width Value="684"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object38>'#13#10'        <Object39>'#13#10'          <Name Value="Line16"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="0"/>'#13#10'            <Top Value="0"/>'#13#10'            <Width Value="684"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object39>'#13#10'        <Object40>'#13#10'          <Name Value="Line17"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="68"/>'#13#10'            <Top Value="456"/>'#13#10'            <Width Value="684"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object40>'#13#10'        <Object41>'#13#10'          <Name Value="Line18"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="68"/>'#13#10'            <Top Value="480"/>'#13#10'            <Width Value="684"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object41>'#13#10'        <Object42>'#13#10'          <Name Value="Line19"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="68"/>'#13#10'            <Top Value="504"/>'#13#10'            <Width Value="684"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object42>'#13#10'        <Object43>'#13#10'          <Name Value="Line20"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="68"/>'#13#10'            <Top Value="528"/>'#13#10'            <Width Value="684"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object43>'#13#10'        <Object44>'#13#10'          <Name Value="Line21"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="68"/>'#13#10'            <Top Value="552"/>'#13#10'            <Width Value="684"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object44>'#13#10'        <Object45>'#13#10'          <Name Value="Line22"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="68"/>'#13#10'            <Top Value="412"/>'#13#10'            <Width Value="0"/>'#13#10'            <Height Value="160"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object45>'#13#10'        <Object46>'#13#10'          <Name Value="Line23"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="752"/>'#13#10'            <Top Value="412"/>'#13#10'            <Width Value="0"/>'#13#10'            <Height Value="160"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object46>'#13#10'        <Object47>'#13#10'          <Name Value="Line24"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="92"/>'#13#10'            <Top Value="416"/>'#13#10'            <Width Value="0"/>'#13#10'            <Height Value="156"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object47>'#13#10'        <Object48>'#13#10'          <Name Value="Line25"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="212"/>'#13#10'            <Top Value="416"/>'#13#10'            <Width Value="0"/>'#13#10'            <Height Value="152"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object48>'#13#10'        <Object49>'#13#10'          <Name Value="Line26"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="528"/>'#13#10'            <Top Value="416"/>'#13#10'            <Width Value="0"/>'#13#10'            <Height Value="156"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object49>'#13#10'        <Object50>'#13#10'          <Name Value="Line27"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="636"/>'#13#10'            <Top Value="412"/>'#13#10'            <Width Value="0"/>'#13#10'            <Height Value="160"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object50>'#13#10'        <Object51>'#13#10'          <Name Value="Memo21"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="208"/>'#13#10'            <Top Value="392"/>'#13#10'            <Width Value="384"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="Firma Solidaria Tripulantes&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="10"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsBold"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object51>'#13#10'        <Object52>'#13#10'          <Name Value="Memo22"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="72"/>'#13#10'            <Top Value="436"/>'#13#10'            <Width Value="16"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="1&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="9"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value=""/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object52>'#13#10'        <Object53>'#13#10'          <Name Value="Memo23"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="72"/>'#13#10'            <Top Value="460"/>'#13#10'            <Width Value="16"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="2&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="9"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value=""/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object53>'#13#10'        <Object54>'#13#10'          <Name Value="Memo24"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="72"/>'#13#10'            <Top Value="484"/>'#13#10'            <Width Value="16"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="3&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="9"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value=""/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object54>'#13#10'        <Object55>'#13#10'          <Name Value="Memo25"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="72"/>'#13#10'            <Top Value="508"/>'#13#10'            <Width Value="16"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="4&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="9"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value=""/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object55>'#13#10'        <Object56>'#13#10'          <Name Value="Memo26"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="72"/>'#13#10'            <Top Value="532"/>'#13#10'            <Width Value="16"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="5&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="9"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value=""/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object56>'#13#10'        <Object57>'#13#10'          <Name Value="Memo27"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="96"/>'#13#10'            <Top Value="412"/>'#13#10'            <Width Value="112"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="Codigo Planilla&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="9"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value=""/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object57>'#13#10'        <Object58>'#13#10'          <Name Value="Memo28"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="228"/>'#13#10'            <Top Value="416"/>'#13#10'            <Width Value="292"/>'#13#10'            <Height Value="14"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="Nombre de Ejecutivo Segun DUI&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="9"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value=""/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object58>'#13#10'        <Object59>'#13#10'          <Name Value="Memo29"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="532"/>'#13#10'            <Top Value="414"/>'#13#10'            <Width Value="92"/>'#13#10'            <Height Value="14"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="Monto&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="9"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value=""/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object59>'#13#10'        <Object60>'#13#10'          <Name Value="Memo30"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="640"/>'#13#10'            <Top Value="412"/>'#13#10'            <Width Value="108"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="Firma&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="9"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value=""/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object60>'#13#10'        <Object61>'#13#10'          <Name Value="Line28"/>'#13#10'          <ClassName Value="TfrLineView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtLine"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="68"/>'#13#10'            <Top Value="572"/>'#13#10'            <Width Value="684"/>'#13#10'            <Height Value="0"/>'#13#10'          </Size>'#13#10'          <Flags Value="0"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'        </Object61>'#13#10'        <Object62>'#13#10'          <Name Value="Memo31"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="72"/>'#13#10'            <Top Value="552"/>'#13#10'            <Width Value="16"/>'#13#10'            <Height Value="18"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="6&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="helvetica [urw]"/>'#13#10'            <Size Value="9"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value=""/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object62>'#13#10'        <Object63>'#13#10'          <Name Value="Memo32"/>'#13#10'          <ClassName Value="TfrMemoView"/>'#13#10'          <Visible Value="True"/>'#13#10'          <Typ Value="gtMemo"/>'#13#10'          <StreamMode Value="0"/>'#13#10'          <Size>'#13#10'            <Left Value="28"/>'#13#10'            <Top Value="588"/>'#13#10'            <Width Value="740"/>'#13#10'            <Height Value="46"/>'#13#10'          </Size>'#13#10'          <Flags Value="3"/>'#13#10'          <FillColor Value="clNone"/>'#13#10'          <Frames>'#13#10'            <FrameColor Value="clBlack"/>'#13#10'            <FrameStyle Value="frsSolid"/>'#13#10'            <FrameWidth Value="1"/>'#13#10'            <FrameBorders Value=""/>'#13#10'            <Restrictions Value=""/>'#13#10'          </Frames>'#13#10'          <Data>'#13#10'            <Format Value="558"/>'#13#10'            <FormatStr Value=""/>'#13#10'            <Memo Value="&quot;Declaro bajo Juramento que he liquidado y/o recibido los productos arriba detallados, los cuales quedan en mi custodia &#xD;&#xA;y mi responsabilidad, sobre extravio y/o perdidas, So pena de responsabilidad Civil y Penalmente sobre estos.&quot;&#xD;&#xA;"/>'#13#10'            <Script Value=""/>'#13#10'            <OnClick Value=""/>'#13#10'            <OnMouseEnter Value=""/>'#13#10'            <OnMouseLeave Value=""/>'#13#10'            <DetailReport Value=""/>'#13#10'          </Data>'#13#10'          <Tag Value=""/>'#13#10'          <FURLInfo Value=""/>'#13#10'          <Font>'#13#10'            <Name Value="Times New Roman"/>'#13#10'            <Size Value="8"/>'#13#10'            <Color Value="clBlack"/>'#13#10'            <Charset Value="0"/>'#13#10'            <Style Value="fsItalic"/>'#13#10'          </Font>'#13#10'          <Highlight>'#13#10'            <FontStyle Value="2"/>'#13#10'            <FontColor Value="clBlack"/>'#13#10'            <FillColor Value="clWhite"/>'#13#10'            <HighlightStr Value=""/>'#13#10'          </Highlight>'#13#10'          <Alignment Value="taCenter"/>'#13#10'          <Layout Value="tlTop"/>'#13#10'          <Angle Value="0"/>'#13#10'          <Justify Value="False"/>'#13#10'          <Cursor Value="0"/>'#13#10'        </Object63>'#13#10'        <ObjectCount Value="63"/>'#13#10'      </Page1>'#13#10'      <FVal>'#13#10'        <Count Value="0"/>'#13#10'      </FVal>'#13#10'      <ParentVars Value=""/>'#13#10'    </Pages>'#13#10'    <DetailReports>'#13#10'      <Count Value="0"/>'#13#10'    </DetailReports>'#13#10'  </LazReport>'#13#10'</CONFIG>'#13#10
+  end
+  object MSucursalMQRY: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    AfterDelete = MSucursalMQRYAfterDelete
+    AfterPost = MSucursalMQRYAfterPost
+    BeforeCancel = MSucursalMQRYBeforeCancel
+    BeforeEdit = MSucursalMQRYBeforeEdit
+    OnCalcFields = MSucursalMQRYCalcFields
+    OnNewRecord = MSucursalMQRYNewRecord
+    BufferChunks = 1000
+    CachedUpdates = True
+    GenerateParamNames = False
+    GeneratorField.Generator = 'GEN_PLUMOVSUCURSAL'
+    GeneratorField.Field = 'PLUMOVSUCURSAL'
+    GeneratorField.ApplyOnEvent = gaeOnPostRecord
+    SQL.Strings = (
+      'SELECT a.*,b.codigo as cvend,c.nombre bodega,'
+      'b.nombre,'
+      'd.descripcion TIPO_PEDIDO FROM MOV_SUCURSALM a'
+      'inner join empleados b on (a.pluempleados=b.pluempleados)'
+      'inner join bodegas c on (a.plusucursal=c.plubodega)'
+      'inner join TIPO_PEDIDO d on (a.PLUTIPO=d.plutipo)'
+      'WHERE'
+      'a.PLUEMPRESA=:pluempresa'
+      'AND a.PLUSUCURSAL=:PLUSUCURSAL'
+      'AND A.TIPO=''CAR'''
+      'AND A.PLUMOVSUCURSAL=:PLUMOVSUCURSAL'
+    )
+    Params = <    
+      item
+        DataType = ftInteger
+        Name = 'pluempresa'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftInteger
+        Name = 'PLUSUCURSAL'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftInteger
+        Name = 'PLUMOVSUCURSAL'
+        ParamType = ptInput
+      end>
+    UpdateObject = MsucursalmSQL
+    DataSetCloseAction = dcDiscardChanges
+    left = 184
+    top = 88
+    ParamData = <    
+      item
+        DataType = ftInteger
+        Name = 'pluempresa'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftInteger
+        Name = 'PLUSUCURSAL'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftInteger
+        Name = 'PLUMOVSUCURSAL'
+        ParamType = ptInput
+      end>
+    object MSucursalMQRYstatus1: TStringField
+      DisplayWidth = 20
+      FieldKind = fkCalculated
+      FieldName = 'status'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MSucursalMQRYPLUMOVSUCURSAL: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUMOVSUCURSAL'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object MSucursalMQRYOBSERVACIONES: TIBStringField
+      DisplayWidth = 100
+      FieldKind = fkData
+      FieldName = 'OBSERVACIONES'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object MSucursalMQRYPLUSUCURSAL: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUSUCURSAL'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object MSucursalMQRYPLUSUCURSAL2: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUSUCURSAL2'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object MSucursalMQRYFECHA: TDateTimeField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MSucursalMQRYPOST: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'POST'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object MSucursalMQRYENTREGADO: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'ENTREGADO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object MSucursalMQRYTIPO: TIBStringField
+      DisplayWidth = 3
+      FieldKind = fkData
+      FieldName = 'TIPO'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object MSucursalMQRYPLUEMPRESA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPRESA'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object MSucursalMQRYPLUEMPLEADOS: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPLEADOS'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object MSucursalMQRYCODIGO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object MSucursalMQRYENVIADO: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'ENVIADO'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object MSucursalMQRYPROCESADO: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'PROCESADO'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object MSucursalMQRYINGRESO: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'INGRESO'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object MSucursalMQRYEGRESO: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'EGRESO'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object MSucursalMQRYENVIO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ENVIO'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MSucursalMQRYPREPARAR: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'PREPARAR'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object MSucursalMQRYRECIBIDO: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'RECIBIDO'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object MSucursalMQRYFECHA_ENVIADO: TDateTimeField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA_ENVIADO'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MSucursalMQRYFECHA_PROCESADO: TDateTimeField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA_PROCESADO'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MSucursalMQRYPLUEMPLEADOS_PROCESADO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPLEADOS_PROCESADO'
+      Index = 21
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MSucursalMQRYANULADO: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'ANULADO'
+      Index = 22
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object MSucursalMQRYPLUREQSUCURSAL: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUREQSUCURSAL'
+      Index = 23
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MSucursalMQRYPLUTIPO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUTIPO'
+      Index = 24
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object MSucursalMQRYPLULIQUIDACION: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLULIQUIDACION'
+      Index = 25
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MSucursalMQRYPLUSUARIO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUSUARIO'
+      Index = 26
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MSucursalMQRYFECHA_CREA: TDateTimeField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA_CREA'
+      Index = 27
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MSucursalMQRYCVEND: TIBStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CVEND'
+      Index = 28
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnValidate = MSucursalMQRYCVENDValidate
+      Size = 10
+    end
+    object MSucursalMQRYBODEGA: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'BODEGA'
+      Index = 29
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object MSucursalMQRYNOMBRE: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 30
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object MSucursalMQRYTIPO_PEDIDO: TIBStringField
+      DisplayWidth = 15
+      FieldKind = fkData
+      FieldName = 'TIPO_PEDIDO'
+      Index = 31
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 15
+    end
+    object MSucursalMQRYestatus1: TStringField
+      DisplayWidth = 20
+      FieldKind = fkCalculated
+      FieldName = 'estatus'
+      Index = 32
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object MsucursalmSQL: TIBUpdateSQL
+    RefreshSQL.Strings = (
+      'SELECT a.*,b.codigo as cvend,c.nombre bodega,'
+      'b.nombre,'
+      'd.descripcion TIPO_PEDIDO FROM MOV_SUCURSALM a'
+      'inner join empleados b on (a.pluempleados=b.pluempleados)'
+      'inner join bodegas c on (a.plusucursal=c.plubodega)'
+      'inner join TIPO_PEDIDO d on (a.PLUTIPO=d.plutipo)'
+      'Where A.PLUMOVSUCURSAL = :PLUMOVSUCURSAL'
+    )
+    ModifySQL.Strings = (
+      'Update MOV_SUCURSALM A Set '
+      '  A.PLUMOVSUCURSAL = :PLUMOVSUCURSAL,'
+      '  A.OBSERVACIONES = :OBSERVACIONES,'
+      '  A.PLUSUCURSAL = :PLUSUCURSAL,'
+      '  A.PLUSUCURSAL2 = :PLUSUCURSAL2,'
+      '  A.FECHA = :FECHA,'
+      '  A.POST = :POST,'
+      '  A.ENTREGADO = :ENTREGADO,'
+      '  A.TIPO = :TIPO,'
+      '  A.PLUEMPRESA = :PLUEMPRESA,'
+      '  A.PLUEMPLEADOS = :PLUEMPLEADOS,'
+      '  A.CODIGO = :CODIGO,'
+      '  A.ENVIADO = :ENVIADO,'
+      '  A.PROCESADO = :PROCESADO,'
+      '  A.INGRESO = :INGRESO,'
+      '  A.EGRESO = :EGRESO,'
+      '  A.ENVIO = :ENVIO,'
+      '  A.PREPARAR = :PREPARAR,'
+      '  A.RECIBIDO = :RECIBIDO,'
+      '  A.FECHA_ENVIADO = :FECHA_ENVIADO,'
+      '  A.FECHA_PROCESADO = :FECHA_PROCESADO,'
+      '  A.PLUEMPLEADOS_PROCESADO = :PLUEMPLEADOS_PROCESADO,'
+      '  A.ANULADO = :ANULADO,'
+      '  A.PLUREQSUCURSAL = :PLUREQSUCURSAL,'
+      '  A.PLUTIPO = :PLUTIPO,'
+      '  A.PLULIQUIDACION = :PLULIQUIDACION,'
+      '  A.PLUSUARIO = :PLUSUARIO,'
+      '  A.FECHA_CREA = :FECHA_CREA'
+      'Where A.PLUMOVSUCURSAL = :OLD_PLUMOVSUCURSAL'
+    )
+    InsertSQL.Strings = (
+      'Insert Into MOV_SUCURSALM(PLUMOVSUCURSAL, OBSERVACIONES, PLUSUCURSAL, PLUSUCURSAL2, FECHA, POST, '
+      'ENTREGADO, TIPO, PLUEMPRESA, PLUEMPLEADOS, CODIGO, ENVIADO, PROCESADO, INGRESO, EGRESO, ENVIO, '
+      'PREPARAR, RECIBIDO, FECHA_ENVIADO, FECHA_PROCESADO, PLUEMPLEADOS_PROCESADO, ANULADO, '
+      'PLUREQSUCURSAL, PLUTIPO, PLULIQUIDACION, PLUSUARIO, FECHA_CREA)'
+      'Values(:PLUMOVSUCURSAL, :OBSERVACIONES, :PLUSUCURSAL, :PLUSUCURSAL2, :FECHA, :POST, :ENTREGADO, '
+      ':TIPO, :PLUEMPRESA, :PLUEMPLEADOS, :CODIGO, :ENVIADO, :PROCESADO, :INGRESO, :EGRESO, :ENVIO, '
+      ':PREPARAR, :RECIBIDO, :FECHA_ENVIADO, :FECHA_PROCESADO, :PLUEMPLEADOS_PROCESADO, :ANULADO, '
+      ':PLUREQSUCURSAL, :PLUTIPO, :PLULIQUIDACION, :PLUSUARIO, :FECHA_CREA)'
+    )
+    DeleteSQL.Strings = (
+      'Delete From MOV_SUCURSALM A'
+      'Where A.PLUMOVSUCURSAL = :PLUMOVSUCURSAL'
+    )
+    left = 280
+    top = 88
+  end
+  object MSUCURSALDQRY: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    AfterDelete = MSUCURSALDQRYAfterDelete
+    AfterEdit = MSUCURSALDQRYAfterEdit
+    AfterPost = MSUCURSALDQRYAfterPost
+    OnCalcFields = MSUCURSALDQRYCalcFields
+    OnNewRecord = MSUCURSALDQRYNewRecord
+    BufferChunks = 1000
+    CachedUpdates = True
+    DataSource = MSUCURSALMDS
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'SELECT a.PLUMOVSUCURSAL, a.ITEM, a.CANTIDAD, a.UNITARIO, a.PLUEMPRESA, '
+      'a.PLUPRODUCTO, a.OBSERVACION, a.COSTOPROMEDIO, a.ULTIMOCOSTO, '
+      'a.PENDIENTE,'
+      'B.CODIGO,B.DESCRIPCION'
+      'FROM MOV_SUCURSALD a'
+      'inner join producto b on (a.pluproducto=b.pluproducto)'
+      'where a.plumovsucursal=:plumovsucursal'
+      ' ORDER BY A.ITEM ASC'
+    )
+    Params = <    
+      item
+        DataType = ftInteger
+        Name = 'plumovsucursal'
+        ParamType = ptInput
+      end>
+    UpdateObject = MSUCURSALDSQL
+    DataSetCloseAction = dcDiscardChanges
+    left = 176
+    top = 352
+    ParamData = <    
+      item
+        DataType = ftInteger
+        Name = 'plumovsucursal'
+        ParamType = ptInput
+      end>
+    object MSUCURSALDQRYTOTAL: TCurrencyField
+      DisplayWidth = 10
+      FieldKind = fkCalculated
+      FieldName = 'TOTAL'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+    end
+    object MSUCURSALDQRYPLUMOVSUCURSAL: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUMOVSUCURSAL'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object MSUCURSALDQRYITEM: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ITEM'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object MSUCURSALDQRYCANTIDAD: TIBBCDField
+      DisplayWidth = 9
+      FieldKind = fkData
+      FieldName = 'CANTIDAD'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 9
+      Currency = False
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
+    end
+    object MSUCURSALDQRYUNITARIO: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'UNITARIO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object MSUCURSALDQRYPLUEMPRESA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPRESA'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MSUCURSALDQRYPLUPRODUCTO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUPRODUCTO'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object MSUCURSALDQRYOBSERVACION: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'OBSERVACION'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object MSUCURSALDQRYCOSTOPROMEDIO: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'COSTOPROMEDIO'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object MSUCURSALDQRYULTIMOCOSTO: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ULTIMOCOSTO'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object MSUCURSALDQRYPENDIENTE: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PENDIENTE'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MSUCURSALDQRYCODIGO: TIBStringField
+      DisplayWidth = 64
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      OnValidate = MSUCURSALDQRYCODIGOValidate
+      Size = 64
+    end
+    object MSUCURSALDQRYDESCRIPCION: TIBStringField
+      DisplayWidth = 250
+      FieldKind = fkData
+      FieldName = 'DESCRIPCION'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 250
+    end
+  end
+  object MSUCURSALDSQL: TIBUpdateSQL
+    RefreshSQL.Strings = (
+      'SELECT a.PLUMOVSUCURSAL, a.ITEM, a.CANTIDAD, a.UNITARIO, a.PLUEMPRESA, '
+      'a.PLUPRODUCTO, a.OBSERVACION, a.COSTOPROMEDIO, a.ULTIMOCOSTO, '
+      'a.PENDIENTE,'
+      'B.CODIGO,B.DESCRIPCION'
+      'FROM MOV_SUCURSALD a'
+      'inner join producto b on (a.pluproducto=b.pluproducto)'
+      'Where A.PLUMOVSUCURSAL = :PLUMOVSUCURSAL AND A.ITEM = :ITEM'
+    )
+    ModifySQL.Strings = (
+      'Update MOV_SUCURSALD A Set '
+      '  A.PLUMOVSUCURSAL = :PLUMOVSUCURSAL,'
+      '  A.ITEM = :ITEM,'
+      '  A.CANTIDAD = :CANTIDAD,'
+      '  A.UNITARIO = :UNITARIO,'
+      '  A.PLUEMPRESA = :PLUEMPRESA,'
+      '  A.PLUPRODUCTO = :PLUPRODUCTO,'
+      '  A.OBSERVACION = :OBSERVACION,'
+      '  A.COSTOPROMEDIO = :COSTOPROMEDIO,'
+      '  A.ULTIMOCOSTO = :ULTIMOCOSTO,'
+      '  A.PENDIENTE = :PENDIENTE'
+      'Where A.PLUMOVSUCURSAL = :OLD_PLUMOVSUCURSAL AND A.ITEM = :OLD_ITEM'
+    )
+    InsertSQL.Strings = (
+      'Insert Into MOV_SUCURSALD(PLUMOVSUCURSAL, ITEM, CANTIDAD, UNITARIO, PLUEMPRESA, PLUPRODUCTO, OBSERVACION, COSTOPROMEDIO, ULTIMOCOSTO, PENDIENTE)'
+      'Values(:PLUMOVSUCURSAL, :ITEM, :CANTIDAD, :UNITARIO, :PLUEMPRESA, :PLUPRODUCTO, :OBSERVACION, :COSTOPROMEDIO, :ULTIMOCOSTO, :PENDIENTE)'
+    )
+    DeleteSQL.Strings = (
+      'Delete From MOV_SUCURSALD A'
+      'Where A.PLUMOVSUCURSAL = :PLUMOVSUCURSAL AND A.ITEM = :ITEM'
+    )
+    left = 336
+    top = 352
+  end
+  object msucursald2QRY: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'SELECT a.PLUMOVSUCURSAL,  sum(a.CANTIDAD) cant,'
+      'a.PLUPRODUCTO, a.OBSERVACION,'
+      'b.codigo'
+      'FROM MOV_SUCURSALD a'
+      'inner join producto b on (a.pluproducto=b.pluproducto)'
+      'where a.plumovsucursal=:PLUMOVSUCURSAL'
+      'group by a.pluproducto,b.codigo,a.PLUMOVSUCURSAl,a.OBSERVACION'
+    )
+    Params = <    
+      item
+        DataType = ftInteger
+        Name = 'PLUMOVSUCURSAL'
+        ParamType = ptInput
+      end>
+    DataSetCloseAction = dcDiscardChanges
+    left = 248
+    top = 304
+    ParamData = <    
+      item
+        DataType = ftInteger
+        Name = 'PLUMOVSUCURSAL'
+        ParamType = ptInput
+      end>
+    object msucursald2QRYPLUMOVSUCURSAL: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUMOVSUCURSAL'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object msucursald2QRYCANT: TIBBCDField
+      DisplayWidth = 18
+      FieldKind = fkData
+      FieldName = 'CANT'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 18
+      Currency = False
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
+    end
+    object msucursald2QRYPLUPRODUCTO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUPRODUCTO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object msucursald2QRYOBSERVACION: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'OBSERVACION'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object msucursald2QRYCODIGO: TIBStringField
+      DisplayWidth = 64
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 64
+    end
+  end
+  object rptMOVqry: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    OnCalcFields = rptMOVqryCalcFields
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'SELECT '
+      'a.PLUMOVSUCURSAL, '
+      'a.ITEM, '
+      'a.CANTIDAD, '
+      'a.UNITARIO, '
+      'a.PLUPRODUCTO,'
+      'b.codigo doc,'
+      'b.fecha,'
+      'c.nombre bodega,'
+      'd.nombre vendedor,'
+      'e.codigo codprod,'
+      'e.descripcion producto,'
+      'f.NOMBRE empresa,b.tipo,'
+      'G.PLUTIPO,G.DESCRIPCION TIPO_PEDIDO,'
+      'H.USUARIO'
+      'FROM MOV_SUCURSALD a'
+      'inner join mov_sucursalm b on (a.PLUMOVSUCURSAL=b.plumovsucursal)'
+      'inner join bodegas c on (b.plusucursal=c.plubodega)'
+      'inner join producto e on (a.pluproducto=e.pluproducto)'
+      'inner join empleados d on (b.pluempleados=d.pluempleados)'
+      'inner join empresas f on (b.PLUEMPRESA=f.pluempresa)'
+      'INNER JOIN TIPO_PEDIDO G ON (B.PLUTIPO=G.PLUTIPO)'
+      'INNER JOIN USUARIOS H ON (B.PLUSUARIO=H.PLUSUARIO)'
+      'where b.plumovsucursal=:plu'
+    )
+    Params = <    
+      item
+        DataType = ftInteger
+        Name = 'plu'
+        ParamType = ptInput
+      end>
+    DataSetCloseAction = dcDiscardChanges
+    left = 456
+    top = 112
+    ParamData = <    
+      item
+        DataType = ftInteger
+        Name = 'plu'
+        ParamType = ptInput
+      end>
+    object rptMOVqryPLUMOVSUCURSAL: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUMOVSUCURSAL'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object rptMOVqryITEM: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ITEM'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object rptMOVqryCANTIDAD: TIBBCDField
+      DisplayWidth = 9
+      FieldKind = fkData
+      FieldName = 'CANTIDAD'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 9
+      Currency = False
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
+    end
+    object rptMOVqryUNITARIO: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'UNITARIO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object rptMOVqryPLUPRODUCTO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUPRODUCTO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object rptMOVqryDOC: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DOC'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object rptMOVqryFECHA: TDateTimeField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object rptMOVqryBODEGA: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'BODEGA'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object rptMOVqryVENDEDOR: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'VENDEDOR'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object rptMOVqryCODPROD: TIBStringField
+      DisplayWidth = 64
+      FieldKind = fkData
+      FieldName = 'CODPROD'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 64
+    end
+    object rptMOVqryPRODUCTO: TIBStringField
+      DisplayWidth = 250
+      FieldKind = fkData
+      FieldName = 'PRODUCTO'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 250
+    end
+    object rptMOVqryEMPRESA: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'EMPRESA'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 60
+    end
+    object rptMOVqryTIPO: TIBStringField
+      DisplayWidth = 3
+      FieldKind = fkData
+      FieldName = 'TIPO'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object rptMOVqryPLUTIPO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUTIPO'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object rptMOVqryTIPO_PEDIDO: TIBStringField
+      DisplayWidth = 15
+      FieldKind = fkData
+      FieldName = 'TIPO_PEDIDO'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 15
+    end
+    object rptMOVqryUSUARIO: TIBStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'USUARIO'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
+    object rptMOVqryestatus1: TStringField
+      DisplayWidth = 20
+      FieldKind = fkCalculated
+      FieldName = 'estatus'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object rptMOVqrytipodoc1: TStringField
+      DisplayWidth = 20
+      FieldKind = fkCalculated
+      FieldName = 'tipodoc'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+end

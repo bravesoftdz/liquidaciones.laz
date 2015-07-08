@@ -1,0 +1,102 @@
+unit liqRptCuadre;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, db, FileUtil, LResources, Forms, Controls, Graphics,
+  Dialogs, ExtCtrls, DBGrids, Buttons, StdCtrls, MaskEdit, EditBtn, ZDataset;
+
+type
+
+  { TfrmRptCuadre }
+
+  TfrmRptCuadre = class(TForm)
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    BitBtn4: TBitBtn;
+    CuadreDS: TDatasource;
+    DBGrid1: TDBGrid;
+    FECHA1: TDateEdit;
+    FECHA2: TDateEdit;
+    Label4: TLabel;
+    Label5: TLabel;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    CuadreQRY: TZQuery;
+    procedure BitBtn2Click(Sender: TObject);
+    procedure BitBtn4Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure PopupCalBtn1Click(Sender: TObject);
+    procedure PopupCalBtnClick(Sender: TObject);
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end; 
+
+var
+  frmRptCuadre: TfrmRptCuadre;
+
+implementation
+
+USES Pickdate;
+
+{ TfrmRptCuadre }
+
+procedure TfrmRptCuadre.BitBtn2Click(Sender: TObject);
+begin
+  close;
+end;
+
+procedure TfrmRptCuadre.BitBtn4Click(Sender: TObject);
+VAR
+SQL:STRING;
+begin
+
+
+   ShortDateFormat := 'MM/DD/YY';
+
+
+    // SHOWMESSAGE(datetostr(fecha1.date));
+    // SHOWMESSAGE(datetostr(fecha2.date));
+
+    SQL := 'SELECT a.CODIGO,a.OBSERVACION,sum(a.monto) AS TOTAL FROM LIQUIDACION_DET a '+
+    ' inner join liquidacionm m on (a.PLULIQUIDACION=m.pluliquidacion) '+
+    ' where m.fecha between '''+datetostr(fecha1.date)+''' and '''+datetostr(fecha2.date)+''' and '+
+    ' m.post=''T''  group by a.codigo,a.observacion';
+
+
+    CuadreQry.close;
+    CuadreQRY.SQL.Clear;
+    CuadreQRY.SQL.Add(sql);
+    //CuadreQry.Params[0].value := datetostr(fecha1.date);
+    //CuadreQry.Params[1].value := datetostr(fecha2.date);
+    CuadreQry.Open;
+
+    shortdateformat:='DD/MM/YY';
+
+end;
+
+procedure TfrmRptCuadre.FormCreate(Sender: TObject);
+begin
+   fecha1.Date:= now;
+   fecha2.Date:=now;
+end;
+
+procedure TfrmRptCuadre.PopupCalBtn1Click(Sender: TObject);
+begin
+
+end;
+
+procedure TfrmRptCuadre.PopupCalBtnClick(Sender: TObject);
+begin
+
+end;
+
+initialization
+  {$I liqrptcuadre.lrs}
+
+end.
+

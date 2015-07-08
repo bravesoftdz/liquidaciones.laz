@@ -1,0 +1,386 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmFC2','FORMDATA',[
+  'TPF0'#7'TfrmFC2'#6'frmFC2'#4'Left'#3'J'#1#6'Height'#3#172#1#3'Top'#2'Z'#5'Wi'
+  +'dth'#3#253#1#11'BorderStyle'#7#8'bsSingle'#7'Caption'#6#28'Facturas de Cons'
+  +'umidor Final'#12'ClientHeight'#3#172#1#11'ClientWidth'#3#253#1#8'OnCreate'#7
+  +#10'FormCreate'#10'LCLVersion'#6#7'1.4.0.2'#0#6'TLabel'#6'Label8'#4'Left'#2
+  +'('#6'Height'#2#13#3'Top'#2#24#5'Width'#2'('#7'Caption'#6#6'Fecha:'#11'Font.'
+  +'Height'#2#245#9'Font.Name'#6#13'MS Sans Serif'#10'Font.Style'#11#6'fsBold'#0
+  +#11'ParentColor'#8#10'ParentFont'#8#0#0#9'TMaskEdit'#8'edtFecha'#4'Left'#2'p'
+  +#6'Height'#2#23#3'Top'#2#24#5'Width'#2'd'#8'CharCase'#7#8'ecNormal'#9'MaxLen'
+  +'gth'#2#10#8'TabOrder'#2#1#9'OnKeyDown'#7#15'edtFechaKeyDown'#8'EditMask'#6
+  +#15'!99/99/0000;1;_'#4'Text'#6#10'  /  /    '#9'SpaceChar'#6#1'_'#0#0#5'TEdi'
+  +'t'#14'edtCorrelativo'#4'Left'#2'p'#6'Height'#2#23#3'Top'#2'/'#5'Width'#2'd'
+  +#10'OnKeyPress'#7#22'edtCorrelativoKeyPress'#8'TabOrder'#2#3#0#0#6'TLabel'#6
+  +'Label2'#4'Left'#2'('#6'Height'#2#13#3'Top'#2'0'#5'Width'#2'B'#7'Caption'#6
+  +#12'Correlativo:'#11'Font.Height'#2#245#9'Font.Name'#6#13'MS Sans Serif'#10
+  +'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8#10'ParentFont'#8#0#0#6'TLabel'
+  +#6'Label3'#4'Left'#2'('#6'Height'#2#13#3'Top'#2'H'#5'Width'#2','#7'Caption'#6
+  +#7'Codigo:'#11'Font.Height'#2#245#9'Font.Name'#6#13'MS Sans Serif'#10'Font.S'
+  +'tyle'#11#6'fsBold'#0#11'ParentColor'#8#10'ParentFont'#8#0#0#5'TEdit'#9'edtc'
+  +'odigo'#4'Left'#2'p'#6'Height'#2#23#3'Top'#2'G'#5'Width'#2'd'#9'OnKeyDown'#7
+  +#16'edtcodigoKeyDown'#8'TabOrder'#2#4#0#0#6'TLabel'#6'Label4'#4'Left'#2'('#6
+  +'Height'#2#13#3'Top'#2'`'#5'Width'#2','#7'Caption'#6#8'Cliente:'#11'Font.Hei'
+  +'ght'#2#245#9'Font.Name'#6#13'MS Sans Serif'#10'Font.Style'#11#6'fsBold'#0#11
+  +'ParentColor'#8#10'ParentFont'#8#0#0#5'TEdit'#10'edtCliente'#4'Left'#2'p'#6
+  +'Height'#2#23#3'Top'#2'`'#5'Width'#2'd'#9'OnKeyDown'#7#17'edtClienteKeyDown'
+  +#10'OnKeyPress'#7#18'edtClienteKeyPress'#8'TabOrder'#2#5#0#0#5'TEdit'#11'edt'
+  +'Vendedor'#4'Left'#2'p'#6'Height'#2#23#3'Top'#2'x'#5'Width'#2'd'#9'OnKeyDown'
+  +#7#18'edtVendedorKeyDown'#10'OnKeyPress'#7#19'edtVendedorKeyPress'#8'TabOrde'
+  +'r'#2#6#0#0#6'TLabel'#6'Label6'#4'Left'#2'('#6'Height'#2#13#3'Top'#2'x'#5'Wi'
+  +'dth'#2';'#7'Caption'#6#9'Vendedor:'#11'Font.Height'#2#245#9'Font.Name'#6#13
+  +'MS Sans Serif'#10'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8#10'ParentFon'
+  +'t'#8#0#0#6'TLabel'#6'Label7'#4'Left'#2'('#6'Height'#2#13#3'Top'#3#144#0#5'W'
+  +'idth'#2'"'#7'Caption'#6#6'Total:'#11'Font.Height'#2#245#9'Font.Name'#6#13'M'
+  +'S Sans Serif'#10'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8#10'ParentFont'
+  +#8#0#0#9'TMaskEdit'#8'edttotal'#4'Left'#2'p'#6'Height'#2#23#3'Top'#3#144#0#5
+  +'Width'#2'd'#8'CharCase'#7#8'ecNormal'#9'MaxLength'#2#0#8'TabOrder'#2#7#9'On'
+  +'KeyDown'#7#15'edttotalKeyDown'#4'Text'#6#4'0.00'#9'SpaceChar'#6#1'_'#0#0#7
+  +'TBitBtn'#10'btnGuardar'#4'Left'#2'('#6'Height'#2#25#3'Top'#3#176#0#5'Width'
+  +#2'K'#7'Caption'#6#8'&Guardar'#7'OnClick'#7#15'btnGuardarClick'#8'TabOrder'#2
+  +#10#0#0#7'TBitBtn'#7'BitBtn3'#4'Left'#3#136#0#6'Height'#2#25#3'Top'#3#176#0#5
+  +'Width'#2'K'#7'Caption'#6#9'&Cancelar'#7'OnClick'#7#12'BitBtn3Click'#8'TabOr'
+  +'der'#2#8#7'TabStop'#8#0#0#7'TBitBtn'#7'BitBtn4'#4'Left'#3#8#1#6'Height'#2#25
+  +#3'Top'#3#176#0#5'Width'#2'K'#7'Caption'#6#6'&Salir'#7'OnClick'#7#12'BitBtn4'
+  +'Click'#8'TabOrder'#2#9#7'TabStop'#8#0#0#9'TCheckBox'#7'chRVend'#4'Left'#3'U'
+  +#1#6'Height'#2#19#3'Top'#2#24#5'Width'#3#132#0#7'Caption'#6#21'Repetir Ult. '
+  +'Vendedor'#7'Checked'#9#5'State'#7#9'cbChecked'#8'TabOrder'#2#0#7'TabStop'#8
+  +#0#0#9'TCheckBox'#9'chkRFecha'#4'Left'#3'U'#1#6'Height'#2#19#3'Top'#2'3'#5'W'
+  +'idth'#2'p'#7'Caption'#6#18'Repetir Ult. Fecha'#7'Checked'#9#5'State'#7#9'cb'
+  +'Checked'#8'TabOrder'#2#2#7'TabStop'#8#0#0#12'TSpeedButton'#12'SpeedButton4'
+  +#4'Left'#3#212#0#6'Height'#2#21#4'Hint'#6'aClick, Para Buscar  Clientes/ Col'
+  +'oque en modo de edicion si lo que desea es modificar e documento'#3'Top'#2
+  +'`'#5'Width'#2#22#10'Glyph.Data'#10':'#3#0#0'6'#3#0#0'BM6'#3#0#0#0#0#0#0'6'#0
+  +#0#0'('#0#0#0#16#0#0#0#16#0#0#0#1#0#24#0#0#0#0#0#0#3#0#0#0#0#0#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#255#252#128'aOO^^^'#139#139#139#255#252#128#255#252#128#255#252
+  +#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128
+  +#255#252#128#255#252#128#255#252#128'aOOxu'#153#168#131#135'^^^'#139#139#139
+  +#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255
+  +#252#128#255#252#128#255#252#128#255#252#128#255#252#128'e'#184#244'@'#140
+  +#219#127'z'#165#168#131#135'^^^'#139#139#139#255#252#128#255#252#128#255#252
+  +#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128
+  +#255#252#128#130#148#255'Q'#183#255'@'#140#219#127'z'#165#168#131#135'^^^'
+  +#139#139#139#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255
+  +#252#128#255#252#128#255#252#128#255#252#128#255#252#128#130#148#255'Q'#183
+  +#255'@'#140#219#127'z'#165#176#135#135'^^^'#139#139#139#255#252#128#255#252
+  +#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128
+  ,#255#252#128#255#252#128#130#148#255'U'#187#255'@}'#210#127'z'#165#168#131
+  +#135'lfnlfnlfnlfnlfn'#139#139#139#255#252#128#255#252#128#255#252#128#255#252
+  +#128#255#252#128#255#252#128#130#148#255'Q'#183#255'@'#140#219#139#139#139'{'
+  +'{{'#196#152#133#208#172#147#227#201#177#213#180#164'tsslfn'#255#252#128#255
+  +#252#128#255#252#128#255#252#128#255#252#128#255#252#128#130#148#255#130#148
+  +#255#176#135#135#245#210#169#255#244#199#255#252#208#255#255#219#255#255#220
+  +#253#246#226#168#131#135'lfn'#255#252#128#255#252#128#255#252#128#255#252#128
+  +#255#252#128#255#252#128#208#172#147#235#205#168#255#242#191#255#246#195#255
+  +#255#217#255#255#233#255#255#248#255#255#255#244#238#205'uaa'#139#139#139#255
+  +#252#128#255#252#128#255#252#128#255#252#128#255#252#128#213#180#164#255#241
+  +#196#255#228#177#255#249#198#255#255#219#255#255#237#255#255#250#255#255#247
+  +#255#255#219#195#155#138'lfn'#255#252#128#255#252#128#255#252#128#255#252#128
+  +#255#252#128#208#172#147#255#246#205#255#221#170#255#245#194#255#255#214#255
+  +#255#229#255#255#237#255#255#230#255#255#217#208#172#147'lfn'#255#252#128#255
+  +#252#128#255#252#128#255#252#128#255#252#128#213#180#164#255#244#199#255#229
+  +#184#255#239#188#255#255#204#255#255#214#255#255#219#255#255#217#255#252#208
+  +#208#172#147'lfn'#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128
+  +#213#180#164#255#246#205#255#241#214#255#227#183#255#241#190#255#245#194#255
+  +#249#198#255#246#195#255#248#197#182#141#128#139#139#139#255#252#128#255#252
+  +#128#255#252#128#255#252#128#255#252#128#218#179#155#236#224#195#255#255#255
+  +#255#250#232#255#236#191#255#223#172#255#227#176#255#240#189#245#210#169#158
+  +'ss'#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128
+  +#255#252#128#213#180#164#244#238#205#255#250#232#255#246#205#255#238#187#255
+  +#244#199#248#209#165#187#146#138#255#252#128#255#252#128#255#252#128#255#252
+  +#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#213#180#164
+  +#213#180#164#202#165#142#225#187#163#218#179#155#139#139#139#255#252#128#255
+  +#252#128#255#252#128#7'OnClick'#7#17'SpeedButton4Click'#8'ShowHint'#9#14'Par'
+  +'entShowHint'#8#0#0#12'TSpeedButton'#12'SpeedButton5'#4'Left'#3#212#0#6'Heig'
+  +'ht'#2#21#4'Hint'#6'aClick, Para Buscar  Clientes/ Coloque en modo de edicio'
+  +'n si lo que desea es modificar e documento'#3'Top'#2'x'#5'Width'#2#22#10'Gl'
+  +'yph.Data'#10':'#3#0#0'6'#3#0#0'BM6'#3#0#0#0#0#0#0'6'#0#0#0'('#0#0#0#16#0#0#0
+  +#16#0#0#0#1#0#24#0#0#0#0#0#0#3#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#255#252
+  +#128'aOO^^^'#139#139#139#255#252#128#255#252#128#255#252#128#255#252#128#255
+  +#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252
+  +#128#255#252#128'aOOxu'#153#168#131#135'^^^'#139#139#139#255#252#128#255#252
+  +#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128
+  +#255#252#128#255#252#128#255#252#128'e'#184#244'@'#140#219#127'z'#165#168#131
+  +#135'^^^'#139#139#139#255#252#128#255#252#128#255#252#128#255#252#128#255#252
+  +#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#130#148#255
+  +'Q'#183#255'@'#140#219#127'z'#165#168#131#135'^^^'#139#139#139#255#252#128
+  +#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255
+  +#252#128#255#252#128#255#252#128#130#148#255'Q'#183#255'@'#140#219#127'z'#165
+  +#176#135#135'^^^'#139#139#139#255#252#128#255#252#128#255#252#128#255#252#128
+  +#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#130
+  +#148#255'U'#187#255'@}'#210#127'z'#165#168#131#135'lfnlfnlfnlfnlfn'#139#139
+  +#139#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128
+  +#130#148#255'Q'#183#255'@'#140#219#139#139#139'{{{'#196#152#133#208#172#147
+  +#227#201#177#213#180#164'tsslfn'#255#252#128#255#252#128#255#252#128#255#252
+  +#128#255#252#128#255#252#128#130#148#255#130#148#255#176#135#135#245#210#169
+  +#255#244#199#255#252#208#255#255#219#255#255#220#253#246#226#168#131#135'lfn'
+  +#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#208
+  +#172#147#235#205#168#255#242#191#255#246#195#255#255#217#255#255#233#255#255
+  +#248#255#255#255#244#238#205'uaa'#139#139#139#255#252#128#255#252#128#255#252
+  +#128#255#252#128#255#252#128#213#180#164#255#241#196#255#228#177#255#249#198
+  +#255#255#219#255#255#237#255#255#250#255#255#247#255#255#219#195#155#138'lfn'
+  +#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#208#172#147#255
+  +#246#205#255#221#170#255#245#194#255#255#214#255#255#229#255#255#237#255#255
+  +#230#255#255#217#208#172#147'lfn'#255#252#128#255#252#128#255#252#128#255#252
+  +#128#255#252#128#213#180#164#255#244#199#255#229#184#255#239#188#255#255#204
+  +#255#255#214#255#255#219#255#255#217#255#252#208#208#172#147'lfn'#255#252#128
+  +#255#252#128#255#252#128#255#252#128#255#252#128#213#180#164#255#246#205#255
+  +#241#214#255#227#183#255#241#190#255#245#194#255#249#198#255#246#195#255#248
+  +#197#182#141#128#139#139#139#255#252#128#255#252#128#255#252#128#255#252#128
+  +#255#252#128#218#179#155#236#224#195#255#255#255#255#250#232#255#236#191#255
+  ,#223#172#255#227#176#255#240#189#245#210#169#158'ss'#255#252#128#255#252#128
+  +#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#213#180#164#244
+  +#238#205#255#250#232#255#246#205#255#238#187#255#244#199#248#209#165#187#146
+  +#138#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128#255#252#128
+  +#255#252#128#255#252#128#255#252#128#213#180#164#213#180#164#202#165#142#225
+  +#187#163#218#179#155#139#139#139#255#252#128#255#252#128#255#252#128#7'OnCli'
+  +'ck'#7#17'SpeedButton5Click'#8'ShowHint'#9#14'ParentShowHint'#8#0#0#6'TLabel'
+  +#6'Label5'#4'Left'#3#240#0#6'Height'#2#1#3'Top'#2'a'#5'Width'#2#1#10'Font.Co'
+  +'lor'#7#6'clBlue'#11'Font.Height'#2#243#9'Font.Name'#6#4'Sans'#10'Font.Style'
+  +#11#6'fsBold'#8'fsItalic'#0#11'ParentColor'#8#10'ParentFont'#8#0#0#6'TLabel'
+  +#6'Label1'#4'Left'#3#240#0#6'Height'#2#1#3'Top'#2'~'#5'Width'#2#1#10'Font.Co'
+  +'lor'#7#6'clBlue'#11'Font.Height'#2#243#9'Font.Name'#6#4'Sans'#10'Font.Style'
+  +#11#6'fsBold'#8'fsItalic'#0#11'ParentColor'#8#10'ParentFont'#8#0#0#7'TDBGrid'
+  +#7'DBGrid1'#4'Left'#2#8#6'Height'#3#204#0#3'Top'#3#216#0#5'Width'#3#232#1#5
+  +'Color'#7#8'clWindow'#7'Columns'#14#0#10'DataSource'#7#11'DataSource1'#8'Tab'
+  +'Order'#2#11#0#0#11'TDataSource'#11'DataSource2'#12'OnDataChange'#7#21'DataS'
+  +'ource2DataChange'#4'left'#3'`'#1#3'top'#3#160#0#0#0#11'TDataSource'#11'Data'
+  +'Source1'#7'DataSet'#7#7'factura'#4'left'#3#192#1#3'top'#3#168#0#0#0#11'TMem'
+  +'Dataset'#7'factura'#9'FieldDefs'#14#1#4'Name'#6#5'fecha'#8'DataType'#7#6'ft'
+  +'Date'#9'Precision'#2#0#4'Size'#2#0#0#1#4'Name'#6#11'correlativo'#8'DataType'
+  +#7#8'ftString'#9'Precision'#2#0#4'Size'#2#0#0#1#4'Name'#6#6'codigo'#8'DataTy'
+  +'pe'#7#9'ftInteger'#9'Precision'#2#0#4'Size'#2#0#0#1#4'Name'#6#7'cliente'#8
+  +'DataType'#7#8'ftString'#9'Precision'#2#0#4'Size'#2#0#0#1#4'Name'#6#8'vended'
+  +'or'#8'DataType'#7#8'ftString'#9'Precision'#2#0#4'Size'#2#0#0#1#4'Name'#6#5
+  +'total'#8'DataType'#7#10'ftCurrency'#9'Precision'#2#0#4'Size'#2#0#0#0#4'left'
+  +#3#160#1#3'top'#3#136#0#0#0#8'TIBQuery'#5'FACTM'#8'Database'#7#7'dm.fbdb'#11
+  +'Transaction'#7#17'dm.IBTransaction1'#9'AfterPost'#7#14'FACTMAfterPost'#12'B'
+  +'ufferChunks'#3#232#3#13'CachedUpdates'#9#18'GenerateParamNames'#8#24'Genera'
+  +'torField.Generator'#6#19'PLUDOCCLIENTESM_GEN'#20'GeneratorField.Field'#6#14
+  +'PLUDOCCLIENTES'#27'GeneratorField.ApplyOnEvent'#7#15'gaeOnPostRecord'#11'SQ'
+  +'L.Strings'#1#6#6'select'#6#17'A.PLUDOCCLIENTES,'#6#31'cast(a.fecha as date)'
+  +' AS FECHA,'#6#15'A.PLUEMPLEADOS,'#6'4a.codigo,a.correlativo,a.tipo,a.plucli'
+  +'ente,a.nombre,'#6'?a.esexento,a.gravado,a.iva,a.post,a.total,b.nombre as ve'
+  +'ndedor,'#6'=a.pluempresas,a.plusucursales,a.flete,a.pagado,a.diascredito,'#6
+  +'Aa.legal,a.formapago,a.plufacturanc,a.direccion_envio,a.pendiente,'#6'4a.im'
+  +'preso,a.v_exento,a.anulado,a.pc_crea,a.id,a.dia,'#6#29'A.CONDICIONES,A.OBSE'
+  +'RVACIONES'#6#19'from docclientesm a'#6'9inner join empleados b on (a.pluemp'
+  +'leados=b.pluempleados)'#6#16'where a.codigo=0'#0#6'Params'#14#0#12'UpdateOb'
+  +'ject'#7#8'FACTMSQL'#18'DataSetCloseAction'#7#16'dcDiscardChanges'#4'left'#3
+  +#200#0#3'top'#2#24#0#13'TIntegerField'#19'FACTMPLUDOCCLIENTES'#12'DisplayWid'
+  +'th'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#14'PLUDOCCLIENTES'#5'Index'
+  +#2#0#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8
+  +'ReadOnly'#8#8'Required'#9#0#0#10'TDateField'#10'FACTMFECHA'#12'DisplayWidth'
+  +#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'FECHA'#5'Index'#2#1#11'Looku'
+  +'pCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
+  +'Required'#9#0#0#13'TIntegerField'#17'FACTMPLUEMPLEADOS'#12'DisplayWidth'#2
+  +#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#12'PLUEMPLEADOS'#5'Index'#2#2#11
+  +'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnl'
+  +'y'#8#8'Required'#9#0#0#13'TIntegerField'#11'FACTMCODIGO'#12'DisplayWidth'#2
+  +#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'CODIGO'#5'Index'#2#3#11'Lookup'
+  +'Cache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
+  +'Required'#9#0#0#14'TIBStringField'#16'FACTMCORRELATIVO'#12'DisplayWidth'#2
+  +#15#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'CORRELATIVO'#5'Index'#2#4#11
+  +'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnl'
+  +'y'#8#8'Required'#8#4'Size'#2#15#0#0#14'TIBStringField'#9'FACTMTIPO'#12'Disp'
+  +'layWidth'#2#3#9'FieldKind'#7#6'fkData'#9'FieldName'#6#4'TIPO'#5'Index'#2#5
+  +#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Read'
+  +'Only'#8#8'Required'#9#4'Size'#2#3#0#0#13'TIntegerField'#15'FACTMPLUCLIENTE'
+  +#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#10'PLUCLIENTE'
+  +#5'Index'#2#6#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWh'
+  +'ere'#0#8'ReadOnly'#8#8'Required'#9#0#0#14'TIBStringField'#11'FACTMNOMBRE'#12
+  +'DisplayWidth'#3#250#0#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'NOMBRE'#5'I'
+  +'ndex'#2#7#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
+  +#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#250#0#0#0#14'TIBStringField'#13'FAC'
+  ,'TMESEXENTO'#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#8
+  +'ESEXENTO'#5'Index'#2#8#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'
+  +#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#1#0#0#11'TFloatField'
+  +#12'FACTMGRAVADO'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'
+  +#6#7'GRAVADO'#5'Index'#2#9#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpd'
+  +'ate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#8'MaxValue'#5#0#0#0#0#0#0#0
+  +#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#2#0#0#11'TFloatField'
+  +#8'FACTMIVA'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#3
+  +'IVA'#5'Index'#2#10#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8
+  +'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#2#0#0#14'TIBStringField'#9'F'
+  +'ACTMPOST'#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#4'PO'
+  +'ST'#5'Index'#2#11#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'p'
+  +'fInWhere'#0#8'ReadOnly'#8#8'Required'#9#4'Size'#2#1#0#0#11'TFloatField'#10
+  +'FACTMTOTAL'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5
+  +'TOTAL'#5'Index'#2#12#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8
+  +'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#2#0#0#14'TIBStringField'#13
+  +'FACTMVENDEDOR'#12'DisplayWidth'#2'<'#9'FieldKind'#7#6'fkData'#9'FieldName'#6
+  +#8'VENDEDOR'#5'Index'#2#13#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpd'
+  +'ate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'<'#0#0#13'TIntege'
+  +'rField'#16'FACTMPLUEMPRESAS'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'
+  +#9'FieldName'#6#11'PLUEMPRESAS'#5'Index'#2#14#11'LookupCache'#8#13'ProviderF'
+  +'lags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#13'T'
+  +'IntegerField'#18'FACTMPLUSUCURSALES'#12'DisplayWidth'#2#10#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#13'PLUSUCURSALES'#5'Index'#2#15#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9
+  +#0#0#11'TFloatField'#10'FACTMFLETE'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'f'
+  +'kData'#9'FieldName'#6#5'FLETE'#5'Index'#2#16#11'LookupCache'#8#13'ProviderF'
+  +'lags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#8'MaxVal'
+  +'ue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#2
+  +#0#0#14'TIBStringField'#11'FACTMPAGADO'#12'DisplayWidth'#2#2#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#6'PAGADO'#5'Index'#2#17#11'LookupCache'#8#13'Provide'
+  +'rFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'
+  +#2#2#0#0#13'TIntegerField'#16'FACTMDIASCREDITO'#12'DisplayWidth'#2#10#9'Fiel'
+  +'dKind'#7#6'fkData'#9'FieldName'#6#11'DIASCREDITO'#5'Index'#2#18#11'LookupCa'
+  +'che'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'R'
+  +'equired'#8#0#0#14'TIBStringField'#10'FACTMLEGAL'#12'DisplayWidth'#2#1#9'Fie'
+  +'ldKind'#7#6'fkData'#9'FieldName'#6#5'LEGAL'#5'Index'#2#19#11'LookupCache'#8
+  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
+  +#8#4'Size'#2#1#0#0#14'TIBStringField'#14'FACTMFORMAPAGO'#12'DisplayWidth'#2
+  +'('#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'FORMAPAGO'#5'Index'#2#20#11'Lo'
+  +'okupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'
+  +#8#8'Required'#8#4'Size'#2'('#0#0#13'TIntegerField'#17'FACTMPLUFACTURANC'#12
+  +'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#12'PLUFACTURANC'
+  +#5'Index'#2#21#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInW'
+  +'here'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TIBStringField'#20'FACTMDIRECCIO'
+  +'N_ENVIO'#12'DisplayWidth'#3#250#0#9'FieldKind'#7#6'fkData'#9'FieldName'#6#15
+  +'DIRECCION_ENVIO'#5'Index'#2#22#11'LookupCache'#8#13'ProviderFlags'#11#10'pf'
+  +'InUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#250#0#0#0#11
+  +'TFloatField'#14'FACTMPENDIENTE'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkDa'
+  +'ta'#9'FieldName'#6#9'PENDIENTE'#5'Index'#2#23#11'LookupCache'#8#13'Provider'
+  +'Flags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#8'MaxVa'
+  +'lue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2
+  +#2#0#0#14'TIBStringField'#12'FACTMIMPRESO'#12'DisplayWidth'#2#1#9'FieldKind'
+  +#7#6'fkData'#9'FieldName'#6#7'IMPRESO'#5'Index'#2#24#11'LookupCache'#8#13'Pr'
+  +'oviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4
+  +'Size'#2#1#0#0#11'TFloatField'#13'FACTMV_EXENTO'#12'DisplayWidth'#2#10#9'Fie'
+  +'ldKind'#7#6'fkData'#9'FieldName'#6#8'V_EXENTO'#5'Index'#2#25#11'LookupCache'
+  +#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Requir'
+  +'ed'#8#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9
+  +'Precision'#2#2#0#0#14'TIBStringField'#12'FACTMANULADO'#12'DisplayWidth'#2#1
+  +#9'FieldKind'#7#6'fkData'#9'FieldName'#6#7'ANULADO'#5'Index'#2#26#11'LookupC'
+  +'ache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
+  ,'Required'#8#4'Size'#2#1#0#0#14'TIBStringField'#12'FACTMPC_CREA'#12'DisplayW'
+  +'idth'#2#25#9'FieldKind'#7#6'fkData'#9'FieldName'#6#7'PC_CREA'#5'Index'#2#27
+  +#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Read'
+  +'Only'#8#8'Required'#8#4'Size'#2#25#0#0#13'TIntegerField'#7'FACTMID'#12'Disp'
+  +'layWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#2'ID'#5'Index'#2#28
+  +#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Read'
+  +'Only'#8#8'Required'#9#0#0#13'TIntegerField'#8'FACTMDIA'#12'DisplayWidth'#2
+  +#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#3'DIA'#5'Index'#2#29#11'LookupCa'
+  +'che'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'R'
+  +'equired'#8#0#0#14'TIBStringField'#16'FACTMCONDICIONES'#12'DisplayWidth'#2#10
+  +#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'CONDICIONES'#5'Index'#2#30#11'Lo'
+  +'okupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'
+  +#8#8'Required'#8#4'Size'#2#10#0#0#14'TIBStringField'#18'FACTMOBSERVACIONES'
+  +#12'DisplayWidth'#3#250#0#9'FieldKind'#7#6'fkData'#9'FieldName'#6#13'OBSERVA'
+  +'CIONES'#5'Index'#2#31#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'
+  +#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#250#0#0#0#0#12'TIBUpda'
+  +'teSQL'#8'FACTMSQL'#18'RefreshSQL.Strings'#1#12#171#4#0#0'Select A.PLUDOCCLI'
+  +'ENTES, A.CODIGO, A.CONDICIONES, A.DESCUENTO, A.FECHA, A.NOMBRE, A.OBSERVACI'
+  +'ONES, A.ESEXENTO, A.GRAVADO, A.IVA, A.POST, A.TIPO, A.TOTAL, A.PLUCLIENTE, '
+  +'A.PLUEMPLEADOS, A.PLUEMPRESAS, A.PLUSUCURSALES, A.FLETE, A.OCOMPRA, A.TIEMP'
+  +'OCREDITO, A.PAGADO, A.NOCHEQUE, A.PLUBANCO, A.NOMBRETARJETA, A.NOTARJETA, A'
+  +'.TELTARJETA, A.FECHATARJETA, A.PLUTARJETACRED, A.NOQUEDAN, A.FECHAEMISIONQ,'
+  +' A.FECHAPAGOQ, A.MONTOTARJETA, A.DIASCREDITO, A.TIEMPOENTREGA, A.IVAPOST, A'
+  +'.LEGAL, A.VALIDEZ, A.FORMAPAGO, A.FORMAORDENAR, A.PLUFACTURANC, A.DIRECCION'
+  +'_ENVIO, A.NOTA_ENVIO, A.ENVIO, A.FECHA_ENVIO, A.DEPTO_ENVIO, A.CIUDAD_ENVIO'
+  +', A.TEL_ENVIO, A.CONTACTO_ENVIO, A.HORA_ENVIO, A.FORMA_ENVIO, A.ENTREGADO_E'
+  +'NVIO, A.ENTREGADO, A.POSTREMISION, A.DESCUENTO2, A.PLUTIPOVENTA, A.NOTA, A.'
+  +'NOTA2, A.CUENTABANCO, A.SALIDABODEGA, A.PLUCLIENTESSUC, A.FACTORCAMBIO, A.F'
+  +'ECHAPAGO, A.GANADO, A.RAZON, A.PLUOPORTUNIDAD, A.PENDIENTE, A.PLUPAGO, A.PL'
+  +'UQUEDAN, A.TARJETA_AUTORIZ, A.CHEQUE_AUTORIZ, A.AI, A.IMPRESO, A.CORRELATIV'
+  +'O, A.V_EXENTO, A.FECHA_ULT_PAGO, A.ANULADO, A.PLUMOTORISTA, A.PLUPARTIDA, A'
+  +'.POST2, A.FECHA_ANULADA, A.PLUCAJERO, A.FECHA_IMPRESION, A.PC_CREA, A.PC_IM'
+  +'PRIME, A.ID, A.DIA, A.PERCEPCION From DOCCLIENTESM A'#6'(Where A.PLUDOCCLIE'
+  +'NTES = :PLUDOCCLIENTES'#0#17'ModifySQL.Strings'#1#6#26'Update DOCCLIENTESM '
+  +'A Set '#6'%  A.PLUDOCCLIENTES = :PLUDOCCLIENTES,'#6#21'  A.CODIGO = :CODIGO'
+  +','#6#31'  A.CONDICIONES = :CONDICIONES,'#6#27'  A.DESCUENTO = :DESCUENTO,'#6
+  +#19'  A.FECHA = :FECHA,'#6#21'  A.NOMBRE = :NOMBRE,'#6'#  A.OBSERVACIONES = '
+  +':OBSERVACIONES,'#6#25'  A.ESEXENTO = :ESEXENTO,'#6#23'  A.GRAVADO = :GRAVAD'
+  +'O,'#6#15'  A.IVA = :IVA,'#6#17'  A.POST = :POST,'#6#17'  A.TIPO = :TIPO,'#6
+  +#19'  A.TOTAL = :TOTAL,'#6#29'  A.PLUCLIENTE = :PLUCLIENTE,'#6'!  A.PLUEMPLE'
+  +'ADOS = :PLUEMPLEADOS,'#6#31'  A.PLUEMPRESAS = :PLUEMPRESAS,'#6'#  A.PLUSUCU'
+  +'RSALES = :PLUSUCURSALES,'#6#19'  A.FLETE = :FLETE,'#6#23'  A.OCOMPRA = :OCO'
+  +'MPRA,'#6'#  A.TIEMPOCREDITO = :TIEMPOCREDITO,'#6#21'  A.PAGADO = :PAGADO,'#6
+  +#25'  A.NOCHEQUE = :NOCHEQUE,'#6#25'  A.PLUBANCO = :PLUBANCO,'#6'#  A.NOMBRE'
+  +'TARJETA = :NOMBRETARJETA,'#6#27'  A.NOTARJETA = :NOTARJETA,'#6#29'  A.TELTA'
+  +'RJETA = :TELTARJETA,'#6'!  A.FECHATARJETA = :FECHATARJETA,'#6'%  A.PLUTARJE'
+  +'TACRED = :PLUTARJETACRED,'#6#25'  A.NOQUEDAN = :NOQUEDAN,'#6'#  A.FECHAEMIS'
+  +'IONQ = :FECHAEMISIONQ,'#6#29'  A.FECHAPAGOQ = :FECHAPAGOQ,'#6'!  A.MONTOTAR'
+  +'JETA = :MONTOTARJETA,'#6#31'  A.DIASCREDITO = :DIASCREDITO,'#6'#  A.TIEMPOE'
+  +'NTREGA = :TIEMPOENTREGA,'#6#23'  A.IVAPOST = :IVAPOST,'#6#19'  A.LEGAL = :L'
+  +'EGAL,'#6#23'  A.VALIDEZ = :VALIDEZ,'#6#27'  A.FORMAPAGO = :FORMAPAGO,'#6'! '
+  +' A.FORMAORDENAR = :FORMAORDENAR,'#6'!  A.PLUFACTURANC = :PLUFACTURANC,'#6
+  +'''  A.DIRECCION_ENVIO = :DIRECCION_ENVIO,'#6#29'  A.NOTA_ENVIO = :NOTA_ENVI'
+  +'O,'#6#19'  A.ENVIO = :ENVIO,'#6#31'  A.FECHA_ENVIO = :FECHA_ENVIO,'#6#31'  '
+  +'A.DEPTO_ENVIO = :DEPTO_ENVIO,'#6'!  A.CIUDAD_ENVIO = :CIUDAD_ENVIO,'#6#27' '
+  +' A.TEL_ENVIO = :TEL_ENVIO,'#6'%  A.CONTACTO_ENVIO = :CONTACTO_ENVIO,'#6#29
+  +'  A.HORA_ENVIO = :HORA_ENVIO,'#6#31'  A.FORMA_ENVIO = :FORMA_ENVIO,'#6'''  '
+  +'A.ENTREGADO_ENVIO = :ENTREGADO_ENVIO,'#6#27'  A.ENTREGADO = :ENTREGADO,'#6
+  +'!  A.POSTREMISION = :POSTREMISION,'#6#29'  A.DESCUENTO2 = :DESCUENTO2,'#6'!'
+  +'  A.PLUTIPOVENTA = :PLUTIPOVENTA,'#6#17'  A.NOTA = :NOTA,'#6#19'  A.NOTA2 ='
+  +' :NOTA2,'#6#31'  A.CUENTABANCO = :CUENTABANCO,'#6'!  A.SALIDABODEGA = :SALI'
+  +'DABODEGA,'#6'%  A.PLUCLIENTESSUC = :PLUCLIENTESSUC,'#6'!  A.FACTORCAMBIO = '
+  +':FACTORCAMBIO,'#6#27'  A.FECHAPAGO = :FECHAPAGO,'#6#21'  A.GANADO = :GANADO'
+  +','#6#19'  A.RAZON = :RAZON,'#6'%  A.PLUOPORTUNIDAD = :PLUOPORTUNIDAD,'#6#27
+  ,'  A.PENDIENTE = :PENDIENTE,'#6#23'  A.PLUPAGO = :PLUPAGO,'#6#27'  A.PLUQUED'
+  +'AN = :PLUQUEDAN,'#6'''  A.TARJETA_AUTORIZ = :TARJETA_AUTORIZ,'#6'%  A.CHEQU'
+  +'E_AUTORIZ = :CHEQUE_AUTORIZ,'#6#13'  A.AI = :AI,'#6#23'  A.IMPRESO = :IMPRE'
+  +'SO,'#6#31'  A.CORRELATIVO = :CORRELATIVO,'#6#25'  A.V_EXENTO = :V_EXENTO,'#6
+  +'%  A.FECHA_ULT_PAGO = :FECHA_ULT_PAGO,'#6#23'  A.ANULADO = :ANULADO,'#6'!  '
+  +'A.PLUMOTORISTA = :PLUMOTORISTA,'#6#29'  A.PLUPARTIDA = :PLUPARTIDA,'#6#19' '
+  +' A.POST2 = :POST2,'#6'#  A.FECHA_ANULADA = :FECHA_ANULADA,'#6#27'  A.PLUCAJ'
+  +'ERO = :PLUCAJERO,'#6'''  A.FECHA_IMPRESION = :FECHA_IMPRESION,'#6#23'  A.PC'
+  +'_CREA = :PC_CREA,'#6#29'  A.PC_IMPRIME = :PC_IMPRIME,'#6#13'  A.ID = :ID,'#6
+  +#15'  A.DIA = :DIA,'#6#28'  A.PERCEPCION = :PERCEPCION'#6',Where A.PLUDOCCLI'
+  +'ENTES = :OLD_PLUDOCCLIENTES'#0#17'InsertSQL.Strings'#1#12#252#3#0#0'Insert '
+  +'Into DOCCLIENTESM(PLUDOCCLIENTES, CODIGO, CONDICIONES, DESCUENTO, FECHA, NO'
+  +'MBRE, OBSERVACIONES, ESEXENTO, GRAVADO, IVA, POST, TIPO, TOTAL, PLUCLIENTE,'
+  +' PLUEMPLEADOS, PLUEMPRESAS, PLUSUCURSALES, FLETE, OCOMPRA, TIEMPOCREDITO, P'
+  +'AGADO, NOCHEQUE, PLUBANCO, NOMBRETARJETA, NOTARJETA, TELTARJETA, FECHATARJE'
+  +'TA, PLUTARJETACRED, NOQUEDAN, FECHAEMISIONQ, FECHAPAGOQ, MONTOTARJETA, DIAS'
+  +'CREDITO, TIEMPOENTREGA, IVAPOST, LEGAL, VALIDEZ, FORMAPAGO, FORMAORDENAR, P'
+  +'LUFACTURANC, DIRECCION_ENVIO, NOTA_ENVIO, ENVIO, FECHA_ENVIO, DEPTO_ENVIO, '
+  +'CIUDAD_ENVIO, TEL_ENVIO, CONTACTO_ENVIO, HORA_ENVIO, FORMA_ENVIO, ENTREGADO'
+  +'_ENVIO, ENTREGADO, POSTREMISION, DESCUENTO2, PLUTIPOVENTA, NOTA, NOTA2, CUE'
+  +'NTABANCO, SALIDABODEGA, PLUCLIENTESSUC, FACTORCAMBIO, FECHAPAGO, GANADO, RA'
+  +'ZON, PLUOPORTUNIDAD, PENDIENTE, PLUPAGO, PLUQUEDAN, TARJETA_AUTORIZ, CHEQUE'
+  +'_AUTORIZ, AI, IMPRESO, CORRELATIVO, V_EXENTO, FECHA_ULT_PAGO, ANULADO, PLUM'
+  +'OTORISTA, PLUPARTIDA, POST2, FECHA_ANULADA, PLUCAJERO, FECHA_IMPRESION, PC_'
+  +'CREA, PC_IMPRIME, ID, DIA, PERCEPCION)'#12'A'#4#0#0'Values(:PLUDOCCLIENTES,'
+  +' :CODIGO, :CONDICIONES, :DESCUENTO, :FECHA, :NOMBRE, :OBSERVACIONES, :ESEXE'
+  +'NTO, :GRAVADO, :IVA, :POST, :TIPO, :TOTAL, :PLUCLIENTE, :PLUEMPLEADOS, :PLU'
+  +'EMPRESAS, :PLUSUCURSALES, :FLETE, :OCOMPRA, :TIEMPOCREDITO, :PAGADO, :NOCHE'
+  +'QUE, :PLUBANCO, :NOMBRETARJETA, :NOTARJETA, :TELTARJETA, :FECHATARJETA, :PL'
+  +'UTARJETACRED, :NOQUEDAN, :FECHAEMISIONQ, :FECHAPAGOQ, :MONTOTARJETA, :DIASC'
+  +'REDITO, :TIEMPOENTREGA, :IVAPOST, :LEGAL, :VALIDEZ, :FORMAPAGO, :FORMAORDEN'
+  +'AR, :PLUFACTURANC, :DIRECCION_ENVIO, :NOTA_ENVIO, :ENVIO, :FECHA_ENVIO, :DE'
+  +'PTO_ENVIO, :CIUDAD_ENVIO, :TEL_ENVIO, :CONTACTO_ENVIO, :HORA_ENVIO, :FORMA_'
+  +'ENVIO, :ENTREGADO_ENVIO, :ENTREGADO, :POSTREMISION, :DESCUENTO2, :PLUTIPOVE'
+  +'NTA, :NOTA, :NOTA2, :CUENTABANCO, :SALIDABODEGA, :PLUCLIENTESSUC, :FACTORCA'
+  +'MBIO, :FECHAPAGO, :GANADO, :RAZON, :PLUOPORTUNIDAD, :PENDIENTE, :PLUPAGO, :'
+  +'PLUQUEDAN, :TARJETA_AUTORIZ, :CHEQUE_AUTORIZ, :AI, :IMPRESO, :CORRELATIVO, '
+  +':V_EXENTO, :FECHA_ULT_PAGO, :ANULADO, :PLUMOTORISTA, :PLUPARTIDA, :POST2, :'
+  +'FECHA_ANULADA, :PLUCAJERO, :FECHA_IMPRESION, :PC_CREA, :PC_IMPRIME, :ID, :D'
+  +'IA, :PERCEPCION)'#0#17'DeleteSQL.Strings'#1#6#26'Delete From DOCCLIENTESM A'
+  +#6'(Where A.PLUDOCCLIENTES = :PLUDOCCLIENTES'#0#4'left'#3#251#0#3'top'#2','#0
+  +#0#8'TIBQuery'#14'CorrelativoQRY'#8'Database'#7#7'dm.fbdb'#11'Transaction'#7
+  +#17'dm.IBTransaction1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8#10'DataS'
+  +'ource'#7#12'dm.EmpresaDS'#18'GenerateParamNames'#8#27'GeneratorField.ApplyO'
+  +'nEvent'#7#14'gaeOnNewRecord'#11'SQL.Strings'#1#6'Hselect INICIAL,FINAL,corr'
+  +'elativo from correlativos where tipo=:tipo AND '#6#22'PLUEMPRESA=:PLUEMPRES'
+  +'A'#0#6'Params'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#4'tipo'#9'ParamTyp'
+  +'e'#7#7'ptInput'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#10'PLUEMPRESA'#9'P'
+  +'aramType'#7#7'ptInput'#0#0#18'DataSetCloseAction'#7#16'dcDiscardChanges'#4
+  +'left'#3'@'#1#3'top'#2'h'#9'ParamData'#14#1#8'DataType'#7#9'ftUnknown'#4'Nam'
+  +'e'#6#4'tipo'#9'ParamType'#7#7'ptInput'#0#1#8'DataType'#7#9'ftUnknown'#4'Nam'
+  +'e'#6#10'PLUEMPRESA'#9'ParamType'#7#7'ptInput'#0#0#0#13'TIntegerField'#21'Co'
+  +'rrelativoQRYINICIAL'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'Field'
+  +'Name'#6#7'INICIAL'#5'Index'#2#0#11'LookupCache'#8#13'ProviderFlags'#11#10'p'
+  +'fInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#13'TIntegerField'
+  +#19'CorrelativoQRYFINAL'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'Fi'
+  +'eldName'#6#5'FINAL'#5'Index'#2#1#11'LookupCache'#8#13'ProviderFlags'#11#10
+  +'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TIBStringFiel'
+  +'d'#25'CorrelativoQRYCORRELATIVO'#12'DisplayWidth'#2#15#9'FieldKind'#7#6'fkD'
+  +'ata'#9'FieldName'#6#11'CORRELATIVO'#5'Index'#2#2#11'LookupCache'#8#13'Provi'
+  +'derFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Si'
+  +'ze'#2#15#0#0#0#0
+]);

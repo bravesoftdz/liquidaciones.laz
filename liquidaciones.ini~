@@ -1,0 +1,11 @@
+[LOCALIZACION]
+Server3=192.168.0.119
+Base de Datos2=inventario
+Server=10.0.2.2
+Base de Datos=/home/noe/Documentos/Trabajo/misistemas/datos/sensuntepeque/sensunte.gdb
+Reportes=c:\liquidaciones\REPORTES\
+/opt/datos/ZACATECOLUCA.GDB
+[CONFIGURACION]
+Usuario=admin
+
+Base de Datos3=inventario

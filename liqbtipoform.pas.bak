@@ -1,0 +1,54 @@
+unit liqbtipoForm;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, db, FileUtil, LResources, Forms, Controls, Graphics,
+  Dialogs, ExtCtrls, StdCtrls, Buttons, DBGrids, ZDataset;
+
+type
+
+  { TliqBtipofrm }
+
+  TliqBtipofrm = class(TForm)
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    tipods: TDatasource;
+    DBGrid1: TDBGrid;
+    Panel1: TPanel;
+    tipoQRY: TZReadOnlyQuery;
+    tipoQRYDESCRIPCION: TStringField;
+    tipoQRYPLUTIPO: TLongintField;
+    procedure DBGrid1DblClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end; 
+
+var
+  liqBtipofrm: TliqBtipofrm;
+
+implementation
+
+{ TliqBtipofrm }
+
+procedure TliqBtipofrm.FormCreate(Sender: TObject);
+begin
+   tipoqry.Close;
+   tipoqry.Open;
+end;
+
+procedure TliqBtipofrm.DBGrid1DblClick(Sender: TObject);
+begin
+  bitbtn1.Click;
+end;
+
+initialization
+  {$I liqbtipoform.lrs}
+
+end.
+

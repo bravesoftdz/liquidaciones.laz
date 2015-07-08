@@ -1,0 +1,327 @@
+object bprodfrm: Tbprodfrm
+  Left = 155
+  Height = 356
+  Top = 121
+  Width = 553
+  ActiveControl = Panel1
+  Caption = 'Busqueda de Productos'
+  ClientHeight = 356
+  ClientWidth = 553
+  LCLVersion = '1.4.0.2'
+  object Panel1: TPanel
+    Left = 0
+    Height = 72
+    Top = 0
+    Width = 553
+    Align = alTop
+    ClientHeight = 72
+    ClientWidth = 553
+    TabOrder = 0
+    OnClick = Panel1Click
+    object Label1: TLabel
+      Left = 168
+      Height = 13
+      Top = 8
+      Width = 37
+      Caption = 'Codigo:'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 8
+      Height = 13
+      Top = 40
+      Width = 54
+      Caption = 'Descripcion'
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 8
+      Height = 13
+      Top = 8
+      Width = 17
+      Caption = 'BC:'
+      ParentColor = False
+    end
+    object edtCodigo: TEdit
+      Left = 208
+      Height = 21
+      Top = 8
+      Width = 112
+      OnChange = edtCodigoChange
+      TabOrder = 1
+    end
+    object EdtNombre: TEdit
+      Left = 72
+      Height = 21
+      Top = 39
+      Width = 248
+      OnChange = EdtNombreChange
+      TabOrder = 2
+    end
+    object BitBtn1: TBitBtn
+      Left = 344
+      Height = 30
+      Top = 8
+      Width = 96
+      Caption = 'Aceptar'
+      Default = True
+      Glyph.Data = {
+        26060000424D2606000000000000360000002800000013000000140000000100
+        200000000000F005000064000000640000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000003700010654
+        100F053C0C1D0012030900000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000C76171F1197228B0E8A1EB006440E4500000004000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000010731C141DA9309B1EB032F31AAC2DFA138C
+        23AD032907210000000100000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000001A81270C27AD3A7B2FC1
+        44F22CBE41FF27B83BFF20AE34E90F661B64000C010A00000000000000000000
+        0000000000000000000000000000000000000000000000000000000000001669
+        210B2DA53F713FD356EE40D256FE3CCE52FE37C94DFF33C548FD23A236C50A43
+        1334000000020000000000000000000000000000000000000000000000000000
+        0000000000001B6D261339B54A774ADB61E34DE065FE49DC60FA3BCC51D03FD3
+        56EC40D256FE38C94EF51F8A2F86031805140000000000000000000000000000
+        0000000000000000000000000000237C31183AB64D8951E168F056EA6FFE54E8
+        6DFE47D85DC3259A35413ED4549C49DD61F947DB5EFF37C14CD713591C4E0001
+        000400000000000000000000000000000000000000000000000038B54A6F50E2
+        68EE57EA70FE56E96EF948D45EBB2CA03C34186A220333C74A364BE063D351E4
+        69FF4BDE64FA30A843B4082C0C20000000010000000000000000000000000000
+        00000000000037B8474946D55BCC4BDB62E844CE59A42EA93F2E14641B010000
+        0000188A270642D5597854E86DF755E86EFE4BDA62F11F762B67010A010D0000
+        000000000000000000000000000000000000007F190224A3311E289E34311462
+        1A0B000000000000000000000000000000002FB9431E4DE165BD58EB71FC58EC
+        71FF3FC154CC14531D4500000003000000000000000000000000000000000000
+        00000019000000370000000000000000000000000000000000000000000024AC
+        39033DCD534F50E468E156E96FFF52E36AF732A544A60520081D000000020000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000158D23083ECF54884BDE63F751E369FE4AD7
+        60ED1D712A6B010E031000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000002AB4
+        3E223CCB51B445D35CFD48D85FFE38BE4DD61861225300000006000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000001783260233B4443F45C658E444CA5AFE3ECB54FA299E
+        3AB50622092A0003000300000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000000000000055000239B5
+        487747C159EE49C45CFF43C156F62783349707240A1E00000001000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000269D321938B2489843BB55FB46BE58FE3FB350E91F71
+        2972031405120000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000259C332636B0
+        46C73DB44EFD40B751FE33A342D012521A390000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000E81200128A6373B32AC42BE36AD46E82EA13D9D14631C1D0000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000001A95230423A1312E279E
+        364F208F2E1B001F0001
+      }
+      OnClick = BitBtn1Click
+      TabOrder = 3
+    end
+    object BitBtn2: TBitBtn
+      Left = 448
+      Height = 30
+      Top = 8
+      Width = 96
+      Cancel = True
+      Caption = 'Cancelar'
+      Kind = bkCancel
+      ModalResult = 2
+      TabOrder = 4
+    end
+    object edttipo: TEdit
+      Left = 344
+      Height = 21
+      Top = 48
+      Width = 80
+      TabOrder = 5
+      Text = 'CAR'
+      Visible = False
+    end
+    object edtbc: TEdit
+      Left = 72
+      Height = 21
+      Top = 8
+      Width = 88
+      OnChange = edtbcChange
+      OnKeyPress = edtbcKeyPress
+      TabOrder = 0
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 284
+    Top = 72
+    Width = 553
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'CODIGO'
+        Width = 75
+        FieldName = 'CODIGO'
+      end    
+      item
+        Title.Caption = 'DESCRIPCION'
+        Width = 250
+        FieldName = 'DESCRIPCION'
+      end    
+      item
+        Title.Caption = 'EXISTENCIA'
+        FieldName = 'EXISTENCIA'
+      end    
+      item
+        Title.Caption = 'PRECIO'
+        FieldName = 'PRECIO'
+      end    
+      item
+        Title.Caption = 'PRECIODISTRIBUDOR'
+        FieldName = 'PRECIODISTRIBUDOR'
+      end    
+      item
+        Title.Caption = 'UNIDADMEDIDA'
+        FieldName = 'UNIDADMEDIDA'
+      end>
+    DataSource = prodds
+    TabOrder = 1
+    OnDblClick = DBGrid1DblClick
+  end
+  object prodds: TDataSource
+    DataSet = ProdQRY
+    left = 160
+    top = 152
+  end
+  object ProdQRY: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select PRODUCTO.BC AS BC,PRODUCTO.CODIGO AS CODIGO,'
+      'PRODUCTO.DESCRIPCION AS DESCRIPCION,PRODUCTO.PRECIO AS PRECIO,'
+      'PRODUCTO.PRECIODISTRIBUIDOR AS PRECIODISTRIBUDOR,'
+      'PRODUCTO.PRECIOESPECIAL AS PRECIOESPECIAL,'
+      'PRODUCTO.UNIDADMEDIDA AS UNIDADMEDIDA, PRODUCTO.EXISTENCIA AS '
+      'EXISTENCIA'
+      ' from PRODUCTO WHERE PLUEMPRESAS=:pluempresa and '
+      ' UPPER(codigo) like ''A%'' AND'
+      ' ACTIVO=''T'' ORDER BY descripcion asc'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempresa'
+        ParamType = ptInput
+      end>
+    DataSetCloseAction = dcDiscardChanges
+    left = 144
+    top = 112
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempresa'
+        ParamType = ptInput
+      end>
+    object ProdQRYBC: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'BC'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ProdQRYCODIGO: TIBStringField
+      DisplayWidth = 64
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 64
+    end
+    object ProdQRYDESCRIPCION: TIBStringField
+      DisplayWidth = 250
+      FieldKind = fkData
+      FieldName = 'DESCRIPCION'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 250
+    end
+    object ProdQRYPRECIO: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PRECIO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ProdQRYPRECIODISTRIBUDOR: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PRECIODISTRIBUDOR'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ProdQRYPRECIOESPECIAL: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PRECIOESPECIAL'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ProdQRYUNIDADMEDIDA: TIBStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'UNIDADMEDIDA'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
+    object ProdQRYEXISTENCIA: TIBBCDField
+      DisplayWidth = 18
+      FieldKind = fkData
+      FieldName = 'EXISTENCIA'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 18
+      Currency = False
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
+    end
+  end
+end

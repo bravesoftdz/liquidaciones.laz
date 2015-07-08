@@ -1,0 +1,239 @@
+object frmRptPendLiq: TfrmRptPendLiq
+  Left = 739
+  Height = 505
+  Top = 35
+  Width = 401
+  ActiveControl = Panel1
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Vendedores Pendientes de Liquidar'
+  ClientHeight = 505
+  ClientWidth = 401
+  OnClose = FormClose
+  OnShow = FormShow
+  LCLVersion = '1.4.0.2'
+  object Panel1: TPanel
+    Left = 0
+    Height = 42
+    Top = 0
+    Width = 401
+    Align = alTop
+    ClientHeight = 42
+    ClientWidth = 401
+    TabOrder = 0
+    object BitBtn4: TBitBtn
+      Left = 16
+      Height = 30
+      Top = 8
+      Width = 107
+      Caption = 'Ver Detalle'
+      Kind = bkOK
+      OnClick = BitBtn4Click
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 63
+    Top = 442
+    Width = 401
+    Align = alBottom
+    ClientHeight = 63
+    ClientWidth = 401
+    TabOrder = 1
+    object btnprint: TSpeedButton
+      Left = 120
+      Height = 29
+      Top = 16
+      Width = 104
+      Caption = 'Imprimir'
+      Enabled = False
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+        FF00FFFFFF00C89561FDCA9865FFCA9765FFCA9765FFCA9765FFCA9764FFC997
+        64FFC99764FFCA9865FFC89461FDFFFFFF00FFFFFF00FFFFFF00636363995D5D
+        5DD2585858FFC79561FFF9F7F6FFF9F1ECFFF9F1EBFFF8F0E9FFF7EDE6FFF4EA
+        E1FFF2E8DEFFFAF8F6FFC79461FF242424FF232323D12323237A6A6A6AFDA7A7
+        A7FFB5B5B5FF818181FFAFACAAFFC5C0BDFFC5C0BDFFC5C0BDFFC5C0BDFFC5C0
+        BDFFC5C0BDFFADAAA8FF2C2C2CFFB5B5B5FF9B9B9BFF232323FF707070FFB5B5
+        B5FFB5B5B5FF959595FF818181FF818181FF797979FF6E6E6EFF616161FF5252
+        52FF434343FF424242FF6E6E6EFFB5B5B5FFB5B5B5FF252525FF757575FFBBBB
+        BBFFBBBBBBFF8D8D8DFFD4D4D4FFB9B9B9FFB9B9B9FFB9B9B9FFB9B9B9FFB9B9
+        B9FFB9B9B9FFD3D3D3FF838383FFBBBBBBFFBBBBBBFF2A2A2AFF7A7A7AFFD7D7
+        D7FFD7D7D7FF979797FFD8D8D8FFBFBFBFFFBFBFBFFFBFBFBFFFBFBFBFFFBFBF
+        BFFFBFBFBFFFD7D7D7FF8E8E8EFFD7D7D7FFD7D7D7FF3F3F3FFF7E7E7EFFF9F9
+        F9FFF9F9F9FFABABABFFDFDFDFFFCBCBCBFFCBCBCBFFCBCBCBFFCBCBCBFFCBCB
+        CBFFCBCBCBFFDFDFDFFFA3A3A3FFF9F9F9FFF9F9F9FF616161FF818181F9FCFC
+        FCFFFCFCFCFFCBCBCBFFF2F2F2FFF2F2F2FFF2F2F2FFF2F2F2FFF2F2F2FFF2F2
+        F2FFF2F2F2FFF2F2F2FFC6C6C6FFFCFCFCFFFCFCFCFF707070FE818181D2D2D2
+        D2FFE8E8E8FF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D
+        7DFF7D7D7DFF7D7D7DFF7D7D7DFFE8E8E8FFC4C4C4FF565656DC818181459A9A
+        9AFFCCCCCCFFC78B4EFFF9F4EDFFFEE8D8FFFEE8D7FFFDE5D3FFFCE4D1FFFAE0
+        C7FFF9DDC3FFFAF4EDFFC7854AFFC3C3C3FF747474FF47474745FFFFFF008181
+        8163818181F3C5894CFFF9F4EFFFFEE7D7FFFDE7D5FFFCE6D2FFFBE1CCFFF8DC
+        C2FFF6DABDFFFAF4EFFFC48348FF595959F353535363FFFFFF00FFFFFF00FFFF
+        FF0081818109C5894BF9F9F4F0FFFCE6D3FFFDE7D3FFFBE3CDFFFAE0C8FFF5D6
+        BBFFF3D4B5FFF8F4F0FFC38246F960606009FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00C6894BF7F9F5F1FFFCE3CFFFFCE4CFFFFAE1CAFFF9DDC4FFF4E9
+        DFFFF7F2ECFFF5EFE9FFC27E45FBFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00C6894CF6F9F5F1FFFCE3CDFFFBE3CDFFF9E0C8FFF8DCC2FFFDFB
+        F8FFFCE6CDFFE2B684FFBF7942A6FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00C48649FAF7F2ECFFF8F4EEFFF8F3EDFFF8F3EDFFF8F2ECFFF2E6
+        D7FFE2B27DFFDA9163F6B46B3E07FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00C17D4460C88B4DBBC88C4FFEC88C4FFFC88D4FF7C98C4FF7C589
+        4CFEC4763B94FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+      }
+      OnClick = btnprintClick
+    end
+    object BitBtn2: TBitBtn
+      Left = 256
+      Height = 30
+      Top = 16
+      Width = 107
+      Caption = '&Cerrar'
+      Kind = bkClose
+      OnClick = BitBtn2Click
+      TabOrder = 0
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 400
+    Top = 42
+    Width = 401
+    Align = alClient
+    Color = clBlack
+    Columns = <    
+      item
+        ReadOnly = True
+        Title.Caption = 'FECHA'
+        Width = 100
+        FieldName = 'FECHA'
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'NOMBRE'
+        Width = 250
+        FieldName = 'NOMBRE'
+      end>
+    DataSource = PENDLIQDS
+    FixedCols = 0
+    Flat = True
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -15
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    Options = [dgCancelOnExit]
+    ParentFont = False
+    ReadOnly = True
+    Scrollbars = ssNone
+    TabOrder = 2
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Color = clWhite
+    TitleFont.Height = -13
+    TitleFont.Name = 'Arial'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    TitleFont.Style = [fsBold]
+    TitleStyle = tsNative
+  end
+  object PENDLIQDS: TDataSource
+    DataSet = PENDLIQQRY
+    left = 178
+    top = 183
+  end
+  object RPT: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    StoreInForm = True
+    DataType = dtDataSet
+    left = 272
+    top = 264
+    ReportXML = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<CONFIG>'#13#10'  <LazReport>'#13#10'    <Version Value="28"/>'#13#10'    <Title Value=""/>'#13#10'    <Subject Value=""/>'#13#10'    <KeyWords Value=""/>'#13#10'    <Comments Value=""/>'#13#10'    <ReportCreateDate Value="1899-12-30 00:00:00"/>'#13#10'    <ReportLastChange Value="1899-12-30 00:00:00"/>'#13#10'    <ReportVersionBuild Value=""/>'#13#10'    <ReportVersionMajor Value=""/>'#13#10'    <ReportVersionMinor Value=""/>'#13#10'    <ReportVersionRelease Value=""/>'#13#10'    <ReportAutor Value=""/>'#13#10'    <Script Value=""/>'#13#10'    <Pages>'#13#10'      <PrintToDefault Value="False"/>'#13#10'      <DoublePass Value="False"/>'#13#10'      <SelectedPrinter Value="Default printer"/>'#13#10'      <PageCount Value="1"/>'#13#10'      <Page1>'#13#10'        <Name Value="Page1"/>'#13#10'        <ClassName Value="TfrPageReport"/>'#13#10'        <Visible Value="True"/>'#13#10'        <Width Value="2159"/>'#13#10'        <Height Value="2794"/>'#13#10'        <Script Value=""/>'#13#10'        <PgSize Value="1"/>'#13#10'        <Margins>'#13#10'          <left Value="0"/>'#13#10'          <Top Value="0"/>'#13#10'          <Right Value="0"/>'#13#10'          <Bottom Value="0"/>'#13#10'        </Margins>'#13#10'        <Orientation Value="poPortrait"/>'#13#10'        <UseMargins Value="True"/>'#13#10'        <PrintToPrevPage Value="False"/>'#13#10'        <ColCount Value="0"/>'#13#10'        <ColGap Value="0"/>'#13#10'        <LayoutOrder Value="loColumns"/>'#13#10'        <ObjectCount Value="0"/>'#13#10'      </Page1>'#13#10'      <FVal>'#13#10'        <Count Value="0"/>'#13#10'      </FVal>'#13#10'      <ParentVars Value=""/>'#13#10'    </Pages>'#13#10'    <DetailReports>'#13#10'      <Count Value="0"/>'#13#10'    </DetailReports>'#13#10'  </LazReport>'#13#10'</CONFIG>'#13#10
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = PENDLIQQRY
+    left = 220
+    top = 236
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 20000
+    OnTimer = Timer1Timer
+    left = 88
+    top = 96
+  end
+  object PENDLIQQRY: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    OnCalcFields = PENDLIQQRYCalcFields
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'SELECT distinct CAST(M.FECHA AS DATE) FECHA,UPPER(E.NOMBRE) '
+      'NOMBRE'
+      'FROM EMPLEADOS E'
+      'INNER JOIN MOV_SUCURSALM M ON '
+      '(E.PLUEMPLEADOS=M.PLUSUCURSAL2)'
+      'WHERE PLULIQUIDACION=0 AND POST=''T'''
+      'ORDER BY'
+      'CAST(M.FECHA AS DATE) DESC,'
+      'E.NOMBRE'
+    )
+    Params = <>
+    DataSetCloseAction = dcDiscardChanges
+    left = 88
+    top = 147
+    object PENDLIQQRYFECHA: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object PENDLIQQRYNOMBRE: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object PENDLIQQRYTITULO1: TStringField
+      DisplayWidth = 60
+      FieldKind = fkCalculated
+      FieldName = 'TITULO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object PENDLIQQRYTITULO2_1: TStringField
+      DisplayWidth = 60
+      FieldKind = fkCalculated
+      FieldName = 'TITULO1'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+  end
+end

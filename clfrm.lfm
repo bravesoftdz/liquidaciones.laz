@@ -1,0 +1,1142 @@
+object frmclientes: Tfrmclientes
+  Left = 439
+  Height = 329
+  Top = 183
+  Width = 614
+  Caption = 'Listado de Clientes'
+  ClientHeight = 329
+  ClientWidth = 614
+  LCLVersion = '1.0.12.0'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 329
+    Top = 0
+    Width = 614
+    ActivePage = TabSheet1
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Busqueda'
+      ClientHeight = 300
+      ClientWidth = 604
+      object Panel1: TPanel
+        Left = 0
+        Height = 57
+        Top = 0
+        Width = 604
+        Align = alTop
+        ClientHeight = 57
+        ClientWidth = 604
+        Color = clSilver
+        ParentColor = False
+        TabOrder = 0
+        object Buscar: TGroupBox
+          Left = 4
+          Height = 49
+          Top = 0
+          Width = 583
+          Caption = 'Buscar'
+          ClientHeight = 33
+          ClientWidth = 581
+          Color = clSilver
+          ParentColor = False
+          TabOrder = 0
+          object Label3: TLabel
+            Left = 4
+            Height = 16
+            Top = 0
+            Width = 49
+            Caption = 'Codigo:'
+            ParentColor = False
+          end
+          object Label4: TLabel
+            Left = 110
+            Height = 16
+            Top = 0
+            Width = 57
+            Caption = 'Nombre:'
+            ParentColor = False
+          end
+          object Label5: TLabel
+            Left = 494
+            Height = 16
+            Top = 0
+            Width = 28
+            Caption = 'Reg.'
+            ParentColor = False
+          end
+          object Label1: TLabel
+            Left = 310
+            Height = 16
+            Top = 0
+            Width = 64
+            Caption = 'Dirección:'
+            ParentColor = False
+          end
+          object edtcodigo: TEdit
+            Left = 54
+            Height = 27
+            Hint = 'Busqueda de Clientes por Codigo'
+            Top = 0
+            Width = 49
+            CharCase = ecUppercase
+            OnChange = edtcodigoChange
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 1
+          end
+          object Edit2: TEdit
+            Left = 166
+            Height = 27
+            Hint = 'Busqueda de clientes por nombre'
+            Top = 0
+            Width = 127
+            CharCase = ecUppercase
+            OnChange = Edit2Change
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 2
+          end
+          object Edit3: TEdit
+            Left = 526
+            Height = 27
+            Hint = 'Busqueda de clientes por  No. Registro...!'
+            Top = 0
+            Width = 49
+            CharCase = ecUppercase
+            OnChange = Edit3Change
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 0
+          end
+          object Edit4: TEdit
+            Left = 374
+            Height = 27
+            Hint = 'Busqueda de clientes por Dirección'
+            Top = 0
+            Width = 112
+            Color = 16053503
+            OnChange = Edit4Change
+            TabOrder = 3
+          end
+        end
+      end
+      object Panel3: TPanel
+        Left = 0
+        Height = 45
+        Top = 255
+        Width = 604
+        Align = alBottom
+        ClientHeight = 45
+        ClientWidth = 604
+        Color = clSilver
+        ParentColor = False
+        TabOrder = 2
+        object BitBtn1: TBitBtn
+          Left = 380
+          Height = 25
+          Top = 4
+          Width = 75
+          Kind = bkOK
+          ModalResult = 1
+          TabOrder = 0
+        end
+        object BitBtn2: TBitBtn
+          Left = 468
+          Height = 25
+          Top = 4
+          Width = 75
+          Caption = 'Salir'
+          Kind = bkCancel
+          OnClick = BitBtn2Click
+          TabOrder = 1
+        end
+      end
+      object DBGrid1: TDBGrid
+        Left = 0
+        Height = 198
+        Top = 57
+        Width = 604
+        Align = alClient
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'CODIGO'
+            FieldName = 'CODIGO'
+          end        
+          item
+            Title.Caption = 'NOMBRE'
+            Width = 200
+            FieldName = 'NOMBRE'
+          end        
+          item
+            Title.Caption = 'DIRECCION1'
+            Width = 300
+            FieldName = 'DIRECCION1'
+          end        
+          item
+            Title.Caption = 'REGISTRO'
+            FieldName = 'REGISTRO'
+          end>
+        DataSource = ClDS
+        TabOrder = 1
+        TitleFont.Height = -10
+        TitleFont.Name = 'MS Sans Serif'
+      end
+    end
+  end
+  object ClQry: TZQuery
+    Connection = dm.fbDB
+    AutoCalcFields = False
+    SQL.Strings = (
+      'SELECT '
+      '  CLIENTES.*,'
+      '  CLCATEGORIA.NOMBRE AS CLASE'
+      'FROM'
+      '  CLIENTES'
+      '  INNER JOIN CLCATEGORIA ON (CLIENTES.PLUCLCATEGORIA = CLCATEGORIA.PLUCLCATEGORIA)'
+      'ORDER BY clientes.CODIGO ASC'
+    )
+    Params = <>
+    left = 112
+    top = 104
+    object ClQryPLUCLIENTE: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUCLIENTE'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ClQryCODIGO: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ClQryNOMBRE: TStringField
+      DisplayWidth = 400
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 400
+    end
+    object ClQryDIRRECCION1: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'DIRRECCION1'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object ClQryDIRECCION2: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'DIRECCION2'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object ClQryCOLONIA: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'COLONIA'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryCIUDAD: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'CIUDAD'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryDEPARTAMENTO: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'DEPARTAMENTO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryPAIS: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'PAIS'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryZONA: TStringField
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'ZONA'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object ClQryEXT1: TStringField
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'EXT1'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object ClQryEXT2: TStringField
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'EXT2'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object ClQryNIT: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'NIT'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryGIRO: TStringField
+      DisplayWidth = 416
+      FieldKind = fkData
+      FieldName = 'GIRO'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 416
+    end
+    object ClQryTIPO: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'TIPO'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryPLUCLRUBRO: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUCLRUBRO'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryPLUCLCATEGORIA: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUCLCATEGORIA'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryDEPTOPAIS: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'DEPTOPAIS'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object ClQryPLUTARJETA: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUTARJETA'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryNOMBRETARJETA: TStringField
+      DisplayWidth = 160
+      FieldKind = fkData
+      FieldName = 'NOMBRETARJETA'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 160
+    end
+    object ClQryFECHATARJETA: TDateTimeField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHATARJETA'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryTELEFONO: TStringField
+      DisplayWidth = 160
+      FieldKind = fkData
+      FieldName = 'TELEFONO'
+      Index = 21
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 160
+    end
+    object ClQryFAX: TStringField
+      DisplayWidth = 160
+      FieldKind = fkData
+      FieldName = 'FAX'
+      Index = 22
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 160
+    end
+    object ClQryREGISTRO: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'REGISTRO'
+      Index = 23
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryTELTARJETA: TStringField
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'TELTARJETA'
+      Index = 24
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object ClQryDIRECCION1: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'DIRECCION1'
+      Index = 25
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object ClQryDIAPAGO: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'DIAPAGO'
+      Index = 26
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryDIAQUEDAN: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'DIAQUEDAN'
+      Index = 27
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryPERSONACOBRO: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'PERSONACOBRO'
+      Index = 28
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object ClQryTELCOBRO: TStringField
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'TELCOBRO'
+      Index = 29
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object ClQryEXTCOBRO: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'EXTCOBRO'
+      Index = 30
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryCREDITOACTIVO: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'CREDITOACTIVO'
+      Index = 31
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object ClQryCREDITO: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'CREDITO'
+      Index = 32
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object ClQryCREDITO1: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'CREDITO1'
+      Index = 33
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object ClQryEMAIL: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'EMAIL'
+      Index = 34
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object ClQryNOTARJETA: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'NOTARJETA'
+      Index = 35
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryPLUEMPLEADOS: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPLEADOS'
+      Index = 36
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryLIMITECREDITO: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'LIMITECREDITO'
+      Index = 37
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ClQryEXCENTO: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'EXCENTO'
+      Index = 38
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object ClQrySALDO: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'SALDO'
+      Index = 39
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ClQryWEB: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'WEB'
+      Index = 40
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object ClQryGENERAR_ECUENTA: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'GENERAR_ECUENTA'
+      Index = 41
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object ClQryTARJETA: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'TARJETA'
+      Index = 42
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object ClQryCEDULA: TStringField
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'CEDULA'
+      Index = 43
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object ClQryDUI: TStringField
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'DUI'
+      Index = 44
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object ClQryOBSERVACIONES1: TStringField
+      DisplayWidth = 1020
+      FieldKind = fkData
+      FieldName = 'OBSERVACIONES1'
+      Index = 45
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1020
+    end
+    object ClQryOBSERVACIONES2: TStringField
+      DisplayWidth = 1020
+      FieldKind = fkData
+      FieldName = 'OBSERVACIONES2'
+      Index = 46
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1020
+    end
+    object ClQryTRABAJO: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'TRABAJO'
+      Index = 47
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object ClQryTEL_TRABAJO: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'TEL_TRABAJO'
+      Index = 48
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryRECOMENDACIONES: TStringField
+      DisplayWidth = 1020
+      FieldKind = fkData
+      FieldName = 'RECOMENDACIONES'
+      Index = 49
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1020
+    end
+    object ClQryNOMBRE_FIADOR: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'NOMBRE_FIADOR'
+      Index = 50
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object ClQryDIRECCION_FIADOR: TStringField
+      DisplayWidth = 1020
+      FieldKind = fkData
+      FieldName = 'DIRECCION_FIADOR'
+      Index = 51
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1020
+    end
+    object ClQryTEL_FIADOR: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'TEL_FIADOR'
+      Index = 52
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object ClQryTRABAJO_FIADOR: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'TRABAJO_FIADOR'
+      Index = 53
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object ClQryDUI_FIADOR: TStringField
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'DUI_FIADOR'
+      Index = 54
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object ClQryCEDULA_FIADOR: TStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'CEDULA_FIADOR'
+      Index = 55
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object ClQryOBSERVACIONES_FIADOR: TStringField
+      DisplayWidth = 1020
+      FieldKind = fkData
+      FieldName = 'OBSERVACIONES_FIADOR'
+      Index = 56
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1020
+    end
+    object ClQryMUNICIPIO: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'MUNICIPIO'
+      Index = 57
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryDIAS_CREDITO: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DIAS_CREDITO'
+      Index = 58
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryPLUCLIENTE_MAYOR: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUCLIENTE_MAYOR'
+      Index = 59
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryCALIFICACION_CREDITO: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'CALIFICACION_CREDITO'
+      Index = 60
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object ClQryCALIFICACION_COMPRAS: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'CALIFICACION_COMPRAS'
+      Index = 61
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object ClQryCLASIFICACION: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'CLASIFICACION'
+      Index = 62
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object ClQryNOTA_COBRO: TStringField
+      DisplayWidth = 1000
+      FieldKind = fkData
+      FieldName = 'NOTA_COBRO'
+      Index = 63
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+    object ClQryPRECIO: TStringField
+      DisplayWidth = 48
+      FieldKind = fkData
+      FieldName = 'PRECIO'
+      Index = 64
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 48
+    end
+    object ClQryPLUCTA: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUCTA'
+      Index = 65
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryTIPODOC: TStringField
+      DisplayWidth = 2
+      FieldKind = fkData
+      FieldName = 'TIPODOC'
+      Index = 66
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 2
+    end
+    object ClQryDIASCRED: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DIASCRED'
+      Index = 67
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryUSUARIO: TStringField
+      DisplayWidth = 48
+      FieldKind = fkData
+      FieldName = 'USUARIO'
+      Index = 68
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 48
+    end
+    object ClQryACTIVO: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'ACTIVO'
+      Index = 69
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object ClQryCONTACTO: TStringField
+      DisplayWidth = 160
+      FieldKind = fkData
+      FieldName = 'CONTACTO'
+      Index = 70
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 160
+    end
+    object ClQryFORMAPAGO: TStringField
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'FORMAPAGO'
+      Index = 71
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object ClQryPLUDOC: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUDOC'
+      Index = 72
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryPLUABONO: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUABONO'
+      Index = 73
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryTASA_CERO: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'TASA_CERO'
+      Index = 74
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object ClQryCODIGO2: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'CODIGO2'
+      Index = 75
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryCODIGO3: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'CODIGO3'
+      Index = 76
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryMUNI: TStringField
+      DisplayWidth = 12
+      FieldKind = fkData
+      FieldName = 'MUNI'
+      Index = 77
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 12
+    end
+    object ClQryOCUPACION: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'OCUPACION'
+      Index = 78
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ClQryEDAD: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'EDAD'
+      Index = 79
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryLUGARTRABAJO: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'LUGARTRABAJO'
+      Index = 80
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object ClQryJOBI: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'JOBI'
+      Index = 81
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object ClQryPLUSUCURSAL_CREA: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUSUCURSAL_CREA'
+      Index = 82
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryPLUSUCURSAL_MOD: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUSUCURSAL_MOD'
+      Index = 83
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryPLUCATEGORIA: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUCATEGORIA'
+      Index = 84
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClQryCLASE: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'CLASE'
+      Index = 85
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 120
+    end
+  end
+  object ClDS: TDatasource
+    DataSet = ClQry
+    left = 152
+    top = 152
+  end
+end

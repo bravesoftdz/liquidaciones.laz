@@ -1,0 +1,57 @@
+object BrDateForm: TBrDateForm
+  Left = 496
+  Height = 232
+  Top = 227
+  Width = 199
+  ActiveControl = Calendar1
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Select Fecha'
+  ClientHeight = 232
+  ClientWidth = 199
+  Color = 10323827
+  OnCreate = FormCreate
+  LCLVersion = '0.9.28.2'
+  object Calendar1: TCalendar
+    Left = 16
+    Height = 153
+    Top = 8
+    Width = 169
+    Align = alCustom
+    DateTime = 40354
+    DisplaySettings = [dsShowHeadings, dsShowDayNames, dsStartMonday]
+    OnClick = Calendar1Click
+  end
+  object BitBtn1: TBitBtn
+    Left = 0
+    Height = 30
+    Top = 184
+    Width = 96
+    Caption = 'Aceptar'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = BitBtn1Click
+    TabOrder = 1
+  end
+  object BitBtn2: TBitBtn
+    Left = 96
+    Height = 30
+    Top = 184
+    Width = 96
+    Cancel = True
+    Caption = 'Cancelar'
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 2
+  end
+  object Edit1: TEdit
+    Left = 8
+    Height = 21
+    Top = 168
+    Width = 80
+    TabOrder = 3
+    Text = 'Edit1'
+    Visible = False
+  end
+end

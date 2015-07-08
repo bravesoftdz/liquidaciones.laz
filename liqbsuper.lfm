@@ -1,0 +1,8 @@
+object frmBusqueda: TfrmBusqueda
+  Left = 431
+  Height = 257
+  Top = 218
+  Width = 504
+  Caption = 'Busqueda Supervisores'
+  LCLVersion = '0.9.28.2'
+end

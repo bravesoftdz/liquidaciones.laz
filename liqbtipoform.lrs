@@ -1,0 +1,34 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TliqBtipofrm','FORMDATA',[
+  'TPF0'#12'TliqBtipofrm'#11'liqBtipofrm'#4'Left'#3#200#0#6'Height'#3#191#0#3'T'
+  +'op'#3#198#0#5'Width'#3','#1#13'ActiveControl'#7#6'Panel1'#11'BorderIcons'#11
+  +#0#11'BorderStyle'#7#8'bsSingle'#7'Caption'#6#15'Tipo de Pedidos'#12'ClientH'
+  +'eight'#3#191#0#11'ClientWidth'#3','#1#8'OnCreate'#7#10'FormCreate'#10'LCLVe'
+  +'rsion'#6#7'1.4.0.2'#0#6'TPanel'#6'Panel1'#4'Left'#2#0#6'Height'#2'0'#3'Top'
+  +#2#0#5'Width'#3','#1#5'Align'#7#5'alTop'#12'ClientHeight'#2'0'#11'ClientWidt'
+  +'h'#3','#1#8'TabOrder'#2#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#2'X'#6'Height'#2
+  +#30#3'Top'#2#8#5'Width'#2'`'#7'Caption'#6#7'Aceptar'#7'Default'#9#4'Kind'#7#4
+  +'bkOK'#11'ModalResult'#2#1#7'OnClick'#7#12'BitBtn1Click'#8'TabOrder'#2#0#0#0
+  +#7'TBitBtn'#7'BitBtn2'#4'Left'#3#192#0#6'Height'#2#30#3'Top'#2#8#5'Width'#2
+  +'`'#7'Caption'#6#8'Cancelar'#4'Kind'#7#8'bkCancel'#11'ModalResult'#2#2#8'Tab'
+  +'Order'#2#1#0#0#0#7'TDBGrid'#7'DBGrid1'#4'Left'#2#0#6'Height'#3#143#0#3'Top'
+  +#2'0'#5'Width'#3','#1#5'Align'#7#8'alClient'#5'Color'#7#8'clWindow'#7'Column'
+  +'s'#14#1#8'ReadOnly'#9#13'Title.Caption'#6#2'Id'#9'FieldName'#6#7'PLUTIPO'#0
+  +#1#8'ReadOnly'#9#13'Title.Caption'#6#11'Descripcion'#5'Width'#3#200#0#9'Fiel'
+  +'dName'#6#11'DESCRIPCION'#0#0#10'DataSource'#7#6'tipods'#10'Scrollbars'#7#14
+  +'ssAutoVertical'#8'TabOrder'#2#1#10'OnDblClick'#7#15'DBGrid1DblClick'#0#0#11
+  +'TDataSource'#6'tipods'#7'DataSet'#7#7'tipoQRY'#4'left'#2'x'#3'top'#2'h'#0#0
+  +#8'TIBQuery'#7'tipoQRY'#8'Database'#7#7'dm.fbdb'#11'Transaction'#7#17'dm.IBT'
+  +'ransaction1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8#18'GenerateParamN'
+  +'ames'#8#27'GeneratorField.ApplyOnEvent'#7#14'gaeOnNewRecord'#11'SQL.Strings'
+  +#1#6')select * from tipo_pedido where plutipo<3'#0#6'Params'#14#0#18'DataSet'
+  +'CloseAction'#7#16'dcDiscardChanges'#4'left'#2'`'#3'top'#2'@'#0#13'TIntegerF'
+  +'ield'#14'tipoQRYPLUTIPO'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'F'
+  +'ieldName'#6#7'PLUTIPO'#5'Index'#2#0#11'LookupCache'#8#13'ProviderFlags'#11
+  +#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#14'TIBStringF'
+  +'ield'#18'tipoQRYDESCRIPCION'#12'DisplayWidth'#2#15#9'FieldKind'#7#6'fkData'
+  +#9'FieldName'#6#11'DESCRIPCION'#5'Index'#2#1#11'LookupCache'#8#13'ProviderFl'
+  +'ags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2
+  +#15#0#0#0#0
+]);

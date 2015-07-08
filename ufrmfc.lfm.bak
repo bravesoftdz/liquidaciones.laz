@@ -1,0 +1,1349 @@
+object frmFC2: TfrmFC2
+  Left = 465
+  Height = 430
+  Top = 127
+  Width = 509
+  BorderStyle = bsSingle
+  Caption = 'Facturas de Consumidor Final'
+  ClientHeight = 430
+  ClientWidth = 509
+  OnCreate = FormCreate
+  LCLVersion = '1.0.12.0'
+  object Label8: TLabel
+    Left = 40
+    Height = 14
+    Top = 24
+    Width = 44
+    Caption = 'Fecha:'
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object edtFecha: TMaskEdit
+    Left = 112
+    Height = 27
+    Top = 24
+    Width = 100
+    CharCase = ecNormal
+    MaxLength = 10
+    TabOrder = 1
+    OnKeyDown = edtFechaKeyDown
+    EditMask = '!99/99/0000;1;_'
+    Text = '  /  /    '
+    SpaceChar = '_'
+  end
+  object edtCorrelativo: TEdit
+    Left = 112
+    Height = 27
+    Top = 47
+    Width = 100
+    OnKeyPress = edtCorrelativoKeyPress
+    TabOrder = 3
+  end
+  object Label2: TLabel
+    Left = 40
+    Height = 14
+    Top = 48
+    Width = 76
+    Caption = 'Correlativo:'
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 40
+    Height = 14
+    Top = 72
+    Width = 50
+    Caption = 'Codigo:'
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object edtcodigo: TEdit
+    Left = 112
+    Height = 27
+    Top = 71
+    Width = 100
+    OnKeyDown = edtcodigoKeyDown
+    TabOrder = 4
+  end
+  object Label4: TLabel
+    Left = 40
+    Height = 14
+    Top = 96
+    Width = 51
+    Caption = 'Cliente:'
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object edtCliente: TEdit
+    Left = 112
+    Height = 27
+    Top = 96
+    Width = 100
+    OnKeyDown = edtClienteKeyDown
+    OnKeyPress = edtClienteKeyPress
+    TabOrder = 5
+  end
+  object edtVendedor: TEdit
+    Left = 112
+    Height = 27
+    Top = 120
+    Width = 100
+    OnKeyDown = edtVendedorKeyDown
+    OnKeyPress = edtVendedorKeyPress
+    TabOrder = 6
+  end
+  object Label6: TLabel
+    Left = 40
+    Height = 14
+    Top = 120
+    Width = 65
+    Caption = 'Vendedor:'
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 40
+    Height = 14
+    Top = 144
+    Width = 37
+    Caption = 'Total:'
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object edttotal: TMaskEdit
+    Left = 112
+    Height = 27
+    Top = 144
+    Width = 100
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 7
+    OnKeyDown = edttotalKeyDown
+    Text = '0.00'
+    SpaceChar = '_'
+  end
+  object btnGuardar: TBitBtn
+    Left = 40
+    Height = 25
+    Top = 176
+    Width = 75
+    Caption = '&Guardar'
+    OnClick = btnGuardarClick
+    TabOrder = 10
+  end
+  object BitBtn3: TBitBtn
+    Left = 136
+    Height = 25
+    Top = 176
+    Width = 75
+    Caption = '&Cancelar'
+    OnClick = BitBtn3Click
+    TabOrder = 8
+    TabStop = False
+  end
+  object BitBtn4: TBitBtn
+    Left = 264
+    Height = 25
+    Top = 176
+    Width = 75
+    Caption = '&Salir'
+    OnClick = BitBtn4Click
+    TabOrder = 9
+    TabStop = False
+  end
+  object chRVend: TCheckBox
+    Left = 341
+    Height = 23
+    Top = 24
+    Width = 161
+    Caption = 'Repetir Ult. Vendedor'
+    Checked = True
+    State = cbChecked
+    TabOrder = 0
+    TabStop = False
+  end
+  object chkRFecha: TCheckBox
+    Left = 341
+    Height = 23
+    Top = 51
+    Width = 137
+    Caption = 'Repetir Ult. Fecha'
+    Checked = True
+    State = cbChecked
+    TabOrder = 2
+    TabStop = False
+  end
+  object SpeedButton4: TSpeedButton
+    Left = 212
+    Height = 21
+    Hint = 'Click, Para Buscar  Clientes/ Coloque en modo de edicion si lo que desea es modificar e documento'
+    Top = 96
+    Width = 22
+    Glyph.Data = {
+      36030000424D3603000000000000360000002800000010000000100000000100
+      1800000000000003000000000000000000000000000000000000FFFC80614F4F
+      5E5E5E8B8B8BFFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC
+      80FFFC80FFFC80FFFC80614F4F787599A883875E5E5E8B8B8BFFFC80FFFC80FF
+      FC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC8065B8F4408CDB
+      7F7AA5A883875E5E5E8B8B8BFFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC
+      80FFFC80FFFC80FFFC808294FF51B7FF408CDB7F7AA5A883875E5E5E8B8B8BFF
+      FC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC808294FF
+      51B7FF408CDB7F7AA5B087875E5E5E8B8B8BFFFC80FFFC80FFFC80FFFC80FFFC
+      80FFFC80FFFC80FFFC80FFFC80FFFC808294FF55BBFF407DD27F7AA5A883876C
+      666E6C666E6C666E6C666E6C666E8B8B8BFFFC80FFFC80FFFC80FFFC80FFFC80
+      FFFC808294FF51B7FF408CDB8B8B8B7B7B7BC49885D0AC93E3C9B1D5B4A47473
+      736C666EFFFC80FFFC80FFFC80FFFC80FFFC80FFFC808294FF8294FFB08787F5
+      D2A9FFF4C7FFFCD0FFFFDBFFFFDCFDF6E2A883876C666EFFFC80FFFC80FFFC80
+      FFFC80FFFC80FFFC80D0AC93EBCDA8FFF2BFFFF6C3FFFFD9FFFFE9FFFFF8FFFF
+      FFF4EECD7561618B8B8BFFFC80FFFC80FFFC80FFFC80FFFC80D5B4A4FFF1C4FF
+      E4B1FFF9C6FFFFDBFFFFEDFFFFFAFFFFF7FFFFDBC39B8A6C666EFFFC80FFFC80
+      FFFC80FFFC80FFFC80D0AC93FFF6CDFFDDAAFFF5C2FFFFD6FFFFE5FFFFEDFFFF
+      E6FFFFD9D0AC936C666EFFFC80FFFC80FFFC80FFFC80FFFC80D5B4A4FFF4C7FF
+      E5B8FFEFBCFFFFCCFFFFD6FFFFDBFFFFD9FFFCD0D0AC936C666EFFFC80FFFC80
+      FFFC80FFFC80FFFC80D5B4A4FFF6CDFFF1D6FFE3B7FFF1BEFFF5C2FFF9C6FFF6
+      C3FFF8C5B68D808B8B8BFFFC80FFFC80FFFC80FFFC80FFFC80DAB39BECE0C3FF
+      FFFFFFFAE8FFECBFFFDFACFFE3B0FFF0BDF5D2A99E7373FFFC80FFFC80FFFC80
+      FFFC80FFFC80FFFC80FFFC80D5B4A4F4EECDFFFAE8FFF6CDFFEEBBFFF4C7F8D1
+      A5BB928AFFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80D5
+      B4A4D5B4A4CAA58EE1BBA3DAB39B8B8B8BFFFC80FFFC80FFFC80
+    }
+    NumGlyphs = 0
+    OnClick = SpeedButton4Click
+    ShowHint = True
+    ParentShowHint = False
+  end
+  object SpeedButton5: TSpeedButton
+    Left = 212
+    Height = 21
+    Hint = 'Click, Para Buscar  Clientes/ Coloque en modo de edicion si lo que desea es modificar e documento'
+    Top = 120
+    Width = 22
+    Glyph.Data = {
+      36030000424D3603000000000000360000002800000010000000100000000100
+      1800000000000003000000000000000000000000000000000000FFFC80614F4F
+      5E5E5E8B8B8BFFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC
+      80FFFC80FFFC80FFFC80614F4F787599A883875E5E5E8B8B8BFFFC80FFFC80FF
+      FC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC8065B8F4408CDB
+      7F7AA5A883875E5E5E8B8B8BFFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC
+      80FFFC80FFFC80FFFC808294FF51B7FF408CDB7F7AA5A883875E5E5E8B8B8BFF
+      FC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC808294FF
+      51B7FF408CDB7F7AA5B087875E5E5E8B8B8BFFFC80FFFC80FFFC80FFFC80FFFC
+      80FFFC80FFFC80FFFC80FFFC80FFFC808294FF55BBFF407DD27F7AA5A883876C
+      666E6C666E6C666E6C666E6C666E8B8B8BFFFC80FFFC80FFFC80FFFC80FFFC80
+      FFFC808294FF51B7FF408CDB8B8B8B7B7B7BC49885D0AC93E3C9B1D5B4A47473
+      736C666EFFFC80FFFC80FFFC80FFFC80FFFC80FFFC808294FF8294FFB08787F5
+      D2A9FFF4C7FFFCD0FFFFDBFFFFDCFDF6E2A883876C666EFFFC80FFFC80FFFC80
+      FFFC80FFFC80FFFC80D0AC93EBCDA8FFF2BFFFF6C3FFFFD9FFFFE9FFFFF8FFFF
+      FFF4EECD7561618B8B8BFFFC80FFFC80FFFC80FFFC80FFFC80D5B4A4FFF1C4FF
+      E4B1FFF9C6FFFFDBFFFFEDFFFFFAFFFFF7FFFFDBC39B8A6C666EFFFC80FFFC80
+      FFFC80FFFC80FFFC80D0AC93FFF6CDFFDDAAFFF5C2FFFFD6FFFFE5FFFFEDFFFF
+      E6FFFFD9D0AC936C666EFFFC80FFFC80FFFC80FFFC80FFFC80D5B4A4FFF4C7FF
+      E5B8FFEFBCFFFFCCFFFFD6FFFFDBFFFFD9FFFCD0D0AC936C666EFFFC80FFFC80
+      FFFC80FFFC80FFFC80D5B4A4FFF6CDFFF1D6FFE3B7FFF1BEFFF5C2FFF9C6FFF6
+      C3FFF8C5B68D808B8B8BFFFC80FFFC80FFFC80FFFC80FFFC80DAB39BECE0C3FF
+      FFFFFFFAE8FFECBFFFDFACFFE3B0FFF0BDF5D2A99E7373FFFC80FFFC80FFFC80
+      FFFC80FFFC80FFFC80FFFC80D5B4A4F4EECDFFFAE8FFF6CDFFEEBBFFF4C7F8D1
+      A5BB928AFFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80FFFC80D5
+      B4A4D5B4A4CAA58EE1BBA3DAB39B8B8B8BFFFC80FFFC80FFFC80
+    }
+    NumGlyphs = 0
+    OnClick = SpeedButton5Click
+    ShowHint = True
+    ParentShowHint = False
+  end
+  object Label5: TLabel
+    Left = 240
+    Height = 1
+    Top = 97
+    Width = 1
+    Font.Color = clBlue
+    Font.Height = -13
+    Font.Name = 'Sans'
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 240
+    Height = 1
+    Top = 126
+    Width = 1
+    Font.Color = clBlue
+    Font.Height = -13
+    Font.Name = 'Sans'
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Height = 204
+    Top = 216
+    Width = 488
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 11
+  end
+  object FACTM: TZQuery
+    Connection = dm.fbDB
+    AutoCalcFields = False
+    UpdateObject = FACTMSQL
+    AfterPost = FACTMAfterPost
+    SQL.Strings = (
+      'select'
+      'A.PLUDOCCLIENTES,'
+      'cast(a.fecha as date) AS FECHA,'
+      'A.PLUEMPLEADOS,'
+      'a.codigo,a.correlativo,a.tipo,a.plucliente,a.nombre,'
+      'a.esexento,a.gravado,a.iva,a.post,a.total,b.nombre as vendedor,'
+      'a.pluempresas,a.plusucursales,a.flete,a.pagado,a.diascredito,'
+      'a.legal,a.formapago,a.plufacturanc,a.direccion_envio,a.pendiente,'
+      'a.impreso,a.v_exento,a.anulado,a.pc_crea,a.id,a.dia,'
+      'A.CONDICIONES,A.OBSERVACIONES'
+      'from docclientesm a'
+      'inner join empleados b on (a.pluempleados=b.pluempleados)'
+      'where a.codigo=0'
+    )
+    Params = <>
+    Sequence = ZSequence1
+    SequenceField = 'PLUDOCCLIENTES'
+    left = 260
+    top = 32
+    object FACTMPLUDOCCLIENTES: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUDOCCLIENTES'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object FACTMFECHA: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object FACTMPLUEMPLEADOS: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPLEADOS'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object FACTMCODIGO: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object FACTMCORRELATIVO: TStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'CORRELATIVO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object FACTMTIPO: TStringField
+      DisplayWidth = 12
+      FieldKind = fkData
+      FieldName = 'TIPO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 12
+    end
+    object FACTMPLUCLIENTE: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUCLIENTE'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object FACTMNOMBRE: TStringField
+      DisplayWidth = 1000
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+    object FACTMESEXENTO: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'ESEXENTO'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object FACTMGRAVADO: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'GRAVADO'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object FACTMIVA: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'IVA'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object FACTMPOST: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'POST'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 1
+    end
+    object FACTMTOTAL: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'TOTAL'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object FACTMVENDEDOR: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'VENDEDOR'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object FACTMPLUEMPRESAS: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPRESAS'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object FACTMPLUSUCURSALES: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUSUCURSALES'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object FACTMFLETE: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FLETE'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object FACTMPAGADO: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'PAGADO'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object FACTMDIASCREDITO: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DIASCREDITO'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object FACTMLEGAL: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'LEGAL'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object FACTMFORMAPAGO: TStringField
+      DisplayWidth = 160
+      FieldKind = fkData
+      FieldName = 'FORMAPAGO'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 160
+    end
+    object FACTMPLUFACTURANC: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUFACTURANC'
+      Index = 21
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object FACTMDIRECCION_ENVIO: TStringField
+      DisplayWidth = 1000
+      FieldKind = fkData
+      FieldName = 'DIRECCION_ENVIO'
+      Index = 22
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+    object FACTMPENDIENTE: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PENDIENTE'
+      Index = 23
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object FACTMIMPRESO: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'IMPRESO'
+      Index = 24
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object FACTMV_EXENTO: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'V_EXENTO'
+      Index = 25
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object FACTMANULADO: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'ANULADO'
+      Index = 26
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object FACTMPC_CREA: TStringField
+      DisplayWidth = 100
+      FieldKind = fkData
+      FieldName = 'PC_CREA'
+      Index = 27
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object FACTMID: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 28
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object FACTMDIA: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DIA'
+      Index = 29
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object FACTMCONDICIONES: TStringField
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'CONDICIONES'
+      Index = 30
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object FACTMOBSERVACIONES: TStringField
+      DisplayWidth = 1000
+      FieldKind = fkData
+      FieldName = 'OBSERVACIONES'
+      Index = 31
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+  end
+  object CorrelativoQRY: TZQuery
+    Connection = dm.fbDB
+    AutoCalcFields = False
+    SQL.Strings = (
+      'select INICIAL,FINAL,correlativo from correlativos where tipo=:tipo AND PLUEMPRESA=:PLUEMPRESA'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'tipo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUEMPRESA'
+        ParamType = ptUnknown
+      end>
+    left = 272
+    top = 88
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'tipo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUEMPRESA'
+        ParamType = ptUnknown
+      end>
+  end
+  object ZSequence1: TZSequence
+    Connection = dm.fbDB
+    SequenceName = 'PLUDOCCLIENTESM_GEN'
+    left = 360
+    top = 104
+  end
+  object FACTMSQL: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM docclientesm'
+      'WHERE'
+      '  docclientesm.PLUDOCCLIENTES = :OLD_PLUDOCCLIENTES'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO docclientesm'
+      '  (PLUDOCCLIENTES, CODIGO, CONDICIONES, DESCUENTO, FECHA, NOMBRE, OBSERVACIONES, '
+      '   ESEXENTO, GRAVADO, IVA, POST, TIPO, TOTAL, PLUCLIENTE, PLUEMPLEADOS, '
+      '   PLUEMPRESAS, PLUSUCURSALES, FLETE, OCOMPRA, TIEMPOCREDITO, PAGADO, NOCHEQUE, '
+      '   PLUBANCO, NOMBRETARJETA, NOTARJETA, TELTARJETA, FECHATARJETA, PLUTARJETACRED, '
+      '   NOQUEDAN, FECHAEMISIONQ, FECHAPAGOQ, MONTOTARJETA, DIASCREDITO, TIEMPOENTREGA, '
+      '   IVAPOST, LEGAL, VALIDEZ, FORMAPAGO, FORMAORDENAR, PLUFACTURANC, DIRECCION_ENVIO, '
+      '   NOTA_ENVIO, ENVIO, FECHA_ENVIO, DEPTO_ENVIO, CIUDAD_ENVIO, TEL_ENVIO, '
+      '   CONTACTO_ENVIO, HORA_ENVIO, FORMA_ENVIO, ENTREGADO_ENVIO, ENTREGADO, '
+      '   POSTREMISION, DESCUENTO2, PLUTIPOVENTA, NOTA, NOTA2, CUENTABANCO, SALIDABODEGA, '
+      '   PLUCLIENTESSUC, FACTORCAMBIO, FECHAPAGO, GANADO, RAZON, PLUOPORTUNIDAD, '
+      '   PENDIENTE, PLUPAGO, PLUQUEDAN, TARJETA_AUTORIZ, CHEQUE_AUTORIZ, AI, '
+      '   IMPRESO, CORRELATIVO, V_EXENTO, FECHA_ULT_PAGO, ANULADO, PLUMOTORISTA, '
+      '   PLUPARTIDA, POST2, FECHA_ANULADA, PLUCAJERO, FECHA_IMPRESION, PC_CREA, '
+      '   PC_IMPRIME, ID, DIA, PERCEPCION)'
+      'VALUES'
+      '  (:PLUDOCCLIENTES, :CODIGO, :CONDICIONES, :DESCUENTO, :FECHA, :NOMBRE, '
+      '   :OBSERVACIONES, :ESEXENTO, :GRAVADO, :IVA, :POST, :TIPO, :TOTAL, :PLUCLIENTE, '
+      '   :PLUEMPLEADOS, :PLUEMPRESAS, :PLUSUCURSALES, :FLETE, :OCOMPRA, :TIEMPOCREDITO, '
+      '   :PAGADO, :NOCHEQUE, :PLUBANCO, :NOMBRETARJETA, :NOTARJETA, :TELTARJETA, '
+      '   :FECHATARJETA, :PLUTARJETACRED, :NOQUEDAN, :FECHAEMISIONQ, :FECHAPAGOQ, '
+      '   :MONTOTARJETA, :DIASCREDITO, :TIEMPOENTREGA, :IVAPOST, :LEGAL, :VALIDEZ, '
+      '   :FORMAPAGO, :FORMAORDENAR, :PLUFACTURANC, :DIRECCION_ENVIO, :NOTA_ENVIO, '
+      '   :ENVIO, :FECHA_ENVIO, :DEPTO_ENVIO, :CIUDAD_ENVIO, :TEL_ENVIO, :CONTACTO_ENVIO, '
+      '   :HORA_ENVIO, :FORMA_ENVIO, :ENTREGADO_ENVIO, :ENTREGADO, :POSTREMISION, '
+      '   :DESCUENTO2, :PLUTIPOVENTA, :NOTA, :NOTA2, :CUENTABANCO, :SALIDABODEGA, '
+      '   :PLUCLIENTESSUC, :FACTORCAMBIO, :FECHAPAGO, :GANADO, :RAZON, :PLUOPORTUNIDAD, '
+      '   :PENDIENTE, :PLUPAGO, :PLUQUEDAN, :TARJETA_AUTORIZ, :CHEQUE_AUTORIZ, '
+      '   :AI, :IMPRESO, :CORRELATIVO, :V_EXENTO, :FECHA_ULT_PAGO, :ANULADO, :PLUMOTORISTA, '
+      '   :PLUPARTIDA, :POST2, :FECHA_ANULADA, :PLUCAJERO, :FECHA_IMPRESION, :PC_CREA, '
+      '   :PC_IMPRIME, :ID, :DIA, :PERCEPCION)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE docclientesm SET'
+      '  PLUDOCCLIENTES = :PLUDOCCLIENTES,'
+      '  CODIGO = :CODIGO,'
+      '  CONDICIONES = :CONDICIONES,'
+      '  DESCUENTO = :DESCUENTO,'
+      '  FECHA = :FECHA,'
+      '  NOMBRE = :NOMBRE,'
+      '  OBSERVACIONES = :OBSERVACIONES,'
+      '  ESEXENTO = :ESEXENTO,'
+      '  GRAVADO = :GRAVADO,'
+      '  IVA = :IVA,'
+      '  POST = :POST,'
+      '  TIPO = :TIPO,'
+      '  TOTAL = :TOTAL,'
+      '  PLUCLIENTE = :PLUCLIENTE,'
+      '  PLUEMPLEADOS = :PLUEMPLEADOS,'
+      '  PLUEMPRESAS = :PLUEMPRESAS,'
+      '  PLUSUCURSALES = :PLUSUCURSALES,'
+      '  FLETE = :FLETE,'
+      '  OCOMPRA = :OCOMPRA,'
+      '  TIEMPOCREDITO = :TIEMPOCREDITO,'
+      '  PAGADO = :PAGADO,'
+      '  NOCHEQUE = :NOCHEQUE,'
+      '  PLUBANCO = :PLUBANCO,'
+      '  NOMBRETARJETA = :NOMBRETARJETA,'
+      '  NOTARJETA = :NOTARJETA,'
+      '  TELTARJETA = :TELTARJETA,'
+      '  FECHATARJETA = :FECHATARJETA,'
+      '  PLUTARJETACRED = :PLUTARJETACRED,'
+      '  NOQUEDAN = :NOQUEDAN,'
+      '  FECHAEMISIONQ = :FECHAEMISIONQ,'
+      '  FECHAPAGOQ = :FECHAPAGOQ,'
+      '  MONTOTARJETA = :MONTOTARJETA,'
+      '  DIASCREDITO = :DIASCREDITO,'
+      '  TIEMPOENTREGA = :TIEMPOENTREGA,'
+      '  IVAPOST = :IVAPOST,'
+      '  LEGAL = :LEGAL,'
+      '  VALIDEZ = :VALIDEZ,'
+      '  FORMAPAGO = :FORMAPAGO,'
+      '  FORMAORDENAR = :FORMAORDENAR,'
+      '  PLUFACTURANC = :PLUFACTURANC,'
+      '  DIRECCION_ENVIO = :DIRECCION_ENVIO,'
+      '  NOTA_ENVIO = :NOTA_ENVIO,'
+      '  ENVIO = :ENVIO,'
+      '  FECHA_ENVIO = :FECHA_ENVIO,'
+      '  DEPTO_ENVIO = :DEPTO_ENVIO,'
+      '  CIUDAD_ENVIO = :CIUDAD_ENVIO,'
+      '  TEL_ENVIO = :TEL_ENVIO,'
+      '  CONTACTO_ENVIO = :CONTACTO_ENVIO,'
+      '  HORA_ENVIO = :HORA_ENVIO,'
+      '  FORMA_ENVIO = :FORMA_ENVIO,'
+      '  ENTREGADO_ENVIO = :ENTREGADO_ENVIO,'
+      '  ENTREGADO = :ENTREGADO,'
+      '  POSTREMISION = :POSTREMISION,'
+      '  DESCUENTO2 = :DESCUENTO2,'
+      '  PLUTIPOVENTA = :PLUTIPOVENTA,'
+      '  NOTA = :NOTA,'
+      '  NOTA2 = :NOTA2,'
+      '  CUENTABANCO = :CUENTABANCO,'
+      '  SALIDABODEGA = :SALIDABODEGA,'
+      '  PLUCLIENTESSUC = :PLUCLIENTESSUC,'
+      '  FACTORCAMBIO = :FACTORCAMBIO,'
+      '  FECHAPAGO = :FECHAPAGO,'
+      '  GANADO = :GANADO,'
+      '  RAZON = :RAZON,'
+      '  PLUOPORTUNIDAD = :PLUOPORTUNIDAD,'
+      '  PENDIENTE = :PENDIENTE,'
+      '  PLUPAGO = :PLUPAGO,'
+      '  PLUQUEDAN = :PLUQUEDAN,'
+      '  TARJETA_AUTORIZ = :TARJETA_AUTORIZ,'
+      '  CHEQUE_AUTORIZ = :CHEQUE_AUTORIZ,'
+      '  AI = :AI,'
+      '  IMPRESO = :IMPRESO,'
+      '  CORRELATIVO = :CORRELATIVO,'
+      '  V_EXENTO = :V_EXENTO,'
+      '  FECHA_ULT_PAGO = :FECHA_ULT_PAGO,'
+      '  ANULADO = :ANULADO,'
+      '  PLUMOTORISTA = :PLUMOTORISTA,'
+      '  PLUPARTIDA = :PLUPARTIDA,'
+      '  POST2 = :POST2,'
+      '  FECHA_ANULADA = :FECHA_ANULADA,'
+      '  PLUCAJERO = :PLUCAJERO,'
+      '  FECHA_IMPRESION = :FECHA_IMPRESION,'
+      '  PC_CREA = :PC_CREA,'
+      '  PC_IMPRIME = :PC_IMPRIME,'
+      '  ID = :ID,'
+      '  DIA = :DIA,'
+      '  PERCEPCION = :PERCEPCION'
+      'WHERE'
+      '  docclientesm.PLUDOCCLIENTES = :OLD_PLUDOCCLIENTES'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 416
+    top = 80
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'PLUDOCCLIENTES'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CODIGO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CONDICIONES'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DESCUENTO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FECHA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NOMBRE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OBSERVACIONES'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ESEXENTO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'GRAVADO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'IVA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'POST'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'TIPO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'TOTAL'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUCLIENTE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUEMPLEADOS'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUEMPRESAS'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUSUCURSALES'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FLETE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OCOMPRA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'TIEMPOCREDITO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PAGADO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NOCHEQUE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUBANCO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NOMBRETARJETA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NOTARJETA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'TELTARJETA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FECHATARJETA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUTARJETACRED'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NOQUEDAN'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FECHAEMISIONQ'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FECHAPAGOQ'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'MONTOTARJETA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DIASCREDITO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'TIEMPOENTREGA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'IVAPOST'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'LEGAL'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'VALIDEZ'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FORMAPAGO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FORMAORDENAR'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUFACTURANC'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DIRECCION_ENVIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NOTA_ENVIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ENVIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FECHA_ENVIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DEPTO_ENVIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CIUDAD_ENVIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'TEL_ENVIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CONTACTO_ENVIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HORA_ENVIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FORMA_ENVIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ENTREGADO_ENVIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ENTREGADO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'POSTREMISION'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DESCUENTO2'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUTIPOVENTA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NOTA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NOTA2'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CUENTABANCO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'SALIDABODEGA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUCLIENTESSUC'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FACTORCAMBIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FECHAPAGO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'GANADO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'RAZON'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUOPORTUNIDAD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PENDIENTE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUPAGO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUQUEDAN'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'TARJETA_AUTORIZ'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CHEQUE_AUTORIZ'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'AI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'IMPRESO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CORRELATIVO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'V_EXENTO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FECHA_ULT_PAGO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ANULADO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUMOTORISTA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUPARTIDA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'POST2'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FECHA_ANULADA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLUCAJERO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FECHA_IMPRESION'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PC_CREA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PC_IMPRIME'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DIA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PERCEPCION'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_PLUDOCCLIENTES'
+        ParamType = ptUnknown
+      end>
+  end
+  object DataSource2: TDatasource
+    OnDataChange = DataSource2DataChange
+    left = 352
+    top = 160
+  end
+  object DataSource1: TDatasource
+    DataSet = factura
+    left = 448
+    top = 168
+  end
+  object factura: TMemDataset
+    FieldDefs = <    
+      item
+        Name = 'fecha'
+        DataType = ftDate
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'correlativo'
+        DataType = ftString
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'codigo'
+        DataType = ftInteger
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'cliente'
+        DataType = ftString
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'vendedor'
+        DataType = ftString
+        Precision = 0
+        Size = 0
+      end    
+      item
+        Name = 'total'
+        DataType = ftCurrency
+        Precision = 0
+        Size = 0
+      end>
+    left = 416
+    top = 136
+  end
+end

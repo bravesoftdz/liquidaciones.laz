@@ -1,0 +1,47 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tbvendedorfrm','FORMDATA',[
+  'TPF0'#13'Tbvendedorfrm'#12'bvendedorfrm'#4'Left'#3#145#0#6'Height'#3'X'#1#3
+  +'Top'#3#136#0#5'Width'#3'"'#2#13'ActiveControl'#7#6'Panel1'#11'BorderIcons'
+  +#11#0#11'BorderStyle'#7#8'bsSingle'#7'Caption'#6#22'Busqueda de Vendedores'
+  +#12'ClientHeight'#3'X'#1#11'ClientWidth'#3'"'#2#6'OnShow'#7#8'FormShow'#10'L'
+  +'CLVersion'#6#7'1.4.0.2'#0#6'TPanel'#6'Panel1'#4'Left'#2#0#6'Height'#2'H'#3
+  +'Top'#2#0#5'Width'#3'"'#2#5'Align'#7#5'alTop'#12'ClientHeight'#2'H'#11'Clien'
+  +'tWidth'#3'"'#2#8'TabOrder'#2#0#0#6'TLabel'#6'Label1'#4'Left'#2#8#6'Height'#2
+  +#13#3'Top'#2#8#5'Width'#2'%'#7'Caption'#6#7'Codigo:'#11'ParentColor'#8#0#0#6
+  +'TLabel'#6'Label2'#4'Left'#2#8#6'Height'#2#13#3'Top'#2'0'#5'Width'#2')'#7'Ca'
+  +'ption'#6#7'Nombre:'#11'ParentColor'#8#0#0#5'TEdit'#9'edtCodigo'#4'Left'#2'@'
+  +#6'Height'#2#21#3'Top'#2#8#5'Width'#2'X'#8'CharCase'#7#11'ecUppercase'#8'OnC'
+  +'hange'#7#15'edtCodigoChange'#8'TabOrder'#2#0#0#0#5'TEdit'#9'EdtNombre'#4'Le'
+  +'ft'#2'@'#6'Height'#2#21#3'Top'#2''''#5'Width'#3#170#0#8'CharCase'#7#11'ecUp'
+  +'percase'#8'OnChange'#7#15'EdtNombreChange'#8'TabOrder'#2#1#0#0#7'TBitBtn'#10
+  +'BtnAceptar'#4'Left'#3'8'#1#6'Height'#2#30#3'Top'#2#16#5'Width'#2'`'#7'Capti'
+  +'on'#6#7'Aceptar'#7'Default'#9#4'Kind'#7#4'bkOK'#11'ModalResult'#2#1#7'OnCli'
+  +'ck'#7#15'BtnAceptarClick'#8'TabOrder'#2#2#0#0#7'TBitBtn'#7'BitBtn2'#4'Left'
+  +#3#176#1#6'Height'#2#30#3'Top'#2#16#5'Width'#2'`'#7'Caption'#6#8'Cancelar'#4
+  +'Kind'#7#8'bkCancel'#11'ModalResult'#2#2#7'OnClick'#7#12'BitBtn2Click'#8'Tab'
+  +'Order'#2#3#0#0#0#7'TDBGrid'#7'DBGrid1'#4'Left'#2#0#6'Height'#3#16#1#3'Top'#2
+  +'H'#5'Width'#3'"'#2#5'Align'#7#8'alClient'#5'Color'#7#8'clWindow'#7'Columns'
+  +#14#1#13'Title.Caption'#6#6'CODIGO'#5'Width'#2'K'#9'FieldName'#6#6'CODIGO'#0
+  +#1#13'Title.Caption'#6#6'NOMBRE'#5'Width'#3'^'#1#9'FieldName'#6#6'NOMBRE'#0#0
+  +#10'DataSource'#7#6'VendDS'#8'TabOrder'#2#1#10'OnDblClick'#7#15'DBGrid1DblCl'
+  +'ick'#0#0#11'TDataSource'#6'VendDS'#7'DataSet'#7#7'VendQRY'#4'left'#3#168#0#3
+  +'top'#2'x'#0#0#8'TIBQuery'#7'VendQRY'#8'Database'#7#7'dm.fbdb'#11'Transactio'
+  +'n'#7#17'dm.IBTransaction1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8#18
+  +'GenerateParamNames'#8#27'GeneratorField.ApplyOnEvent'#7#14'gaeOnNewRecord'
+  +#11'SQL.Strings'#1#6'Fselect pluempleados,codigo,nombre from empleados where'
+  +' activo=''T'' and '#6#24'plusucursal=:plusucursal'#0#6'Params'#14#1#8'DataT'
+  +'ype'#7#9'ftUnknown'#4'Name'#6#11'plusucursal'#9'ParamType'#7#7'ptInput'#0#0
+  +#18'DataSetCloseAction'#7#16'dcDiscardChanges'#4'left'#2'p'#3'top'#2'x'#9'Pa'
+  +'ramData'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#11'plusucursal'#9'ParamT'
+  +'ype'#7#7'ptInput'#0#0#0#13'TIntegerField'#19'VendQRYPLUEMPLEADOS'#12'Displa'
+  +'yWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#12'PLUEMPLEADOS'#5'Ind'
+  +'ex'#2#0#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0
+  +#8'ReadOnly'#8#8'Required'#9#0#0#14'TIBStringField'#13'VendQRYCODIGO'#12'Dis'
+  +'playWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'CODIGO'#5'Index'#2
+  +#1#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Re'
+  +'adOnly'#8#8'Required'#8#4'Size'#2#10#0#0#14'TIBStringField'#13'VendQRYNOMBR'
+  +'E'#12'DisplayWidth'#2'<'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'NOMBRE'#5
+  +'Index'#2#2#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWher'
+  +'e'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'<'#0#0#0#0
+]);

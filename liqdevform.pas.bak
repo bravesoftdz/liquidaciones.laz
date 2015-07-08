@@ -1,0 +1,958 @@
+unit liqdevform;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, db, FileUtil, LResources, Forms, Controls, Graphics,
+  Dialogs, ExtCtrls, ComCtrls, Buttons, StdCtrls, DbCtrls, DBGrids, LR_Class,
+  LR_DBSet, frametools, ZDataset, ZSequence, ZSqlUpdate,LCLType, LR_DSet;
+
+type
+
+  { Tliqdevfrm }
+
+  Tliqdevfrm = class(TForm)
+    btnBuscar: TSpeedButton;
+    btnBuscaVend: TSpeedButton;
+    btnprocesar: TSpeedButton;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    DBMemo1: TDBMemo;
+    DBText1: TDBText;
+    edtcodigo: TDBEdit;
+    EDTFECHA: TDBEdit;
+    edtVendedor: TDBEdit;
+    frDBDataSet1: TfrDBDataSet;
+    GRIDDET: TDBGrid;
+    GroupBox4: TGroupBox;
+    Label37: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    lrpt: TfrReport;
+    msucursald2QRY: TZQuery;
+    msucursald2QRYCANT: TFloatField;
+    msucursald2QRYCODIGO: TStringField;
+    msucursald2QRYOBSERVACION: TStringField;
+    msucursald2QRYPLUMOVSUCURSAL: TLongintField;
+    msucursald2QRYPLUPRODUCTO: TLongintField;
+    MSUCURSALDDS: TDatasource;
+    MSUCURSALDQRY: TZQuery;
+    MSUCURSALDQRYCANTIDAD: TFloatField;
+    MSUCURSALDQRYCODIGO: TStringField;
+    MSUCURSALDQRYCOSTOPROMEDIO: TFloatField;
+    MSUCURSALDQRYDESCRIPCION: TStringField;
+    MSUCURSALDQRYITEM: TLongintField;
+    MSUCURSALDQRYOBSERVACION: TStringField;
+    MSUCURSALDQRYPENDIENTE: TLongintField;
+    MSUCURSALDQRYPLUEMPRESA: TLongintField;
+    MSUCURSALDQRYPLUMOVSUCURSAL: TLongintField;
+    MSUCURSALDQRYPLUPRODUCTO: TLongintField;
+    MSUCURSALDQRYTotal1: TFloatField;
+    MSUCURSALDQRYULTIMOCOSTO: TFloatField;
+    MSUCURSALDQRYUNITARIO: TFloatField;
+    MSUCURSALDSQL: TZUpdateSQL;
+    MSUCURSALMDS: TDatasource;
+    MSucursalMQRY: TZQuery;
+    MSucursalMQRYANULADO: TStringField;
+    MSucursalMQRYBODEGA: TStringField;
+    MSucursalMQRYCODIGO: TLongintField;
+    MSucursalMQRYCVEND: TStringField;
+    MSucursalMQRYEGRESO: TStringField;
+    MSucursalMQRYENTREGADO: TStringField;
+    MSucursalMQRYENVIADO: TStringField;
+    MSucursalMQRYENVIO: TLongintField;
+    MSucursalMQRYestatus1: TStringField;
+    MSucursalMQRYFECHA: TDateTimeField;
+    MSucursalMQRYFECHA_CREA: TDateTimeField;
+    MSucursalMQRYFECHA_ENVIADO: TDateTimeField;
+    MSucursalMQRYFECHA_PROCESADO: TDateTimeField;
+    MSucursalMQRYINGRESO: TStringField;
+    MSucursalMQRYNOMBRE: TStringField;
+    MSucursalMQRYOBSERVACIONES: TStringField;
+    MSucursalMQRYPLUEMPLEADOS: TLongintField;
+    MSucursalMQRYPLUEMPLEADOS_PROCESADO: TLongintField;
+    MSucursalMQRYPLUEMPRESA: TLongintField;
+    MSucursalMQRYPLULIQUIDACION: TLongintField;
+    MSucursalMQRYPLUMOVSUCURSAL: TLongintField;
+    MSucursalMQRYPLUREQSUCURSAL: TLongintField;
+    MSucursalMQRYPLUSUARIO: TLongintField;
+    MSucursalMQRYPLUSUCURSAL: TLongintField;
+    MSucursalMQRYPLUSUCURSAL2: TLongintField;
+    MSucursalMQRYPLUTIPO: TLongintField;
+    MSucursalMQRYPOST: TStringField;
+    MSucursalMQRYPREPARAR: TStringField;
+    MSucursalMQRYPROCESADO: TStringField;
+    MSucursalMQRYRECIBIDO: TStringField;
+    MSucursalMQRYTIPO: TStringField;
+    MSUCURSALMSQL: TZUpdateSQL;
+    MSUC_GEN: TZSequence;
+    Panel1: TPanel;
+    Panel3: TPanel;
+    PopupCalBtn: TSpeedButton;
+    rptMovDS: TDatasource;
+    rptMOVqry: TZQuery;
+    rptMOVqryBODEGA: TStringField;
+    rptMOVqryCANTIDAD: TFloatField;
+    rptMOVqryCODPROD: TStringField;
+    rptMOVqryDOC: TLongintField;
+    rptMOVqryEMPRESA: TStringField;
+    rptMOVqryESTATUS1: TStringField;
+    rptMOVqryFECHA: TDateTimeField;
+    rptMOVqryITEM: TLongintField;
+    rptMOVqryPLUMOVSUCURSAL: TLongintField;
+    rptMOVqryPLUPRODUCTO: TLongintField;
+    rptMOVqryPRODUCTO: TStringField;
+    rptMOVqryTIPO: TStringField;
+    rptMOVqrytipodoc1: TStringField;
+    rptMOVqryUNITARIO: TFloatField;
+    rptMOVqryUSUARIO: TStringField;
+    rptMOVqryVENDEDOR: TStringField;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton6: TSpeedButton;
+    SpeedButton7: TSpeedButton;
+    SpeedButton8: TSpeedButton;
+    ToolBar2: TToolBar;
+    ToolButton1: TToolButton;
+    ToolButton5: TToolButton;
+    ToolButton6: TToolButton;
+    ToolButton7: TToolButton;
+    ToolButton8: TToolButton;
+    procedure btnBuscarClick(Sender: TObject);
+    procedure btnBuscaVendClick(Sender: TObject);
+    procedure btnprocesarClick(Sender: TObject);
+    procedure btnSalirClick(Sender: TObject);
+    procedure edtcodigoEnter(Sender: TObject);
+    procedure edtcodigoExit(Sender: TObject);
+    procedure edtcodigoKeyPress(Sender: TObject; var Key: char);
+    procedure FormShow(Sender: TObject);
+    procedure frDBDataSet1CheckEOF(Sender: TObject; var Eof: Boolean);
+    procedure GRIDDETDblClick(Sender: TObject);
+    procedure GroupBox4Click(Sender: TObject);
+    procedure MSUCURSALDQRYAfterPost(DataSet: TDataSet);
+    procedure MSUCURSALDQRYCalcFields(DataSet: TDataSet);
+    procedure MSUCURSALDQRYCANTIDADValidate(Sender: TField);
+    procedure MSUCURSALDQRYCODIGOValidate(Sender: TField);
+    procedure MSUCURSALDQRYNewRecord(DataSet: TDataSet);
+    procedure MSucursalMQRYAfterDelete(DataSet: TDataSet);
+    procedure MSucursalMQRYAfterPost(DataSet: TDataSet);
+    procedure MSucursalMQRYBeforeCancel(DataSet: TDataSet);
+    procedure MSucursalMQRYBeforeEdit(DataSet: TDataSet);
+    procedure MSucursalMQRYCalcFields(DataSet: TDataSet);
+    procedure MSucursalMQRYCVENDValidate(Sender: TField);
+    procedure MSucursalMQRYNewRecord(DataSet: TDataSet);
+    procedure Panel1Click(Sender: TObject);
+    procedure PopupCalBtnClick(Sender: TObject);
+    procedure rptMovDSDataChange(Sender: TObject; Field: TField);
+    procedure rptMOVqryCalcFields(DataSet: TDataSet);
+    procedure SpeedButton11Click(Sender: TObject);
+    procedure SpeedButton12Click(Sender: TObject);
+    procedure SpeedButton13Click(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
+    procedure SpeedButton3Click(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
+    procedure SpeedButton5Click(Sender: TObject);
+    procedure SpeedButton6Click(Sender: TObject);
+    procedure SpeedButton7Click(Sender: TObject);
+    procedure SpeedButton8Click(Sender: TObject);
+    procedure SpeedButton9Click(Sender: TObject);
+  private
+    { private declarations }
+      procedure controles(estado:boolean);
+      function compruebatecla(key:char):char;
+      procedure eliminarReserva;
+  public
+    { public declarations }
+  end; 
+
+var
+  liqdevfrm: Tliqdevfrm;
+
+implementation
+
+
+
+uses
+liqdm,
+liqbprodform,
+liqbasignaform,
+Pickdate,
+procesos,
+LiqMenuform,
+liqprogresoform,
+liqbvendedorform,
+DBUTILS;
+
+
+{ Tliqdevfrm }
+
+procedure Tliqdevfrm.controles(estado:boolean);
+var
+i:integer;
+begin
+
+        for I := 0 to Panel1.ControlCount - 1 do    { Iterate }
+        begin
+                if Panel1.Controls[i].ClassType<> Ttoolbar then
+                Panel1.Controls[i].Enabled := estado;
+
+        end;    { for }
+
+       IF NOT (MSUCURSALMQRYPLUMOVSUCURSAL.VALUE >0) OR
+       (MSUCURSALMQRYPOST.Value='T') THEN
+       BEGIN
+        griddet.Columns[0].ReadOnly:=  TRUE;
+        griddet.Columns[2].ReadOnly:=  TRUE;
+
+        griddet.Options:=[];
+
+       END
+       ELSE
+       BEGIN
+
+     //  SHOWMESSAGE('ENTRO');
+       griddet.Columns[0].ReadOnly:=  estado;
+       griddet.Columns[2].ReadOnly:=  estado;
+       griddet.Options := [dgEditing,dgTitles,dgIndicator,dgColumnResize,dgColumnMove,dgConfirmDelete,dgrowlines,dgtabs];
+
+
+
+       end;
+        //refresh;
+
+end;
+
+procedure Tliqdevfrm.SpeedButton5Click(Sender: TObject);
+begin
+  if MSUCURSALMQRYpost.Value ='T' then
+    exit;
+  IF MSUCURSALMQRY.IsEmpty THEN
+      EXIT;
+
+  MSUCURSALMQRY.edit;
+
+
+end;
+
+procedure Tliqdevfrm.SpeedButton6Click(Sender: TObject);
+begin
+
+  if MSUCURSALMQRYpost.Value ='F' then
+   BEGIN
+    SHOWMESSAGE('Debe Procesar Para Poder Imprimir!!!');
+    lrpt.PreviewButtons:=[];
+    //[pbZoom,pbLoad,pbSave,pbPrint,pbFind,pbHelp,pbExit];
+
+   end ;
+
+  //  lrpt.PreviewButtons:=[pbZoom,pbLoad,pbSave,pbPrint,pbFind,pbHelp,pbExit];
+
+  rptmovqry.Close;
+  rptmovqry.Params[0].Value:= msucursalmqryplumovsucursal.Value;
+  rptmovqry.Open;
+
+  if  rptmovqry.IsEmpty then
+  exit;
+
+  lrpt.ShowReport;
+
+end;
+
+procedure Tliqdevfrm.SpeedButton7Click(Sender: TObject);
+VAR PROCESO:BOOLEAN;
+EXISTENCIA:INTEGER;
+begin
+
+  IF MSUCURSALMQRY.IsEmpty THEN
+  EXIT;
+
+ if MSUCURSALMQRYpost.Value ='F' then
+    exit;
+
+  if MSucursalMqryPLULIQUIDACION.Value>0 then
+  begin
+     showmessage('Documento Liquidado, no puede ser desprocesado!!!');
+     exit;
+  end;
+
+   if NOT (permisos(dm.UserQRYPLUPERFIL.Value,75) ='S') then
+  begin
+    SHOWMESSAGE('Opcion no Autorizada!!!');
+    EXIT;
+  END;
+
+  if MessageDlg('Desea Desprocesar este Documento...?',
+   mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  begin
+
+
+  try
+
+   Application.CreateForm(Tprogresofrm,progresofrm);
+   progresofrm.Show;
+
+     //elimino los registro de INV_RESERVAS
+  { dm.myqry.Close;
+   dm.myqry.sql.Clear;
+   dm.MyQry.sql.Add(' delete from  INV_RESERVAS where PLUDOCCLIENTES=:plumovinv ');
+   dm.MyQry.sql.Add(' and tipo LIKE ''%DEV%''  ');
+   dm.myqry.parambyname('plumovinv').value := MSUCURSALMQRYPLUMOVSUCURSAL.Value;
+   dm.myqry.ExecSQL;
+   }
+
+   eliminarReserva;
+
+   MsucursalMQry.Edit;
+   MSucursalMqrypost.Value:='F';
+   MsucursalMqry.Post;
+
+
+ except
+  on e : exception do
+    begin
+      progresofrm.Close;
+      //si hay algun error , se deshacen los cambios
+      dm.InsResSQL.CancelUpdates;
+      ShowMessage ('Clase de error: ' + e.ClassName + chr(13) + chr(13) +
+          'Mensaje del error: ' + e.Message+', Error al Procesar...');
+
+
+    end;
+
+  end; //try
+
+  progresofrm.Close;
+
+  end; //desea continuar
+
+end;
+
+procedure Tliqdevfrm.eliminarReserva;
+begin
+   //elimino los registro de INV_RESERVAS
+   dm.myqry.Close;
+   dm.myqry.sql.Clear;
+   dm.MyQry.sql.Add(' delete from  INV_RESERVAS where PLUDOCCLIENTES=:plumovinv ');
+   dm.MyQry.sql.Add(' and tipo LIKE ''%DEV%''  ');
+   dm.myqry.parambyname('plumovinv').value := MSUCURSALMQRYPLUMOVSUCURSAL.Value;
+   dm.myqry.ExecSQL;
+end;
+
+procedure Tliqdevfrm.SpeedButton8Click(Sender: TObject);
+begin
+
+   CLOSE;
+
+end;
+
+procedure Tliqdevfrm.SpeedButton9Click(Sender: TObject);
+begin
+  CLOSE;
+end;
+
+procedure Tliqdevfrm.btnBuscarClick(Sender: TObject);
+begin
+
+
+ with Tliqbasignafrm.Create(SELF) do
+  try
+
+   EDTTIPO.Text:= 'DEV';
+   if ShowModal = mrOk then
+    begin
+
+    IF NOT BMSUCQRY.IsEmpty THEN
+    BEGIN
+
+     MSUCURSALMQRY.CLOSE;
+     MSUCURSALMQRY.Params[0].VALUE := DM.EmpresaQRYPLUEMPRESA.Value;
+     MSUCURSALMQRY.Params[1].VALUE := DM.BodegaQRYPLUBODEGA.Value;
+     MSUCURSALMQRY.Params[2].VALUE := BMSUCQRY.FIELDBYNAME('PLUMOVSUCURSAL').VALUE;
+     MSUCURSALMQRY.OPEN;
+
+     CONTROLES(FALSE);
+
+    END;
+
+    end;
+  finally
+end;
+
+end;
+
+procedure Tliqdevfrm.btnBuscaVendClick(Sender: TObject);
+begin
+
+  with Tbvendedorfrm.Create(SELF) do
+  try
+
+   if ShowModal = mrOk then
+    begin
+
+    IF NOT VENDQRY.IsEmpty THEN
+    BEGIN
+
+     MSUCURSALMQRYcvend.VALUE := VENDQRYcodigo.VALUE;
+
+    END;
+
+    end;
+  finally
+
+end;
+end;
+
+procedure Tliqdevfrm.btnprocesarClick(Sender: TObject);
+VAR PROCESO:BOOLEAN;
+EXISTENCIA:INTEGER;
+outil : TDBUtil;
+begin
+
+ IF MSUCURSALMQRY.IsEmpty THEN
+ EXIT;
+
+ if MSUCURSALMQRYpost.Value ='T' then
+    exit;
+
+ eliminarReserva;
+
+  outil := TDbutil.Create;
+  if outil.ValidaLiq(msucursalmqrypluempleados.Value,msucursalmqryfecha.Value) then
+  begin
+    showmessage('Vendedor ya posee Liquidacion Procesada en esta fecha, ya no puede Devolver productos!!');
+    outil.Free;
+    exit;
+  end;
+
+
+
+  if MessageDlg('Desea Procesar este Documento...?',
+   mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  begin
+
+
+  try
+
+  Application.CreateForm(Tprogresofrm,progresofrm);
+
+  //Cierro el query de la tabla inv_reservas y la abro
+  DM.InsResSQL.Close;
+  DM.InsResSQL.Open;
+
+  //abro el detalle de la asignacion
+  msucursald2qry.close;
+  msucursald2qry.Params[0].value := msucursalmqryplumovsucursal.Value;
+  msucursald2qry.Open;
+  progresofrm.ProgressBar1.Min:=0;
+  progresofrm.ProgressBar1.Max:=msucursald2QRY.RecordCount;
+  progresofrm.ProgressBar1.Step:=1;
+  progresofrm.Show;
+
+  msucursald2qry.First;
+
+  while NOT msucursald2qry.EOF do
+  begin
+
+  //extraemos la existencia
+  //existencia := K_Existencia(msucursald2qrypluproducto.Value,msucursalmqryplusucursal.Value);
+  // Verificar si producto existe en bodega del vendedor
+
+  dm.myqry.close;
+  dm.myqry.sql.clear;
+  dm.myqry.sql.add('select sum(entrada)-sum(salida) existe from inv_reservas where pluproducto=:pluprod ');
+  dm.myqry.sql.add(' and plubodegas=:pluv  ');
+  dm.myqry.params[0].value := msucursald2qrypluproducto.Value;
+  dm.MyQry.Params[1].Value := msucursalmqryplusucursal2.Value;//pluvendedor
+  dm.MyQry.Open;
+
+  if dm.MyQry.FieldByName('existe').Value >0 then
+     existencia := dm.MyQry.FieldByName('existe').Value
+     else
+     existencia := 0;
+
+  //si no hay suficiente existencia se rompe el proceso
+  if (msucursald2qrycant.Value>existencia) then
+  begin
+
+     progresofrm.Close;
+     showmessage('Vendedor tiene asignado:"'+inttostr(existencia)+'", en Producto:"'+msucursald2qry.FieldByName('codigo').asstring+'", No puede devolver mas que eso!!');
+     dm.InsResSQL.CancelUpdates;
+     exit;
+
+  end;
+
+  // procesado de la orden, inserta datos en la tabla de inventario
+  PROCESO := procesar_reserva(msucursalmqrytipo.Value,msucursald2qrypluproducto.Value,
+  msucursalmqryfecha.Value,msucursalmqrytipo.Asstring+'-'+msucursalmqrycodigo.asstring,
+  msucursalmqrytipo.AsString,0,msucursald2qrycant.Value,msucursalmqryobservaciones.AsString,
+  msucursalmqryplusucursal2.Value,msucursalmqryplumovsucursal.Value);
+
+  // si ocurre algun error al procesar, rompo el lazo
+  if not PROCESO then
+  begin
+
+     progresofrm.Close;
+     showmessage('error al procesar');
+     dm.InsResSQL.CancelUpdates;
+     exit;
+  end;
+
+  progresofrm.ProgressBar1.StepIt;
+  msucursald2qry.Next;
+  end;
+
+   // si todo se ejecuta con exito, se aplican los cambios
+   dm.InsResSQL.ApplyUpdates;
+
+
+
+   dm.myqry.close;
+   dm.myqry.sql.clear;
+   dm.myqry.sql.add('select count(*) cnt from inv_reservas where tipo=''DEV'' and '+
+   'pludocclientes='+msucursalmqryplumovsucursal.AsString+'');
+   dm.myqry.open;
+
+   if dm.myqry.fieldbyname('cnt').asinteger>0 then
+   begin
+       MsucursalMQry.Edit;
+      MSucursalMqrypost.Value:='T';
+      MsucursalMqry.Post;
+   end
+   else
+        showmessage('Error al procesar, Documento No Procesado, Cierre el modulo de Devolucion,'+
+        ' Intente nuevamente!!!');
+
+
+ except
+  on e : exception do
+    begin
+
+      progresofrm.Close;
+      //si hay algun error , se deshacen los cambios
+      dm.InsResSQL.CancelUpdates;
+      ShowMessage ('Clase de error: ' + e.ClassName + chr(13) + chr(13) +
+          'Mensaje del error: ' + e.Message+', Error al Procesar...');
+
+
+    end;
+
+  end; //try
+
+  progresofrm.Close;
+
+  end; //desea continuar
+
+end;
+
+procedure Tliqdevfrm.btnSalirClick(Sender: TObject);
+begin
+  close;
+end;
+
+procedure Tliqdevfrm.edtcodigoEnter(Sender: TObject);
+begin
+   menufrm.entrar(sender);
+end;
+
+procedure Tliqdevfrm.edtcodigoExit(Sender: TObject);
+begin
+  menufrm.salir(sender);
+end;
+
+procedure Tliqdevfrm.edtcodigoKeyPress(Sender: TObject; var Key: char);
+begin
+   key := compruebatecla(key);
+end;
+
+
+function TliqDevFRM.compruebatecla(key:char):char;
+begin
+
+   if ( key = Char(VK_RETURN) ) then // -- En caso de pulsar enter, pasa al siguiente campo
+         begin
+              key:=#0;
+              SelectNext(activecontrol,true,true);
+         end;
+      if ( key = Char(VK_UP) ) then // -- Si pulsamos la flecha arriba, vuelve al campo anterior
+         begin
+              key:=#0;
+              SelectNext(activecontrol,false,true);
+         end;
+      if ( key = Char(VK_DOWN) ) then // -- Si pulsamos la flecha abajo, pasa al campo siguiente
+         begin
+              key:=#0;
+              SelectNext(activecontrol,true,true);
+         end;
+      compruebatecla:=(key);
+ end;
+
+procedure Tliqdevfrm.FormShow(Sender: TObject);
+begin
+
+  MSUCURSALMQRY.CLOSE;
+  MSUCURSALMQRY.Params[0].VALUE := DM.EmpresaQRYPLUEMPRESA.Value;
+  MSUCURSALMQRY.Params[1].VALUE := DM.BodegaQRYPLUBODEGA.Value;
+  MSUCURSALMQRY.Params[2].VALUE := 0;//PLUMOVSUCURSAL
+  MSUCURSALMQRY.OPEN;
+
+  MSUCURSALDQRY.Close;
+  MSUCURSALDQRY.OPEN;
+
+  CONTROLES(FALSE);
+end;
+
+procedure Tliqdevfrm.frDBDataSet1CheckEOF(Sender: TObject; var Eof: Boolean);
+begin
+
+end;
+
+procedure Tliqdevfrm.GRIDDETDblClick(Sender: TObject);
+begin
+
+  IF NOT (MSUCURSALMQRYPLUMOVSUCURSAL.Value>0) THEN
+  EXIT;
+
+  IF MSUCURSALMQRYPOST.Value ='T' THEN
+  EXIT;
+
+   application.createform(Tbprodfrm,bprodfrm) ;
+   BPRODFRM.edttipo.TEXT := 'DEV';
+   bprodfrm.showmodal;
+
+end;
+
+procedure Tliqdevfrm.GroupBox4Click(Sender: TObject);
+begin
+
+end;
+
+procedure Tliqdevfrm.MSUCURSALDQRYAfterPost(DataSet: TDataSet);
+  var
+  Item : String;
+begin
+
+
+  Item := MSUCURSALDQRYItem.AsString;
+  MSUCURSALDQRYCODIGO.Tag:=0;
+ // Sumar;
+  MSUCURSALDQRY.Locate('Item', Item, []);
+
+end;
+
+procedure Tliqdevfrm.MSUCURSALDQRYCalcFields(DataSet: TDataSet);
+begin
+  MSUCURSALDQRY.FIELDBYNAME('TOTAL').VALUE := MSUCURSALDQRYUNITARIO.VALUE * MSUCURSALDQRYCANTIDAD.VALUE;
+end;
+
+procedure Tliqdevfrm.MSUCURSALDQRYCANTIDADValidate(Sender: TField);
+begin
+
+end;
+
+procedure Tliqdevfrm.MSUCURSALDQRYCODIGOValidate(Sender: TField);
+begin
+
+  dm.myqry.close;
+  dm.myqry.SQL.Clear;
+  dm.myqry.sql.add('select pluproducto,descripcion,precio,costopromedio,activo from PRODUCTO WHERE codigo like :codigo and pluempresas = :pluempresa ');
+  dm.MyQry.ParamByName('pluempresa').value := dm.EmpresaQRYPLUEMPRESA.Value;
+  dm.myqry.ParamByName('codigo').value := MSUCURSALDQRYCODIGO.Value;
+  dm.MyQry.Open;
+
+  if dm.MyQry.IsEmpty then
+  begin
+     showmessage('Producto no encontrado!!!');
+     MSUCURSALDQRY.Cancel;
+     exit;
+  end
+  else
+  begin
+
+    if dm.myqry.FieldByName('activo').Value ='F' then
+    begin
+
+      showmessage('Producto Inactivo..., no lo puede utilizar!!!');
+      MSUCURSALDQRY.CancelUpdates;
+      exit;
+
+    end;
+
+    MSUCURSALDQRYPLUPRODUCTO.Value := DM.MyQry.FieldByName('PLUPRODUCTO').VALUE;
+    MSUCURSALDQRYUNITARIO.Value:= DM.MyQry.FieldByName('precio').AsFloat;
+    MSUCURSALDQRYcostopromedio.Value:= DM.MyQry.FieldByName('costopromedio').VALUE;
+    MSUCURSALDQRYDESCRIPCION.Value:= DM.MyQry.FieldByName('DESCRIPCION').VALUE;
+
+
+
+  end;
+
+end;
+
+procedure Tliqdevfrm.MSUCURSALDQRYNewRecord(DataSet: TDataSet);
+VAR
+ITEM:INTEGER;
+begin
+
+
+   IF NOT (MSUCURSALMQRYPLUMOVSUCURSAL.Value>0) THEN
+   EXIT;
+
+   IF MSUCURSALMQRYPOST.Value ='T' THEN
+   EXIT;
+
+    DM.MYQRY.CLOSE;
+    DM.MYQry.SQL.Clear;
+    dm.MyQry.SQL.Add('select max(item) as item from mov_sucursald where plumovsucursal=:plu ');
+    dm.MyQry.ParamByName('plu').Value := MSUCURSALMQRYPLUMOVSUCURSAL.Value;
+    dm.MyQry.Open;
+
+    if dm.MyQry.FieldByName('item').Value > 0 then
+       item := dm.MyQry.FieldByName('item').Value + 1
+       else
+       item := 1;
+
+    MSUCURSALDQRYITEM.VALUE := ITEM;
+    MSUCURSALDQRYPLUMOVSUCURSAL.Value:= MSUCURSALMQRYPLUMOVSUCURSAL.Value;
+    MSUCURSALDQRYCANTIDAD.VALUE := 1;
+
+end;
+
+procedure Tliqdevfrm.MSucursalMQRYAfterDelete(DataSet: TDataSet);
+begin
+  MSUCURSALMQRY.ApplyUpdates;
+end;
+
+procedure Tliqdevfrm.MSucursalMQRYAfterPost(DataSet: TDataSet);
+begin
+  MSUCURSALMQRY.ApplyUpdates;
+  CONTROLES(FALSE);
+end;
+
+procedure Tliqdevfrm.MSucursalMQRYBeforeCancel(DataSet: TDataSet);
+begin
+  CONTROLES(FALSE);
+end;
+
+procedure Tliqdevfrm.MSucursalMQRYBeforeEdit(DataSet: TDataSet);
+begin
+   CONTROLES(TRUE);
+end;
+
+procedure Tliqdevfrm.MSucursalMQRYCalcFields(DataSet: TDataSet);
+begin
+    if MSucursalMqrypost.Value ='T' then
+     MSucursalMqryestatus1.value := '**PROCESADO'
+     ELSE
+     MSucursalMqryestatus1.value := '**SIN PROCESAR';
+
+     if MSucursalMqryPLULIQUIDACION.Value>0 then
+     MSucursalMqryestatus1.value := '**LIQUIDADO';
+
+end;
+
+procedure Tliqdevfrm.MSucursalMQRYCVENDValidate(Sender: TField);
+begin
+
+  dm.myqry.close;
+  dm.myqry.sql.clear;
+  dm.myqry.sql.add('select pluempleados,codigo,nombre,activo,plusucursal from empleados where codigo like :codigo '+
+  ' and pluempresas=:pluempresa ');
+  dm.myqry.parambyname('codigo').value :=  MSucursalMQryCVEND.Value;
+  dm.myqry.parambyname('pluempresa').value :=  dm.empresaqrypluempresa.value;
+  dm.myqry.open;
+
+  if dm.myqry.IsEmpty then
+  begin
+    showmessage('codigo de Vendedor no existe!!!');
+    edtvendedor.SetFocus;
+    exit;
+  end;
+
+  if dm.myqry.FieldByName('activo').value='F' then
+  begin
+       showmessage('Vendedor en estado inactivo!!!');
+       edtvendedor.SetFocus;
+       exit;
+  end;
+
+  if dm.myqry.FieldByName('plusucursal').value<>dm.BodegaQRYPLUBODEGA.value then
+  begin
+       showmessage('El vendedor no pertenese a esta sucursal!!!');
+       edtvendedor.SetFocus;
+       exit;
+  end;
+
+  MSucursalMqrypluempleados.Value := dm.myqry.FieldByName('pluempleados').value;
+  MSucursalMqrynombre.Value := dm.myqry.FieldByName('nombre').value;
+  MSucursalMqryplusucursal2.Value := dm.myqry.FieldByName('pluempleados').value;
+
+
+end;
+
+procedure Tliqdevfrm.MSucursalMQRYNewRecord(DataSet: TDataSet);
+  VAR
+CODIGO:INTEGER;
+begin
+
+     CONTROLES(TRUE);
+
+     DM.MyQry.CLOSE;
+     DM.MYQRY.SQL.Clear;
+     DM.MyQry.SQL.Add('SELECT MAX(CODIGO) CODIGO FROM MOV_SUCURSALM WHERE PLUEMPRESA=:PLUEMPRESA ');
+     DM.MyQry.SQL.Add(' AND TIPO=''DEV''  ');
+     DM.MYQRY.ParamByName('PLUEMPRESA').VALUE := DM.EMPRESAQRYPLUEMPRESA.VALUE;
+     DM.MYQRY.OPEN;
+
+     IF DM.MYQRY.FIELDBYNAME('CODIGO').VALUE > 0 THEN
+     CODIGO := DM.MYQRY.FIELDBYNAME('CODIGO').VALUE +1
+     ELSE
+     CODIGO := 1;
+
+     MSUCURSALMQRYCODIGO.VALUE := CODIGO;
+     MSUCURSALMQRYFECHA.value := DATE;
+     MSUCURSALMQRYPLUEMPRESA.Value:= DM.EmpresaQRYPLUEMPRESA.Value;
+     MSUCURSALMQRYPLUSUCURSAL.Value:= DM.BodegaQRYPLUBODEGA.Value;
+     MSUCURSALMQRYPOST.Value:= 'F';
+     MSUCURSALMQRYENTREGADO.Value:= 'F';
+     MSUCURSALMQRYTIPO.Value:= 'DEV';
+     MSUCURSALMQRYBODEGA.AsString:= DM.BodegaQRYNOMBRE.AsString;
+     MSUCURSALMQRYENVIADO.value := 'F';
+     MSUCURSALMQRYPLULIQUIDACION.VALUE := 0;
+     MSUCURSALMQRYPLUREQSUCURSAL.Value:=0;
+     MSUCURSALMQRYPLUTIPO.VALUE :=3;
+     MSUCURSALMQRYPLUSUARIO.Value     := DM.UserQRYPLUSUARIO.Value;
+     MSUCURSALMQRYFECHA_CREA.Value    := NOW;
+     EDTCODIGO.SetFocus;
+
+
+end;
+
+procedure Tliqdevfrm.Panel1Click(Sender: TObject);
+begin
+
+end;
+
+procedure Tliqdevfrm.PopupCalBtnClick(Sender: TObject);
+begin
+
+   with TBrDateForm.Create(SELF) do
+  try
+
+   if ShowModal = mrOk then
+    begin
+
+     { if  strtodate(Calendar1.Date)<now then
+     begin
+
+       showmessage('Fecha de liquidacion no puede ser menor que la del dia!!');
+       exit;
+     end;  }
+
+     MSucursalMQry.Edit;
+     MSucursalMQryFEcha.AsString := Calendar1.Date;
+     EdtFecha.SelectAll;
+
+    end;
+  finally
+
+end;
+end;
+
+procedure Tliqdevfrm.rptMovDSDataChange(Sender: TObject; Field: TField);
+begin
+
+end;
+
+procedure Tliqdevfrm.rptMOVqryCalcFields(DataSet: TDataSet);
+begin
+     if rptMovQrytipo.Value ='CAR' then
+      rptMovQrytipodoc1.Value := 'ASIGNACION DE PRODUCTOS'
+      ELSE
+      rptMovQrytipodoc1.Value := 'DEVOLUCION DE PRODUCTOS';
+
+      if msucursalmqrypost.Value ='T' THEN
+      RPTMOVQRYESTATUS1.Value := '**PROCESADO'
+      ELSE
+      RPTMOVQRYESTATUS1.Value := '**SIN PROCESAR';
+
+      if msucursalmqryPLULIQUIDACION.Value>0 THEN
+      RPTMOVQRYESTATUS1.Value := '**LIQUIDADO';
+end;
+
+procedure Tliqdevfrm.SpeedButton11Click(Sender: TObject);
+begin
+     if MSUCURSALMQRYpost.Value ='T' then
+    exit;
+
+    if (MSUCURSALMQRY.State = dsinsert) or (MSUCURSALMQRY.State = dsedit) then
+        MSUCURSALMQRY.Post;
+end;
+
+procedure Tliqdevfrm.SpeedButton12Click(Sender: TObject);
+begin
+     if MSUCURSALMQRYpost.Value ='T' then
+    exit;
+
+  MSUCURSALMQRY.edit;
+end;
+
+procedure Tliqdevfrm.SpeedButton13Click(Sender: TObject);
+begin
+   MSUCURSALMQRY.Insert;
+end;
+
+procedure Tliqdevfrm.SpeedButton1Click(Sender: TObject);
+begin
+  MSUCURSALMQRY.Insert;
+end;
+
+procedure Tliqdevfrm.SpeedButton2Click(Sender: TObject);
+begin
+
+   if MSUCURSALMQRYpost.Value ='T' then
+    exit;
+
+    msucursalmqry.Cancel;
+
+end;
+
+procedure Tliqdevfrm.SpeedButton3Click(Sender: TObject);
+begin
+   if MSUCURSALMQRYpost.Value ='T' then
+    exit;
+
+   IF MSUCURSALMQRY.IsEmpty THEN
+      EXIT;
+
+   if MessageDlg('Desea Borrar Registro...?',
+   mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  begin
+  msucursalmqry.Delete;
+
+  end;
+end;
+
+procedure Tliqdevfrm.SpeedButton4Click(Sender: TObject);
+begin
+  if MSUCURSALMQRYpost.Value ='T' then
+    exit;
+
+    if (MSUCURSALMQRY.State = dsinsert) or (MSUCURSALMQRY.State = dsedit) then
+        MSUCURSALMQRY.Post;
+end;
+
+initialization
+  {$I liqdevform.lrs}
+
+end.
+

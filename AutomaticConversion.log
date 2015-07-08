@@ -1,0 +1,17 @@
+Hint: * Convirtiendo archivo G:\pruebas\dliquidaciones\ufrmRptLiquidacionVend.pas *
+Hint: Reemplazada unidad "Windows" con "LCLIntf, LCLType, LMessages" en sección 'uses'.
+Hint: * Reparando archivo de formulario G:\pruebas\dliquidaciones\ufrmRptLiquidacionVend.lfm *
+Hint: Removed property "ParentCtl3D".
+Hint: Removed property "Ctl3D".
+Hint: Removed property "TextHeight".
+Hint: Removed property "OldCreateOrder".
+Hint: Removed property "ParseInput".
+Hint: Removed property "DateFormat".
+Hint: Removed property "CalColors.TitleBackColor".
+Hint: Removed property "CalAlignment".
+Hint: Removed property "ParseInput".
+Hint: Removed property "DateFormat".
+Hint: Removed property "CalColors.TitleBackColor".
+Hint: Removed property "CalAlignment".
+Hint: * Arreglando las unidades usadas para el archivo G:\pruebas\dliquidaciones\ufrmRptLiquidacionVend.pas *
+Hint: Conversion Preparada.

@@ -1,0 +1,111 @@
+object liqBtipofrm: TliqBtipofrm
+  Left = 200
+  Height = 191
+  Top = 198
+  Width = 300
+  ActiveControl = Panel1
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Tipo de Pedidos'
+  ClientHeight = 191
+  ClientWidth = 300
+  OnCreate = FormCreate
+  LCLVersion = '1.4.0.2'
+  object Panel1: TPanel
+    Left = 0
+    Height = 48
+    Top = 0
+    Width = 300
+    Align = alTop
+    ClientHeight = 48
+    ClientWidth = 300
+    TabOrder = 0
+    object BitBtn1: TBitBtn
+      Left = 88
+      Height = 30
+      Top = 8
+      Width = 96
+      Caption = 'Aceptar'
+      Default = True
+      Kind = bkOK
+      ModalResult = 1
+      OnClick = BitBtn1Click
+      TabOrder = 0
+    end
+    object BitBtn2: TBitBtn
+      Left = 192
+      Height = 30
+      Top = 8
+      Width = 96
+      Caption = 'Cancelar'
+      Kind = bkCancel
+      ModalResult = 2
+      TabOrder = 1
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 143
+    Top = 48
+    Width = 300
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        ReadOnly = True
+        Title.Caption = 'Id'
+        FieldName = 'PLUTIPO'
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Descripcion'
+        Width = 200
+        FieldName = 'DESCRIPCION'
+      end>
+    DataSource = tipods
+    Scrollbars = ssAutoVertical
+    TabOrder = 1
+    OnDblClick = DBGrid1DblClick
+  end
+  object tipods: TDataSource
+    DataSet = tipoQRY
+    left = 120
+    top = 104
+  end
+  object tipoQRY: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select * from tipo_pedido where plutipo<3'
+    )
+    Params = <>
+    DataSetCloseAction = dcDiscardChanges
+    left = 96
+    top = 64
+    object tipoQRYPLUTIPO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUTIPO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object tipoQRYDESCRIPCION: TIBStringField
+      DisplayWidth = 15
+      FieldKind = fkData
+      FieldName = 'DESCRIPCION'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 15
+    end
+  end
+end

@@ -1,0 +1,566 @@
+object frmLiqPago: TfrmLiqPago
+  Left = 454
+  Height = 369
+  Top = 107
+  Width = 631
+  ActiveControl = DBGrid1
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Detalle de Liquidacion'
+  ClientHeight = 369
+  ClientWidth = 631
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '1.4.0.2'
+  object Label1: TLabel
+    Left = 392
+    Height = 18
+    Top = 256
+    Width = 67
+    Caption = 'TOTAL ->'
+    Font.Height = -15
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 396
+    Height = 18
+    Top = 288
+    Width = 44
+    Caption = 'DIF. ->'
+    Font.Color = clRed
+    Font.Height = -15
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Height = 240
+    Top = 8
+    Width = 616
+    Color = clWindow
+    Columns = <    
+      item
+        ReadOnly = True
+        Title.Caption = 'Item'
+        Width = 40
+        FieldName = 'ITEM'
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Codigo'
+        FieldName = 'CODIGO'
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Descripcion'
+        Width = 200
+        FieldName = 'DESCRIPCION'
+      end    
+      item
+        Color = clYellow
+        Title.Caption = 'Monto'
+        Width = 100
+        FieldName = 'MONTO'
+        DisplayFormat = '$,0.00;-$,0.00'
+      end    
+      item
+        Color = clInfoBk
+        Title.Caption = 'Observacion'
+        Width = 175
+        FieldName = 'OBSERVACION'
+      end>
+    DataSource = liqPAgoDS
+    Scrollbars = ssAutoVertical
+    TabOrder = 0
+  end
+  object BitBtn1: TBitBtn
+    Left = 515
+    Height = 30
+    Top = 328
+    Width = 107
+    Caption = 'Aceptar'
+    Kind = bkOK
+    OnClick = BitBtn1Click
+    TabOrder = 1
+  end
+  object EDTTOTAL: TEdit
+    Left = 480
+    Height = 26
+    Top = 256
+    Width = 142
+    Alignment = taRightJustify
+    Font.Height = -15
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 2
+    Text = '0.00'
+  end
+  object EDTDIF: TEdit
+    Left = 480
+    Height = 26
+    Top = 288
+    Width = 142
+    Alignment = taRightJustify
+    Font.Color = clRed
+    Font.Height = -15
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 3
+    Text = '0.00'
+  end
+  object BitBtn2: TBitBtn
+    Left = 8
+    Height = 30
+    Top = 256
+    Width = 96
+    Caption = '&Bancos'
+    Kind = bkYesToAll
+    OnClick = BitBtn2Click
+    TabOrder = 4
+  end
+  object pbancos: TPanel
+    Left = 152
+    Height = 208
+    Top = 40
+    Width = 362
+    Caption = 'pbancos'
+    ClientHeight = 208
+    ClientWidth = 362
+    TabOrder = 5
+    Visible = False
+    OnEnter = pbancosEnter
+    OnExit = pbancosExit
+    object Panel2: TPanel
+      Left = 1
+      Height = 59
+      Top = 148
+      Width = 360
+      Align = alBottom
+      ClientHeight = 59
+      ClientWidth = 360
+      TabOrder = 0
+      object BitBtn3: TBitBtn
+        Left = 135
+        Height = 30
+        Top = 19
+        Width = 96
+        Caption = 'Aceptar'
+        Default = True
+        Kind = bkOK
+        OnClick = BitBtn3Click
+        TabOrder = 0
+      end
+      object BitBtn4: TBitBtn
+        Left = 247
+        Height = 30
+        Top = 19
+        Width = 96
+        Cancel = True
+        Caption = 'Cancelar'
+        Kind = bkCancel
+        OnClick = BitBtn4Click
+        TabOrder = 1
+      end
+    end
+    object DBGrid2: TDBGrid
+      Left = 1
+      Height = 147
+      Top = 1
+      Width = 360
+      Align = alClient
+      Color = clWindow
+      Columns = <      
+        item
+          Title.Caption = 'Codigo'
+          FieldName = 'CODIGO'
+        end      
+        item
+          Title.Caption = 'Descripcion'
+          Width = 250
+          FieldName = 'DESCRIPCION'
+        end>
+      DataSource = fpago2DS
+      TabOrder = 1
+      OnDblClick = DBGrid2DblClick
+    end
+  end
+  object liqPAgoDS: TDataSource
+    DataSet = liqPagoQry
+    left = 72
+    top = 96
+  end
+  object fpago2DS: TDataSource
+    DataSet = fpago2QRY
+    left = 280
+    top = 80
+  end
+  object fpagoQRY: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select * from forma_pago where reglascred=''S'''
+      'order by codigo desc'
+    )
+    Params = <>
+    DataSetCloseAction = dcDiscardChanges
+    left = 168
+    top = 98
+    object fpagoQRYCODIGO: TIBStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 4
+    end
+    object fpagoQRYDESCRIPCION: TIBStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'DESCRIPCION'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object fpagoQRYPLUCUENTA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUCUENTA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object fpagoQRYCREDITO: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'CREDITO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object fpagoQRYDIASCRED: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DIASCRED'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object fpagoQRYREGLASCRED: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'REGLASCRED'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object fpagoQRYPLUSUARIO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUSUARIO'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object fpagoQRYFECHA_CREA: TDateTimeField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA_CREA'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object fpago2QRY: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select * from forma_pago where '
+      'credito=''S'''
+      'order by codigo desc'
+    )
+    Params = <>
+    DataSetCloseAction = dcDiscardChanges
+    left = 248
+    top = 32
+    object fpago2QRYCODIGO: TIBStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 4
+    end
+    object fpago2QRYDESCRIPCION: TIBStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'DESCRIPCION'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object fpago2QRYPLUCUENTA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUCUENTA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object fpago2QRYCREDITO: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'CREDITO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object fpago2QRYDIASCRED: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DIASCRED'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object fpago2QRYREGLASCRED: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'REGLASCRED'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object fpago2QRYPLUSUARIO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUSUARIO'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object fpago2QRYFECHA_CREA: TDateTimeField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA_CREA'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object liqPagoQry: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    AfterDelete = liqPagoQRYAfterDelete
+    AfterPost = liqPagoQRYAfterPost
+    OnNewRecord = liqPagoQRYNewRecord
+    BufferChunks = 1000
+    CachedUpdates = True
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select  a.*,b.descripcion  from liquidacion_det  a'
+      'inner join forma_pago b on (a.codigo=b.codigo)'
+      'where pluliquidacion=:pluliquidacion and tipo=:tipo'
+      'ORDER BY a.item asc'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluliquidacion'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'tipo'
+        ParamType = ptInput
+      end>
+    UpdateObject = liqpagoSQL
+    DataSetCloseAction = dcDiscardChanges
+    left = 27
+    top = 59
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluliquidacion'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'tipo'
+        ParamType = ptInput
+      end>
+    object liqPagoQryPLULIQUIDACION: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLULIQUIDACION'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object liqPagoQryCODIGO: TIBStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 4
+    end
+    object liqPagoQryMONTO: TIBBCDField
+      DisplayWidth = 18
+      FieldKind = fkData
+      FieldName = 'MONTO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 18
+      Currency = False
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
+    end
+    object liqPagoQryITEM: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ITEM'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object liqPagoQryOBSERVACION: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'OBSERVACION'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object liqPagoQryDESCRIPCION: TIBStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'DESCRIPCION'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object liqPagoQryTIPO: TStringField
+      DisplayWidth = 3
+      FieldKind = fkData
+      FieldName = 'TIPO'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 3
+    end
+    object liqPagoQryENVIADO: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'ENVIADO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 1
+    end
+  end
+  object liqpagoSQL: TIBUpdateSQL
+    RefreshSQL.Strings = (
+      'select  a.*,b.descripcion  from liquidacion_det  a'
+      'inner join forma_pago b on (a.codigo=b.codigo)'
+      'Where A.PLULIQUIDACION = :PLULIQUIDACION AND A.CODIGO = :CODIGO AND A.ITEM = :ITEM'
+    )
+    ModifySQL.Strings = (
+      'Update LIQUIDACION_DET A Set '
+      '  A.PLULIQUIDACION = :PLULIQUIDACION,'
+      '  A.CODIGO = :CODIGO,'
+      '  A.MONTO = :MONTO,'
+      '  A.ITEM = :ITEM,'
+      '  A.OBSERVACION = :OBSERVACION,'
+      '  A.TIPO = :TIPO,'
+      '  A.ENVIADO = :ENVIADO'
+      'Where A.PLULIQUIDACION = :OLD_PLULIQUIDACION AND A.CODIGO = :OLD_CODIGO AND A.ITEM = '
+      ':OLD_ITEM'
+    )
+    InsertSQL.Strings = (
+      'Insert Into LIQUIDACION_DET(PLULIQUIDACION, CODIGO, MONTO, ITEM, OBSERVACION, TIPO, ENVIADO)'
+      'Values(:PLULIQUIDACION, :CODIGO, :MONTO, :ITEM, :OBSERVACION, :TIPO, :ENVIADO)'
+    )
+    DeleteSQL.Strings = (
+      'Delete From LIQUIDACION_DET A'
+      'Where A.PLULIQUIDACION = :PLULIQUIDACION AND A.CODIGO = :CODIGO AND A.ITEM = :ITEM'
+    )
+    left = 104
+    top = 152
+  end
+end

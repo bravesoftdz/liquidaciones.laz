@@ -1,0 +1,34 @@
+{ Este es un archivo de recurso de Lazarus generado automáticamente }
+
+LazarusResources.Add('TliqbFaltantefrm','FORMDATA',[
+  'TPF0'#16'TliqbFaltantefrm'#15'liqbFaltantefrm'#4'Left'#3#217#0#6'Height'#3#8
+  +#2#3'Top'#2'.'#5'Width'#3'+'#2#13'ActiveControl'#7#6'Panel1'#11'BorderIcons'
+  +#11#12'biSystemMenu'#0#11'BorderStyle'#7#8'bsSingle'#7'Caption'#6#21'Busqued'
+  +'a de Faltantes'#12'ClientHeight'#3#8#2#11'ClientWidth'#3'+'#2#7'OnClose'#7#9
+  +'FormClose'#8'OnCreate'#7#10'FormCreate'#6'OnShow'#7#8'FormShow'#10'LCLVersi'
+  +'on'#6#8'0.9.28.2'#0#6'TPanel'#6'Panel1'#4'Left'#2#0#6'Height'#2'H'#3'Top'#2
+  +#0#5'Width'#3'+'#2#5'Align'#7#5'alTop'#12'ClientHeight'#2'H'#11'ClientWidth'
+  +#3'+'#2#8'TabOrder'#2#0#7'OnClick'#7#11'Panel1Click'#0#6'TLabel'#6'Label1'#4
+  +'Left'#2#8#6'Height'#2#14#3'Top'#2#9#5'Width'#2'&'#7'Caption'#6#7'Codigo:'#11
+  +'ParentColor'#8#0#0#6'TLabel'#6'Label2'#4'Left'#2#8#6'Height'#2#14#3'Top'#2
+  +'('#5'Width'#2'/'#7'Caption'#6#8'Vendedor'#11'ParentColor'#8#0#0#6'TLabel'#6
+  +'Label3'#4'Left'#2#8#6'Height'#2#14#3'Top'#2#8#5'Width'#2#1#11'ParentColor'#8
+  +#0#0#5'TEdit'#9'edtCodigo'#4'Left'#2'X'#6'Height'#2#21#3'Top'#2#8#5'Width'#2
+  +'X'#8'CharCase'#7#11'ecUppercase'#8'OnChange'#7#15'edtCodigoChange'#8'TabOrd'
+  +'er'#2#0#0#0#5'TEdit'#9'EdtNombre'#4'Left'#2'X'#6'Height'#2#21#3'Top'#2''''#5
+  +'Width'#3#208#0#8'CharCase'#7#11'ecUppercase'#8'OnChange'#7#15'EdtNombreChan'
+  +'ge'#8'TabOrder'#2#1#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#3'X'#1#6'Height'#2#30
+  +#3'Top'#2#16#5'Width'#2'`'#7'Caption'#6#7'Aceptar'#7'Default'#9#4'Kind'#7#4
+  +'bkOK'#11'ModalResult'#2#1#7'OnClick'#7#12'BitBtn1Click'#8'TabOrder'#2#2#0#0
+  +#7'TBitBtn'#7'BitBtn2'#4'Left'#3#192#1#6'Height'#2#30#3'Top'#2#16#5'Width'#2
+  +'`'#6'Cancel'#9#7'Caption'#6#8'Cancelar'#4'Kind'#7#8'bkCancel'#11'ModalResul'
+  +'t'#2#2#8'TabOrder'#2#3#0#0#0#7'TDBGrid'#12'gridFaltante'#4'Left'#2#0#6'Heig'
+  +'ht'#3#192#1#3'Top'#2'H'#5'Width'#3'+'#2#5'Align'#7#8'alClient'#7'Columns'#14
+  +#1#8'ReadOnly'#9#13'Title.Caption'#6#5'Fecha'#5'Width'#2'd'#9'FieldName'#6#5
+  +'fecha'#0#1#8'ReadOnly'#9#13'Title.Caption'#6#8'Vendedor'#5'Width'#3#19#1#9
+  +'FieldName'#6#6'nombre'#0#1#8'ReadOnly'#9#13'Title.Caption'#6#5'Monto'#5'Wid'
+  +'th'#2'd'#9'FieldName'#6#5'monto'#13'DisplayFormat'#6#18'$,0.0000;-$,0.0000'
+  +#0#0#10'DataSource'#7#10'FaltanteDS'#8'TabOrder'#2#1#0#0#11'TDatasource'#10
+  +'FaltanteDS'#12'OnDataChange'#7#20'FaltanteDSDataChange'#4'left'#2'o'#3'top'
+  +#3#131#0#0#0#0
+]);

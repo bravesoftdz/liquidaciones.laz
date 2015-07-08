@@ -1,0 +1,840 @@
+object liqEVendedorfrm: TliqEVendedorfrm
+  Left = 358
+  Height = 473
+  Top = 75
+  Width = 613
+  ActiveControl = PageControl1
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Detalle Existencias Por Vendedor'
+  ClientHeight = 473
+  ClientWidth = 613
+  OnCreate = FormCreate
+  LCLVersion = '0.9.28.2'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 473
+    Top = 0
+    Width = 613
+    ActivePage = TabSheet3
+    Align = alClient
+    TabIndex = 2
+    TabOrder = 0
+    OnEnter = PageControl1Enter
+    object TabSheet1: TTabSheet
+      Caption = 'Busqueda'
+      ClientHeight = 447
+      ClientWidth = 605
+      object Panel1: TPanel
+        Left = 0
+        Height = 82
+        Top = 0
+        Width = 605
+        Align = alTop
+        ClientHeight = 82
+        ClientWidth = 605
+        TabOrder = 0
+        object Label1: TLabel
+          Left = 13
+          Height = 14
+          Top = 16
+          Width = 38
+          Caption = 'Codigo:'
+          ParentColor = False
+        end
+        object Label2: TLabel
+          Left = 13
+          Height = 14
+          Top = 48
+          Width = 42
+          Caption = 'Nombre:'
+          ParentColor = False
+        end
+        object Label3: TLabel
+          Left = 77
+          Height = 12
+          Top = 4
+          Width = 94
+          Caption = 'Pulse <Enter> Para Buscar'
+          Font.Color = clBlue
+          Font.Height = -8
+          Font.Name = 'Sans'
+          Font.Style = [fsItalic]
+          ParentColor = False
+          ParentFont = False
+        end
+        object edtcodigo: TEdit
+          Left = 77
+          Height = 21
+          Top = 16
+          Width = 104
+          CharCase = ecUppercase
+          OnChange = edtcodigoChange
+          OnKeyPress = edtcodigoKeyPress
+          TabOrder = 0
+        end
+        object edtNombre: TEdit
+          Left = 77
+          Height = 21
+          Top = 48
+          Width = 192
+          CharCase = ecUppercase
+          OnChange = edtNombreChange
+          OnKeyPress = edtNombreKeyPress
+          TabOrder = 1
+        end
+        object BitBtn1: TBitBtn
+          Left = 365
+          Height = 30
+          Top = 24
+          Width = 104
+          Caption = 'Todos'
+          Kind = bkAll
+          OnClick = BitBtn1Click
+          TabOrder = 2
+        end
+        object BitBtn2: TBitBtn
+          Left = 485
+          Height = 30
+          Top = 24
+          Width = 99
+          Caption = '&Cerrar'
+          Kind = bkClose
+          OnClick = BitBtn2Click
+          TabOrder = 3
+        end
+      end
+      object DBGrid2: TDBGrid
+        Left = 0
+        Height = 365
+        Top = 82
+        Width = 605
+        Align = alClient
+        Columns = <        
+          item
+            ReadOnly = True
+            Title.Caption = 'Codigo'
+            Width = 125
+            FieldName = 'CODIGO'
+          end        
+          item
+            ReadOnly = True
+            Title.Caption = 'Nombre'
+            Width = 350
+            FieldName = 'NOMBRE'
+          end>
+        DataSource = venDS
+        TabOrder = 1
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Existencias'
+      ClientHeight = 447
+      ClientWidth = 605
+      object Panel2: TPanel
+        Left = 0
+        Height = 48
+        Top = 0
+        Width = 605
+        Align = alTop
+        ClientHeight = 48
+        ClientWidth = 605
+        TabOrder = 0
+        object DBText1: TDBText
+          Left = 10
+          Height = 18
+          Top = 8
+          Width = 250
+          AutoSize = False
+          Font.Color = clBlue
+          Font.Height = -12
+          Font.Name = 'Sans'
+          Font.Style = [fsBold, fsItalic]
+          ParentColor = False
+          ParentFont = False
+          DataField = 'NOMBRE'
+          DataSource = venDS
+        end
+        object BitBtn3: TBitBtn
+          Left = 469
+          Height = 30
+          Top = 8
+          Width = 115
+          Caption = '&Imprimir'
+          Glyph.Data = {
+            36040000424D3604000000000000360000002800000010000000100000000100
+            2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+            FF00FFFFFF00C89561FDCA9865FFCA9765FFCA9765FFCA9765FFCA9764FFC997
+            64FFC99764FFCA9865FFC89461FDFFFFFF00FFFFFF00FFFFFF00636363995D5D
+            5DD2585858FFC79561FFF9F7F6FFF9F1ECFFF9F1EBFFF8F0E9FFF7EDE6FFF4EA
+            E1FFF2E8DEFFFAF8F6FFC79461FF242424FF232323D12323237A6A6A6AFDA7A7
+            A7FFB5B5B5FF818181FFAFACAAFFC5C0BDFFC5C0BDFFC5C0BDFFC5C0BDFFC5C0
+            BDFFC5C0BDFFADAAA8FF2C2C2CFFB5B5B5FF9B9B9BFF232323FF707070FFB5B5
+            B5FFB5B5B5FF959595FF818181FF818181FF797979FF6E6E6EFF616161FF5252
+            52FF434343FF424242FF6E6E6EFFB5B5B5FFB5B5B5FF252525FF757575FFBBBB
+            BBFFBBBBBBFF8D8D8DFFD4D4D4FFB9B9B9FFB9B9B9FFB9B9B9FFB9B9B9FFB9B9
+            B9FFB9B9B9FFD3D3D3FF838383FFBBBBBBFFBBBBBBFF2A2A2AFF7A7A7AFFD7D7
+            D7FFD7D7D7FF979797FFD8D8D8FFBFBFBFFFBFBFBFFFBFBFBFFFBFBFBFFFBFBF
+            BFFFBFBFBFFFD7D7D7FF8E8E8EFFD7D7D7FFD7D7D7FF3F3F3FFF7E7E7EFFF9F9
+            F9FFF9F9F9FFABABABFFDFDFDFFFCBCBCBFFCBCBCBFFCBCBCBFFCBCBCBFFCBCB
+            CBFFCBCBCBFFDFDFDFFFA3A3A3FFF9F9F9FFF9F9F9FF616161FF818181F9FCFC
+            FCFFFCFCFCFFCBCBCBFFF2F2F2FFF2F2F2FFF2F2F2FFF2F2F2FFF2F2F2FFF2F2
+            F2FFF2F2F2FFF2F2F2FFC6C6C6FFFCFCFCFFFCFCFCFF707070FE818181D2D2D2
+            D2FFE8E8E8FF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D
+            7DFF7D7D7DFF7D7D7DFF7D7D7DFFE8E8E8FFC4C4C4FF565656DC818181459A9A
+            9AFFCCCCCCFFC78B4EFFF9F4EDFFFEE8D8FFFEE8D7FFFDE5D3FFFCE4D1FFFAE0
+            C7FFF9DDC3FFFAF4EDFFC7854AFFC3C3C3FF747474FF47474745FFFFFF008181
+            8163818181F3C5894CFFF9F4EFFFFEE7D7FFFDE7D5FFFCE6D2FFFBE1CCFFF8DC
+            C2FFF6DABDFFFAF4EFFFC48348FF595959F353535363FFFFFF00FFFFFF00FFFF
+            FF0081818109C5894BF9F9F4F0FFFCE6D3FFFDE7D3FFFBE3CDFFFAE0C8FFF5D6
+            BBFFF3D4B5FFF8F4F0FFC38246F960606009FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00C6894BF7F9F5F1FFFCE3CFFFFCE4CFFFFAE1CAFFF9DDC4FFF4E9
+            DFFFF7F2ECFFF5EFE9FFC27E45FBFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00C6894CF6F9F5F1FFFCE3CDFFFBE3CDFFF9E0C8FFF8DCC2FFFDFB
+            F8FFFCE6CDFFE2B684FFBF7942A6FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00C48649FAF7F2ECFFF8F4EEFFF8F3EDFFF8F3EDFFF8F2ECFFF2E6
+            D7FFE2B27DFFDA9163F6B46B3E07FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00C17D4460C88B4DBBC88C4FFEC88C4FFFC88D4FF7C98C4FF7C589
+            4CFEC4763B94FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+          }
+          OnClick = BitBtn3Click
+          TabOrder = 0
+        end
+        object BitBtn4: TBitBtn
+          Left = 349
+          Height = 30
+          Top = 8
+          Width = 115
+          Caption = 'Ver Detalle'
+          Kind = bkOK
+          OnClick = BitBtn4Click
+          TabOrder = 1
+        end
+      end
+      object DBGrid1: TDBGrid
+        Left = 0
+        Height = 399
+        Top = 48
+        Width = 605
+        Align = alClient
+        Columns = <        
+          item
+            ReadOnly = True
+            Title.Caption = 'Codigo'
+            Width = 100
+            FieldName = 'CODIGO'
+          end        
+          item
+            ReadOnly = True
+            Title.Caption = 'Existencia'
+            Width = 100
+            FieldName = 'EXISTENCIA'
+            DisplayFormat = '0.00;-0.00'
+          end>
+        DataSource = vEXISTEds
+        TabOrder = 1
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Movimientos'
+      ClientHeight = 447
+      ClientWidth = 605
+      object Panel3: TPanel
+        Left = 0
+        Height = 88
+        Top = 0
+        Width = 605
+        Align = alTop
+        ClientHeight = 88
+        ClientWidth = 605
+        TabOrder = 0
+        object Label4: TLabel
+          Left = 5
+          Height = 14
+          Top = 11
+          Width = 35
+          Caption = 'Desde:'
+          ParentColor = False
+        end
+        object Label5: TLabel
+          Left = 221
+          Height = 14
+          Top = 11
+          Width = 33
+          Caption = 'Hasta:'
+          ParentColor = False
+        end
+        object Label6: TLabel
+          Left = 7
+          Height = 14
+          Top = 48
+          Width = 53
+          Caption = 'Cod. Prod:'
+          ParentColor = False
+        end
+        object SpeedButton1: TSpeedButton
+          Left = 220
+          Height = 22
+          Top = 48
+          Width = 25
+          Color = clBtnFace
+          NumGlyphs = 0
+          Transparent = False
+          OnClick = SpeedButton1Click
+        end
+        object BitBtn5: TBitBtn
+          Left = 445
+          Height = 30
+          Top = 8
+          Width = 115
+          Caption = '&Imprimir'
+          Glyph.Data = {
+            36040000424D3604000000000000360000002800000010000000100000000100
+            2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+            FF00FFFFFF00C89561FDCA9865FFCA9765FFCA9765FFCA9765FFCA9764FFC997
+            64FFC99764FFCA9865FFC89461FDFFFFFF00FFFFFF00FFFFFF00636363995D5D
+            5DD2585858FFC79561FFF9F7F6FFF9F1ECFFF9F1EBFFF8F0E9FFF7EDE6FFF4EA
+            E1FFF2E8DEFFFAF8F6FFC79461FF242424FF232323D12323237A6A6A6AFDA7A7
+            A7FFB5B5B5FF818181FFAFACAAFFC5C0BDFFC5C0BDFFC5C0BDFFC5C0BDFFC5C0
+            BDFFC5C0BDFFADAAA8FF2C2C2CFFB5B5B5FF9B9B9BFF232323FF707070FFB5B5
+            B5FFB5B5B5FF959595FF818181FF818181FF797979FF6E6E6EFF616161FF5252
+            52FF434343FF424242FF6E6E6EFFB5B5B5FFB5B5B5FF252525FF757575FFBBBB
+            BBFFBBBBBBFF8D8D8DFFD4D4D4FFB9B9B9FFB9B9B9FFB9B9B9FFB9B9B9FFB9B9
+            B9FFB9B9B9FFD3D3D3FF838383FFBBBBBBFFBBBBBBFF2A2A2AFF7A7A7AFFD7D7
+            D7FFD7D7D7FF979797FFD8D8D8FFBFBFBFFFBFBFBFFFBFBFBFFFBFBFBFFFBFBF
+            BFFFBFBFBFFFD7D7D7FF8E8E8EFFD7D7D7FFD7D7D7FF3F3F3FFF7E7E7EFFF9F9
+            F9FFF9F9F9FFABABABFFDFDFDFFFCBCBCBFFCBCBCBFFCBCBCBFFCBCBCBFFCBCB
+            CBFFCBCBCBFFDFDFDFFFA3A3A3FFF9F9F9FFF9F9F9FF616161FF818181F9FCFC
+            FCFFFCFCFCFFCBCBCBFFF2F2F2FFF2F2F2FFF2F2F2FFF2F2F2FFF2F2F2FFF2F2
+            F2FFF2F2F2FFF2F2F2FFC6C6C6FFFCFCFCFFFCFCFCFF707070FE818181D2D2D2
+            D2FFE8E8E8FF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D
+            7DFF7D7D7DFF7D7D7DFF7D7D7DFFE8E8E8FFC4C4C4FF565656DC818181459A9A
+            9AFFCCCCCCFFC78B4EFFF9F4EDFFFEE8D8FFFEE8D7FFFDE5D3FFFCE4D1FFFAE0
+            C7FFF9DDC3FFFAF4EDFFC7854AFFC3C3C3FF747474FF47474745FFFFFF008181
+            8163818181F3C5894CFFF9F4EFFFFEE7D7FFFDE7D5FFFCE6D2FFFBE1CCFFF8DC
+            C2FFF6DABDFFFAF4EFFFC48348FF595959F353535363FFFFFF00FFFFFF00FFFF
+            FF0081818109C5894BF9F9F4F0FFFCE6D3FFFDE7D3FFFBE3CDFFFAE0C8FFF5D6
+            BBFFF3D4B5FFF8F4F0FFC38246F960606009FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00C6894BF7F9F5F1FFFCE3CFFFFCE4CFFFFAE1CAFFF9DDC4FFF4E9
+            DFFFF7F2ECFFF5EFE9FFC27E45FBFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00C6894CF6F9F5F1FFFCE3CDFFFBE3CDFFF9E0C8FFF8DCC2FFFDFB
+            F8FFFCE6CDFFE2B684FFBF7942A6FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00C48649FAF7F2ECFFF8F4EEFFF8F3EDFFF8F3EDFFF8F2ECFFF2E6
+            D7FFE2B27DFFDA9163F6B46B3E07FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00C17D4460C88B4DBBC88C4FFEC88C4FFFC88D4FF7C98C4FF7C589
+            4CFEC4763B94FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+          }
+          OnClick = BitBtn5Click
+          TabOrder = 0
+        end
+        object BitBtn6: TBitBtn
+          Left = 269
+          Height = 30
+          Top = 45
+          Width = 115
+          Caption = 'Ver Detalle'
+          Default = True
+          Kind = bkOK
+          OnClick = BitBtn6Click
+          TabOrder = 1
+        end
+        object edtProd: TEdit
+          Left = 77
+          Height = 21
+          Top = 48
+          Width = 139
+          CharCase = ecUppercase
+          TabOrder = 2
+        end
+        object BitBtn7: TBitBtn
+          Left = 445
+          Height = 30
+          Top = 45
+          Width = 115
+          Caption = '&Cerrar'
+          Kind = bkClose
+          OnClick = BitBtn7Click
+          TabOrder = 3
+        end
+        object FECHA1: TDateEdit
+          Left = 77
+          Height = 21
+          Top = 8
+          Width = 96
+          CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+          OKCaption = 'OK'
+          CancelCaption = 'Cancel'
+          DefaultToday = True
+          DateOrder = doDMY
+          ButtonWidth = 23
+          Glyph.Data = {
+            36040000424D3604000000000000360000002800000010000000100000000100
+            2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00D69E
+            72C4D3996EF4D19668FFCE9263FFCB8E5EFFC98A5BFFC78756FFC38452FFC384
+            52FFC38452FFC38452FFC38452FFC38452FFBB7742B0FFFFFF00FFFFFF00D7A1
+            75FFF8F2EDFFF7F0EAFFF6EDE6FFF4EAE2FFF3E7DEFFF1E4DBFFF0E2D8FFEAD6
+            C8FFF2E5DCFFFAF4F1FFF9F3F0FFFAF5F2FFC58A5DFDFFFFFF00FFFFFF00D9A4
+            7AFFF9F3EEFFEBD2BEFFFFFFFFFFEBD3BFFFFFFFFFFFEBD3C0FFFFFFFFFFEAC7
+            ADFFECD9CDFFF1E4DBFFF9F3F0FFF9F2EFFFC68C5FFFFFFFFF00FFFFFF00DDA8
+            7EFFF9F3EFFFEBD0BAFFEBD0BBFF75B57AFF75B57AFF75B57AFFEBD1BDFFEACD
+            B5FFFAF4F0FFEBD9CCFFF1E4DBFFFAF4F1FFC68A5CFFFFFFFF00FFFFFF00DFAA
+            82FFF9F3EFFFEACEB7FFFFFFFFFF75B57AFF94D49BFF74B579FFFFFFFFFFEACF
+            BAFFFBF6F2FFFAF3F0FFEBD8CBFFF2E6DDFFC88D5FFFFFFFFF00FFFFFF00E1AE
+            87FFFAF4F0FFEACBB2FFEACCB3FF75B57AFF74B579FF73B478FFEACEB7FF70B3
+            75FF6FB274FF6EB172FFE8C8AEFFEAD7C9FFC48654FFFFFFFF00FFFFFF00E3B1
+            8CFFFAF6F1FFEAC9AEFFFFFFFFFFEAC9B0FFFFFFFFFFE9CBB3FFFFFFFFFF6FB1
+            73FF8ED295FF6BAF6FFFFFFFFFFFF1E5DBFFC68655FFFFFFFF00FFFFFF00E5B4
+            8FFFFAF6F2FFE9C6AAFFE9C6ACFFEAC7ACFFE9C7ADFFE9C9AEFFE9C9B0FF6CB0
+            71FF6AAF6EFF68AD6DFFE8CCB5FFF2E7DEFFC88A59FFFFFFFF00FFFFFF00E7B7
+            94FFFBF7F4FFE9C3A6FFFFFFFFFFE8C4A9FFFFFFFFFFE9C6AAFFFFFFFFFFE8C7
+            ACFFFFFFFFFFE8C8B0FFFFFFFFFFF7F1EBFFCB8F5FFFFFFFFF00FFFFFF00E9BA
+            98FFFBF7F4FF65A4FFFF64A3FFFF62A2FFFF61A1FFFF5F9FFFFF5C9DFFFF5A9A
+            FFFF5798FFFF5495FFFF5294FFFFFBF7F4FFCE9364FFFFFFFF00FFFFFF00EBBD
+            9BFFFBF7F4FF64A4FFFF79BDFFFF75BBFFFF71B9FFFF6DB8FFFF68B3FFFF61B0
+            FFFF5AABFFFF54A7FFFF3B7DFFFFFBF7F4FFD1976AFFFFFFFF00FFFFFF00ECBF
+            9EFFFBF7F4FF65A4FFFF64A3FFFF60A0FFFF5D9EFFFF5899FFFF5496FFFF4D90
+            FFFF478BFFFF4284FFFF3D7FFFFFFBF7F4FFD49B6FFFFFFFFF00FFFFFF00EEC1
+            A1EBFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7
+            F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFD7A074F8FFFFFF00FFFFFF00EFC2
+            A37EEFC1A2E3EDC09FFFEBBE9DFFEBBC9AFFE9BA96FFE7B793FFE6B590FFE4B2
+            8CFFE2AF88FFE0AC84FFDDA980FFDCA57DFFDAA37ACAFFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+          }
+          NumGlyphs = 0
+          TabOrder = 4
+        end
+        object FECHA2: TDateEdit
+          Left = 269
+          Height = 21
+          Top = 8
+          Width = 104
+          CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+          OKCaption = 'OK'
+          CancelCaption = 'Cancel'
+          DefaultToday = True
+          DateOrder = doDMY
+          ButtonWidth = 23
+          Glyph.Data = {
+            36040000424D3604000000000000360000002800000010000000100000000100
+            2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00D69E
+            72C4D3996EF4D19668FFCE9263FFCB8E5EFFC98A5BFFC78756FFC38452FFC384
+            52FFC38452FFC38452FFC38452FFC38452FFBB7742B0FFFFFF00FFFFFF00D7A1
+            75FFF8F2EDFFF7F0EAFFF6EDE6FFF4EAE2FFF3E7DEFFF1E4DBFFF0E2D8FFEAD6
+            C8FFF2E5DCFFFAF4F1FFF9F3F0FFFAF5F2FFC58A5DFDFFFFFF00FFFFFF00D9A4
+            7AFFF9F3EEFFEBD2BEFFFFFFFFFFEBD3BFFFFFFFFFFFEBD3C0FFFFFFFFFFEAC7
+            ADFFECD9CDFFF1E4DBFFF9F3F0FFF9F2EFFFC68C5FFFFFFFFF00FFFFFF00DDA8
+            7EFFF9F3EFFFEBD0BAFFEBD0BBFF75B57AFF75B57AFF75B57AFFEBD1BDFFEACD
+            B5FFFAF4F0FFEBD9CCFFF1E4DBFFFAF4F1FFC68A5CFFFFFFFF00FFFFFF00DFAA
+            82FFF9F3EFFFEACEB7FFFFFFFFFF75B57AFF94D49BFF74B579FFFFFFFFFFEACF
+            BAFFFBF6F2FFFAF3F0FFEBD8CBFFF2E6DDFFC88D5FFFFFFFFF00FFFFFF00E1AE
+            87FFFAF4F0FFEACBB2FFEACCB3FF75B57AFF74B579FF73B478FFEACEB7FF70B3
+            75FF6FB274FF6EB172FFE8C8AEFFEAD7C9FFC48654FFFFFFFF00FFFFFF00E3B1
+            8CFFFAF6F1FFEAC9AEFFFFFFFFFFEAC9B0FFFFFFFFFFE9CBB3FFFFFFFFFF6FB1
+            73FF8ED295FF6BAF6FFFFFFFFFFFF1E5DBFFC68655FFFFFFFF00FFFFFF00E5B4
+            8FFFFAF6F2FFE9C6AAFFE9C6ACFFEAC7ACFFE9C7ADFFE9C9AEFFE9C9B0FF6CB0
+            71FF6AAF6EFF68AD6DFFE8CCB5FFF2E7DEFFC88A59FFFFFFFF00FFFFFF00E7B7
+            94FFFBF7F4FFE9C3A6FFFFFFFFFFE8C4A9FFFFFFFFFFE9C6AAFFFFFFFFFFE8C7
+            ACFFFFFFFFFFE8C8B0FFFFFFFFFFF7F1EBFFCB8F5FFFFFFFFF00FFFFFF00E9BA
+            98FFFBF7F4FF65A4FFFF64A3FFFF62A2FFFF61A1FFFF5F9FFFFF5C9DFFFF5A9A
+            FFFF5798FFFF5495FFFF5294FFFFFBF7F4FFCE9364FFFFFFFF00FFFFFF00EBBD
+            9BFFFBF7F4FF64A4FFFF79BDFFFF75BBFFFF71B9FFFF6DB8FFFF68B3FFFF61B0
+            FFFF5AABFFFF54A7FFFF3B7DFFFFFBF7F4FFD1976AFFFFFFFF00FFFFFF00ECBF
+            9EFFFBF7F4FF65A4FFFF64A3FFFF60A0FFFF5D9EFFFF5899FFFF5496FFFF4D90
+            FFFF478BFFFF4284FFFF3D7FFFFFFBF7F4FFD49B6FFFFFFFFF00FFFFFF00EEC1
+            A1EBFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7
+            F4FFFBF7F4FFFBF7F4FFFBF7F4FFFBF7F4FFD7A074F8FFFFFF00FFFFFF00EFC2
+            A37EEFC1A2E3EDC09FFFEBBE9DFFEBBC9AFFE9BA96FFE7B793FFE6B590FFE4B2
+            8CFFE2AF88FFE0AC84FFDDA980FFDCA57DFFDAA37ACAFFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+            FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+          }
+          NumGlyphs = 0
+          TabOrder = 5
+        end
+      end
+      object DBGrid3: TDBGrid
+        Left = 0
+        Height = 359
+        Top = 88
+        Width = 605
+        Align = alClient
+        Columns = <        
+          item
+            Width = 75
+            FieldName = 'FECHA'
+          end        
+          item
+            Width = 150
+            FieldName = 'REFERENCIA'
+          end        
+          item
+            FieldName = 'TIPO'
+          end        
+          item
+            FieldName = 'ENTRADA'
+            DisplayFormat = '0.00;-0.00'
+          end        
+          item
+            FieldName = 'SALIDA'
+            DisplayFormat = '0.00;-0.00'
+          end>
+        DataSource = HistDS
+        TabOrder = 1
+      end
+    end
+  end
+  object VendQRY: TZQuery
+    Connection = dm.fbDB
+    AutoCalcFields = False
+    SQL.Strings = (
+      'select pluempleados,codigo,nombre from empleados '
+      'where activo=''T'' and nombre like ''A%'''
+      'order by codigo asc'
+    )
+    Params = <>
+    DataSource = dm.EmpresaDS
+    left = 144
+    top = 152
+    object VendQRYPLUEMPLEADOS: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPLEADOS'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object VendQRYCODIGO: TStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object VendQRYNOMBRE: TStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+  end
+  object vexistenciaQRY: TZQuery
+    Connection = dm.fbDB
+    AutoCalcFields = False
+    OnCalcFields = vexistenciaQRYCalcFields
+    SQL.Strings = (
+      'SELECT B.CODIGO,'
+      'b.DESCRIPCION,C.NOMBRE,'
+      'A.EXISTENCIA FROM VEND_EXISTENCIA A'
+      'INNER JOIN PRODUCTO B ON  (A.PLUPRODUCTO=B.PLUPRODUCTO)'
+      'INNER JOIN EMPLEADOS C ON (A.PLUVENDEDOR=C.PLUEMPLEADOS)'
+      'WHERE A.PLUVENDEDOR=:pluempleados'
+      'order by b.codigo asc'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempleados'
+        ParamType = ptUnknown
+      end>
+    DataSource = venDS
+    left = 144
+    top = 264
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempleados'
+        ParamType = ptUnknown
+      end>
+    object vexistenciaQRYCODIGO: TStringField
+      DisplayWidth = 64
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 64
+    end
+    object vexistenciaQRYEXISTENCIA: TFloatField
+      DisplayWidth = 15
+      FieldKind = fkData
+      FieldName = 'EXISTENCIA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object vexistenciaQRYDESCRIPCION: TStringField
+      DisplayWidth = 250
+      FieldKind = fkData
+      FieldName = 'DESCRIPCION'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 250
+    end
+    object vexistenciaQRYNOMBRE: TStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object vexistenciaQRYEMPRESA1: TStringField
+      DisplayWidth = 20
+      FieldKind = fkCalculated
+      FieldName = 'EMPRESA'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object venDS: TDatasource
+    DataSet = VendQRY
+    OnDataChange = venDSDataChange
+    left = 144
+    top = 200
+  end
+  object vEXISTEds: TDatasource
+    DataSet = vexistenciaQRY
+    left = 175
+    top = 303
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = vexistenciaQRY
+    left = 224
+    top = 350
+  end
+  object lrpt: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    StoreInDFM = True
+    DataType = dtDataSet
+    left = 288
+    top = 289
+    ReportForm = {
+      18000000EA07000018000000000F0044656661756C74207072696E74657200FF
+      0D00546672506167655265706F727400E8030000010000000100000000000000
+      0000000000000000000000000000000100000000000000000000000000000000
+      0002001500456E636162657A61646F44652070C3A167696E6131000000000020
+      000000280400008000000030000000803F000000000000000000000000FFFFFF
+      1F0000000000000000000000000001000200000000000000000002000E004461
+      746F734D61657374726F73310000000000B40000002804000014000000300000
+      00803F000000000000000000000000FFFFFF1F00000000000000000000000000
+      0100050000000000000C006672444244617461536574310002000B005069654D
+      61657374726F310000000000DC000000280400006800000030000000803F0000
+      00000000000000000000FFFFFF1F000000000000000000000000000100060000
+      00000000000000000006004D656D6F3230000C00000024000000600000001200
+      000003000000803F000000000000000000000000FFFFFF1F2E02000000000001
+      000D005041472E5B5B50414745235D5D0000000001000F0068656C7665746963
+      61205B7572775D000A0000000200000000000000020000000000FFFFFF000000
+      00000000000000000000000005004D656D6F3100D4000000280000001C010000
+      1200000003000000803F000000000000000000000000FFFFFF1F2E0200000000
+      00020015005B5645584953544544532E22656D7072657361225D0D0000000000
+      0001000F0068656C766574696361205B7572775D000C00000002000000000000
+      00020000000000FFFFFF00000000020000000000000000000005004D656D6F32
+      00D4000000440000001C0100001200000003000000803F000000000000000000
+      000000FFFFFF1F2E02000000000001001500444554414C4C4520444520455849
+      5354454E4349410000000001000F0068656C766574696361205B7572775D000B
+      0000000200000000000000020000000000FFFFFF000000000200000000000000
+      00000005004D656D6F3300040000006400000060000000120000000300000080
+      3F000000000000000000000000FFFFFF1F2E0200000000000100090056454E44
+      45444F523A0000000001000F0068656C766574696361205B7572775D000B0000
+      000200000000000000020000000000FFFFFF0000000002000000000000000000
+      0005004D656D6F340068000000640000004C0100001200000003000000803F00
+      0000000000000000000000FFFFFF1F2E020000000000010014005B5645584953
+      544544532E224E4F4D425245225D0000000001000F0068656C76657469636120
+      5B7572775D000B0000000200000000000000020000000000FFFFFF0000000000
+      0000000000000000000005004D656D6F350004000000B40000007C0000001200
+      000003000000803F000000000000000000000000FFFFFF1F2E02000000000001
+      0014005B5645584953544544532E22434F4449474F225D0000000001000F0068
+      656C766574696361205B7572775D000A00000000000000000000000200000000
+      00FFFFFF00000000000000000000000000000005004D656D6F360084000000B4
+      000000300100001200000003000000803F000000000000000000000000FFFFFF
+      1F2E020000000000010019005B5645584953544544532E224445534352495043
+      494F4E225D0000000001000F0068656C766574696361205B7572775D000A0000
+      000000000000000000020000000000FFFFFF0000000000000000000000000000
+      0005004D656D6F3700BC010000B40000007C0000001200000003000000803F00
+      0000000000000000000000FFFFFF1F2E020000000000010018005B5645584953
+      544544532E224558495354454E434941225D0000000001000F0068656C766574
+      696361205B7572775D000A0000000000000000000000020000000000FFFFFF00
+      000000000000000000000000000005004D656D6F3800080000008C0000006000
+      00001200000003000000803F000000000000000000000000FFFFFF1F2E020000
+      00000001000600436F6469676F0000000001000F0068656C766574696361205B
+      7572775D000A0000000200000000000000020000000000FFFFFF000000000000
+      00000000000000000005004D656D6F3900840000008C00000060000000120000
+      0003000000803F000000000000000000000000FFFFFF1F2E0200000000000100
+      0B004465736372697063696F6E0000000001000F0068656C766574696361205B
+      7572775D000A0000000200000000000000020000000000FFFFFF000000000000
+      00000000000000000006004D656D6F313000BC0100008C000000600000001200
+      000003000000803F000000000000000000000000FFFFFF1F2E02000000000001
+      000A004578697374656E6369610000000001000F0068656C766574696361205B
+      7572775D000A0000000200000000000000020000000000FFFFFF000000000000
+      00000000000000040005004C696E653100080000009E00000030020000000000
+      00010000000040000000000200000000000000FFFFFF1F2E0200000000000000
+      000000000100000006004D656D6F313100800200002400000060000000120000
+      0003000000803F000000000000000000000000FFFFFF1F2E0200000000000100
+      0E005B5B444154455D5B54494D455D5D0000000001000F0068656C7665746963
+      61205B7572775D00070000000200000000000000020000000000FFFFFF000000
+      00000000000000000000FE00000000000000
+    }
+  end
+  object HistDS: TDatasource
+    DataSet = HistQRY
+    left = 480
+    top = 200
+  end
+  object HistQRY: TZQuery
+    Connection = dm.fbDB
+    AutoCalcFields = False
+    SQL.Strings = (
+      'select inv_reservas.FECHA,'
+      'INV_RESERVAS.REFERENCIA,'
+      'INV_RESERVAS.TIPO,'
+      'INV_RESERVAS.ENTRADA,'
+      'INV_RESERVAS.SALIDA from inv_reservas '
+      'inner join producto on (inv_reservas.pluproducto=producto.pluproducto)'
+      'where plubodegas=:PLU AND '
+      'upper(producto.codigo) like :CODIGO '
+      'AND INV_RESERVAS.FECHA BETWEEN :FECHA1 AND :FECHA2'
+      'ORDER BY FECHA ASC'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'PLU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CODIGO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FECHA1'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FECHA2'
+        ParamType = ptUnknown
+      end>
+    left = 426
+    top = 152
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'PLU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CODIGO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FECHA1'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FECHA2'
+        ParamType = ptUnknown
+      end>
+    object HistQRYFECHA: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object HistQRYREFERENCIA: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'REFERENCIA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object HistQRYTIPO: TStringField
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'TIPO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 5
+    end
+    object HistQRYENTRADA: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ENTRADA'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 0
+    end
+    object HistQRYSALIDA: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'SALIDA'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 0
+    end
+  end
+  object DGuardar: TSaveDialog
+    DefaultExt = '.xls'
+    Filter = 'Hoja Electronica|xls'
+    left = 300
+    top = 160
+  end
+end

@@ -1,0 +1,165 @@
+object frmBancos: TfrmBancos
+  Left = 687
+  Height = 289
+  Top = 308
+  Width = 427
+  ActiveControl = DBGrid1
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Bancos'
+  ClientHeight = 289
+  ClientWidth = 427
+  OnShow = FormShow
+  LCLVersion = '0.9.28.2'
+  object Panel1: TPanel
+    Left = 0
+    Height = 74
+    Top = 215
+    Width = 427
+    Align = alBottom
+    ClientHeight = 74
+    ClientWidth = 427
+    TabOrder = 0
+    object BitBtn1: TBitBtn
+      Left = 208
+      Height = 30
+      Top = 25
+      Width = 96
+      Caption = 'Aceptar'
+      Default = True
+      Kind = bkOK
+      OnClick = BitBtn1Click
+      TabOrder = 0
+    end
+    object BitBtn2: TBitBtn
+      Left = 312
+      Height = 30
+      Top = 25
+      Width = 96
+      Cancel = True
+      Caption = 'Cancelar'
+      Kind = bkCancel
+      OnClick = BitBtn2Click
+      TabOrder = 1
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 215
+    Top = 0
+    Width = 427
+    Align = alClient
+    Columns = <    
+      item
+        Title.Caption = 'Codigo'
+        FieldName = 'CODIGO'
+      end    
+      item
+        Title.Caption = 'Descripcion'
+        Width = 250
+        FieldName = 'DESCRIPCION'
+      end>
+    DataSource = fpago2DS
+    TabOrder = 1
+  end
+  object fpago2QRY: TZQuery
+    Connection = dm.fbDB
+    AutoCalcFields = False
+    SQL.Strings = (
+      'select * from forma_pago where '
+      'credito=''S'''
+      'order by codigo desc'
+    )
+    Params = <>
+    left = 96
+    top = 80
+    object fpago2QRYCODIGO: TStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 4
+    end
+    object fpago2QRYDESCRIPCION: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'DESCRIPCION'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object fpago2QRYPLUCUENTA: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUCUENTA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object fpago2QRYCREDITO: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'CREDITO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object fpago2QRYDIASCRED: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DIASCRED'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object fpago2QRYREGLASCRED: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'REGLASCRED'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object fpago2QRYPLUSUARIO: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUSUARIO'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object fpago2QRYFECHA_CREA: TDateTimeField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA_CREA'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object fpago2DS: TDatasource
+    DataSet = fpago2QRY
+    left = 119
+    top = 107
+  end
+end

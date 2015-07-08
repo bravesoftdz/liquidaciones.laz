@@ -1,0 +1,79 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmRptLiqVendExis','FORMDATA',[
+  'TPF0'#18'TfrmRptLiqVendExis'#17'frmRptLiqVendExis'#4'Left'#3#160#1#6'Height'
+  +#3#200#0#3'Top'#3#189#0#5'Width'#3'@'#1#11'BorderIcons'#11#12'biSystemMenu'#0
+  +#7'Caption'#6#22'Reporte de Existencias'#12'ClientHeight'#3#200#0#11'ClientW'
+  +'idth'#3'@'#1#8'OnCreate'#7#10'FormCreate'#10'LCLVersion'#6#7'1.4.0.2'#0#9'T'
+  +'CheckBox'#7'chCheck'#4'Left'#2#8#6'Height'#2#17#3'Top'#2#8#5'Width'#2'/'#7
+  +'Caption'#6#5'Todos'#7'Checked'#9#8'OnChange'#7#13'chCheckChange'#5'State'#7
+  +#9'cbChecked'#8'TabOrder'#2#0#0#0#6'TLabel'#6'Label1'#4'Left'#2#7#6'Height'#2
+  +#13#3'Top'#2' '#5'Width'#2'2'#7'Caption'#6#9'Vendedor:'#11'ParentColor'#8#0#0
+  +#17'TDBLookupComboBox'#11'cmbVendedor'#4'Left'#2#8#6'Height'#2#21#3'Top'#2'8'
+  +#5'Width'#3'1'#1#7'Enabled'#8#8'KeyField'#6#12'PLUEMPLEADOS'#9'ListField'#6#6
+  +'NOMBRE'#14'ListFieldIndex'#2#0#10'ListSource'#7#6'VEndDS'#11'LookupCache'#8
+  +#8'TabOrder'#2#1#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#2' '#6'Height'#2'0'#3'Top'
+  +#2'p'#5'Width'#2'K'#7'Caption'#6#7'Generar'#7'OnClick'#7#12'BitBtn1Click'#8
+  +'TabOrder'#2#2#0#0#7'TBitBtn'#7'BitBtn2'#4'Left'#3#184#0#6'Height'#2'0'#3'To'
+  +'p'#2'p'#5'Width'#2'J'#7'Caption'#6#6'&Salir'#10'Glyph.Data'#10#226#1#0#0#222
+  +#1#0#0'BM'#222#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0'$'#0#0#0#18#0#0#0#1#0#4#0#0#0
+  +#0#0'h'#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0#0#0#0#0#0#0#128#0#0#128#0#0#0
+  +#128#128#0#128#0#0#0#128#0#128#0#128#128#0#0#192#192#192#0#128#128#128#0#0#0
+  +#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0#255#0#255#255#0#0#255#255#255#0
+  +'8'#136#136#136#136'w'#247#247#135#248#136#136#136#136#131'33?'#0#0'DD@'#8
+  +#136#255#244'DD'#136#136#136#136#136#243'3'#255#143#0#0'33MP'#7#255#244'33'
+  +#136#136#136#136#136'38'#136#143#0#0'33E'#213#15#255#244'3333'#143#136#143'3'
+  +'8'#243'?'#0#0'33M]'#15#255#244'3333'#136'x'#143'38'#243'?'#0#0'33E'#213#15
+  +#239#228'3333'#143#135#143'38'#243'?'#0#0'33M]'#15#255#244'3333'#136'x'#143
+  +'38'#243'?'#0#0'33E'#213#15#239#228'3333'#143#135#143'38'#243'?'#0#0'33M]'#15
+  +#255#244'3333'#136'x'#143'38'#243'?'#0#0'33E'#213#15#239#228'3333'#143#135
+  +#143'38'#243'?'#0#0'33M]'#14#254#244'3333'#136'x'#143'38'#243'?'#0#0'33E'#213
+  +#15#239#228'3333'#143#135#143'38'#243'?'#0#0'33M]'#14#254#244'3333'#136'x'
+  +#143'38'#243'?'#0#0'33DDDDD3333'#143#143#143#255#248#243'?'#0#0'33333333333'
+  +#136#136#136#136#136'3?'#0#0'333'#0#0#0'333333?'#255#255#243'3?'#0#0'333'#10
+  +#170#160'333333'#136#136#136#243'3?'#0#0'333'#0#0#0'333333'#143#255#248#243
+  +'3?'#0#0#9'NumGlyphs'#2#2#7'OnClick'#7#12'BitBtn2Click'#8'TabOrder'#2#3#0#0#8
+  +'TIBQuery'#7'vendQRY'#8'Database'#7#7'dm.fbdb'#11'Transaction'#7#17'dm.IBTra'
+  +'nsaction1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8#18'GenerateParamNam'
+  +'es'#8#27'GeneratorField.ApplyOnEvent'#7#14'gaeOnNewRecord'#11'SQL.Strings'#1
+  +#6')select pluempleados,nombre from empleados'#6#30' where pluempresas=:plue'
+  +'mpresa'#6#15' and activo=''T'''#0#6'Params'#14#1#8'DataType'#7#9'ftUnknown'
+  +#4'Name'#6#10'pluempresa'#9'ParamType'#7#9'ptUnknown'#0#0#18'DataSetCloseAct'
+  +'ion'#7#16'dcDiscardChanges'#4'left'#3#224#0#3'top'#2'8'#9'ParamData'#14#1#8
+  +'DataType'#7#9'ftUnknown'#4'Name'#6#10'pluempresa'#9'ParamType'#7#9'ptUnknow'
+  +'n'#0#0#0#13'TIntegerField'#19'vendQRYPLUEMPLEADOS'#12'DisplayWidth'#2#10#9
+  +'FieldKind'#7#6'fkData'#9'FieldName'#6#12'PLUEMPLEADOS'#5'Index'#2#0#11'Look'
+  +'upCache'#8#6'Origin'#6#22'EMPLEADOS.PLUEMPLEADOS'#13'ProviderFlags'#11#10'p'
+  +'fInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#14'TIBStringField'
+  +#13'vendQRYNOMBRE'#12'DisplayWidth'#2'<'#9'FieldKind'#7#6'fkData'#9'FieldNam'
+  +'e'#6#6'NOMBRE'#5'Index'#2#1#11'LookupCache'#8#6'Origin'#6#16'EMPLEADOS.NOMB'
+  +'RE'#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Requ'
+  +'ired'#8#4'Size'#2'<'#0#0#0#11'TDataSource'#6'VEndDS'#7'DataSet'#7#7'vendQRY'
+  +#4'left'#3#176#0#3'top'#2'8'#0#0#11'TSaveDialog'#8'Dguardar'#10'DefaultExt'#6
+  +#4'.xls'#6'Filter'#6#22'Hoja Electronica|*.xls'#10'InitialDir'#6#3'c:\'#4'le'
+  +'ft'#3#128#0#3'top'#2'8'#0#0#11'TMemDataset'#5'MemDS'#9'FieldDefs'#14#1#4'Na'
+  +'me'#6#5'FECHA'#8'DataType'#7#6'ftDate'#9'Precision'#2#255#4'Size'#2#0#0#1#4
+  +'Name'#6#6'CODIGO'#8'DataType'#7#9'ftInteger'#9'Precision'#2#255#4'Size'#2#0
+  +#0#1#4'Name'#6#6'NOMBRE'#8'DataType'#7#8'ftString'#9'Precision'#2#255#4'Size'
+  +#2'<'#0#1#4'Name'#6#7'CODIGO1'#8'DataType'#7#8'ftString'#9'Precision'#2#255#4
+  +'Size'#2'@'#0#1#4'Name'#6#14'PLULIQUIDACION'#8'DataType'#7#9'ftInteger'#9'Pr'
+  +'ecision'#2#255#4'Size'#2#0#0#1#4'Name'#6#11'PLUPRODUCTO'#8'DataType'#7#9'ft'
+  +'Integer'#9'Precision'#2#255#4'Size'#2#0#0#1#4'Name'#6#7'INICIAL'#8'DataType'
+  +#7#5'ftBCD'#9'Precision'#2#255#4'Size'#2#2#0#1#4'Name'#6#8'PED_RUTA'#8'DataT'
+  +'ype'#7#5'ftBCD'#9'Precision'#2#255#4'Size'#2#2#0#1#4'Name'#6#6'FISICO'#8'Da'
+  +'taType'#7#5'ftBCD'#9'Precision'#2#255#4'Size'#2#2#0#1#4'Name'#6#5'SALDO'#8
+  +'DataType'#7#5'ftBCD'#9'Precision'#2#255#4'Size'#2#2#0#1#4'Name'#6#10'DEVOLU'
+  +'CION'#8'DataType'#7#5'ftBCD'#9'Precision'#2#255#4'Size'#2#2#0#1#4'Name'#6#10
+  +'PED_BODEGA'#8'DataType'#7#5'ftBCD'#9'Precision'#2#255#4'Size'#2#2#0#1#4'Nam'
+  ,'e'#6#5'FINAL'#8'DataType'#7#5'ftBCD'#9'Precision'#2#255#4'Size'#2#2#0#1#4'N'
+  +'ame'#6#6'PRECIO'#8'DataType'#7#5'ftBCD'#9'Precision'#2#255#4'Size'#2#4#0#1#4
+  +'Name'#6#5'TOTAL'#8'DataType'#7#5'ftBCD'#9'Precision'#2#255#4'Size'#2#2#0#1#4
+  +'Name'#6#8'SUBTOTAL'#8'DataType'#7#5'ftBCD'#9'Precision'#2#255#4'Size'#2#2#0
+  +#1#4'Name'#6#9'DESCUENTO'#8'DataType'#7#5'ftBCD'#9'Precision'#2#255#4'Size'#2
+  +#2#0#1#4'Name'#6#8'TRANSFER'#8'DataType'#7#5'ftBCD'#9'Precision'#2#255#4'Siz'
+  +'e'#2#2#0#1#4'Name'#6#14'MONTO_COMISION'#8'DataType'#7#5'ftBCD'#9'Precision'
+  +#2#255#4'Size'#2#2#0#1#4'Name'#6#13'PORC_COMISION'#8'DataType'#7#5'ftBCD'#9
+  +'Precision'#2#255#4'Size'#2#2#0#1#4'Name'#6#12'POR_COMISION'#8'DataType'#7#5
+  +'ftBCD'#9'Precision'#2#255#4'Size'#2#2#0#0#4'left'#3#136#0#3'top'#3#128#0#0#0
+  +#0
+]);

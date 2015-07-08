@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <General>
+      <MainUnit Value="0"/>
+      <AutoCreateForms Value="False"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <Language Value="040A"/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <DestinationDirectory Value="/home/noe/liquidaciones"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="9">
+      <Item1>
+        <PackageName Value="DateTimeCtrls"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="ibexpress"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="lazreport"/>
+        <MinVersion Minor="9" Release="5" Valid="True"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="DBFLaz"/>
+        <MinVersion Minor="1" Release="1" Valid="True"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="MemDSLaz"/>
+        <MinVersion Major="1" Minor="2" Release="1" Valid="True"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="zcomponent"/>
+        <MinVersion Major="6" Minor="6" Release="5" Valid="True"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="RunTimeTypeInfoControls"/>
+        <MinVersion Minor="1" Valid="True"/>
+      </Item8>
+      <Item9>
+        <PackageName Value="LCL"/>
+      </Item9>
+    </RequiredPackages>
+    <Units Count="93">
+      <Unit0>
+        <Filename Value="liquidaciones.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="52" Y="17"/>
+        <UsageCount Value="200"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="liqmenuform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="menufrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="LiqMenuForm"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="323"/>
+        <CursorPos X="3" Y="325"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="liqvendform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="vendedorfrm"/>
+        <ResourceBaseClass Value="Form"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="liqliquidacion.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="liquidFRM"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="liqLiquidacion"/>
+        <EditorIndex Value="16"/>
+        <TopLine Value="2227"/>
+        <CursorPos Y="2228"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="liqbasignaform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="liqbasignafrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="118"/>
+        <CursorPos X="40" Y="121"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="liqloginform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="loginfrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="liqloginform"/>
+        <EditorIndex Value="17"/>
+        <TopLine Value="118"/>
+        <CursorPos X="89" Y="127"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="liqdm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="liqdm"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="240"/>
+        <CursorPos Y="249"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="liqbvendedorform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="bvendedorfrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="24" Y="10"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="liqbprodform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="bprodfrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="liqbprodform"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="171"/>
+        <CursorPos X="62" Y="190"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="liqasignaform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="liqasignafrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="liqasignaform"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="298"/>
+        <CursorPos X="29" Y="303"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="frametools.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmtoolsbar"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="liqbasignaform.lrs"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="pickdate.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="BrDateForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="liqdevform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="liqdevfrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="liqdevform"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="653"/>
+        <CursorPos X="3" Y="655"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="liqbliqform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="liqbliqfrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="181"/>
+        <CursorPos X="3" Y="183"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="liqbsuperform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmBSuper"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="75" Y="9"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="liqbtipoform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="liqBtipofrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos X="74" Y="9"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="liqdetpliqform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmLiqPago"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="236"/>
+        <CursorPos X="17" Y="241"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="liqlreportes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="liqRptfrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="liqLreportes"/>
+        <EditorIndex Value="8"/>
+        <CursorPos X="23" Y="88"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="liqsupervform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSupervisor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="161"/>
+        <CursorPos X="3" Y="164"/>
+        <UsageCount Value="200"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="liqbsuper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmBusqueda"/>
+        <ResourceBaseClass Value="Form"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="liqtrasladoform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="liqtrasladofrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="645"/>
+        <CursorPos X="27" Y="646"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="liqfpagosform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="liqpagosFrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="liqfpagosform"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="114"/>
+        <CursorPos X="3" Y="116"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="procesos.pas"/>
+        <UnitName Value="procesos"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="553"/>
+        <CursorPos X="42" Y="574"/>
+        <UsageCount Value="107"/>
+        <Loaded Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="liqacercaform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmacerca"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="25"/>
+        <CursorPos Y="45"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="../../lazarus/lcl/include/control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2717"/>
+        <CursorPos X="31" Y="2728"/>
+        <UsageCount Value="4"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="../compoenntes/ZEOSDBO-6.6.5-stable/src/dbc/ZDbcUtils.pas"/>
+        <TopLine Value="355"/>
+        <CursorPos Y="371"/>
+        <UsageCount Value="10"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="../compoenntes/ZEOSDBO-6.6.5-stable/src/component/ZAbstractRODataset.pas"/>
+        <TopLine Value="3087"/>
+        <CursorPos X="22" Y="3098"/>
+        <UsageCount Value="3"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="liqevendedor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="liqEVendedorfrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3"/>
+        <CursorPos X="57" Y="27"/>
+        <UsageCount Value="202"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="liqprogresoform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="progresofrm"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="13"/>
+        <CursorPos X="3" Y="39"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="liqbancosform.pas"/>
+        <ComponentName Value="frmBancos"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="42"/>
+        <CursorPos X="9" Y="59"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="4"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="liqrptcuadre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmRptCuadre"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="liqRptCuadre"/>
+        <TopLine Value="110"/>
+        <CursorPos X="85" Y="126"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="../media/data/pruebas_delphi/BETO/FMCOTIZACION.pas"/>
+        <TopLine Value="856"/>
+        <CursorPos Y="865"/>
+        <UsageCount Value="4"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="liqpendieterpt.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmRptPendLiq"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="LiqPendieterpt"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="72"/>
+        <CursorPos X="3" Y="74"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="claseaexcel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="claseaexcel"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="153"/>
+        <CursorPos X="6" Y="11"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="../compoenntes/fpspreadsheet/fpspreadsheetgrid.pas"/>
+        <TopLine Value="120"/>
+        <CursorPos X="62" Y="138"/>
+        <UsageCount Value="4"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="../jedi/jcl/source/common/JclBase.pas"/>
+        <TopLine Value="140"/>
+        <CursorPos X="73" Y="149"/>
+        <UsageCount Value="4"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="liqfaltantesform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="liqfaltantefrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="53"/>
+        <CursorPos X="38" Y="66"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="dbutils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DBUtils"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="78"/>
+        <CursorPos X="5" Y="95"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="liqasignareporte.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="liqasignarpt"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3"/>
+        <CursorPos X="16" Y="8"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="201"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="../../lazarus/lcl/include/wincontrol.inc"/>
+        <TopLine Value="6625"/>
+        <CursorPos X="4" Y="6629"/>
+        <UsageCount Value="4"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="liqbfaltanteform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="liqbFaltantefrm"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="100"/>
+        <CursorPos X="26" Y="115"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="201"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="liqrptfaltanteform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="liqrptFaltantefrm"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="24" Y="10"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="../usr/lib/lazarus/0.9.28.2/lcl/include/application.inc"/>
+        <TopLine Value="1957"/>
+        <CursorPos Y="1970"/>
+        <UsageCount Value="4"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="../usr/lib/lazarus/0.9.28.2/ide/lazarus.pp"/>
+        <TopLine Value="104"/>
+        <CursorPos X="69" Y="122"/>
+        <UsageCount Value="4"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="liqfrmbusuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmBusuarios"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="74" Y="9"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="liqfrmdexis.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmDExisIni"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <CursorPos X="42" Y="20"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="../componentes/ZEOSDBO-6.6.6/src/component/ZAbstractRODataset.pas"/>
+        <TopLine Value="579"/>
+        <CursorPos Y="589"/>
+        <UsageCount Value="2"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="ufrmpsql.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmpsql"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="17"/>
+        <CursorPos X="3" Y="43"/>
+        <UsageCount Value="200"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="../dliquidaciones_old/liqdevform.pas"/>
+        <ComponentName Value="liqdevfrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UsageCount Value="4"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="../dliquidaciones7032011_errorRPT/liqdevform.pas"/>
+        <HasResources Value="True"/>
+        <UsageCount Value="4"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="../dliquidaciones7032011_errorRPT/liqdevform.lfm"/>
+        <SyntaxHighlighter Value="LFM"/>
+        <UsageCount Value="4"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="../../lazarus/fpc/2.2.4/source/packages/fcl-base/src/inifiles.pp"/>
+        <TopLine Value="109"/>
+        <CursorPos X="3" Y="110"/>
+        <UsageCount Value="4"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="ufrmverdocprocesado.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmVerDocProcesado"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="112"/>
+        <CursorPos X="30" Y="176"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="200"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="uliquidfrm2.pas"/>
+        <ComponentName Value="liquidFRM2"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="169"/>
+        <CursorPos X="12" Y="185"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="6"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="ufrmfc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmFC2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ufrmFC"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="198"/>
+        <CursorPos X="5" Y="201"/>
+        <UsageCount Value="255"/>
+        <Loaded Value="True"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="clfrm.pas"/>
+        <ComponentName Value="FRMCLIENTES"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="162"/>
+        <CursorPos Y="164"/>
+        <UsageCount Value="14"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="ufrmbvendedor.pas"/>
+        <ComponentName Value="frmBVendedor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ufrmBVendedor"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="96"/>
+        <CursorPos X="31" Y="94"/>
+        <UsageCount Value="71"/>
+        <Loaded Value="True"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="liqdm.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="../../lazarus/components/lazreport/source/lr_utils.pas"/>
+        <TopLine Value="636"/>
+        <CursorPos Y="647"/>
+        <UsageCount Value="1"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="../../lazarus/lcl/include/customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="619"/>
+        <CursorPos X="16" Y="621"/>
+        <UsageCount Value="5"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="liqliquidacion.lfm"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="../../lazarus/lcl/lclclasses.pp"/>
+        <TopLine Value="148"/>
+        <CursorPos Y="159"/>
+        <UsageCount Value="1"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="../../lazarus/components/ZEOSDBO-7.1.2/src/component/ZSqlMonitor.pas"/>
+        <TopLine Value="275"/>
+        <CursorPos Y="301"/>
+        <UsageCount Value="1"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="Crypt32.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="62"/>
+        <CursorPos Y="79"/>
+        <UsageCount Value="4"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="../../lazarus/lcl/grids.pas"/>
+        <TopLine Value="4439"/>
+        <CursorPos X="21" Y="4444"/>
+        <UsageCount Value="1"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="../../lazarus/components/ZEOSDBO-7.1.2/src/plain/ZPlainLoader.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="184"/>
+        <CursorPos Y="189"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="../../lazarus/components/ZEOSDBO-7.1/src/component/ZAbstractRODataset.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2103"/>
+        <CursorPos Y="2113"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="F:/sistemas/pruebas_delphi/OPM/dm1.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="48"/>
+        <UsageCount Value="10"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="F:/sistemas/pruebas_delphi/sci-luxor_copia/dmfrm.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="366"/>
+        <CursorPos X="30" Y="382"/>
+        <UsageCount Value="10"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="../componentes/ZEOSDBO-7.1.4-stable/src/component/ZAbstractRODataset.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="839"/>
+        <CursorPos Y="850"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="../componentes/ibx/runtime/IB.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="426"/>
+        <CursorPos X="20" Y="440"/>
+        <UsageCount Value="63"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="../../lazarus/lcl/lresources.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3115"/>
+        <CursorPos Y="3125"/>
+        <UsageCount Value="10"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="E:/pruebas/liqdm.pas"/>
+        <ComponentName Value="dm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="liqasignaform.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1050"/>
+        <CursorPos X="22" Y="1062"/>
+        <UsageCount Value="1"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="liqbvendedorform.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="141"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="../ibx/runtime/IBCustomDataSet.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3801"/>
+        <CursorPos Y="3813"/>
+        <UsageCount Value="5"/>
+      </Unit76>
+      <Unit77>
+        <Filename Value="liqbtipoform.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="76"/>
+        <CursorPos X="40" Y="77"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit77>
+      <Unit78>
+        <Filename Value="../ZEOSDBO-7.1.4-stable/src/component/ZAbstractRODataset.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="838"/>
+        <CursorPos Y="850"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit78>
+      <Unit79>
+        <Filename Value="../../lazarus/fpc/2.6.4/source/packages/fcl-db/src/base/db.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1606"/>
+        <CursorPos X="15" Y="1586"/>
+        <UsageCount Value="1"/>
+      </Unit79>
+      <Unit80>
+        <Filename Value="liqtrasladoform.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="441"/>
+        <CursorPos X="18" Y="447"/>
+        <UsageCount Value="1"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit80>
+      <Unit81>
+        <Filename Value="../componentes/ibx/runtime/IBCustomDataSet.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3799"/>
+        <CursorPos X="33" Y="3802"/>
+        <UsageCount Value="56"/>
+      </Unit81>
+      <Unit82>
+        <Filename Value="F:/sistemas/pruebas/dliquidaciones/liqliquidacion.pas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="96" Y="8"/>
+        <UsageCount Value="2"/>
+      </Unit82>
+      <Unit83>
+        <Filename Value="../ibx/runtime/IB.pas"/>
+        <UnitName Value="IB"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="421"/>
+        <CursorPos X="67" Y="432"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit83>
+      <Unit84>
+        <Filename Value="ufrmmontotes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmmontotes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ufrmMontoTes"/>
+        <EditorIndex Value="18"/>
+        <TopLine Value="34"/>
+        <CursorPos X="9" Y="38"/>
+        <UsageCount Value="138"/>
+        <Loaded Value="True"/>
+      </Unit84>
+      <Unit85>
+        <Filename Value="../../../../../lazarus/lcl/include/customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2064"/>
+        <CursorPos Y="2076"/>
+        <UsageCount Value="3"/>
+      </Unit85>
+      <Unit86>
+        <Filename Value="../../../../../lazarus/lcl/include/control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3646"/>
+        <CursorPos Y="3657"/>
+        <UsageCount Value="2"/>
+      </Unit86>
+      <Unit87>
+        <Filename Value="../../../../../lazarus/components/lazreport/source/lr_class.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="9863"/>
+        <CursorPos X="38" Y="9875"/>
+        <UsageCount Value="3"/>
+      </Unit87>
+      <Unit88>
+        <Filename Value="../componentes/ibx/runtime/IBSQL.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2761"/>
+        <CursorPos Y="2775"/>
+        <UsageCount Value="52"/>
+      </Unit88>
+      <Unit89>
+        <Filename Value="ufrmRptLiquidacionVend.pas"/>
+        <ComponentName Value="frmRptLiquidacionVend"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ufrmRptLiquidacionVend"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="96"/>
+        <CursorPos X="14" Y="100"/>
+        <UsageCount Value="54"/>
+        <Loaded Value="True"/>
+      </Unit89>
+      <Unit90>
+        <Filename Value="ufrmrptliqvendexis.pas"/>
+        <ComponentName Value="frmRptLiqVendExis"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ufrmRptLiqVendExis"/>
+        <EditorIndex Value="19"/>
+        <TopLine Value="116"/>
+        <CursorPos X="63" Y="138"/>
+        <UsageCount Value="64"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit90>
+      <Unit91>
+        <Filename Value="ufrmRptLiqVendExis.dfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="17"/>
+        <UsageCount Value="2"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit91>
+      <Unit92>
+        <Filename Value="frmrptliqvendexis.pas"/>
+        <ComponentName Value="frmRptLiqVendExis"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="149"/>
+        <CursorPos X="63" Y="100"/>
+        <UsageCount Value="13"/>
+      </Unit92>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="1719" Column="61" TopLine="1700"/>
+      </Position1>
+      <Position2>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="1727" Column="39" TopLine="1708"/>
+      </Position2>
+      <Position3>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="1728" Column="38" TopLine="1709"/>
+      </Position3>
+      <Position4>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="1738" Column="54" TopLine="1719"/>
+      </Position4>
+      <Position5>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="2195" Column="24" TopLine="2173"/>
+      </Position5>
+      <Position6>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="1255" Column="37" TopLine="1240"/>
+      </Position6>
+      <Position7>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="1254" Column="37" TopLine="1239"/>
+      </Position7>
+      <Position8>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="1255" Column="37" TopLine="1240"/>
+      </Position8>
+      <Position9>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="2450" Column="20" TopLine="2440"/>
+      </Position9>
+      <Position10>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="2022" Column="35" TopLine="2014"/>
+      </Position10>
+      <Position11>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="2017" Column="3" TopLine="2015"/>
+      </Position11>
+      <Position12>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="1222" Column="8" TopLine="1220"/>
+      </Position12>
+      <Position13>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="1261" Column="3" TopLine="1259"/>
+      </Position13>
+      <Position14>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="1957" Column="3" TopLine="1955"/>
+      </Position14>
+      <Position15>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="1997" Column="40" TopLine="1988"/>
+      </Position15>
+      <Position16>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="1211" Column="2" TopLine="1200"/>
+      </Position16>
+      <Position17>
+        <Filename Value="liqliquidacion.pas"/>
+        <Caret Line="1254" Column="30" TopLine="1235"/>
+      </Position17>
+      <Position18>
+        <Filename Value="liqmenuform.pas"/>
+        <Caret Line="325" Column="40" TopLine="322"/>
+      </Position18>
+      <Position19>
+        <Filename Value="liqmenuform.pas"/>
+        <Caret Line="330" Column="5" TopLine="328"/>
+      </Position19>
+      <Position20>
+        <Filename Value="ufrmrptliqvendexis.pas"/>
+        <Caret Line="16" Column="3"/>
+      </Position20>
+      <Position21>
+        <Filename Value="liqmenuform.pas"/>
+        <Caret Line="331" Column="5" TopLine="329"/>
+      </Position21>
+      <Position22>
+        <Filename Value="liqmenuform.pas"/>
+        <Caret Line="383" Column="3" TopLine="381"/>
+      </Position22>
+      <Position23>
+        <Filename Value="liqmenuform.pas"/>
+        <Caret Line="325" Column="3" TopLine="323"/>
+      </Position23>
+      <Position24>
+        <Filename Value="ufrmRptLiquidacionVend.pas"/>
+        <Caret Line="23" Column="3" TopLine="8"/>
+      </Position24>
+      <Position25>
+        <Filename Value="liqdevform.pas"/>
+        <Caret Line="917" Column="29" TopLine="739"/>
+      </Position25>
+      <Position26>
+        <Filename Value="liqdevform.pas"/>
+        <Caret Line="655" Column="3" TopLine="653"/>
+      </Position26>
+      <Position27>
+        <Filename Value="liqbprodform.pas"/>
+        <Caret Line="101" Column="27" TopLine="77"/>
+      </Position27>
+      <Position28>
+        <Filename Value="liqbprodform.pas"/>
+        <Caret Line="444" Column="20" TopLine="417"/>
+      </Position28>
+      <Position29>
+        <Filename Value="liqbprodform.pas"/>
+        <Caret Line="359" Column="7" TopLine="341"/>
+      </Position29>
+      <Position30>
+        <Filename Value="liqbprodform.pas"/>
+        <Caret Line="376" Column="70" TopLine="356"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="/home/noe/pruebas/otros"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <UseAnsiStrings Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <CodeGeneration>
+      <SmallerCode Value="True"/>
+    </CodeGeneration>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="4">
+      <Item1>
+        <Name Value="EZSQLException"/>
+      </Item1>
+      <Item2>
+        <Name Value="EDatabaseError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EVariantTypeCastError"/>
+      </Item3>
+      <Item4>
+        <Name Value="EReadError"/>
+      </Item4>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

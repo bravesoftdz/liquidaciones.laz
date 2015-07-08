@@ -1,0 +1,49 @@
+{ Este es un archivo de recurso de Lazarus generado automáticamente }
+
+LazarusResources.Add('TfrmBancos','FORMDATA',[
+  'TPF0'#10'TfrmBancos'#9'frmBancos'#4'Left'#3#175#2#6'Height'#3'!'#1#3'Top'#3
+  +'4'#1#5'Width'#3#171#1#13'ActiveControl'#7#7'DBGrid1'#11'BorderIcons'#11#0#11
+  +'BorderStyle'#7#8'bsSingle'#7'Caption'#6#6'Bancos'#12'ClientHeight'#3'!'#1#11
+  +'ClientWidth'#3#171#1#6'OnShow'#7#8'FormShow'#10'LCLVersion'#6#8'0.9.28.2'#0
+  +#6'TPanel'#6'Panel1'#4'Left'#2#0#6'Height'#2'J'#3'Top'#3#215#0#5'Width'#3#171
+  +#1#5'Align'#7#8'alBottom'#12'ClientHeight'#2'J'#11'ClientWidth'#3#171#1#8'Ta'
+  +'bOrder'#2#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#3#208#0#6'Height'#2#30#3'Top'#2
+  +#25#5'Width'#2'`'#7'Caption'#6#7'Aceptar'#7'Default'#9#4'Kind'#7#4'bkOK'#7'O'
+  +'nClick'#7#12'BitBtn1Click'#8'TabOrder'#2#0#0#0#7'TBitBtn'#7'BitBtn2'#4'Left'
+  +#3'8'#1#6'Height'#2#30#3'Top'#2#25#5'Width'#2'`'#6'Cancel'#9#7'Caption'#6#8
+  +'Cancelar'#4'Kind'#7#8'bkCancel'#7'OnClick'#7#12'BitBtn2Click'#8'TabOrder'#2
+  +#1#0#0#0#7'TDBGrid'#7'DBGrid1'#4'Left'#2#0#6'Height'#3#215#0#3'Top'#2#0#5'Wi'
+  +'dth'#3#171#1#5'Align'#7#8'alClient'#7'Columns'#14#1#13'Title.Caption'#6#6'C'
+  +'odigo'#9'FieldName'#6#6'CODIGO'#0#1#13'Title.Caption'#6#11'Descripcion'#5'W'
+  +'idth'#3#250#0#9'FieldName'#6#11'DESCRIPCION'#0#0#10'DataSource'#7#8'fpago2D'
+  +'S'#8'TabOrder'#2#1#0#0#7'TZQuery'#9'fpago2QRY'#10'Connection'#7#7'dm.fbDB'
+  +#14'AutoCalcFields'#8#11'SQL.Strings'#1#6#31'select * from forma_pago where '
+  +#6#11'credito=''S'''#6#20'order by codigo desc'#0#6'Params'#14#0#4'left'#2'`'
+  +#3'top'#2'P'#0#12'TStringField'#15'fpago2QRYCODIGO'#12'DisplayWidth'#2#4#9'F'
+  +'ieldKind'#7#6'fkData'#9'FieldName'#6#6'CODIGO'#5'Index'#2#0#11'LookupCache'
+  +#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Requir'
+  +'ed'#8#4'Size'#2#4#0#0#12'TStringField'#20'fpago2QRYDESCRIPCION'#12'DisplayW'
+  +'idth'#2#20#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'DESCRIPCION'#5'Index'
+  +#2#1#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8
+  +'ReadOnly'#8#8'Required'#8#0#0#13'TLongintField'#18'fpago2QRYPLUCUENTA'#12'D'
+  +'isplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'PLUCUENTA'#5'In'
+  +'dex'#2#2#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
+  +#0#8'ReadOnly'#8#8'Required'#8#0#0#12'TStringField'#16'fpago2QRYCREDITO'#12
+  +'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#7'CREDITO'#5'Inde'
+  +'x'#2#3#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0
+  +#8'ReadOnly'#8#8'Required'#8#4'Size'#2#1#0#0#13'TLongintField'#17'fpago2QRYD'
+  +'IASCRED'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#8'DI'
+  +'ASCRED'#5'Index'#2#4#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#12'TStringField'#19'fpago2QRYR'
+  +'EGLASCRED'#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#10
+  +'REGLASCRED'#5'Index'#2#5#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpda'
+  +'te'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#1#0#0#13'TLongintF'
+  +'ield'#18'fpago2QRYPLUSUARIO'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'
+  +#9'FieldName'#6#9'PLUSUARIO'#5'Index'#2#6#11'LookupCache'#8#13'ProviderFlags'
+  +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TDateTi'
+  +'meField'#19'fpago2QRYFECHA_CREA'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkD'
+  +'ata'#9'FieldName'#6#10'FECHA_CREA'#5'Index'#2#7#11'LookupCache'#8#13'Provid'
+  +'erFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#0
+  +#11'TDatasource'#8'fpago2DS'#7'DataSet'#7#9'fpago2QRY'#4'left'#2'w'#3'top'#2
+  +'k'#0#0#0
+]);

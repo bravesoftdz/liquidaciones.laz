@@ -1,0 +1,17 @@
+LazarusResources.Add('TBrDateForm','FORMDATA',[
+  'TPF0'#11'TBrDateForm'#10'BrDateForm'#4'Left'#3#240#1#6'Height'#3#232#0#3'Top'
+  +#3#227#0#5'Width'#3#199#0#13'ActiveControl'#7#9'Calendar1'#11'BorderIcons'#11
+  +#0#11'BorderStyle'#7#8'bsSingle'#7'Caption'#6#12'Select Fecha'#12'ClientHeig'
+  +'ht'#3#232#0#11'ClientWidth'#3#199#0#5'Color'#4's'#135#157#0#8'OnCreate'#7#10
+  +'FormCreate'#10'LCLVersion'#6#8'0.9.28.2'#0#9'TCalendar'#9'Calendar1'#4'Left'
+  +#2#16#6'Height'#3#153#0#3'Top'#2#8#5'Width'#3#169#0#5'Align'#7#8'alCustom'#8
+  +'DateTime'#4#162#157#0#0#15'DisplaySettings'#11#14'dsShowHeadings'#14'dsShow'
+  +'DayNames'#13'dsStartMonday'#0#7'OnClick'#7#14'Calendar1Click'#0#0#7'TBitBtn'
+  +#7'BitBtn1'#4'Left'#2#0#6'Height'#2#30#3'Top'#3#184#0#5'Width'#2'`'#7'Captio'
+  +'n'#6#7'Aceptar'#7'Default'#9#4'Kind'#7#4'bkOK'#11'ModalResult'#2#1#7'OnClic'
+  +'k'#7#12'BitBtn1Click'#8'TabOrder'#2#1#0#0#7'TBitBtn'#7'BitBtn2'#4'Left'#2'`'
+  +#6'Height'#2#30#3'Top'#3#184#0#5'Width'#2'`'#6'Cancel'#9#7'Caption'#6#8'Canc'
+  +'elar'#4'Kind'#7#8'bkCancel'#11'ModalResult'#2#2#8'TabOrder'#2#2#0#0#5'TEdit'
+  +#5'Edit1'#4'Left'#2#8#6'Height'#2#21#3'Top'#3#168#0#5'Width'#2'P'#8'TabOrder'
+  +#2#3#4'Text'#6#5'Edit1'#7'Visible'#8#0#0#0
+]);

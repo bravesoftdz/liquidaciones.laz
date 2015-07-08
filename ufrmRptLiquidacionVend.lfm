@@ -1,0 +1,150 @@
+object frmRptLiquidacionVend: TfrmRptLiquidacionVend
+  Left = 333
+  Height = 196
+  Top = 78
+  Width = 325
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Liiquidacion Actual por Vendedor'
+  ClientHeight = 196
+  ClientWidth = 325
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '1.4.0.2'
+  object Label1: TLabel
+    Left = 7
+    Height = 13
+    Top = 48
+    Width = 49
+    Caption = 'Vendedor:'
+    ParentColor = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 24
+    Height = 25
+    Top = 136
+    Width = 75
+    Caption = 'Generar'
+    OnClick = BitBtn1Click
+    TabOrder = 0
+  end
+  object BitBtn2: TBitBtn
+    Left = 224
+    Height = 22
+    Top = 139
+    Width = 66
+    Caption = '&Salir'
+    Glyph.Data = {
+      DE010000424DDE01000000000000760000002800000024000000120000000100
+      0400000000006801000000000000000000001000000000000000000000000000
+      80000080000000808000800000008000800080800000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00388888888877
+      F7F787F8888888888333333F00004444400888FFF444448888888888F333FF8F
+      000033334D5007FFF4333388888888883338888F0000333345D50FFFF4333333
+      338F888F3338F33F000033334D5D0FFFF43333333388788F3338F33F00003333
+      45D50FEFE4333333338F878F3338F33F000033334D5D0FFFF43333333388788F
+      3338F33F0000333345D50FEFE4333333338F878F3338F33F000033334D5D0FFF
+      F43333333388788F3338F33F0000333345D50FEFE4333333338F878F3338F33F
+      000033334D5D0EFEF43333333388788F3338F33F0000333345D50FEFE4333333
+      338F878F3338F33F000033334D5D0EFEF43333333388788F3338F33F00003333
+      4444444444333333338F8F8FFFF8F33F00003333333333333333333333888888
+      8888333F00003333330000003333333333333FFFFFF3333F00003333330AAAA0
+      333333333333888888F3333F00003333330000003333333333338FFFF8F3333F
+      0000
+    }
+    NumGlyphs = 2
+    OnClick = BitBtn2Click
+    TabOrder = 1
+  end
+  object cmbVendedor: TDBLookupComboBox
+    Left = 8
+    Height = 21
+    Top = 72
+    Width = 305
+    Enabled = False
+    KeyField = 'PLUEMPLEADOS'
+    ListField = 'NOMBRE'
+    ListFieldIndex = 0
+    ListSource = VEndDS
+    LookupCache = False
+    TabOrder = 2
+  end
+  object chCheck: TCheckBox
+    Left = 7
+    Height = 17
+    Top = 16
+    Width = 48
+    Caption = 'Todos'
+    Checked = True
+    OnChange = chCheckChange
+    OnClick = chCheckClick
+    State = cbChecked
+    TabOrder = 3
+  end
+  object vendQRY: TIBQuery
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select pluempleados,nombre from empleados'
+      ' where pluempresas=:pluempresa'
+      ' and activo=''T'''
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempresa'
+        ParamType = ptUnknown
+      end>
+    DataSetCloseAction = dcDiscardChanges
+    left = 240
+    top = 32
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempresa'
+        ParamType = ptUnknown
+      end>
+    object vendQRYPLUEMPLEADOS: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPLEADOS'
+      Index = 0
+      LookupCache = False
+      Origin = 'EMPLEADOS.PLUEMPLEADOS'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object vendQRYNOMBRE: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 1
+      LookupCache = False
+      Origin = 'EMPLEADOS.NOMBRE'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+  end
+  object VEndDS: TDataSource
+    DataSet = vendQRY
+    left = 264
+    top = 56
+  end
+  object Dguardar: TSaveDialog
+    DefaultExt = '.xls'
+    FileName = '/home/noe/Escritorio/noecillo.xls'
+    Filter = 'Hoja Electronica|*.xls'
+    InitialDir = '/home/noe/Escritorio/'
+    left = 208
+    top = 80
+  end
+end

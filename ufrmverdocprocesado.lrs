@@ -1,0 +1,77 @@
+LazarusResources.Add('TfrmVerDocProcesado','FORMDATA',[
+  'TPF0'#19'TfrmVerDocProcesado'#18'frmVerDocProcesado'#4'Left'#3#139#1#6'Heigh'
+  +'t'#3'.'#2#3'Top'#2'.'#5'Width'#3#152#2#7'Caption'#6#21' Verificar Documento'
+  +'s'#12'ClientHeight'#3'.'#2#11'ClientWidth'#3#152#2#10'LCLVersion'#6#8'0.9.2'
+  +'8.2'#0#6'TLabel'#4'lbl1'#4'Left'#2#8#6'Height'#2#14#3'Top'#3'h'#1#5'Width'#2
+  +#1#11'ParentColor'#8#0#0#6'TPanel'#4'pnl1'#4'Left'#2#0#6'Height'#2'e'#3'Top'
+  +#2#0#5'Width'#3#152#2#5'Align'#7#5'alTop'#12'ClientHeight'#2'e'#11'ClientWid'
+  +'th'#3#152#2#8'TabOrder'#2#0#7'OnClick'#7#9'pnl1Click'#0#7'TBitBtn'#4'btn1'#4
+  +'Left'#2#22#6'Height'#2#25#3'Top'#2#12#5'Width'#2'K'#7'Caption'#6#10'&Verifi'
+  +'car'#10'Glyph.Data'#10#226#1#0#0#222#1#0#0'BM'#222#1#0#0#0#0#0#0'v'#0#0#0'('
+  +#0#0#0'$'#0#0#0#18#0#0#0#1#0#4#0#0#0#0#0'h'#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0
+  +#0#0#0#0#0#0#0#0#0#128#0#0#128#0#0#0#128#128#0#128#0#0#0#128#0#128#0#128#128
+  +#0#0#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0
+  +#255#0#255#0#255#255#0#0#255#255#255#0'333DDD33333?'#136#136#136'?33'#0#0'2C'
+  +'4"""D338'#143'8333'#136#243'3'#0#0'2$B""""C38'#248#131'?'#255#255'3'#143'3'
+  +#0#0'2""*'#170#170'"$38'#243'3'#248#136#136#243'8'#243#0#0'2""'#163'33'#162
+  +'"C8'#243'?'#131'33'#143'3'#143#0#0'2""333:"C8'#243'83338'#243#143#0#0'2""#3'
+  +'3:DC8'#255#255#143'338'#136#131#0#0':'#170#170#170'333338'#136#136#136'3333'
+  +'3'#0#0'333333333333333'#255#255#255#0#0'333333DDD3'#255#255'333'#136#136#136
+  +#0#0':DC33:""$8'#136#143'338'#243'38'#0#0':"C333'#162'"$8'#243#143'333'#131
+  +'38'#0#0'3'#162'$334B"$3'#131'8'#255#255#248#131'38'#0#0'3'#162'"DDB""$3'#143
+  +'3'#136#136#131'3'#255'8'#0#0'3:"""""'#170'$38'#255'333'#255#136#248#0#0'33'
+  +#170'"""'#170'3'#163'33'#136#255#255#255#136'3'#131#0#0'333'#170#170#170'333'
+  +'333'#136#136#136'333'#0#0'333333333333333333'#0#0#9'NumGlyphs'#2#2#7'OnClic'
+  +'k'#7#9'btn1Click'#8'TabOrder'#2#0#0#0#7'TBitBtn'#4'btn2'#4'Left'#3'0'#2#6'H'
+  +'eight'#2#25#3'Top'#2' '#5'Width'#2'K'#7'Caption'#6#6'&Salir'#4'Kind'#7#7'bk'
+  +'Close'#7'OnClick'#7#9'btn2Click'#8'TabOrder'#2#1#0#0#9'TGroupBox'#4'grp1'#4
+  +'Left'#2'l'#6'Height'#2'G'#3'Top'#2#14#5'Width'#3#177#1#12'ClientHeight'#2'5'
+  +#11'ClientWidth'#3#173#1#8'TabOrder'#2#2#0#7'TBitBtn'#4'btn3'#4'Left'#3#10#1
+  +#6'Height'#2#25#3'Top'#2#10#5'Width'#2'q'#7'Caption'#6#15'&Procesar Todos'#10
+  +'Glyph.Data'#10#246#1#0#0#242#1#0#0'BM'#242#1#0#0#0#0#0#0'v'#0#0#0'('#0#0#0
+  +'$'#0#0#0#19#0#0#0#1#0#4#0#0#0#0#0'|'#1#0#0#0#0#0#0#0#0#0#0#16#0#0#0#0#0#0#0
+  +#0#0#0#0#0#0#128#0#0#128#0#0#0#128#128#0#128#0#0#0#128#0#128#0#128#128#0#0
+  +#192#192#192#0#128#128#128#0#0#0#255#0#0#255#0#0#0#255#255#0#255#0#0#0#255#0
+  +#255#0#255#255#0#0#255#255#255#0'334C33333338'#143'33333'#0#0'33B$3333333'
+  +#131'8'#243'3333'#0#0'34""C33333833'#143'3333'#0#0'3B""$33333'#131'338'#243
+  +'333'#0#0'4"*""C3338'#243'?33'#143'333'#0#0'2"'#162#162'"C3338'#243#131#243
+  +'3'#143'333'#0#0':*"*"$3338'#248'3?38'#243'33'#0#0'4'#162'""'#162'"C338'#131
+  +'33'#243'3'#143'33'#0#0'B"'#162'"*"$33'#143'3'#143'3?38'#243'3'#0#0'"*:"$'
+  +#162'"C3'#143'88'#243'8'#243'3'#143'3'#0#0#162#163'3'#162'"J"$3'#143#131'3'
+  +#143'3'#143'38'#243#0#0':33:"$'#162'"C8338'#243'8'#243'3'#143#0#0'3333'#162
+  +'"J"C3333'#143'3'#143'3'#143#0#0'3333:"$'#162'#33338'#243'8'#248'3'#0#0'3333'
+  +'3'#162'"J333333'#143'3'#143'3'#0#0'33333:"$3333338'#243'8'#243#0#0'333333'
+  +#162'$3333333'#143'8'#243#0#0'333333:"33333338'#248#243#0#0'3333333'#163'333'
+  +'33333'#131'3'#0#0#9'NumGlyphs'#2#2#7'OnClick'#7#9'btn3Click'#8'TabOrder'#2#0
+  +#0#0#7'TBitBtn'#4'btn4'#4'Left'#2#26#6'Height'#2#25#3'Top'#2#10#5'Width'#3
+  +#139#0#7'Caption'#6#18'Procesar Seleccion'#4'Kind'#7#4'bkOK'#7'OnClick'#7#9
+  +'btn4Click'#8'TabOrder'#2#1#0#0#0#0#7'TDBGrid'#6'dbgrd1'#4'Left'#2#0#6'Heigh'
+  +'t'#3#252#0#3'Top'#2'e'#5'Width'#3#148#2#5'Align'#7#8'alCustom'#7'Columns'#14
+  +#1#9'FieldName'#6#5'FECHA'#0#1#9'FieldName'#6#6'CODIGO'#0#1#9'FieldName'#6#4
+  +'TIPO'#0#1#9'FieldName'#6#6'NOMBRE'#0#0#10'DataSource'#7#5'dsDOC'#7'Options'
+  +#11#9'dgEditing'#8'dgTitles'#11'dgIndicator'#14'dgColumnResize'#10'dgColLine'
+  +'s'#6'dgTabs'#15'dgConfirmDelete'#14'dgCancelOnExit'#0#8'TabOrder'#2#1#16'Ti'
+  +'tleFont.Height'#2#245#14'TitleFont.Name'#6#13'MS Sans Serif'#0#0#7'TDBGrid'
+  +#6'dbgrd2'#4'Left'#2#0#6'Height'#3#168#0#3'Top'#3#134#1#5'Width'#3#152#2#5'A'
+  +'lign'#7#8'alBottom'#7'Columns'#14#1#9'FieldName'#6#2'BC'#0#1#5'Width'#2'f'#9
+  +'FieldName'#6#6'CODIGO'#0#1#5'Width'#3','#1#9'FieldName'#6#11'DESCRIPCION'#0
+  +#1#5'Width'#3#139#0#9'FieldName'#6#8'CANTIDAD'#0#0#10'DataSource'#7#6'dsDOCD'
+  +#8'TabOrder'#2#2#16'TitleFont.Height'#2#245#14'TitleFont.Name'#6#13'MS Sans '
+  +'Serif'#0#0#11'TDatasource'#5'dsDOC'#7'DataSet'#7#13'msucursalmqry'#4'left'#2
+  +'H'#3'top'#2'P'#0#0#11'TDatasource'#6'dsDOCD'#7'DataSet'#7#14'msucursald2qry'
+  +#4'left'#2'p'#3'top'#3#128#1#0#0#15'TZReadOnlyQuery'#13'msucursalmqry'#10'Co'
+  +'nnection'#7#7'dm.fbDB'#14'AutoCalcFields'#8#11'SQL.Strings'#1#6'0select m.p'
+  +'lumovsucursal,m.fecha,m.codigo,m.tipo,'#6'''e.nombre,m.plusucursal2,m.obser'
+  +'vaciones'#6#20'from mov_sucursalm m'#6':inner join empleados e on  (m.pluem'
+  ,'pleados=e.pluempleados)'#6'''where m.tipo=''DEV'' and m.plumovsucursal'#6'8'
+  +'not in (select distinct pludocclientes from inv_reservas'#6#17'where tipo='
+  +'''DEV'')'#0#6'Params'#14#0#4'left'#2'8'#3'top'#2'8'#0#0#15'TZReadOnlyQuery'
+  +#14'msucursald2qry'#10'Connection'#7#7'dm.fbDB'#14'AutoCalcFields'#8#11'SQL.'
+  +'Strings'#1#6'.select p.bc,p.codigo,p.descripcion,d.cantidad,'#6#13'p.plupro'
+  +'ducto'#6#21' from mov_sucursald d'#6'6inner join producto p on (d.pluproduc'
+  +'to=p.pluproducto)'#6''' where d.plumovsucursal=:plumovsucursal'#0#6'Params'
+  +#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#14'plumovsucursal'#9'ParamType'#7
+  +#9'ptUnknown'#0#0#10'DataSource'#7#5'dsDOC'#4'left'#2'X'#3'top'#3'`'#1#9'Par'
+  +'amData'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#14'plumovsucursal'#9'Para'
+  +'mType'#7#9'ptUnknown'#0#0#0#0#0
+]);

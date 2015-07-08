@@ -1,0 +1,293 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tdm','FORMDATA',[
+  'TPF0'#3'Tdm'#2'dm'#8'OnCreate'#7#16'DataModuleCreate'#14'OldCreateOrder'#8#6
+  +'Height'#3'='#1#16'HorizontalOffset'#3'B'#1#14'VerticalOffset'#3#176#0#5'Wid'
+  +'th'#3'N'#2#0#11'TDataSource'#9'EmpresaDS'#7'DataSet'#7#10'EmpresaQRY'#4'lef'
+  +'t'#3#136#1#3'top'#2'H'#0#0#11'TDataSource'#8'BodegaDS'#7'DataSet'#7#9'Bodeg'
+  +'aQRY'#4'left'#3'H'#1#3'top'#2'H'#0#0#11'TDataSource'#9'PeriodoDS'#7'DataSet'
+  +#7#10'PeriodoQRY'#4'left'#3#16#2#3'top'#2'H'#0#0#11'TIBDatabase'#4'fbdb'#9'C'
+  +'onnected'#8#11'LoginPrompt'#8#22'AllowStreamedConnected'#8#12'DatabaseName'
+  +#6'L10.0.2.2:/home/trompudo/Documentos/sistemas/clientes/diserv/zacatecoluca'
+  +'.fdb'#14'Params.Strings'#1#6#16'user_name=sysdba'#0#18'DefaultTransaction'#7
+  +#14'IBTransaction1'#9'IdleTimer'#2#0#10'TraceFlags'#11#0#4'left'#2' '#3'top'
+  +#2#16#0#0#14'TIBTransaction'#14'IBTransaction1'#6'Active'#8#15'DefaultDataba'
+  +'se'#7#4'fbdb'#9'IdleTimer'#2#10#13'DefaultAction'#7#17'TACommitRetaining'#14
+  +'Params.Strings'#1#6#14'read_committed'#6#11'rec_version'#6#6'nowait'#0#4'le'
+  +'ft'#2'`'#3'top'#2#16#0#0#8'TIBQuery'#5'myqry'#8'Database'#7#4'fbdb'#11'Tran'
+  +'saction'#7#14'IBTransaction1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8
+  +#18'GenerateParamNames'#8#27'GeneratorField.ApplyOnEvent'#7#14'gaeOnNewRecor'
+  +'d'#6'Params'#14#0#18'DataSetCloseAction'#7#16'dcDiscardChanges'#4'left'#3'H'
+  +#1#3'top'#3#136#0#0#0#8'TIBQuery'#10'EmpresaQRY'#8'Database'#7#4'fbdb'#11'Tr'
+  +'ansaction'#7#14'IBTransaction1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8
+  +#18'GenerateParamNames'#8#27'GeneratorField.ApplyOnEvent'#7#14'gaeOnNewRecor'
+  +'d'#11'SQL.Strings'#1#6'-select pluempresa,codigo,nombre from empresas'#6#16
+  +'where activa=''S'''#0#6'Params'#14#0#18'DataSetCloseAction'#7#16'dcDiscardC'
+  +'hanges'#4'left'#3#136#1#3'top'#2#16#0#13'TIntegerField'#20'EmpresaQRYPLUEMP'
+  +'RESA'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#10'PLUE'
+  +'MPRESA'#5'Index'#2#0#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#14'TIBStringField'#16'EmpresaQ'
+  +'RYCODIGO'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'C'
+  +'ODIGO'#5'Index'#2#1#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#4'Size'#2#10#0#0#14'TIBStringField'
+  +#16'EmpresaQRYNOMBRE'#12'DisplayWidth'#2'<'#9'FieldKind'#7#6'fkData'#9'Field'
+  +'Name'#6#6'NOMBRE'#5'Index'#2#2#11'LookupCache'#8#13'ProviderFlags'#11#10'pf'
+  +'InUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#4'Size'#2'<'#0#0#0#8'T'
+  +'IBQuery'#9'BodegaQRY'#8'Database'#7#4'fbdb'#11'Transaction'#7#14'IBTransact'
+  +'ion1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8#10'DataSource'#7#9'Empre'
+  +'saDS'#18'GenerateParamNames'#8#27'GeneratorField.ApplyOnEvent'#7#14'gaeOnNe'
+  +'wRecord'#11'SQL.Strings'#1#6'&select * from bodegas where activa=''S'''#6#27
+  +'and pluempresas=:pluempresa'#6#13'and local=''S'''#0#6'Params'#14#1#8'DataT'
+  +'ype'#7#9'ftUnknown'#4'Name'#6#10'pluempresa'#9'ParamType'#7#7'ptInput'#0#0
+  +#18'DataSetCloseAction'#7#16'dcDiscardChanges'#4'left'#3'H'#1#3'top'#2#16#9
+  +'ParamData'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#10'pluempresa'#9'Param'
+  +'Type'#7#7'ptInput'#0#0#0#13'TIntegerField'#18'BodegaQRYPLUBODEGA'#12'Displa'
+  +'yWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'PLUBODEGA'#5'Index'#2
+  +#0#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Re'
+  +'adOnly'#8#8'Required'#9#0#0#14'TIBStringField'#15'BodegaQRYCODIGO'#12'Displ'
+  +'ayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'CODIGO'#5'Index'#2#1
+  +#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Read'
+  +'Only'#8#8'Required'#9#4'Size'#2#10#0#0#14'TIBStringField'#15'BodegaQRYNOMBR'
+  +'E'#12'DisplayWidth'#2'<'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'NOMBRE'#5
+  +'Index'#2#2#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWher'
+  +'e'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'<'#0#0#14'TIBStringField'#19'Bod'
+  +'egaQRYDIRECCION1'#12'DisplayWidth'#2'<'#9'FieldKind'#7#6'fkData'#9'FieldNam'
+  +'e'#6#10'DIRECCION1'#5'Index'#2#3#11'LookupCache'#8#13'ProviderFlags'#11#10
+  +'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'<'#0#0#14
+  +'TIBStringField'#15'BodegaQRYCIUDAD'#12'DisplayWidth'#2#20#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#6'CIUDAD'#5'Index'#2#4#11'LookupCache'#8#13'Provider'
+  +'Flags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14
+  +'TIBStringField'#17'BodegaQRYTELEFONO'#12'DisplayWidth'#2#20#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#8'TELEFONO'#5'Index'#2#5#11'LookupCache'#8#13'Provid'
+  +'erFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14
+  +'TIBStringField'#12'BodegaQRYFAX'#12'DisplayWidth'#2#20#9'FieldKind'#7#6'fkD'
+  +'ata'#9'FieldName'#6#3'FAX'#5'Index'#2#6#11'LookupCache'#8#13'ProviderFlags'
+  +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TIBStri'
+  +'ngField'#18'BodegaQRYENCARGADO'#12'DisplayWidth'#2'<'#9'FieldKind'#7#6'fkDa'
+  +'ta'#9'FieldName'#6#9'ENCARGADO'#5'Index'#2#7#11'LookupCache'#8#13'ProviderF'
+  ,'lags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2
+  +'<'#0#0#13'TIntegerField'#20'BodegaQRYPLUEMPRESAS'#12'DisplayWidth'#2#10#9'F'
+  +'ieldKind'#7#6'fkData'#9'FieldName'#6#11'PLUEMPRESAS'#5'Index'#2#8#11'Lookup'
+  +'Cache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
+  +'Required'#9#0#0#14'TIBStringField'#15'BodegaQRYACTIVA'#12'DisplayWidth'#2#1
+  +#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'ACTIVA'#5'Index'#2#9#11'LookupCac'
+  +'he'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Re'
+  +'quired'#8#4'Size'#2#1#0#0#14'TIBStringField'#14'BodegaQRYLOCAL'#12'DisplayW'
+  +'idth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'LOCAL'#5'Index'#2#10#11
+  +'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnl'
+  +'y'#8#8'Required'#8#4'Size'#2#1#0#0#14'TIBStringField'#15'BodegaQRYDIR_IP'#12
+  +'DisplayWidth'#2#15#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'DIR_IP'#5'Inde'
+  +'x'#2#11#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0
+  +#8'ReadOnly'#8#8'Required'#8#4'Size'#2#15#0#0#14'TIBStringField'#19'BodegaQR'
+  +'YLOCATIONDB'#12'DisplayWidth'#2'd'#9'FieldKind'#7#6'fkData'#9'FieldName'#6
+  +#10'LOCATIONDB'#5'Index'#2#12#11'LookupCache'#8#13'ProviderFlags'#11#10'pfIn'
+  +'Update'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'd'#0#0#0#8'TIB'
+  +'Query'#10'PeriodoQRY'#8'Database'#7#4'fbdb'#11'Transaction'#7#14'IBTransact'
+  +'ion1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8#10'DataSource'#7#9'Empre'
+  +'saDS'#18'GenerateParamNames'#8#27'GeneratorField.ApplyOnEvent'#7#14'gaeOnNe'
+  +'wRecord'#11'SQL.Strings'#1#6'4select * from periodos where pluempresa=:plue'
+  +'mpresa '#6#16'order by id desc'#0#6'Params'#14#1#8'DataType'#7#9'ftUnknown'
+  +#4'Name'#6#10'pluempresa'#9'ParamType'#7#7'ptInput'#0#0#18'DataSetCloseActio'
+  +'n'#7#16'dcDiscardChanges'#4'left'#3#16#2#3'top'#2#16#9'ParamData'#14#1#8'Da'
+  +'taType'#7#9'ftUnknown'#4'Name'#6#10'pluempresa'#9'ParamType'#7#7'ptInput'#0
+  +#0#0#13'TIntegerField'#20'PeriodoQRYPLUEMPRESA'#12'DisplayWidth'#2#10#9'Fiel'
+  +'dKind'#7#6'fkData'#9'FieldName'#6#10'PLUEMPRESA'#5'Index'#2#0#11'LookupCach'
+  +'e'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Req'
+  +'uired'#9#0#0#13'TIntegerField'#12'PeriodoQRYID'#12'DisplayWidth'#2#10#9'Fie'
+  +'ldKind'#7#6'fkData'#9'FieldName'#6#2'ID'#5'Index'#2#1#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9
+  +#0#0#14'TDateTimeField'#22'PeriodoQRYFECHAINICIAL'#12'DisplayWidth'#2#10#9'F'
+  +'ieldKind'#7#6'fkData'#9'FieldName'#6#12'FECHAINICIAL'#5'Index'#2#2#11'Looku'
+  +'pCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
+  +'Required'#8#0#0#14'TDateTimeField'#20'PeriodoQRYFECHAFINAL'#12'DisplayWidth'
+  +#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#10'FECHAFINAL'#5'Index'#2#3#11
+  +'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnl'
+  +'y'#8#8'Required'#8#0#0#14'TIBStringField'#21'PeriodoQRYDESCRIPCION'#12'Disp'
+  +'layWidth'#3#200#0#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'DESCRIPCION'#5
+  +'Index'#2#4#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWher'
+  +'e'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#200#0#0#0#14'TIBStringField'#14
+  +'PeriodoQRYPOST'#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6
+  +#4'POST'#5'Index'#2#5#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#1#0#0#13'TIntegerField'
+  +#24'PeriodoQRYPLUSUARIO_CREA'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'
+  +#9'FieldName'#6#14'PLUSUARIO_CREA'#5'Index'#2#6#11'LookupCache'#8#13'Provide'
+  +'rFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14
+  +'TDateTimeField'#20'PeriodoQRYFECHA_CREA'#12'DisplayWidth'#2#10#9'FieldKind'
+  +#7#6'fkData'#9'FieldName'#6#10'FECHA_CREA'#5'Index'#2#7#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8
+  +#0#0#13'TIntegerField'#23'PeriodoQRYPLUSUARIO_MOD'#12'DisplayWidth'#2#10#9'F'
+  +'ieldKind'#7#6'fkData'#9'FieldName'#6#13'PLUSUARIO_MOD'#5'Index'#2#8#11'Look'
+  +'upCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8
+  +#8'Required'#8#0#0#14'TDateTimeField'#19'PeriodoQRYFECHA_MOD'#12'DisplayWidt'
+  +'h'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'FECHA_MOD'#5'Index'#2#9#11
+  +'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnl'
+  +'y'#8#8'Required'#8#0#0#0#8'TIBQuery'#7'UserQRY'#8'Database'#7#4'fbdb'#11'Tr'
+  +'ansaction'#7#14'IBTransaction1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8
+  +#18'GenerateParamNames'#8#27'GeneratorField.ApplyOnEvent'#7#14'gaeOnNewRecor'
+  +'d'#11'SQL.Strings'#1#6'+select * from USUARIOS where activo=''S'' and'#6'5p'
+  +'luperfil in (select distinct pluperfil from autoriza'#6'"where pluopcion=66'
+  +' and opcion=''S'')'#0#6'Params'#14#0#18'DataSetCloseAction'#7#16'dcDiscardC'
+  +'hanges'#4'left'#3#0#1#3'top'#2#16#0#13'TIntegerField'#16'UserQRYPLUSUARIO'
+  +#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'PLUSUARIO'#5
+  ,'Index'#2#0#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWher'
+  +'e'#0#8'ReadOnly'#8#8'Required'#9#0#0#14'TIBStringField'#14'UserQRYUSUARIO'
+  +#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#7'USUARIO'#5
+  +'Index'#2#1#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWher'
+  +'e'#0#8'ReadOnly'#8#8'Required'#9#4'Size'#2#10#0#0#14'TIBStringField'#12'Use'
+  +'rQRYCLAVE'#12'DisplayWidth'#2#16#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5
+  +'CLAVE'#5'Index'#2#2#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#16#0#0#14'TIBStringField'
+  +#13'UserQRYACTIVO'#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'
+  +#6#6'ACTIVO'#5'Index'#2#3#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpda'
+  +'te'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#1#0#0#13'TIntegerF'
+  +'ield'#16'UserQRYPLUPERFIL'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9
+  +'FieldName'#6#9'PLUPERFIL'#5'Index'#2#4#11'LookupCache'#8#13'ProviderFlags'
+  +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#14'TIBStri'
+  +'ngField'#13'UserQRYNOMBRE'#12'DisplayWidth'#2'<'#9'FieldKind'#7#6'fkData'#9
+  +'FieldName'#6#6'NOMBRE'#5'Index'#2#5#11'LookupCache'#8#13'ProviderFlags'#11
+  +#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'<'#0#0
+  +#14'TIBStringField'#13'UserQRYCCLAVE'#12'DisplayWidth'#2#1#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#6'CCLAVE'#5'Index'#2#6#11'LookupCache'#8#13'Provider'
+  +'Flags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'
+  +#2#1#0#0#10'TDateField'#16'UserQRYFECHA_MOD'#12'DisplayWidth'#2#10#9'FieldKi'
+  +'nd'#7#6'fkData'#9'FieldName'#6#9'FECHA_MOD'#5'Index'#2#7#11'LookupCache'#8
+  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
+  +#8#0#0#0#8'TIBQuery'#11'LBodegasQRY'#8'Database'#7#4'fbdb'#11'Transaction'#7
+  +#14'IBTransaction1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8#10'DataSour'
+  +'ce'#7#9'EmpresaDS'#18'GenerateParamNames'#8#27'GeneratorField.ApplyOnEvent'
+  +#7#14'gaeOnNewRecord'#11'SQL.Strings'#1#6'Bselect * from bodegas where activ'
+  +'a=''S'' and pluempresas=:pluempresa'#0#6'Params'#14#1#8'DataType'#7#9'ftUnk'
+  +'nown'#4'Name'#6#10'pluempresa'#9'ParamType'#7#7'ptInput'#0#0#18'DataSetClos'
+  +'eAction'#7#16'dcDiscardChanges'#4'left'#3#176#0#3'top'#2#16#9'ParamData'#14
+  +#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#10'pluempresa'#9'ParamType'#7#7'ptIn'
+  +'put'#0#0#0#13'TIntegerField'#20'LBodegasQRYPLUBODEGA'#12'DisplayWidth'#2#10
+  +#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'PLUBODEGA'#5'Index'#2#0#11'Lookup'
+  +'Cache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
+  +'Required'#9#0#0#14'TIBStringField'#17'LBodegasQRYCODIGO'#12'DisplayWidth'#2
+  +#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'CODIGO'#5'Index'#2#1#11'Lookup'
+  +'Cache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
+  +'Required'#9#4'Size'#2#10#0#0#14'TIBStringField'#17'LBodegasQRYNOMBRE'#12'Di'
+  +'splayWidth'#2'<'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'NOMBRE'#5'Index'
+  +#2#2#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8
+  +'ReadOnly'#8#8'Required'#8#4'Size'#2'<'#0#0#14'TIBStringField'#21'LBodegasQR'
+  +'YDIRECCION1'#12'DisplayWidth'#2'<'#9'FieldKind'#7#6'fkData'#9'FieldName'#6
+  +#10'DIRECCION1'#5'Index'#2#3#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInU'
+  +'pdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'<'#0#0#14'TIBSt'
+  +'ringField'#17'LBodegasQRYCIUDAD'#12'DisplayWidth'#2#20#9'FieldKind'#7#6'fkD'
+  +'ata'#9'FieldName'#6#6'CIUDAD'#5'Index'#2#4#11'LookupCache'#8#13'ProviderFla'
+  +'gs'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TIB'
+  +'StringField'#19'LBodegasQRYTELEFONO'#12'DisplayWidth'#2#20#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#8'TELEFONO'#5'Index'#2#5#11'LookupCache'#8#13'Provid'
+  +'erFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14
+  +'TIBStringField'#14'LBodegasQRYFAX'#12'DisplayWidth'#2#20#9'FieldKind'#7#6'f'
+  +'kData'#9'FieldName'#6#3'FAX'#5'Index'#2#6#11'LookupCache'#8#13'ProviderFlag'
+  +'s'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TIBS'
+  +'tringField'#20'LBodegasQRYENCARGADO'#12'DisplayWidth'#2'<'#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#9'ENCARGADO'#5'Index'#2#7#11'LookupCache'#8#13'Provi'
+  +'derFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Si'
+  +'ze'#2'<'#0#0#13'TIntegerField'#22'LBodegasQRYPLUEMPRESAS'#12'DisplayWidth'#2
+  +#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'PLUEMPRESAS'#5'Index'#2#8#11
+  +'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnl'
+  +'y'#8#8'Required'#9#0#0#14'TIBStringField'#17'LBodegasQRYACTIVA'#12'DisplayW'
+  +'idth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'ACTIVA'#5'Index'#2#9#11
+  +'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnl'
+  +'y'#8#8'Required'#8#4'Size'#2#1#0#0#14'TIBStringField'#16'LBodegasQRYLOCAL'
+  +#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'LOCAL'#5'Ind'
+  ,'ex'#2#10#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
+  +#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#1#0#0#14'TIBStringField'#17'LBodega'
+  +'sQRYDIR_IP'#12'DisplayWidth'#2#15#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6
+  +'DIR_IP'#5'Index'#2#11#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'
+  +#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#15#0#0#14'TIBStringFie'
+  +'ld'#21'LBodegasQRYLOCATIONDB'#12'DisplayWidth'#2'd'#9'FieldKind'#7#6'fkData'
+  +#9'FieldName'#6#10'LOCATIONDB'#5'Index'#2#12#11'LookupCache'#8#13'ProviderFl'
+  +'ags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2
+  +'d'#0#0#0#8'TIBQuery'#11'autorizaQRY'#8'Database'#7#4'fbdb'#11'Transaction'#7
+  +#14'IBTransaction1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8#18'Generate'
+  +'ParamNames'#8#27'GeneratorField.ApplyOnEvent'#7#14'gaeOnNewRecord'#11'SQL.S'
+  +'trings'#1#6'1select * from autoriza where pluperfil=:pluperfil'#6#24'and pl'
+  +'uopcion=:pluopcion'#0#6'Params'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#9
+  +'pluperfil'#9'ParamType'#7#7'ptInput'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
+  +#6#9'pluopcion'#9'ParamType'#7#7'ptInput'#0#0#18'DataSetCloseAction'#7#16'dc'
+  +'DiscardChanges'#4'left'#3#200#1#3'top'#2#16#9'ParamData'#14#1#8'DataType'#7
+  +#9'ftUnknown'#4'Name'#6#9'pluperfil'#9'ParamType'#7#7'ptInput'#0#1#8'DataTyp'
+  +'e'#7#9'ftUnknown'#4'Name'#6#9'pluopcion'#9'ParamType'#7#7'ptInput'#0#0#0#13
+  +'TIntegerField'#20'autorizaQRYPLUPERFIL'#12'DisplayWidth'#2#10#9'FieldKind'#7
+  +#6'fkData'#9'FieldName'#6#9'PLUPERFIL'#5'Index'#2#0#11'LookupCache'#8#13'Pro'
+  +'viderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0
+  +#13'TIntegerField'#20'autorizaQRYPLUOPCION'#12'DisplayWidth'#2#10#9'FieldKin'
+  +'d'#7#6'fkData'#9'FieldName'#6#9'PLUOPCION'#5'Index'#2#1#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9
+  +#0#0#14'TIBStringField'#17'autorizaQRYOPCION'#12'DisplayWidth'#2#1#9'FieldKi'
+  +'nd'#7#6'fkData'#9'FieldName'#6#6'OPCION'#5'Index'#2#2#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8
+  +#4'Size'#2#1#0#0#0#8'TIBQuery'#7'CtasQRY'#8'Database'#7#4'fbdb'#11'Transacti'
+  +'on'#7#14'IBTransaction1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8#10'Da'
+  +'taSource'#7#9'EmpresaDS'#18'GenerateParamNames'#8#27'GeneratorField.ApplyOn'
+  +'Event'#7#14'gaeOnNewRecord'#11'SQL.Strings'#1#6'+select plucuenta,codigo,no'
+  +'mbre from cuentas'#6',where detalle=''D'' and pluempresa=:pluempresa'#0#6'P'
+  +'arams'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#10'pluempresa'#9'ParamType'
+  +#7#7'ptInput'#0#0#18'DataSetCloseAction'#7#16'dcDiscardChanges'#4'left'#2'`'
+  +#3'top'#2'P'#9'ParamData'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#10'pluem'
+  +'presa'#9'ParamType'#7#7'ptInput'#0#0#0#13'TIntegerField'#16'CtasQRYPLUCUENT'
+  +'A'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'PLUCUENT'
+  +'A'#5'Index'#2#0#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfI'
+  +'nWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#14'TIBStringField'#13'CtasQRYCODI'
+  +'GO'#12'DisplayWidth'#2#20#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'CODIGO'
+  +#5'Index'#2#1#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWh'
+  +'ere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TIBStringField'#13'CtasQRYNOMBRE'
+  +#12'DisplayWidth'#2'<'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'NOMBRE'#5'I'
+  +'ndex'#2#2#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
+  +#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'<'#0#0#0#8'TIBQuery'#6'myqry2'#8'Da'
+  +'tabase'#7#4'fbdb'#11'Transaction'#7#14'IBTransaction1'#12'BufferChunks'#3
+  +#232#3#13'CachedUpdates'#8#18'GenerateParamNames'#8#27'GeneratorField.ApplyO'
+  +'nEvent'#7#14'gaeOnNewRecord'#6'Params'#14#0#18'DataSetCloseAction'#7#16'dcD'
+  +'iscardChanges'#4'left'#3#136#1#3'top'#3#136#0#0#0#8'TIBQuery'#6'myqry3'#8'D'
+  +'atabase'#7#4'fbdb'#11'Transaction'#7#10'IBTransInv'#12'BufferChunks'#3#232#3
+  +#13'CachedUpdates'#8#18'GenerateParamNames'#8#27'GeneratorField.ApplyOnEvent'
+  +#7#14'gaeOnNewRecord'#6'Params'#14#0#18'DataSetCloseAction'#7#16'dcDiscardCh'
+  +'anges'#4'left'#3#200#1#3'top'#3#136#0#0#0#13'TIBSQLMonitor'#12'ZSQLMonitor1'
+  +#10'TraceFlags'#11#10'tfQPrepare'#10'tfQExecute'#8'tfQFetch'#7'tfError'#6'tf'
+  +'Stmt'#9'tfConnect'#10'tfTransact'#6'tfBlob'#9'tfService'#6'tfMisc'#0#4'left'
+  +#2'`'#3'top'#3#224#0#0#0#9'TIBEvents'#7'Eventos'#8'Database'#7#4'fbdb'#10'Re'
+  +'gistered'#8#4'left'#2'`'#3'top'#3#160#0#0#0#8'TIBQuery'#11'vendedorQRY'#8'D'
+  +'atabase'#7#4'fbdb'#11'Transaction'#7#14'IBTransaction1'#12'BufferChunks'#3
+  +#232#3#13'CachedUpdates'#8#18'GenerateParamNames'#8#27'GeneratorField.ApplyO'
+  +'nEvent'#7#14'gaeOnNewRecord'#11'SQL.Strings'#1#6'=SELECT PLUEMPRESAS,PLUEMP'
+  +'LEADOS,CODIGO,NOMBRE FROM EMPLEADOS '#6'6WHERE ACTIVO=''T'' AND PLUEMPRESAS'
+  +'=1 ORDER BY NOMBRE ASC'#0#6'Params'#14#0#18'DataSetCloseAction'#7#16'dcDisc'
+  +'ardChanges'#4'left'#3#184#0#3'top'#2'P'#0#13'TIntegerField'#22'vendedorQRYP'
+  +'LUEMPRESAS'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11
+  ,'PLUEMPRESAS'#5'Index'#2#0#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpd'
+  +'ate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#13'TIntegerField'#23've'
+  +'ndedorQRYPLUEMPLEADOS'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'Fie'
+  +'ldName'#6#12'PLUEMPLEADOS'#5'Index'#2#1#11'LookupCache'#8#13'ProviderFlags'
+  +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#14'TIBStri'
+  +'ngField'#17'vendedorQRYCODIGO'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkDat'
+  +'a'#9'FieldName'#6#6'CODIGO'#5'Index'#2#2#11'LookupCache'#8#13'ProviderFlags'
+  +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#10#0
+  +#0#14'TIBStringField'#17'vendedorQRYNOMBRE'#12'DisplayWidth'#2'<'#9'FieldKin'
+  +'d'#7#6'fkData'#9'FieldName'#6#6'NOMBRE'#5'Index'#2#3#11'LookupCache'#8#13'P'
+  +'roviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4
+  +'Size'#2'<'#0#0#0#6'TIBSQL'#9'InsResSQL'#8'Database'#7#4'fbdb'#18'GeneratePa'
+  +'ramNames'#8#16'UniqueParamNames'#8#10'ParamCheck'#9#11'SQL.Strings'#1#6#24
+  +'INSERT INTO INV_RESERVAS'#6'D  (ITEM, PLUPRODUCTO, FECHA, REFERENCIA, TIPO,'
+  +' RESERVADOS, ENTRADA, '#6#8'SALIDA, '#6'-   OBSERVACIONES, PLUBODEGAS, PLUD'
+  +'OCCLIENTES)'#6#6'VALUES'#6'A  (:ITEM, :PLUPRODUCTO, :FECHA, :REFERENCIA, :T'
+  +'IPO, :RESERVADOS, '#6#10':ENTRADA, '#6'9   :SALIDA, :OBSERVACIONES, :PLUBOD'
+  +'EGAS, :PLUDOCCLIENTES)'#0#11'Transaction'#7#10'IBTransInv'#4'left'#3#184#0#3
+  +'top'#3#160#0#0#0#6'TIBSQL'#6'InvSQL'#8'Database'#7#4'fbdb'#18'GenerateParam'
+  +'Names'#8#16'UniqueParamNames'#8#10'ParamCheck'#9#11'SQL.Strings'#1#6#22'INS'
+  +'ERT INTO INVENTARIO'#6';  (PLUPRODUCTO, ITEM, FECHA, TIPO, REFERENCIA, EXIS'
+  +'TENCIA, '#6#17'ENTRADA, SALIDA, '#6'5   DEBE, HABER, SALDO, COSTOANTERIOR, '
+  +'COSTOPROMEDIO, '#6#30'PLUSUCURSALES, OBSERVACIONES, '#6'6   PLUDOCCLIENTES,'
+  +' PLUCOMPRA, PLUMOVINV, PC, USUARIO, '#6#23'FECHA_REAL, PLURETACEO)'#6#6'VAL'
+  +'UES'#6'4  (:PLUPRODUCTO, :ITEM, :FECHA, :TIPO, :REFERENCIA, '#6#23':EXISTEN'
+  +'CIA, :ENTRADA, '#6'3   :SALIDA, :DEBE, :HABER, :SALDO, :COSTOANTERIOR, '#6
+  +' :COSTOPROMEDIO, :PLUSUCURSALES, '#6'0   :OBSERVACIONES, :PLUDOCCLIENTES, :'
+  +'PLUCOMPRA, '#6#27':PLUMOVINV, :PC, :USUARIO, '#6#28'   :FECHA_REAL, :PLURET'
+  +'ACEO)'#0#11'Transaction'#7#10'IBTransInv'#4'left'#3#184#0#3'top'#3#232#0#0#0
+  +#14'TIBTransaction'#10'IBTransInv'#6'Active'#8#15'DefaultDatabase'#7#4'fbdb'
+  +#13'DefaultAction'#7#17'TACommitRetaining'#14'Params.Strings'#1#6#14'read_co'
+  +'mmitted'#6#11'rec_version'#6#6'nowait'#0#4'left'#3#248#0#3'top'#3#232#0#0#0
+  +#0
+]);

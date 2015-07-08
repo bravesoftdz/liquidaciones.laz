@@ -1,0 +1,217 @@
+object frmVerDocProcesado: TfrmVerDocProcesado
+  Left = 395
+  Height = 558
+  Top = 46
+  Width = 664
+  Caption = ' Verificar Documentos'
+  ClientHeight = 558
+  ClientWidth = 664
+  LCLVersion = '0.9.28.2'
+  object lbl1: TLabel
+    Left = 8
+    Height = 14
+    Top = 360
+    Width = 1
+    ParentColor = False
+  end
+  object pnl1: TPanel
+    Left = 0
+    Height = 101
+    Top = 0
+    Width = 664
+    Align = alTop
+    ClientHeight = 101
+    ClientWidth = 664
+    TabOrder = 0
+    OnClick = pnl1Click
+    object btn1: TBitBtn
+      Left = 22
+      Height = 25
+      Top = 12
+      Width = 75
+      Caption = '&Verificar'
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000000000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333444444
+        33333333333F8888883F33330000324334222222443333388F3833333388F333
+        000032244222222222433338F8833FFFFF338F3300003222222AAAAA22243338
+        F333F88888F338F30000322222A33333A2224338F33F8333338F338F00003222
+        223333333A224338F33833333338F38F00003222222333333A444338FFFF8F33
+        3338888300003AAAAAAA33333333333888888833333333330000333333333333
+        333333333333333333FFFFFF000033333333333344444433FFFF333333888888
+        00003A444333333A22222438888F333338F3333800003A2243333333A2222438
+        F38F333333833338000033A224333334422224338338FFFFF8833338000033A2
+        22444442222224338F3388888333FF380000333A2222222222AA243338FF3333
+        33FF88F800003333AA222222AA33A3333388FFFFFF8833830000333333AAAAAA
+        3333333333338888883333330000333333333333333333333333333333333333
+        0000
+      }
+      NumGlyphs = 2
+      OnClick = btn1Click
+      TabOrder = 0
+    end
+    object btn2: TBitBtn
+      Left = 560
+      Height = 25
+      Top = 32
+      Width = 75
+      Caption = '&Salir'
+      Kind = bkClose
+      OnClick = btn2Click
+      TabOrder = 1
+    end
+    object grp1: TGroupBox
+      Left = 108
+      Height = 71
+      Top = 14
+      Width = 433
+      ClientHeight = 53
+      ClientWidth = 429
+      TabOrder = 2
+      object btn3: TBitBtn
+        Left = 266
+        Height = 25
+        Top = 10
+        Width = 113
+        Caption = '&Procesar Todos'
+        Glyph.Data = {
+          F2010000424DF201000000000000760000002800000024000000130000000100
+          0400000000007C01000000000000000000001000000000000000000000000000
+          80000080000000808000800000008000800080800000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333334433333
+          3333333333388F3333333333000033334224333333333333338338F333333333
+          0000333422224333333333333833338F33333333000033422222243333333333
+          83333338F3333333000034222A22224333333338F33F33338F33333300003222
+          A2A2224333333338F383F3338F33333300003A2A222A222433333338F8333F33
+          38F33333000034A22222A22243333338833333F3338F333300004222A2222A22
+          2433338F338F333F3338F3330000222A3A2224A22243338F3838F338F3338F33
+          0000A2A333A2224A2224338F83338F338F3338F300003A33333A2224A2224338
+          333338F338F3338F000033333333A2224A2243333333338F338F338F00003333
+          33333A2224A2233333333338F338F83300003333333333A2224A333333333333
+          8F338F33000033333333333A222433333333333338F338F30000333333333333
+          A224333333333333338F38F300003333333333333A223333333333333338F8F3
+          000033333333333333A3333333333333333383330000
+        }
+        NumGlyphs = 2
+        OnClick = btn3Click
+        TabOrder = 0
+      end
+      object btn4: TBitBtn
+        Left = 26
+        Height = 25
+        Top = 10
+        Width = 139
+        Caption = 'Procesar Seleccion'
+        Kind = bkOK
+        OnClick = btn4Click
+        TabOrder = 1
+      end
+    end
+  end
+  object dbgrd1: TDBGrid
+    Left = 0
+    Height = 252
+    Top = 101
+    Width = 660
+    Align = alCustom
+    Columns = <    
+      item
+        FieldName = 'FECHA'
+      end    
+      item
+        FieldName = 'CODIGO'
+      end    
+      item
+        FieldName = 'TIPO'
+      end    
+      item
+        FieldName = 'NOMBRE'
+      end>
+    DataSource = dsDOC
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 1
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+  end
+  object dbgrd2: TDBGrid
+    Left = 0
+    Height = 168
+    Top = 390
+    Width = 664
+    Align = alBottom
+    Columns = <    
+      item
+        FieldName = 'BC'
+      end    
+      item
+        Width = 102
+        FieldName = 'CODIGO'
+      end    
+      item
+        Width = 300
+        FieldName = 'DESCRIPCION'
+      end    
+      item
+        Width = 139
+        FieldName = 'CANTIDAD'
+      end>
+    DataSource = dsDOCD
+    TabOrder = 2
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+  end
+  object dsDOC: TDatasource
+    DataSet = msucursalmqry
+    left = 72
+    top = 80
+  end
+  object dsDOCD: TDatasource
+    DataSet = msucursald2qry
+    left = 112
+    top = 384
+  end
+  object msucursalmqry: TZReadOnlyQuery
+    Connection = dm.fbDB
+    AutoCalcFields = False
+    SQL.Strings = (
+      'select m.plumovsucursal,m.fecha,m.codigo,m.tipo,'
+      'e.nombre,m.plusucursal2,m.observaciones'
+      'from mov_sucursalm m'
+      'inner join empleados e on  (m.pluempleados=e.pluempleados)'
+      'where m.tipo=''DEV'' and m.plumovsucursal'
+      'not in (select distinct pludocclientes from inv_reservas'
+      'where tipo=''DEV'')'
+    )
+    Params = <>
+    left = 56
+    top = 56
+  end
+  object msucursald2qry: TZReadOnlyQuery
+    Connection = dm.fbDB
+    AutoCalcFields = False
+    SQL.Strings = (
+      'select p.bc,p.codigo,p.descripcion,d.cantidad,'
+      'p.pluproducto'
+      ' from mov_sucursald d'
+      'inner join producto p on (d.pluproducto=p.pluproducto)'
+      ' where d.plumovsucursal=:plumovsucursal'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'plumovsucursal'
+        ParamType = ptUnknown
+      end>
+    DataSource = dsDOC
+    left = 88
+    top = 352
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'plumovsucursal'
+        ParamType = ptUnknown
+      end>
+  end
+end

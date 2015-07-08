@@ -1,0 +1,14 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tfrmmontotes','FORMDATA',[
+  'TPF0'#12'Tfrmmontotes'#11'frmmontotes'#4'Left'#3#200#1#6'Height'#2'a'#3'Top'
+  +#2'|'#5'Width'#3'/'#1#11'BorderIcons'#11#0#7'Caption'#6#3'TES'#12'ClientHeig'
+  +'ht'#2'a'#11'ClientWidth'#3'/'#1#10'LCLVersion'#6#7'1.4.0.2'#0#6'TLabel'#6'L'
+  +'abel1'#4'Left'#2#8#6'Height'#2#15#3'Top'#2#24#5'Width'#3#142#0#7'Caption'#6
+  +#26'Valor Total de Remesa TES:'#11'ParentColor'#8#0#0#9'TMaskEdit'#9'edtTott'
+  +'es'#4'Left'#3#160#0#6'Height'#2#23#3'Top'#2#21#5'Width'#2'x'#8'CharCase'#7#8
+  +'ecNormal'#9'MaxLength'#2#0#8'TabOrder'#2#0#9'SpaceChar'#6#1'_'#0#0#7'TBitBt'
+  +'n'#7'BitBtn1'#4'Left'#3#184#0#6'Height'#2#30#3'Top'#2'1'#5'Width'#2'`'#7'Ca'
+  +'ption'#6#10'&Continuar'#7'Default'#9#4'Kind'#7#5'bkYes'#11'ModalResult'#2#6
+  +#7'OnClick'#7#12'BitBtn1Click'#8'TabOrder'#2#1#0#0#0
+]);

@@ -1,0 +1,119 @@
+object frmBVendedor: TfrmBVendedor
+  Left = 545
+  Height = 252
+  Top = 228
+  Width = 447
+  Caption = 'frmBVendedor'
+  ClientHeight = 252
+  ClientWidth = 447
+  OnShow = FormShow
+  LCLVersion = '1.0.12.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 73
+    Top = 0
+    Width = 447
+    Align = alTop
+    ClientHeight = 73
+    ClientWidth = 447
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 16
+      Height = 16
+      Top = 16
+      Width = 49
+      Caption = 'Codigo:'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 16
+      Height = 16
+      Top = 48
+      Width = 57
+      Caption = 'Nombre:'
+      ParentColor = False
+    end
+    object edtcodigo: TEdit
+      Left = 64
+      Height = 27
+      Top = 8
+      Width = 89
+      OnChange = edtcodigoChange
+      TabOrder = 0
+    end
+    object edtnombre: TEdit
+      Left = 64
+      Height = 27
+      Top = 40
+      Width = 177
+      OnChange = edtnombreChange
+      TabOrder = 4
+    end
+    object BitBtn1: TBitBtn
+      Left = 272
+      Height = 25
+      Top = 24
+      Width = 81
+      Caption = '&Ok'
+      Kind = bkOK
+      ModalResult = 1
+      TabOrder = 2
+    end
+    object BitBtn2: TBitBtn
+      Left = 356
+      Height = 25
+      Top = 24
+      Width = 75
+      Kind = bkCancel
+      ModalResult = 2
+      TabOrder = 3
+    end
+    object edt1: TEdit
+      Left = 157
+      Height = 27
+      Top = 5
+      Width = 17
+      TabOrder = 1
+      Text = '0'
+      Visible = False
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 179
+    Top = 73
+    Width = 447
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        ReadOnly = True
+        Title.Caption = 'Código'
+        FieldName = 'CODIGO'
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Nombre'
+        FieldName = 'NOMBRE'
+      end>
+    DataSource = VendDS
+    TabOrder = 1
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+  end
+  object vendQRY: TZQuery
+    Connection = dm.fbDB
+    AutoCalcFields = False
+    SQL.Strings = (
+      'select codigo,nombre from tel_empleados where nombre like ''A%'''
+    )
+    Params = <>
+    left = 92
+    top = 140
+  end
+  object VendDS: TDatasource
+    DataSet = vendQRY
+    left = 140
+    top = 155
+  end
+end

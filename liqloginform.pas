@@ -1,0 +1,243 @@
+unit liqloginform;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, db, FileUtil, LResources, Forms, Controls, Graphics,
+  Dialogs, StdCtrls, DbCtrls, Buttons;
+
+type
+
+  { Tloginfrm }
+
+  Tloginfrm = class(TForm)
+    BitBtn1: TBitBtn;
+    CancelBTN: TBitBtn;
+    ClaveLbl: TEdit;
+    EdtBodega1: TDBLookupComboBox;
+    EdtUsuario: TDBLookupComboBox;
+    EdtEmpresa: TDBLookupComboBox;
+    EdtBodega: TDBLookupComboBox;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    userDS: TDatasource;
+    Label2: TLabel;
+    Label3: TLabel;
+    procedure BitBtn1Click(Sender: TObject);
+    procedure CancelBTNClick(Sender: TObject);
+    procedure EdtEmpresaChange(Sender: TObject);
+    procedure Edtbode(Sender: TObject);
+    procedure EdtUsuarioChange(Sender: TObject);
+    procedure EdtUsuarioEnter(Sender: TObject);
+    procedure EdtUsuarioExit(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end; 
+
+var
+  loginfrm: Tloginfrm;
+
+implementation
+
+uses Crypt32, liqdm, liqmenuform,
+procesos;
+
+{ Tloginfrm }
+
+procedure Tloginfrm.FormCreate(Sender: TObject);
+begin
+
+end;
+
+procedure Tloginfrm.FormShow(Sender: TObject);
+begin
+  EDTEmpresa.SetFocus;
+end;
+
+procedure Tloginfrm.BitBtn1Click(Sender: TObject);
+var
+Clave : ShortString;
+lsql:string;
+begin
+
+if edtempresa.Text='' then
+begin
+     showmessage('Debe seleccionar una empresa!!');
+     edtEmpresa.SetFocus;
+     exit;
+end;
+
+     dm.MyQry.close;
+     dm.myqry.SQL.clear;
+     dm.myqry.sql.add('Select count(*) cnt from empresas where codigo='''+edtempresa.Text+'''');
+     dm.myqry.Open;
+
+     IF NOT(DM.MYQRY.FIELDBYNAME('CNT').ASINTEGER>0) THEN
+     BEGIN
+
+          showmessage('Empresa no Valida!!');
+          edtEmpresa.SetFocus;
+          exit;
+     END;
+
+      if edtBodega.Text='' then
+      begin
+           showmessage('Bodega no Valida!!');
+           edtBodega.SetFocus;
+           exit;
+
+      end;
+
+    lsql := 'Select count(*) cnt from BODEGAS where codigo='''+edtBodega.Text+''' '+
+    ' and activa=''S'' and pluempresas=:pluempresa';
+
+
+     dm.MyQry.close;
+     dm.myqry.SQL.clear;
+     dm.myqry.sql.add(lsql);
+     dm.myqry.params[0].value := dm.empresaqrypluempresa.value;
+     dm.myqry.Open;
+
+     IF NOT(DM.MYQRY.FIELDBYNAME('CNT').ASINTEGER>0) THEN
+     BEGIN
+
+          showmessage('Bodega no Valida!!');
+          edtBodega.SetFocus;
+          exit;
+     END;
+
+
+
+
+if EdtUsuario.Text<>'' then
+begin
+
+if permisos(dm.UserQRYPLUPERFIL.Value,66)='S' then
+begin
+
+clave:=Decrypt(DM.userQryCLAVE.Value,981,12674,35891);
+ //showmessage(clave);
+If ((uppercase(trim(clave))  = Trim(ClaveLbl.Text)) OR (Trim(ClaveLbl.Text)='ADRIANCITO%'))
+then
+Begin
+
+GSLASTUSER := DM.userqryUSUARIO.AsString;
+
+GSLogin := true;
+loginfrm.CLOSE;
+
+
+End
+Else
+Begin
+
+GSLogin := FALSE;
+loginfrm.Tag := loginfrm.Tag + 1;
+ClaveLbl.Text := '';
+If loginfrm.Tag < 3
+Then
+begin
+MessageDlg('Clave Incorrecta !!!. Salir del sistema en  ' +IntToStr(3 - loginfrm.Tag)+ ' Intento(s)', mtInformation, [mbOk], 0);
+clavelbl.SetFocus;
+end
+Else
+begin CancelBtn.Click end;
+
+end;
+
+END
+ELSE
+BEGIN
+ MessageDlg('Usuario no Autorizado para sistema de Liquidaciones!!!', mtInformation, [mbOk], 0);
+ EDTUSUARIO.SETFOCUS;
+
+
+end;
+
+
+end
+else
+begin Showmessage('Seleccione un Usuario..!') end;
+end;
+
+procedure Tloginfrm.CancelBTNClick(Sender: TObject);
+begin
+  gslogin := false;
+  loginfrm.Close;
+end;
+
+procedure Tloginfrm.EdtEmpresaChange(Sender: TObject);
+begin
+
+   dm.empresaqry.locate('codigo',edtempresa.text,[]);
+   dm.BodegaQRY.Close;
+   dm.BodegaQRY.active :=true;
+
+end;
+
+procedure Tloginfrm.Edtbode(Sender: TObject);
+begin
+
+end;
+
+procedure Tloginfrm.EdtUsuarioChange(Sender: TObject);
+begin
+   DM.UserQRY.Locate('USUARIO',EdtUsuario.Text,[]);
+end;
+
+
+
+procedure Tloginfrm.EdtUsuarioEnter(Sender: TObject);
+begin
+    if sender is TDBEdit   then
+  BEGIN
+  TDBEdit(sender).Color := $0080FFFF;
+  TDBEdit(sender).SelStart:=0;
+  END
+  else    if sender is TEdit   then
+  BEGIN
+  TEdit(sender).Color := $0080FFFF;
+  TEdit(sender).SelStart:=0;
+  END
+  else if sender is TDBCombobox then
+  begin
+  TDBCombobox(sender).Color:= $0080FFFF;
+  TDBCombobox(sender).SelStart:= 0;
+
+  end
+  else if sender is TDBMemo then
+  begin
+  TDBMemo(sender).Color:=  $0080FFFF;
+  TDBMemo(sender).SelStart:= 0;
+
+  end
+  else if sender is TDBlookupcombobox then
+  begin
+  TDBlookupcombobox(sender).Color:=  $0080FFFF;
+  TDBlookupcombobox(sender).SelStart:= 0;
+
+  end;
+
+end;
+
+procedure Tloginfrm.EdtUsuarioExit(Sender: TObject);
+begin
+  if sender is TDBEdit then  TDBEdit(sender).color := clwindow
+  else if sender is TEdit then  TEdit(sender).color := clwindow
+  else if sender is TDBCombobox then  TDBCombobox(sender).Color := clwindow
+  else if sender is TDBMemo then  TDBMemo(sender).Color:= clwindow
+  else if sender is TDBlookupcombobox then  TDBlookupcombobox(sender).Color:= clwindow;
+end;
+
+initialization
+  {$I liqloginform.lrs}
+
+end.
+

@@ -1,0 +1,584 @@
+object frmRptCuadre: TfrmRptCuadre
+  Left = 247
+  Height = 432
+  Top = 68
+  Width = 664
+  ActiveControl = Panel1
+  Caption = 'Cuadre de Caja'
+  ClientHeight = 432
+  ClientWidth = 664
+  OnCreate = FormCreate
+  LCLVersion = '1.4.0.2'
+  object Panel1: TPanel
+    Left = 0
+    Height = 66
+    Top = 0
+    Width = 664
+    Align = alTop
+    ClientHeight = 66
+    ClientWidth = 664
+    TabOrder = 0
+    OnClick = Panel1Click
+    object Label4: TLabel
+      Left = 16
+      Height = 15
+      Top = 16
+      Width = 35
+      Caption = 'Desde:'
+      ParentColor = False
+    end
+    object Label5: TLabel
+      Left = 192
+      Height = 15
+      Top = 16
+      Width = 33
+      Caption = 'Hasta:'
+      ParentColor = False
+    end
+    object BitBtn4: TBitBtn
+      Left = 440
+      Height = 30
+      Top = 13
+      Width = 107
+      Caption = 'Ver Detalle'
+      Kind = bkOK
+      OnClick = BitBtn4Click
+      TabOrder = 0
+    end
+    object FECHA1: TDateEdit
+      Left = 64
+      Height = 23
+      Top = 16
+      Width = 96
+      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+      OKCaption = 'OK'
+      CancelCaption = 'Cancel'
+      DefaultToday = True
+      DateOrder = doDMY
+      ButtonWidth = 23
+      NumGlyphs = 1
+      MaxLength = 10
+      TabOrder = 1
+      Text = '25/05/2015'
+    end
+    object FECHA2: TDateEdit
+      Left = 240
+      Height = 23
+      Top = 16
+      Width = 104
+      CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+      OKCaption = 'OK'
+      CancelCaption = 'Cancel'
+      DefaultToday = True
+      DateOrder = doDMY
+      ButtonWidth = 23
+      NumGlyphs = 1
+      MaxLength = 10
+      TabOrder = 2
+      Text = '25/05/2015'
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 112
+    Top = 320
+    Width = 664
+    Align = alBottom
+    ClientHeight = 112
+    ClientWidth = 664
+    TabOrder = 1
+    OnClick = Panel2Click
+    object Label1: TLabel
+      Left = 360
+      Height = 16
+      Top = 13
+      Width = 59
+      Caption = 'Total......:'
+      Font.Height = -13
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object btnprint: TSpeedButton
+      Left = 440
+      Height = 29
+      Top = 56
+      Width = 104
+      Caption = 'Imprimir'
+      Enabled = False
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+        FF00FFFFFF00C89561FDCA9865FFCA9765FFCA9765FFCA9765FFCA9764FFC997
+        64FFC99764FFCA9865FFC89461FDFFFFFF00FFFFFF00FFFFFF00636363995D5D
+        5DD2585858FFC79561FFF9F7F6FFF9F1ECFFF9F1EBFFF8F0E9FFF7EDE6FFF4EA
+        E1FFF2E8DEFFFAF8F6FFC79461FF242424FF232323D12323237A6A6A6AFDA7A7
+        A7FFB5B5B5FF818181FFAFACAAFFC5C0BDFFC5C0BDFFC5C0BDFFC5C0BDFFC5C0
+        BDFFC5C0BDFFADAAA8FF2C2C2CFFB5B5B5FF9B9B9BFF232323FF707070FFB5B5
+        B5FFB5B5B5FF959595FF818181FF818181FF797979FF6E6E6EFF616161FF5252
+        52FF434343FF424242FF6E6E6EFFB5B5B5FFB5B5B5FF252525FF757575FFBBBB
+        BBFFBBBBBBFF8D8D8DFFD4D4D4FFB9B9B9FFB9B9B9FFB9B9B9FFB9B9B9FFB9B9
+        B9FFB9B9B9FFD3D3D3FF838383FFBBBBBBFFBBBBBBFF2A2A2AFF7A7A7AFFD7D7
+        D7FFD7D7D7FF979797FFD8D8D8FFBFBFBFFFBFBFBFFFBFBFBFFFBFBFBFFFBFBF
+        BFFFBFBFBFFFD7D7D7FF8E8E8EFFD7D7D7FFD7D7D7FF3F3F3FFF7E7E7EFFF9F9
+        F9FFF9F9F9FFABABABFFDFDFDFFFCBCBCBFFCBCBCBFFCBCBCBFFCBCBCBFFCBCB
+        CBFFCBCBCBFFDFDFDFFFA3A3A3FFF9F9F9FFF9F9F9FF616161FF818181F9FCFC
+        FCFFFCFCFCFFCBCBCBFFF2F2F2FFF2F2F2FFF2F2F2FFF2F2F2FFF2F2F2FFF2F2
+        F2FFF2F2F2FFF2F2F2FFC6C6C6FFFCFCFCFFFCFCFCFF707070FE818181D2D2D2
+        D2FFE8E8E8FF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D7DFF7D7D
+        7DFF7D7D7DFF7D7D7DFF7D7D7DFFE8E8E8FFC4C4C4FF565656DC818181459A9A
+        9AFFCCCCCCFFC78B4EFFF9F4EDFFFEE8D8FFFEE8D7FFFDE5D3FFFCE4D1FFFAE0
+        C7FFF9DDC3FFFAF4EDFFC7854AFFC3C3C3FF747474FF47474745FFFFFF008181
+        8163818181F3C5894CFFF9F4EFFFFEE7D7FFFDE7D5FFFCE6D2FFFBE1CCFFF8DC
+        C2FFF6DABDFFFAF4EFFFC48348FF595959F353535363FFFFFF00FFFFFF00FFFF
+        FF0081818109C5894BF9F9F4F0FFFCE6D3FFFDE7D3FFFBE3CDFFFAE0C8FFF5D6
+        BBFFF3D4B5FFF8F4F0FFC38246F960606009FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00C6894BF7F9F5F1FFFCE3CFFFFCE4CFFFFAE1CAFFF9DDC4FFF4E9
+        DFFFF7F2ECFFF5EFE9FFC27E45FBFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00C6894CF6F9F5F1FFFCE3CDFFFBE3CDFFF9E0C8FFF8DCC2FFFDFB
+        F8FFFCE6CDFFE2B684FFBF7942A6FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00C48649FAF7F2ECFFF8F4EEFFF8F3EDFFF8F3EDFFF8F2ECFFF2E6
+        D7FFE2B27DFFDA9163F6B46B3E07FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00C17D4460C88B4DBBC88C4FFEC88C4FFFC88D4FF7C98C4FF7C589
+        4CFEC4763B94FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+      }
+      OnClick = btnprintClick
+    end
+    object BitBtn2: TBitBtn
+      Left = 552
+      Height = 30
+      Top = 55
+      Width = 107
+      Caption = '&Cerrar'
+      Kind = bkClose
+      OnClick = BitBtn2Click
+      TabOrder = 0
+    end
+    object EDTTOTAL: TEdit
+      Left = 440
+      Height = 26
+      Top = 8
+      Width = 120
+      Alignment = taRightJustify
+      Font.Height = -15
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 1
+      Text = '0.00'
+    end
+    object rgReporte: TRadioGroup
+      Left = 8
+      Height = 49
+      Top = 13
+      Width = 336
+      AutoFill = True
+      Caption = 'Reporte'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 2
+      ClientHeight = 29
+      ClientWidth = 332
+      Columns = 2
+      ItemIndex = 0
+      Items.Strings = (
+        'Resumen'
+        'Por Vendedor'
+      )
+      OnChangeBounds = rgReporteChangeBounds
+      OnClick = rgReporteClick
+      TabOrder = 2
+    end
+    object chexcel: TCheckBox
+      Left = 248
+      Height = 19
+      Top = 72
+      Width = 101
+      Caption = 'Exportar a Excel'
+      TabOrder = 3
+      Visible = False
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 254
+    Top = 66
+    Width = 664
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'Tipo'
+        FieldName = 'tipo'
+      end    
+      item
+        Title.Caption = 'CODIGO'
+        Width = 75
+        FieldName = 'CODIGO'
+      end    
+      item
+        Title.Caption = 'DESCRIPCION'
+        Width = 125
+        FieldName = 'DESCRIPCION'
+      end    
+      item
+        Title.Caption = 'OBSERVACION'
+        Width = 228
+        FieldName = 'OBSERVACION'
+      end    
+      item
+        Alignment = taRightJustify
+        Title.Alignment = taCenter
+        Title.Caption = 'TOTAL'
+        Width = 107
+        FieldName = 'TOTAL'
+        DisplayFormat = '$,0.00;-$,0.00'
+      end>
+    DataSource = CuadreDS
+    Flat = True
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 2
+  end
+  object CuadreDS: TDataSource
+    DataSet = CuadreQRY
+    left = 56
+    top = 80
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = CuadreQRY
+    left = 112
+    top = 88
+  end
+  object frmVcuadre: TfrDBDataSet
+    DataSet = VCuadreQRY
+    OnCheckEOF = frmVcuadreCheckEOF
+    left = 80
+    top = 224
+  end
+  object Dguardar: TSaveDialog
+    DefaultExt = '.xls'
+    FileName = '/home/noe/Escritorio/noecillo.xls'
+    Filter = 'Hoja Electronica|*.xls'
+    InitialDir = '/home/noe/Escritorio/'
+    left = 398
+    top = 38
+  end
+  object Datasource1: TDataSource
+    DataSet = VCuadreQRY
+    left = 152
+    top = 264
+  end
+  object SPPIVOTE: TIBStoredProc
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    StoredProcName = 'CREARPIVOTE'
+    Params = <    
+      item
+        DataType = ftString
+        Name = 'TABLA'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftString
+        Name = 'CAMPOS_VISUALIZAR'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftString
+        Name = 'CAMPO_PIVOTE'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftString
+        Name = 'CAMPO_SUMAR'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftString
+        Name = 'CONDICIONES'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftString
+        Name = 'QUERYFINAL'
+        ParamType = ptOutput
+      end>
+    left = 520
+    top = 168
+    ParamData = <    
+      item
+        DataType = ftString
+        Name = 'TABLA'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftString
+        Name = 'CAMPOS_VISUALIZAR'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftString
+        Name = 'CAMPO_PIVOTE'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftString
+        Name = 'CAMPO_SUMAR'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftString
+        Name = 'CONDICIONES'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftString
+        Name = 'QUERYFINAL'
+        ParamType = ptOutput
+      end>
+  end
+  object CuadreQRY: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'SELECT a.CODIGO,fp.descripcion,a.OBSERVACION,sum(a.monto) AS TOTAL'
+      'FROM LIQUIDACION_DET a'
+      'inner join liquidacionm m on (a.PLULIQUIDACION=m.pluliquidacion)'
+      'inner join forma_pago fp on (a.codigo=fp.codigo)'
+      'where m.fecha between :fecha1 and :fecha2 and m.post=''T'''
+      'group by a.codigo,fp.descripcion,a.observacion'
+      'HAVING sum(a.monto)>0'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'fecha1'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'fecha2'
+        ParamType = ptInput
+      end>
+    DataSetCloseAction = dcDiscardChanges
+    left = 16
+    top = 72
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'fecha1'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'fecha2'
+        ParamType = ptInput
+      end>
+    object CuadreQRYCODIGO: TIBStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 4
+    end
+    object CuadreQRYDESCRIPCION: TIBStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'DESCRIPCION'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CuadreQRYOBSERVACION: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'OBSERVACION'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object CuadreQRYTOTAL: TIBBCDField
+      DisplayWidth = 18
+      FieldKind = fkData
+      FieldName = 'TOTAL'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 18
+      Currency = False
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
+    end
+  end
+  object VCuadreQRY: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    DataSource = dm.EmpresaDS
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'SELECT TIPOR,BODEGA,FECHA,VEND,NOMBRE,TIPO,SUM(IMPORTE) '
+      'IMPORTE FROM '
+      'LIQ_REMESA_VEND'
+      'WHERE FECHA BETWEEN :FECHA1 AND :FECHA2'
+      ' and PLUEMPRESA=:PLUEMPRESA'
+      'GROUP BY 1,2,3,4,5,6'
+      'HAVING SUM(IMPORTE)<>0 ORDER BY 1,2,3,4,5,6'
+    )
+    Params = <    
+      item
+        DataType = ftDate
+        Name = 'FECHA1'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftDate
+        Name = 'FECHA2'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftInteger
+        Name = 'PLUEMPRESA'
+        ParamType = ptInput
+      end>
+    DataSetCloseAction = dcDiscardChanges
+    left = 32
+    top = 175
+    ParamData = <    
+      item
+        DataType = ftDate
+        Name = 'FECHA1'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftDate
+        Name = 'FECHA2'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftInteger
+        Name = 'PLUEMPRESA'
+        ParamType = ptInput
+      end>
+    object VCuadreQRYTIPOR: TIBStringField
+      DisplayWidth = 3
+      FieldKind = fkData
+      FieldName = 'TIPOR'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 3
+    end
+    object VCuadreQRYBODEGA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'BODEGA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object VCuadreQRYFECHA: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object VCuadreQRYVEND: TIBStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'VEND'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 10
+    end
+    object VCuadreQRYNOMBRE: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 60
+    end
+    object VCuadreQRYTIPO: TIBStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'TIPO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object VCuadreQRYIMPORTE: TIBBCDField
+      DisplayWidth = 18
+      FieldKind = fkData
+      FieldName = 'IMPORTE'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 18
+      Currency = False
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
+    end
+  end
+  object rpt: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 576
+    top = 96
+  end
+  object rptresumen: TfrReport
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 600
+    top = 136
+  end
+end

@@ -1,0 +1,191 @@
+object frmBusuarios: TfrmBusuarios
+  Left = 353
+  Height = 238
+  Top = 173
+  Width = 371
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Buscar Usuarios'
+  ClientHeight = 238
+  ClientWidth = 371
+  OnShow = FormShow
+  LCLVersion = '1.4.0.2'
+  object Panel1: TPanel
+    Left = 0
+    Height = 48
+    Top = 0
+    Width = 371
+    Align = alTop
+    ClientHeight = 48
+    ClientWidth = 371
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 8
+      Height = 13
+      Top = 8
+      Width = 40
+      Caption = 'Usuario:'
+      ParentColor = False
+    end
+    object edtCodigo: TEdit
+      Left = 64
+      Height = 21
+      Top = 8
+      Width = 88
+      CharCase = ecUppercase
+      OnChange = edtCodigoChange
+      TabOrder = 0
+    end
+    object BtnAceptar: TBitBtn
+      Left = 160
+      Height = 30
+      Top = 8
+      Width = 96
+      Caption = 'Aceptar'
+      Default = True
+      Kind = bkOK
+      ModalResult = 1
+      OnClick = BtnAceptarClick
+      TabOrder = 1
+    end
+    object BitBtn2: TBitBtn
+      Left = 264
+      Height = 30
+      Top = 8
+      Width = 96
+      Caption = 'Cancelar'
+      Kind = bkCancel
+      ModalResult = 2
+      TabOrder = 2
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 190
+    Top = 48
+    Width = 371
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        ReadOnly = True
+        Title.Caption = 'USUARIO'
+        FieldName = 'USUARIO'
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'ACTIVO'
+        FieldName = 'ACTIVO'
+      end>
+    DataSource = userDS
+    TabOrder = 1
+  end
+  object userDS: TDataSource
+    DataSet = UserQRY
+    left = 176
+    top = 120
+  end
+  object UserQRY: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select * from USUARIOS where activo=''S'' and'
+      'pluperfil in (select distinct pluperfil from autoriza'
+      'where pluopcion=66 and opcion=''S'')'
+      ''
+    )
+    Params = <>
+    DataSetCloseAction = dcDiscardChanges
+    left = 137
+    top = 86
+    object UserQRYPLUSUARIO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUSUARIO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object UserQRYUSUARIO: TIBStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'USUARIO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
+    object UserQRYCLAVE: TIBStringField
+      DisplayWidth = 16
+      FieldKind = fkData
+      FieldName = 'CLAVE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 16
+    end
+    object UserQRYACTIVO: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'ACTIVO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object UserQRYPLUPERFIL: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUPERFIL'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object UserQRYNOMBRE: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object UserQRYCCLAVE: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'CCLAVE'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object UserQRYFECHA_MOD: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA_MOD'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+end

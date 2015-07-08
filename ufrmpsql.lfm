@@ -1,0 +1,48 @@
+object frmpsql: Tfrmpsql
+  Left = 503
+  Height = 371
+  Top = 178
+  Width = 509
+  Caption = 'frmpsql'
+  ClientHeight = 371
+  ClientWidth = 509
+  LCLVersion = '0.9.28.2'
+  object DBGrid1: TDBGrid
+    Left = 17
+    Height = 236
+    Top = 109
+    Width = 480
+    DataSource = Datasource1
+    TabOrder = 0
+  end
+  object BitBtn1: TBitBtn
+    Left = 384
+    Height = 30
+    Top = 8
+    Width = 75
+    Caption = 'BitBtn1'
+    OnClick = BitBtn1Click
+    TabOrder = 1
+  end
+  object ZQuery1: TZQuery
+    Connection = dm.fbDB
+    AutoCalcFields = False
+    SQL.Strings = (
+      'SELECT a.*,b.codigo as cvend,c.nombre bodega,'
+      'b.nombre,'
+      'd.descripcion TIPO_PEDIDO FROM MOV_SUCURSALM a'
+      'inner join empleados b on (a.pluempleados=b.pluempleados)'
+      'inner join bodegas c on (a.plusucursal=c.plubodega)'
+      'inner join TIPO_PEDIDO d on (a.PLUTIPO=d.plutipo)'
+      'WHERE A.PLUMOVSUCURSAL=32925'
+    )
+    Params = <>
+    left = 24
+    top = 16
+  end
+  object Datasource1: TDatasource
+    DataSet = ZQuery1
+    left = 67
+    top = 57
+  end
+end
