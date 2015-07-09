@@ -15,7 +15,7 @@ uses
   liqRptCuadre, LiqPendieterpt, claseaexcel, liqfaltantesform, DBUtils,
   liqasignareporte, liqbfaltanteform, liqrptFaltanteForm, liqfrmBusuarios,
   LiqfrmDexis, ufrmpsql, ufrmVerDocProcesado, ufrmFC, clfrm, ufrmBVendedor,
-  ufrmMontoTes, frmCorrelativosVend;
+  ufrmMontoTes, ufrmCorrelativosVend, ufrmLiqCorFacturas;
 
 {$IFDEF WINDOWS}{$R liquidaciones.rc}{$ENDIF}
 
@@ -28,4 +28,4 @@ begin
   Application.CreateForm(Tfrmacerca, frmacerca);
   Application.Run;
 end.
-
+

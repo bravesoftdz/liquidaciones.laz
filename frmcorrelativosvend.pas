@@ -1,30 +1,47 @@
-unit frmCorrelativosVend;
+unit ufrmCorrelativosVend;
 
-{$mode objfpc}
+{$mode delphi}
 
 interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   ExtCtrls, StdCtrls, Buttons, DBGrids, DBControlGrid, IBDynamicGrid,
-  IBLookupComboEditBox, IBQuery, types;
+  IBLookupComboEditBox, IBQuery, IBCustomDataSet, db, types;
 
 type
 
-  { TfrmCorrelativosVend }
+  { TfrmCorrelativosVendLiq }
 
-  TfrmCorrelativosVend = class(TForm)
-    BitBtn1: TBitBtn;
+  TfrmCorrelativosVendLiq = class(TForm)
     BitBtn2: TBitBtn;
+    BitBtn3: TBitBtn;
+    BitBtn4: TBitBtn;
+    BitBtn5: TBitBtn;
+    LstCorrelativosVendQRYCORRELATIVO: TIBStringField;
+    LstCorrelativosVendQRYFACTURADO: TIBStringField;
+    LstCorrelativosVendQRYFECHA_ASIGNA: TDateField;
+    LstCorrelativosVendQRYFECHA_LIQ: TDateField;
+    LstCorrelativosVendQRYIDCORRELATIVO: TIntegerField;
+    LstCorrelativosVendQRYIDVENDEDOR: TIntegerField;
+    LstCorrelativosVendQRYNUMERO: TIntegerField;
+    LstCorrelativosVendQRYTIPO: TIBStringField;
+    LstCorrelativosVendQRYUSUARIO_ASIGNA: TIBStringField;
+    LstCorrelativosVendQRYUSUARIO_LIQ: TIBStringField;
+    LstVendDS: TDataSource;
+    LstCorrelativosVendDS: TDataSource;
     IBDynamicGrid1: TIBDynamicGrid;
     IBLookupComboEditBox1: TIBLookupComboEditBox;
+    LstCorrelativosVendQRY: TIBQuery;
     LstVendQRY: TIBQuery;
     Label2: TLabel;
+    LstVendQRYCODIGO: TIBStringField;
+    LstVendQRYISSS: TIBStringField;
+    LstVendQRYNOMBRE: TIBStringField;
+    LstVendQRYPLUEMPLEADOS: TIntegerField;
     Panel1: TPanel;
-    procedure BitBtn1Click(Sender: TObject);
-    procedure DBControlGrid1ContextPopup(Sender: TObject; MousePos: TPoint;
-      var Handled: Boolean);
-    procedure edtcodigoChange(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
+    procedure Panel1Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -32,32 +49,30 @@ type
   end;
 
 var
-  frmCorrelativosVend: TfrmCorrelativosVend;
+  frmCorrelativosVendLiq: TfrmCorrelativosVendLiq;
 
 implementation
 
 USES LIQDM;
 
-{ TfrmCorrelativosVend }
+{ TfrmCorrelativosVendLiq }
 
-procedure TfrmCorrelativosVend.edtcodigoChange(Sender: TObject);
+procedure TfrmCorrelativosVendLiq.BitBtn2Click(Sender: TObject);
+begin
+  close;
+end;
+
+procedure TfrmCorrelativosVendLiq.Panel1Click(Sender: TObject);
 begin
 
 end;
 
-procedure TfrmCorrelativosVend.DBControlGrid1ContextPopup(Sender: TObject;
-  MousePos: TPoint; var Handled: Boolean);
-begin
+{ TfrmCorrelativosVendLiq }
 
-end;
 
-procedure TfrmCorrelativosVend.BitBtn1Click(Sender: TObject);
-begin
-
-end;
 
 initialization
-  {$I unit1.lrs}
+  {$I frmCorrelativosVend.lrs}
 
 end.
 

@@ -1,7 +1,7 @@
 object liqbasignafrm: Tliqbasignafrm
-  Left = 53
+  Left = 472
   Height = 459
-  Top = 91
+  Top = 202
   Width = 738
   ActiveControl = Panel1
   BorderIcons = []
@@ -20,9 +20,10 @@ object liqbasignafrm: Tliqbasignafrm
     ClientHeight = 120
     ClientWidth = 738
     TabOrder = 0
+    OnClick = Panel1Click
     object Label1: TLabel
       Left = 8
-      Height = 13
+      Height = 15
       Top = 24
       Width = 37
       Caption = 'Doc. #:'
@@ -30,17 +31,17 @@ object liqbasignafrm: Tliqbasignafrm
     end
     object Label2: TLabel
       Left = 8
-      Height = 13
+      Height = 15
       Top = 56
-      Width = 50
+      Width = 54
       Caption = 'Vendedor:'
       ParentColor = False
     end
     object Label3: TLabel
       Left = 8
-      Height = 13
+      Height = 15
       Top = 88
-      Width = 33
+      Width = 34
       Caption = 'Fecha:'
       ParentColor = False
     end
@@ -59,7 +60,7 @@ object liqbasignafrm: Tliqbasignafrm
     end
     object edtCodigo: TEdit
       Left = 80
-      Height = 21
+      Height = 23
       Top = 24
       Width = 88
       CharCase = ecUppercase
@@ -69,7 +70,7 @@ object liqbasignafrm: Tliqbasignafrm
     end
     object EdtNombre: TEdit
       Left = 80
-      Height = 21
+      Height = 23
       Top = 56
       Width = 170
       CharCase = ecUppercase
@@ -345,7 +346,7 @@ object liqbasignafrm: Tliqbasignafrm
     end
     object EDTTIPO: TEdit
       Left = 170
-      Height = 21
+      Height = 23
       Top = 24
       Width = 80
       TabOrder = 7
@@ -354,7 +355,7 @@ object liqbasignafrm: Tliqbasignafrm
     end
     object FECHA1: TDateEdit
       Left = 80
-      Height = 21
+      Height = 23
       Top = 88
       Width = 168
       CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]

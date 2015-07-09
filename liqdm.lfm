@@ -24,7 +24,7 @@ object dm: Tdm
     Connected = False
     LoginPrompt = False
     AllowStreamedConnected = False
-    DatabaseName = '10.0.2.2:/home/trompudo/Documentos/sistemas/clientes/diserv/zacatecoluca.fdb'
+    DatabaseName = 'inventario222'
     Params.Strings = (
       'user_name=sysdba'
     )

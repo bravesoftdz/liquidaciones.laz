@@ -56,6 +56,7 @@ type
     procedure FECHA1Change(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
+    procedure Panel1Click(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
   private
     procedure Buscar;
@@ -305,6 +306,11 @@ begin
 
     end;
 
+
+end;
+
+procedure Tliqbasignafrm.Panel1Click(Sender: TObject);
+begin
 
 end;
 

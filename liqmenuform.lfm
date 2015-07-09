@@ -1085,7 +1085,7 @@ object menufrm: Tmenufrm
       Left = 462
       Height = 15
       Top = 2
-      Width = 254
+      Width = 255
       Caption = 'Mostrar Vendedores Pendientes de Liquidar'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clNavy
@@ -1212,6 +1212,19 @@ object menufrm: Tmenufrm
       object MenuItem16: TMenuItem
         Caption = 'Facturacion Rapida'
         OnClick = MenuItem16Click
+      end
+      object MenuItem26: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Correlativos'
+        object MenuItem6: TMenuItem
+          Caption = 'Control de Correlativos'
+          OnClick = MenuItem6Click
+        end
+        object MenuItem27: TMenuItem
+          Caption = '-'
+        end
       end
     end
     object Reportes1: TMenuItem

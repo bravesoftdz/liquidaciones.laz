@@ -1,0 +1,411 @@
+object frmDetalleCorrelativo: TfrmDetalleCorrelativo
+  Left = 445
+  Height = 252
+  Top = 80
+  Width = 385
+  Caption = 'frmDetalleCorrelativo'
+  ClientHeight = 252
+  ClientWidth = 385
+  OnCreate = FormCreate
+  LCLVersion = '1.4.0.2'
+  object Panel1: TPanel
+    Left = 0
+    Height = 66
+    Top = 186
+    Width = 385
+    Align = alBottom
+    ClientHeight = 66
+    ClientWidth = 385
+    TabOrder = 0
+    object BitBtn3: TBitBtn
+      Left = 72
+      Height = 46
+      Top = 8
+      Width = 90
+      Caption = '&Guardar'
+      Default = True
+      Kind = bkOK
+      Layout = blGlyphTop
+      OnClick = BitBtn3Click
+      TabOrder = 0
+    end
+    object BitBtn4: TBitBtn
+      Left = 248
+      Height = 46
+      Top = 8
+      Width = 90
+      DefaultCaption = True
+      Kind = bkClose
+      Layout = blGlyphTop
+      ModalResult = 11
+      OnClick = BitBtn4Click
+      TabOrder = 1
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 186
+    Top = 0
+    Width = 385
+    Align = alClient
+    ClientHeight = 186
+    ClientWidth = 385
+    TabOrder = 1
+    OnClick = Panel2Click
+    object GroupBox1: TGroupBox
+      Left = 8
+      Height = 153
+      Top = 16
+      Width = 360
+      ClientHeight = 133
+      ClientWidth = 356
+      TabOrder = 0
+      OnClick = GroupBox1Click
+      object Label1: TLabel
+        Left = 16
+        Height = 15
+        Top = 8
+        Width = 34
+        Caption = 'Fecha:'
+        ParentColor = False
+      end
+      object Label2: TLabel
+        Left = 16
+        Height = 15
+        Top = 40
+        Width = 27
+        Caption = 'Tipo:'
+        ParentColor = False
+      end
+      object Label3: TLabel
+        Left = 16
+        Height = 15
+        Top = 72
+        Width = 28
+        Caption = 'Serie:'
+        ParentColor = False
+      end
+      object Label4: TLabel
+        Left = 16
+        Height = 15
+        Top = 104
+        Width = 47
+        Caption = 'Numero:'
+        ParentColor = False
+      end
+      object DBDateTimePicker1: TDBDateTimePicker
+        Left = 80
+        Height = 23
+        Top = 8
+        Width = 83
+        DataField = 'FECHA_ASIGNA'
+        DataSource = CorrelativosVendDS
+        ReadOnly = False
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 0
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = True
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+      end
+      object comboTipo: TDBComboBox
+        Left = 80
+        Height = 23
+        Top = 40
+        Width = 83
+        DataField = 'TIPO'
+        DataSource = CorrelativosVendDS
+        ItemHeight = 15
+        Items.Strings = (
+          'FC'
+          'CF'
+        )
+        MaxLength = 0
+        OnChange = comboTipoChange
+        TabOrder = 1
+      end
+      object DBEdit1: TDBEdit
+        Left = 80
+        Height = 23
+        Top = 72
+        Width = 136
+        DataField = 'CORRELATIVO'
+        DataSource = CorrelativosVendDS
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object DBEdit2: TDBEdit
+        Left = 80
+        Height = 23
+        Top = 104
+        Width = 136
+        DataField = 'NUMERO'
+        DataSource = CorrelativosVendDS
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 3
+      end
+    end
+  end
+  object CorrelativosVendQRY: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    AfterPost = CorrelativosVendQRYAfterPost
+    OnNewRecord = CorrelativosVendQRYNewRecord
+    BufferChunks = 1000
+    CachedUpdates = True
+    GenerateParamNames = False
+    GeneratorField.Generator = 'GEN_IDCORRELATIVO'
+    GeneratorField.Field = 'IDCORRELATIVO'
+    GeneratorField.ApplyOnEvent = gaeOnPostRecord
+    SQL.Strings = (
+      'Select A.IDCORRELATIVO, A.IDVENDEDOR, A.TIPO, A.CORRELATIVO, '
+      'A.NUMERO, A.FACTURADO, A.FECHA_ASIGNA, A.USUARIO_ASIGNA, '
+      'A.FECHA_LIQ, A.USUARIO_LIQ From VEND_CORRELATIVO A'
+      ' where a.idvendedor=:pluempleados'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempleados'
+        ParamType = ptInput
+      end>
+    UpdateObject = CorrelativoSQL
+    DataSetCloseAction = dcDiscardChanges
+    left = 216
+    top = 24
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempleados'
+        ParamType = ptInput
+      end>
+    object CorrelativosVendQRYIDCORRELATIVO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'IDCORRELATIVO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object CorrelativosVendQRYIDVENDEDOR: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'IDVENDEDOR'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object CorrelativosVendQRYTIPO: TIBStringField
+      DisplayWidth = 2
+      FieldKind = fkData
+      FieldName = 'TIPO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      OnValidate = CorrelativosVendQRYTIPOValidate
+      Size = 2
+    end
+    object CorrelativosVendQRYCORRELATIVO: TIBStringField
+      DisplayWidth = 15
+      FieldKind = fkData
+      FieldName = 'CORRELATIVO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 15
+    end
+    object CorrelativosVendQRYNUMERO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'NUMERO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CorrelativosVendQRYFACTURADO: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'FACTURADO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object CorrelativosVendQRYFECHA_ASIGNA: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA_ASIGNA'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CorrelativosVendQRYUSUARIO_ASIGNA: TIBStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'USUARIO_ASIGNA'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object CorrelativosVendQRYFECHA_LIQ: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA_LIQ'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CorrelativosVendQRYUSUARIO_LIQ: TIBStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'USUARIO_LIQ'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+  end
+  object CorrelativosVendDS: TDataSource
+    DataSet = CorrelativosVendQRY
+    left = 256
+    top = 64
+  end
+  object CorrelativoSQL: TIBUpdateSQL
+    RefreshSQL.Strings = (
+      'Select A.IDCORRELATIVO, A.IDVENDEDOR, A.TIPO, A.CORRELATIVO, A.NUMERO, A.FACTURADO, A.FECHA_ASIGNA, A.USUARIO_ASIGNA, A.FECHA_LIQ, A.USUARIO_LIQ From VEND_CORRELATIVO A'
+      'Where A.IDCORRELATIVO = :IDCORRELATIVO'
+    )
+    ModifySQL.Strings = (
+      'Update VEND_CORRELATIVO A Set '
+      '  A.IDCORRELATIVO = :IDCORRELATIVO,'
+      '  A.IDVENDEDOR = :IDVENDEDOR,'
+      '  A.TIPO = :TIPO,'
+      '  A.CORRELATIVO = :CORRELATIVO,'
+      '  A.NUMERO = :NUMERO,'
+      '  A.FACTURADO = :FACTURADO,'
+      '  A.FECHA_ASIGNA = :FECHA_ASIGNA,'
+      '  A.USUARIO_ASIGNA = :USUARIO_ASIGNA,'
+      '  A.FECHA_LIQ = :FECHA_LIQ,'
+      '  A.USUARIO_LIQ = :USUARIO_LIQ'
+      'Where A.IDCORRELATIVO = :OLD_IDCORRELATIVO'
+    )
+    InsertSQL.Strings = (
+      'Insert Into VEND_CORRELATIVO(IDCORRELATIVO, IDVENDEDOR, TIPO, CORRELATIVO, NUMERO, FACTURADO, FECHA_ASIGNA, USUARIO_ASIGNA, FECHA_LIQ, USUARIO_LIQ)'
+      'Values(:IDCORRELATIVO, :IDVENDEDOR, :TIPO, :CORRELATIVO, :NUMERO, :FACTURADO, :FECHA_ASIGNA, :USUARIO_ASIGNA, :FECHA_LIQ, :USUARIO_LIQ)'
+    )
+    DeleteSQL.Strings = (
+      'Delete From VEND_CORRELATIVO A'
+      'Where A.IDCORRELATIVO = :IDCORRELATIVO'
+    )
+    left = 298
+    top = 111
+  end
+  object seriesQRY: TIBQuery
+    Database = dm.fbdb
+    Transaction = dm.IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select * from correlativos order by tipo asc'
+    )
+    Params = <>
+    DataSetCloseAction = dcDiscardChanges
+    left = 328
+    top = 24
+    object seriesQRYPLUEMPRESA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPRESA'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object seriesQRYTIPO: TIBStringField
+      DisplayWidth = 2
+      FieldKind = fkData
+      FieldName = 'TIPO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 2
+    end
+    object seriesQRYINICIAL: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'INICIAL'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object seriesQRYFINAL: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FINAL'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object seriesQRYACTUAL: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ACTUAL'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object seriesQRYCORRELATIVO: TIBStringField
+      DisplayWidth = 15
+      FieldKind = fkData
+      FieldName = 'CORRELATIVO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 15
+    end
+  end
+end

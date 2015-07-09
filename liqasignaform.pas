@@ -130,6 +130,7 @@ type
     procedure btnBuscaVend1Click(Sender: TObject);
     procedure btnprocesarClick(Sender: TObject);
     procedure btnSalirClick(Sender: TObject);
+    procedure DBMemo1Change(Sender: TObject);
     procedure DBText1Click(Sender: TObject);
     procedure edtcodigoEnter(Sender: TObject);
     procedure edtcodigoExit(Sender: TObject);
@@ -714,6 +715,11 @@ begin
   end
   else
   liqasignafrm.Close;
+
+end;
+
+procedure Tliqasignafrm.DBMemo1Change(Sender: TObject);
+begin
 
 end;
 

@@ -1,0 +1,955 @@
+object dm: Tdm
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 317
+  HorizontalOffset = 322
+  VerticalOffset = 176
+  Width = 590
+  object EmpresaDS: TDataSource
+    DataSet = EmpresaQRY
+    left = 392
+    top = 72
+  end
+  object BodegaDS: TDataSource
+    DataSet = BodegaQRY
+    left = 328
+    top = 72
+  end
+  object PeriodoDS: TDataSource
+    DataSet = PeriodoQRY
+    left = 528
+    top = 72
+  end
+  object fbdb: TIBDatabase
+    Connected = True
+    LoginPrompt = False
+    AllowStreamedConnected = False
+    DatabaseName = '190.57.71.42:inventario222'
+    Params.Strings = (
+      'user_name=sysdba'
+      '3$$'
+      '3$$'
+      '3$'
+      '3'
+    )
+    DefaultTransaction = IBTransaction1
+    IdleTimer = 0
+    TraceFlags = []
+    left = 32
+    top = 16
+  end
+  object IBTransaction1: TIBTransaction
+    Active = False
+    DefaultDatabase = fbdb
+    IdleTimer = 10
+    DefaultAction = TACommitRetaining
+    Params.Strings = (
+      'read_committed'
+      'rec_version'
+      'nowait'
+    )
+    left = 96
+    top = 16
+  end
+  object myqry: TIBQuery
+    Database = fbdb
+    Transaction = IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    Params = <>
+    DataSetCloseAction = dcDiscardChanges
+    left = 328
+    top = 136
+  end
+  object EmpresaQRY: TIBQuery
+    Database = fbdb
+    Transaction = IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select pluempresa,codigo,nombre from empresas'
+      'where activa=''S'''
+    )
+    Params = <>
+    DataSetCloseAction = dcDiscardChanges
+    left = 392
+    top = 16
+    object EmpresaQRYPLUEMPRESA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPRESA'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object EmpresaQRYCODIGO: TIBStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
+    object EmpresaQRYNOMBRE: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 60
+    end
+  end
+  object BodegaQRY: TIBQuery
+    Database = fbdb
+    Transaction = IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    DataSource = EmpresaDS
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select * from bodegas where activa=''S'''
+      'and pluempresas=:pluempresa'
+      'and local=''S'''
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempresa'
+        ParamType = ptInput
+      end>
+    DataSetCloseAction = dcDiscardChanges
+    left = 328
+    top = 16
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempresa'
+        ParamType = ptInput
+      end>
+    object BodegaQRYPLUBODEGA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUBODEGA'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object BodegaQRYCODIGO: TIBStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
+    object BodegaQRYNOMBRE: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object BodegaQRYDIRECCION1: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'DIRECCION1'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object BodegaQRYCIUDAD: TIBStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'CIUDAD'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object BodegaQRYTELEFONO: TIBStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'TELEFONO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object BodegaQRYFAX: TIBStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'FAX'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object BodegaQRYENCARGADO: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'ENCARGADO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object BodegaQRYPLUEMPRESAS: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPRESAS'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object BodegaQRYACTIVA: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'ACTIVA'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object BodegaQRYLOCAL: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'LOCAL'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object BodegaQRYDIR_IP: TIBStringField
+      DisplayWidth = 15
+      FieldKind = fkData
+      FieldName = 'DIR_IP'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 15
+    end
+    object BodegaQRYLOCATIONDB: TIBStringField
+      DisplayWidth = 100
+      FieldKind = fkData
+      FieldName = 'LOCATIONDB'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+  end
+  object PeriodoQRY: TIBQuery
+    Database = fbdb
+    Transaction = IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    DataSource = EmpresaDS
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select * from periodos where pluempresa=:pluempresa '
+      'order by id desc'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempresa'
+        ParamType = ptInput
+      end>
+    DataSetCloseAction = dcDiscardChanges
+    left = 528
+    top = 16
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempresa'
+        ParamType = ptInput
+      end>
+    object PeriodoQRYPLUEMPRESA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPRESA'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object PeriodoQRYID: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object PeriodoQRYFECHAINICIAL: TDateTimeField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHAINICIAL'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object PeriodoQRYFECHAFINAL: TDateTimeField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHAFINAL'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object PeriodoQRYDESCRIPCION: TIBStringField
+      DisplayWidth = 200
+      FieldKind = fkData
+      FieldName = 'DESCRIPCION'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object PeriodoQRYPOST: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'POST'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object PeriodoQRYPLUSUARIO_CREA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUSUARIO_CREA'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object PeriodoQRYFECHA_CREA: TDateTimeField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA_CREA'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object PeriodoQRYPLUSUARIO_MOD: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUSUARIO_MOD'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object PeriodoQRYFECHA_MOD: TDateTimeField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA_MOD'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object UserQRY: TIBQuery
+    Database = fbdb
+    Transaction = IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select * from USUARIOS where activo=''S'' and'
+      'pluperfil in (select distinct pluperfil from autoriza'
+      'where pluopcion=66 and opcion=''S'')'
+    )
+    Params = <>
+    DataSetCloseAction = dcDiscardChanges
+    left = 256
+    top = 16
+    object UserQRYPLUSUARIO: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUSUARIO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object UserQRYUSUARIO: TIBStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'USUARIO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
+    object UserQRYCLAVE: TIBStringField
+      DisplayWidth = 16
+      FieldKind = fkData
+      FieldName = 'CLAVE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 16
+    end
+    object UserQRYACTIVO: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'ACTIVO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object UserQRYPLUPERFIL: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUPERFIL'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object UserQRYNOMBRE: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object UserQRYCCLAVE: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'CCLAVE'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object UserQRYFECHA_MOD: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FECHA_MOD'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object LBodegasQRY: TIBQuery
+    Database = fbdb
+    Transaction = IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    DataSource = EmpresaDS
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select * from bodegas where activa=''S'' and pluempresas=:pluempresa'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempresa'
+        ParamType = ptInput
+      end>
+    DataSetCloseAction = dcDiscardChanges
+    left = 176
+    top = 16
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempresa'
+        ParamType = ptInput
+      end>
+    object LBodegasQRYPLUBODEGA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUBODEGA'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object LBodegasQRYCODIGO: TIBStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
+    object LBodegasQRYNOMBRE: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object LBodegasQRYDIRECCION1: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'DIRECCION1'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object LBodegasQRYCIUDAD: TIBStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'CIUDAD'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object LBodegasQRYTELEFONO: TIBStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'TELEFONO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object LBodegasQRYFAX: TIBStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'FAX'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object LBodegasQRYENCARGADO: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'ENCARGADO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object LBodegasQRYPLUEMPRESAS: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPRESAS'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object LBodegasQRYACTIVA: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'ACTIVA'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object LBodegasQRYLOCAL: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'LOCAL'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object LBodegasQRYDIR_IP: TIBStringField
+      DisplayWidth = 15
+      FieldKind = fkData
+      FieldName = 'DIR_IP'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 15
+    end
+    object LBodegasQRYLOCATIONDB: TIBStringField
+      DisplayWidth = 100
+      FieldKind = fkData
+      FieldName = 'LOCATIONDB'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+  end
+  object autorizaQRY: TIBQuery
+    Database = fbdb
+    Transaction = IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select * from autoriza where pluperfil=:pluperfil'
+      'and pluopcion=:pluopcion'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluperfil'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'pluopcion'
+        ParamType = ptInput
+      end>
+    DataSetCloseAction = dcDiscardChanges
+    left = 456
+    top = 16
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluperfil'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'pluopcion'
+        ParamType = ptInput
+      end>
+    object autorizaQRYPLUPERFIL: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUPERFIL'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object autorizaQRYPLUOPCION: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUOPCION'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object autorizaQRYOPCION: TIBStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'OPCION'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+  end
+  object CtasQRY: TIBQuery
+    Database = fbdb
+    Transaction = IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    DataSource = EmpresaDS
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'select plucuenta,codigo,nombre from cuentas'
+      'where detalle=''D'' and pluempresa=:pluempresa'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempresa'
+        ParamType = ptInput
+      end>
+    DataSetCloseAction = dcDiscardChanges
+    left = 96
+    top = 80
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'pluempresa'
+        ParamType = ptInput
+      end>
+    object CtasQRYPLUCUENTA: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUCUENTA'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object CtasQRYCODIGO: TIBStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object CtasQRYNOMBRE: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+  end
+  object myqry2: TIBQuery
+    Database = fbdb
+    Transaction = IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    Params = <>
+    DataSetCloseAction = dcDiscardChanges
+    left = 392
+    top = 136
+  end
+  object myqry3: TIBQuery
+    Database = fbdb
+    Transaction = IBTransInv
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    Params = <>
+    DataSetCloseAction = dcDiscardChanges
+    left = 456
+    top = 136
+  end
+  object ZSQLMonitor1: TIBSQLMonitor
+    TraceFlags = [tfQPrepare, tfQExecute, tfQFetch, tfError, tfStmt, tfConnect, tfTransact, tfBlob, tfService, tfMisc]
+    left = 96
+    top = 224
+  end
+  object Eventos: TIBEvents
+    Database = fbdb
+    Registered = False
+    left = 96
+    top = 160
+  end
+  object vendedorQRY: TIBQuery
+    Database = fbdb
+    Transaction = IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    GenerateParamNames = False
+    GeneratorField.ApplyOnEvent = gaeOnNewRecord
+    SQL.Strings = (
+      'SELECT PLUEMPRESAS,PLUEMPLEADOS,CODIGO,NOMBRE FROM EMPLEADOS '
+      'WHERE ACTIVO=''T'' AND PLUEMPRESAS=1 ORDER BY NOMBRE ASC'
+    )
+    Params = <>
+    DataSetCloseAction = dcDiscardChanges
+    left = 184
+    top = 80
+    object vendedorQRYPLUEMPRESAS: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPRESAS'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object vendedorQRYPLUEMPLEADOS: TIntegerField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLUEMPLEADOS'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object vendedorQRYCODIGO: TIBStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object vendedorQRYNOMBRE: TIBStringField
+      DisplayWidth = 60
+      FieldKind = fkData
+      FieldName = 'NOMBRE'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+  end
+  object InsResSQL: TIBSQL
+    Database = fbdb
+    GenerateParamNames = False
+    UniqueParamNames = False
+    ParamCheck = True
+    SQL.Strings = (
+      'INSERT INTO INV_RESERVAS'
+      '  (ITEM, PLUPRODUCTO, FECHA, REFERENCIA, TIPO, RESERVADOS, ENTRADA, '
+      'SALIDA, '
+      '   OBSERVACIONES, PLUBODEGAS, PLUDOCCLIENTES)'
+      'VALUES'
+      '  (:ITEM, :PLUPRODUCTO, :FECHA, :REFERENCIA, :TIPO, :RESERVADOS, '
+      ':ENTRADA, '
+      '   :SALIDA, :OBSERVACIONES, :PLUBODEGAS, :PLUDOCCLIENTES)'
+    )
+    Transaction = IBTransInv
+    left = 184
+    top = 160
+  end
+  object InvSQL: TIBSQL
+    Database = fbdb
+    GenerateParamNames = False
+    UniqueParamNames = False
+    ParamCheck = True
+    SQL.Strings = (
+      'INSERT INTO INVENTARIO'
+      '  (PLUPRODUCTO, ITEM, FECHA, TIPO, REFERENCIA, EXISTENCIA, '
+      'ENTRADA, SALIDA, '
+      '   DEBE, HABER, SALDO, COSTOANTERIOR, COSTOPROMEDIO, '
+      'PLUSUCURSALES, OBSERVACIONES, '
+      '   PLUDOCCLIENTES, PLUCOMPRA, PLUMOVINV, PC, USUARIO, '
+      'FECHA_REAL, PLURETACEO)'
+      'VALUES'
+      '  (:PLUPRODUCTO, :ITEM, :FECHA, :TIPO, :REFERENCIA, '
+      ':EXISTENCIA, :ENTRADA, '
+      '   :SALIDA, :DEBE, :HABER, :SALDO, :COSTOANTERIOR, '
+      ':COSTOPROMEDIO, :PLUSUCURSALES, '
+      '   :OBSERVACIONES, :PLUDOCCLIENTES, :PLUCOMPRA, '
+      ':PLUMOVINV, :PC, :USUARIO, '
+      '   :FECHA_REAL, :PLURETACEO)'
+    )
+    Transaction = IBTransInv
+    left = 184
+    top = 232
+  end
+  object IBTransInv: TIBTransaction
+    Active = False
+    DefaultDatabase = fbdb
+    DefaultAction = TACommitRetaining
+    Params.Strings = (
+      'read_committed'
+      'rec_version'
+      'nowait'
+    )
+    left = 248
+    top = 232
+  end
+end

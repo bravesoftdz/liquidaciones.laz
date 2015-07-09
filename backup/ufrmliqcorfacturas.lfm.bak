@@ -1,0 +1,151 @@
+object frmLiqCorFacturas: TfrmLiqCorFacturas
+  Left = 203
+  Height = 440
+  Top = 127
+  Width = 651
+  Caption = 'Liquidacion de Facturas'
+  ClientHeight = 440
+  ClientWidth = 651
+  LCLVersion = '1.4.0.2'
+  object Panel1: TPanel
+    Left = 0
+    Height = 56
+    Top = 0
+    Width = 651
+    Align = alTop
+    Caption = 'Liquidacion de Correlativos'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object IBDynamicGrid1: TIBDynamicGrid
+    Left = 0
+    Height = 384
+    Top = 56
+    Width = 651
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        ReadOnly = True
+        Title.Caption = 'Id'
+        Width = 35
+        FieldName = 'IDCORRELATIVO'
+        AutoSizeColumn = False
+        InitialSortColumn = False
+        DBLookupProperties.ItemHeight = 0
+        DBLookupProperties.ItemWidth = 0
+        DBLookupProperties.AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Fecha'
+        Width = 64
+        FieldName = 'FECHA_ASIGNA'
+        AutoSizeColumn = False
+        InitialSortColumn = False
+        DBLookupProperties.ItemHeight = 0
+        DBLookupProperties.ItemWidth = 0
+        DBLookupProperties.AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      end    
+      item
+        ButtonStyle = cbsPickList
+        PickList.Strings = (
+          'FC'
+          'CF'
+        )
+        ReadOnly = True
+        Title.Caption = 'Tipo'
+        Width = 64
+        FieldName = 'TIPO'
+        AutoSizeColumn = False
+        InitialSortColumn = False
+        DBLookupProperties.ItemHeight = 0
+        DBLookupProperties.ItemWidth = 0
+        DBLookupProperties.AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Serie'
+        Width = 64
+        FieldName = 'CORRELATIVO'
+        AutoSizeColumn = False
+        InitialSortColumn = False
+        DBLookupProperties.ItemHeight = 0
+        DBLookupProperties.ItemWidth = 0
+        DBLookupProperties.AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Numero'
+        Width = 64
+        FieldName = 'NUMERO'
+        AutoSizeColumn = False
+        InitialSortColumn = False
+        DBLookupProperties.ItemHeight = 0
+        DBLookupProperties.ItemWidth = 0
+        DBLookupProperties.AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      end    
+      item
+        ButtonStyle = cbsCheckboxColumn
+        ReadOnly = True
+        Title.Caption = 'Liquidado'
+        Width = 64
+        ValueChecked = 'S'
+        ValueUnchecked = 'N'
+        FieldName = 'FACTURADO'
+        AutoSizeColumn = False
+        InitialSortColumn = False
+        DBLookupProperties.ItemHeight = 0
+        DBLookupProperties.ItemWidth = 0
+        DBLookupProperties.AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Usuario Asigna'
+        Width = 100
+        FieldName = 'USUARIO_ASIGNA'
+        AutoSizeColumn = False
+        InitialSortColumn = False
+        DBLookupProperties.ItemHeight = 0
+        DBLookupProperties.ItemWidth = 0
+        DBLookupProperties.AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Fecha Liq.'
+        Width = 75
+        FieldName = 'FECHA_LIQ'
+        AutoSizeColumn = False
+        InitialSortColumn = False
+        DBLookupProperties.ItemHeight = 0
+        DBLookupProperties.ItemWidth = 0
+        DBLookupProperties.AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Usuario Liq.'
+        Width = 100
+        FieldName = 'USUARIO_LIQ'
+        AutoSizeColumn = False
+        InitialSortColumn = False
+        DBLookupProperties.ItemHeight = 0
+        DBLookupProperties.ItemWidth = 0
+        DBLookupProperties.AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      end>
+    Flat = True
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgDisableDelete, dgDisableInsert]
+    Scrollbars = ssAutoVertical
+    TabOrder = 1
+    TitleStyle = tsNative
+    ExpandEditorPanelBelowRow = False
+    Descending = False
+    EditorBorderStyle = bsSingle
+    DefaultPositionAtEnd = False
+  end
+end

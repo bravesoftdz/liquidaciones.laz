@@ -34,8 +34,12 @@ type
     MenuItem23: TMenuItem;
     MenuItem24: TMenuItem;
     MenuItem25: TMenuItem;
+    MenuItem26: TMenuItem;
+    MenuItem27: TMenuItem;
     MenuItem3: TMenuItem;
+    MenuItem4: TMenuItem;
     MenuItem5: TMenuItem;
+    MenuItem6: TMenuItem;
     MenuItem7: TMenuItem;
     MenuItem8: TMenuItem;
     MenuItem9: TMenuItem;
@@ -98,6 +102,7 @@ type
     procedure MenuItem25Click(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
+    procedure MenuItem6Click(Sender: TObject);
     procedure MenuItem7Click(Sender: TObject);
     procedure MenuItem8Click(Sender: TObject);
     procedure N5Click(Sender: TObject);
@@ -153,7 +158,7 @@ uses liqasignaform,
      ufrmpsql, ufrmFC,
      ufrmVerDocProcesado,
      ufrmRptLiquidacionVend,
-     ufrmRptLiqVendExis;
+     ufrmRptLiqVendExis,ufrmCorrelativosVend;
 
 { Tmenufrm }
 
@@ -350,6 +355,12 @@ procedure Tmenufrm.MenuItem5Click(Sender: TObject);
 begin
   application.createform(TfrmRptCuadre,frmRptCuadre);
   frmRptCuadre.show;
+end;
+
+procedure Tmenufrm.MenuItem6Click(Sender: TObject);
+begin
+    application.createForm(TfrmCorrelativosVend,frmCorrelativosVend);
+    frmCorrelativosVend.show;
 end;
 
 procedure Tmenufrm.MenuItem7Click(Sender: TObject);
