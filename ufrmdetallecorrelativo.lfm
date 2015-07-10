@@ -1,17 +1,17 @@
 object frmDetalleCorrelativo: TfrmDetalleCorrelativo
-  Left = 445
-  Height = 252
-  Top = 80
+  Left = 541
+  Height = 285
+  Top = 71
   Width = 385
   Caption = 'frmDetalleCorrelativo'
-  ClientHeight = 252
+  ClientHeight = 285
   ClientWidth = 385
   OnCreate = FormCreate
   LCLVersion = '1.4.0.2'
   object Panel1: TPanel
     Left = 0
     Height = 66
-    Top = 186
+    Top = 219
     Width = 385
     Align = alBottom
     ClientHeight = 66
@@ -44,20 +44,20 @@ object frmDetalleCorrelativo: TfrmDetalleCorrelativo
   end
   object Panel2: TPanel
     Left = 0
-    Height = 186
+    Height = 219
     Top = 0
     Width = 385
     Align = alClient
-    ClientHeight = 186
+    ClientHeight = 219
     ClientWidth = 385
     TabOrder = 1
     OnClick = Panel2Click
     object GroupBox1: TGroupBox
       Left = 8
-      Height = 153
-      Top = 16
+      Height = 193
+      Top = 8
       Width = 360
-      ClientHeight = 133
+      ClientHeight = 173
       ClientWidth = 356
       TabOrder = 0
       OnClick = GroupBox1Click
@@ -89,8 +89,8 @@ object frmDetalleCorrelativo: TfrmDetalleCorrelativo
         Left = 16
         Height = 15
         Top = 104
-        Width = 47
-        Caption = 'Numero:'
+        Width = 34
+        Caption = 'Inicial:'
         ParentColor = False
       end
       object DBDateTimePicker1: TDBDateTimePicker
@@ -153,6 +153,25 @@ object frmDetalleCorrelativo: TfrmDetalleCorrelativo
         CharCase = ecNormal
         MaxLength = 0
         TabOrder = 3
+      end
+      object Label5: TLabel
+        Left = 16
+        Height = 15
+        Top = 136
+        Width = 28
+        Caption = 'Final:'
+        ParentColor = False
+      end
+      object edtFinal: TDBEdit
+        Left = 80
+        Height = 23
+        Top = 136
+        Width = 136
+        DataField = 'FINAL'
+        DataSource = CorrelativosVendDS
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 4
       end
     end
   end
@@ -295,6 +314,16 @@ object frmDetalleCorrelativo: TfrmDetalleCorrelativo
       Required = False
       Size = 10
     end
+    object CorrelativosVendQRYFINAL1: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FINAL'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
   end
   object CorrelativosVendDS: TDataSource
     DataSet = CorrelativosVendQRY
@@ -321,8 +350,10 @@ object frmDetalleCorrelativo: TfrmDetalleCorrelativo
       'Where A.IDCORRELATIVO = :OLD_IDCORRELATIVO'
     )
     InsertSQL.Strings = (
-      'Insert Into VEND_CORRELATIVO(IDCORRELATIVO, IDVENDEDOR, TIPO, CORRELATIVO, NUMERO, FACTURADO, FECHA_ASIGNA, USUARIO_ASIGNA, FECHA_LIQ, USUARIO_LIQ)'
-      'Values(:IDCORRELATIVO, :IDVENDEDOR, :TIPO, :CORRELATIVO, :NUMERO, :FACTURADO, :FECHA_ASIGNA, :USUARIO_ASIGNA, :FECHA_LIQ, :USUARIO_LIQ)'
+      'Insert Into VEND_CORRELATIVO(IDCORRELATIVO, IDVENDEDOR, TIPO, CORRELATIVO, NUMERO, '
+      'FACTURADO, FECHA_ASIGNA, USUARIO_ASIGNA)'
+      'Values(:IDCORRELATIVO, :IDVENDEDOR, :TIPO, :CORRELATIVO, :NUMERO, :FACTURADO, :FECHA_ASIGNA, '
+      ':USUARIO_ASIGNA)'
     )
     DeleteSQL.Strings = (
       'Delete From VEND_CORRELATIVO A'

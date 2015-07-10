@@ -3,7 +3,7 @@ object dm: Tdm
   OldCreateOrder = False
   Height = 317
   HorizontalOffset = 322
-  VerticalOffset = 176
+  VerticalOffset = 167
   Width = 590
   object EmpresaDS: TDataSource
     DataSet = EmpresaQRY

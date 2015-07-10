@@ -1225,9 +1225,6 @@ object menufrm: Tmenufrm
         object MenuItem27: TMenuItem
           Caption = '-'
         end
-        object MenuItem28: TMenuItem
-          Caption = 'Reportes Correlativos'
-        end
       end
     end
     object Reportes1: TMenuItem

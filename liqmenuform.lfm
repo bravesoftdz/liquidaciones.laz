@@ -1,12 +1,12 @@
 object menufrm: Tmenufrm
   Left = 13
-  Height = 109
-  Top = 20
+  Height = 105
+  Top = 24
   Width = 850
   BorderIcons = [biMinimize]
   BorderStyle = bsSingle
   Caption = 'Sistema de Liquidaciones'
-  ClientHeight = 89
+  ClientHeight = 85
   ClientWidth = 850
   Font.Height = -12
   Font.Name = 'Sans'
@@ -1102,7 +1102,7 @@ object menufrm: Tmenufrm
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
-    Top = 66
+    Top = 62
     Width = 850
     Panels = <    
       item

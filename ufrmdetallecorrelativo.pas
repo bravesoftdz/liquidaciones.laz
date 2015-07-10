@@ -17,11 +17,14 @@ type
     BitBtn3: TBitBtn;
     BitBtn4: TBitBtn;
     comboTipo: TDBComboBox;
+    CorrelativosVendQRYFINAL1: TLongintField;
     DBDateTimePicker1: TDBDateTimePicker;
     DBEdit1: TDBEdit;
     DBEdit2: TDBEdit;
+    edtFinal: TDBEdit;
     GroupBox1: TGroupBox;
     CorrelativoSQL: TIBUpdateSQL;
+    Label5: TLabel;
     seriesQRY: TIBQuery;
     Label1: TLabel;
     Label2: TLabel;
@@ -129,9 +132,33 @@ procedure TfrmDetalleCorrelativo.BitBtn3Click(Sender: TObject);
 var
   numero : integer;
 begin
-    if (correlativosVendQry.State = dsinsert) or (correlativosVendQry.State = dsedit) then
-        correlativosVendQry.Post;
 
+    if (correlativosVendQry.State = dsinsert) or (correlativosVendQry.State = dsedit) then
+    begin
+        if (correlativosVendQryfinal1.Value>=correlativosVendQrynumero.Value) then
+        correlativosVendQry.Post
+        else
+          begin
+          showmessage('Numero Final de Facturas no puede ser menos que el inicial!!!');
+          edtFinal.SetFocus;
+          exit;
+          end;
+    end;
+
+    if (correlativosVendQryfinal1.Value>correlativosVendQrynumero.Value) then
+    begin
+      for numero:=correlativosVendQrynumero.Value to  correlativosVendQryfinal1.Value-1 do
+      begin
+          correlativosVendQry.Insert;
+          correlativosVendQrynumero.Value:= numero + 1;
+          correlativosVendQry.Post;
+
+      end;
+    end;
+
+    ModalResult := mrOk;
+
+    {
     if MessageDlg('Insertar Otro Correlativo..?',
                 mtConfirmation, [mbYes, mbNo], 0) = mrNo then
    begin
@@ -145,6 +172,8 @@ begin
        correlativosVendQry.Insert;
        correlativosVendQrynumero.Value:= numero + 1;
     end;
+
+    end; }
 
 
 end;

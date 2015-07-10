@@ -3,7 +3,7 @@ object dm: Tdm
   OldCreateOrder = False
   Height = 317
   HorizontalOffset = 322
-  VerticalOffset = 176
+  VerticalOffset = 167
   Width = 590
   object EmpresaDS: TDataSource
     DataSet = EmpresaQRY
@@ -21,16 +21,12 @@ object dm: Tdm
     top = 72
   end
   object fbdb: TIBDatabase
-    Connected = True
+    Connected = False
     LoginPrompt = False
     AllowStreamedConnected = False
-    DatabaseName = '190.57.71.42:inventario222'
+    DatabaseName = 'inventario222'
     Params.Strings = (
       'user_name=sysdba'
-      '3$$'
-      '3$$'
-      '3$'
-      '3'
     )
     DefaultTransaction = IBTransaction1
     IdleTimer = 0

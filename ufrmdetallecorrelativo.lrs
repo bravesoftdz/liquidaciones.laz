@@ -1,29 +1,29 @@
 { This is an automatically generated lazarus resource file }
 
 LazarusResources.Add('TfrmDetalleCorrelativo','FORMDATA',[
-  'TPF0'#22'TfrmDetalleCorrelativo'#21'frmDetalleCorrelativo'#4'Left'#3#189#1#6
-  +'Height'#3#252#0#3'Top'#2'P'#5'Width'#3#129#1#7'Caption'#6#21'frmDetalleCorr'
-  +'elativo'#12'ClientHeight'#3#252#0#11'ClientWidth'#3#129#1#8'OnCreate'#7#10
-  +'FormCreate'#10'LCLVersion'#6#7'1.4.0.2'#0#6'TPanel'#6'Panel1'#4'Left'#2#0#6
-  +'Height'#2'B'#3'Top'#3#186#0#5'Width'#3#129#1#5'Align'#7#8'alBottom'#12'Clie'
-  +'ntHeight'#2'B'#11'ClientWidth'#3#129#1#8'TabOrder'#2#0#0#7'TBitBtn'#7'BitBt'
-  +'n3'#4'Left'#2'H'#6'Height'#2'.'#3'Top'#2#8#5'Width'#2'Z'#7'Caption'#6#8'&Gu'
-  +'ardar'#7'Default'#9#4'Kind'#7#4'bkOK'#6'Layout'#7#10'blGlyphTop'#7'OnClick'
-  +#7#12'BitBtn3Click'#8'TabOrder'#2#0#0#0#7'TBitBtn'#7'BitBtn4'#4'Left'#3#248#0
-  +#6'Height'#2'.'#3'Top'#2#8#5'Width'#2'Z'#14'DefaultCaption'#9#4'Kind'#7#7'bk'
-  +'Close'#6'Layout'#7#10'blGlyphTop'#11'ModalResult'#2#11#7'OnClick'#7#12'BitB'
-  +'tn4Click'#8'TabOrder'#2#1#0#0#0#6'TPanel'#6'Panel2'#4'Left'#2#0#6'Height'#3
-  +#186#0#3'Top'#2#0#5'Width'#3#129#1#5'Align'#7#8'alClient'#12'ClientHeight'#3
-  +#186#0#11'ClientWidth'#3#129#1#8'TabOrder'#2#1#7'OnClick'#7#11'Panel2Click'#0
-  +#9'TGroupBox'#9'GroupBox1'#4'Left'#2#8#6'Height'#3#153#0#3'Top'#2#16#5'Width'
-  +#3'h'#1#12'ClientHeight'#3#133#0#11'ClientWidth'#3'd'#1#8'TabOrder'#2#0#7'On'
+  'TPF0'#22'TfrmDetalleCorrelativo'#21'frmDetalleCorrelativo'#4'Left'#3#29#2#6
+  +'Height'#3#29#1#3'Top'#2'G'#5'Width'#3#129#1#7'Caption'#6#21'frmDetalleCorre'
+  +'lativo'#12'ClientHeight'#3#29#1#11'ClientWidth'#3#129#1#8'OnCreate'#7#10'Fo'
+  +'rmCreate'#10'LCLVersion'#6#7'1.4.0.2'#0#6'TPanel'#6'Panel1'#4'Left'#2#0#6'H'
+  +'eight'#2'B'#3'Top'#3#219#0#5'Width'#3#129#1#5'Align'#7#8'alBottom'#12'Clien'
+  +'tHeight'#2'B'#11'ClientWidth'#3#129#1#8'TabOrder'#2#0#0#7'TBitBtn'#7'BitBtn'
+  +'3'#4'Left'#2'H'#6'Height'#2'.'#3'Top'#2#8#5'Width'#2'Z'#7'Caption'#6#8'&Gua'
+  +'rdar'#7'Default'#9#4'Kind'#7#4'bkOK'#6'Layout'#7#10'blGlyphTop'#7'OnClick'#7
+  +#12'BitBtn3Click'#8'TabOrder'#2#0#0#0#7'TBitBtn'#7'BitBtn4'#4'Left'#3#248#0#6
+  +'Height'#2'.'#3'Top'#2#8#5'Width'#2'Z'#14'DefaultCaption'#9#4'Kind'#7#7'bkCl'
+  +'ose'#6'Layout'#7#10'blGlyphTop'#11'ModalResult'#2#11#7'OnClick'#7#12'BitBtn'
+  +'4Click'#8'TabOrder'#2#1#0#0#0#6'TPanel'#6'Panel2'#4'Left'#2#0#6'Height'#3
+  +#219#0#3'Top'#2#0#5'Width'#3#129#1#5'Align'#7#8'alClient'#12'ClientHeight'#3
+  +#219#0#11'ClientWidth'#3#129#1#8'TabOrder'#2#1#7'OnClick'#7#11'Panel2Click'#0
+  +#9'TGroupBox'#9'GroupBox1'#4'Left'#2#8#6'Height'#3#193#0#3'Top'#2#8#5'Width'
+  +#3'h'#1#12'ClientHeight'#3#173#0#11'ClientWidth'#3'd'#1#8'TabOrder'#2#0#7'On'
   +'Click'#7#14'GroupBox1Click'#0#6'TLabel'#6'Label1'#4'Left'#2#16#6'Height'#2
   +#15#3'Top'#2#8#5'Width'#2'"'#7'Caption'#6#6'Fecha:'#11'ParentColor'#8#0#0#6
   +'TLabel'#6'Label2'#4'Left'#2#16#6'Height'#2#15#3'Top'#2'('#5'Width'#2#27#7'C'
   +'aption'#6#5'Tipo:'#11'ParentColor'#8#0#0#6'TLabel'#6'Label3'#4'Left'#2#16#6
   +'Height'#2#15#3'Top'#2'H'#5'Width'#2#28#7'Caption'#6#6'Serie:'#11'ParentColo'
   +'r'#8#0#0#6'TLabel'#6'Label4'#4'Left'#2#16#6'Height'#2#15#3'Top'#2'h'#5'Widt'
-  +'h'#2'/'#7'Caption'#6#7'Numero:'#11'ParentColor'#8#0#0#17'TDBDateTimePicker'
+  +'h'#2'"'#7'Caption'#6#8'Inicial:'#11'ParentColor'#8#0#0#17'TDBDateTimePicker'
   +#17'DBDateTimePicker1'#4'Left'#2'P'#6'Height'#2#23#3'Top'#2#8#5'Width'#2'S'#9
   +'DataField'#6#12'FECHA_ASIGNA'#10'DataSource'#7#18'CorrelativosVendDS'#8'Rea'
   +'dOnly'#8#11'CenturyFrom'#3#149#7#7'MaxDate'#5#0#0#0#0#0#4#146#180#20'@'#7'M'
@@ -40,92 +40,99 @@ LazarusResources.Add('TfrmDetalleCorrelativo','FORMDATA',[
   +#9'MaxLength'#2#0#8'TabOrder'#2#2#0#0#7'TDBEdit'#7'DBEdit2'#4'Left'#2'P'#6'H'
   +'eight'#2#23#3'Top'#2'h'#5'Width'#3#136#0#9'DataField'#6#6'NUMERO'#10'DataSo'
   +'urce'#7#18'CorrelativosVendDS'#8'CharCase'#7#8'ecNormal'#9'MaxLength'#2#0#8
-  +'TabOrder'#2#3#0#0#0#0#8'TIBQuery'#19'CorrelativosVendQRY'#8'Database'#7#7'd'
-  +'m.fbdb'#11'Transaction'#7#17'dm.IBTransaction1'#9'AfterPost'#7#28'Correlati'
-  +'vosVendQRYAfterPost'#11'OnNewRecord'#7#28'CorrelativosVendQRYNewRecord'#12
-  +'BufferChunks'#3#232#3#13'CachedUpdates'#9#18'GenerateParamNames'#8#24'Gener'
-  +'atorField.Generator'#6#17'GEN_IDCORRELATIVO'#20'GeneratorField.Field'#6#13
-  +'IDCORRELATIVO'#27'GeneratorField.ApplyOnEvent'#7#15'gaeOnPostRecord'#11'SQL'
-  +'.Strings'#1#6'=Select A.IDCORRELATIVO, A.IDVENDEDOR, A.TIPO, A.CORRELATIVO,'
-  +' '#6'9A.NUMERO, A.FACTURADO, A.FECHA_ASIGNA, A.USUARIO_ASIGNA, '#6'2A.FECHA'
-  +'_LIQ, A.USUARIO_LIQ From VEND_CORRELATIVO A'#6'! where a.idvendedor=:pluemp'
-  +'leados'#0#6'Params'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#12'pluemplead'
-  +'os'#9'ParamType'#7#7'ptInput'#0#0#12'UpdateObject'#7#14'CorrelativoSQL'#18
-  +'DataSetCloseAction'#7#16'dcDiscardChanges'#4'left'#3#216#0#3'top'#2#24#9'Pa'
-  +'ramData'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#12'pluempleados'#9'Param'
-  +'Type'#7#7'ptInput'#0#0#0#13'TIntegerField CorrelativosVendQRYIDCORRELATIVO'
-  +#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#13'IDCORRELAT'
-  +'IVO'#5'Index'#2#0#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'p'
-  +'fInWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#13'TIntegerField'#29'Correlativ'
-  +'osVendQRYIDVENDEDOR'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'Field'
-  +'Name'#6#10'IDVENDEDOR'#5'Index'#2#1#11'LookupCache'#8#13'ProviderFlags'#11
-  +#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#14'TIBStringF'
-  +'ield'#23'CorrelativosVendQRYTIPO'#12'DisplayWidth'#2#2#9'FieldKind'#7#6'fkD'
-  +'ata'#9'FieldName'#6#4'TIPO'#5'Index'#2#2#11'LookupCache'#8#13'ProviderFlags'
-  +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#10'OnValidate'
-  +#7#31'CorrelativosVendQRYTIPOValidate'#4'Size'#2#2#0#0#14'TIBStringField'#30
-  +'CorrelativosVendQRYCORRELATIVO'#12'DisplayWidth'#2#15#9'FieldKind'#7#6'fkDa'
-  ,'ta'#9'FieldName'#6#11'CORRELATIVO'#5'Index'#2#3#11'LookupCache'#8#13'Provid'
-  +'erFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Siz'
-  +'e'#2#15#0#0#13'TIntegerField'#25'CorrelativosVendQRYNUMERO'#12'DisplayWidth'
-  +#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'NUMERO'#5'Index'#2#4#11'Look'
-  +'upCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8
-  +#8'Required'#8#0#0#14'TIBStringField'#28'CorrelativosVendQRYFACTURADO'#12'Di'
-  +'splayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'FACTURADO'#5'Inde'
-  +'x'#2#5#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0
-  +#8'ReadOnly'#8#8'Required'#8#4'Size'#2#1#0#0#10'TDateField'#31'CorrelativosV'
-  +'endQRYFECHA_ASIGNA'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldN'
-  +'ame'#6#12'FECHA_ASIGNA'#5'Index'#2#6#11'LookupCache'#8#13'ProviderFlags'#11
-  +#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TIBStringF'
-  +'ield!CorrelativosVendQRYUSUARIO_ASIGNA'#12'DisplayWidth'#2#10#9'FieldKind'#7
-  +#6'fkData'#9'FieldName'#6#14'USUARIO_ASIGNA'#5'Index'#2#7#11'LookupCache'#8
+  +'TabOrder'#2#3#0#0#6'TLabel'#6'Label5'#4'Left'#2#16#6'Height'#2#15#3'Top'#3
+  +#136#0#5'Width'#2#28#7'Caption'#6#6'Final:'#11'ParentColor'#8#0#0#7'TDBEdit'
+  +#8'edtFinal'#4'Left'#2'P'#6'Height'#2#23#3'Top'#3#136#0#5'Width'#3#136#0#9'D'
+  +'ataField'#6#5'FINAL'#10'DataSource'#7#18'CorrelativosVendDS'#8'CharCase'#7#8
+  +'ecNormal'#9'MaxLength'#2#0#8'TabOrder'#2#4#0#0#0#0#8'TIBQuery'#19'Correlati'
+  +'vosVendQRY'#8'Database'#7#7'dm.fbdb'#11'Transaction'#7#17'dm.IBTransaction1'
+  +#9'AfterPost'#7#28'CorrelativosVendQRYAfterPost'#11'OnNewRecord'#7#28'Correl'
+  +'ativosVendQRYNewRecord'#12'BufferChunks'#3#232#3#13'CachedUpdates'#9#18'Gen'
+  +'erateParamNames'#8#24'GeneratorField.Generator'#6#17'GEN_IDCORRELATIVO'#20
+  +'GeneratorField.Field'#6#13'IDCORRELATIVO'#27'GeneratorField.ApplyOnEvent'#7
+  +#15'gaeOnPostRecord'#11'SQL.Strings'#1#6'=Select A.IDCORRELATIVO, A.IDVENDED'
+  +'OR, A.TIPO, A.CORRELATIVO, '#6'9A.NUMERO, A.FACTURADO, A.FECHA_ASIGNA, A.US'
+  +'UARIO_ASIGNA, '#6'2A.FECHA_LIQ, A.USUARIO_LIQ From VEND_CORRELATIVO A'#6'! '
+  +'where a.idvendedor=:pluempleados'#0#6'Params'#14#1#8'DataType'#7#9'ftUnknow'
+  +'n'#4'Name'#6#12'pluempleados'#9'ParamType'#7#7'ptInput'#0#0#12'UpdateObject'
+  +#7#14'CorrelativoSQL'#18'DataSetCloseAction'#7#16'dcDiscardChanges'#4'left'#3
+  +#216#0#3'top'#2#24#9'ParamData'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#12
+  +'pluempleados'#9'ParamType'#7#7'ptInput'#0#0#0#13'TIntegerField Correlativos'
+  +'VendQRYIDCORRELATIVO'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'Fiel'
+  +'dName'#6#13'IDCORRELATIVO'#5'Index'#2#0#11'LookupCache'#8#13'ProviderFlags'
+  +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#13'TIntege'
+  +'rField'#29'CorrelativosVendQRYIDVENDEDOR'#12'DisplayWidth'#2#10#9'FieldKind'
+  +#7#6'fkData'#9'FieldName'#6#10'IDVENDEDOR'#5'Index'#2#1#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9
+  +#0#0#14'TIBStringField'#23'CorrelativosVendQRYTIPO'#12'DisplayWidth'#2#2#9'F'
+  ,'ieldKind'#7#6'fkData'#9'FieldName'#6#4'TIPO'#5'Index'#2#2#11'LookupCache'#8
   +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
-  +#8#4'Size'#2#10#0#0#10'TDateField'#28'CorrelativosVendQRYFECHA_LIQ'#12'Displ'
-  +'ayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'FECHA_LIQ'#5'Index'
-  +#2#8#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8
-  +'ReadOnly'#8#8'Required'#8#0#0#14'TIBStringField'#30'CorrelativosVendQRYUSUA'
-  +'RIO_LIQ'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'U'
-  +'SUARIO_LIQ'#5'Index'#2#9#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpda'
-  +'te'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#10#0#0#0#11'TDataS'
-  +'ource'#18'CorrelativosVendDS'#7'DataSet'#7#19'CorrelativosVendQRY'#4'left'#3
-  +#0#1#3'top'#2'@'#0#0#12'TIBUpdateSQL'#14'CorrelativoSQL'#18'RefreshSQL.Strin'
-  +'gs'#1#6#168'Select A.IDCORRELATIVO, A.IDVENDEDOR, A.TIPO, A.CORRELATIVO, A.'
-  +'NUMERO, A.FACTURADO, A.FECHA_ASIGNA, A.USUARIO_ASIGNA, A.FECHA_LIQ, A.USUAR'
-  +'IO_LIQ From VEND_CORRELATIVO A'#6'&Where A.IDCORRELATIVO = :IDCORRELATIVO'#0
-  +#17'ModifySQL.Strings'#1#6#30'Update VEND_CORRELATIVO A Set '#6'#  A.IDCORRE'
-  +'LATIVO = :IDCORRELATIVO,'#6#29'  A.IDVENDEDOR = :IDVENDEDOR,'#6#17'  A.TIPO'
-  +' = :TIPO,'#6#31'  A.CORRELATIVO = :CORRELATIVO,'#6#21'  A.NUMERO = :NUMERO,'
-  +#6#27'  A.FACTURADO = :FACTURADO,'#6'!  A.FECHA_ASIGNA = :FECHA_ASIGNA,'#6'%'
-  +'  A.USUARIO_ASIGNA = :USUARIO_ASIGNA,'#6#27'  A.FECHA_LIQ = :FECHA_LIQ,'#6
-  +#30'  A.USUARIO_LIQ = :USUARIO_LIQ'#6'*Where A.IDCORRELATIVO = :OLD_IDCORREL'
-  +'ATIVO'#0#17'InsertSQL.Strings'#1#6#147'Insert Into VEND_CORRELATIVO(IDCORRE'
-  +'LATIVO, IDVENDEDOR, TIPO, CORRELATIVO, NUMERO, FACTURADO, FECHA_ASIGNA, USU'
-  +'ARIO_ASIGNA, FECHA_LIQ, USUARIO_LIQ)'#6#135'Values(:IDCORRELATIVO, :IDVENDE'
-  +'DOR, :TIPO, :CORRELATIVO, :NUMERO, :FACTURADO, :FECHA_ASIGNA, :USUARIO_ASIG'
-  +'NA, :FECHA_LIQ, :USUARIO_LIQ)'#0#17'DeleteSQL.Strings'#1#6#30'Delete From V'
-  +'END_CORRELATIVO A'#6'&Where A.IDCORRELATIVO = :IDCORRELATIVO'#0#4'left'#3'*'
-  +#1#3'top'#2'o'#0#0#8'TIBQuery'#9'seriesQRY'#8'Database'#7#7'dm.fbdb'#11'Tran'
-  +'saction'#7#17'dm.IBTransaction1'#12'BufferChunks'#3#232#3#13'CachedUpdates'
-  +#8#18'GenerateParamNames'#8#27'GeneratorField.ApplyOnEvent'#7#14'gaeOnNewRec'
-  +'ord'#11'SQL.Strings'#1#6',select * from correlativos order by tipo asc'#0#6
-  +'Params'#14#0#18'DataSetCloseAction'#7#16'dcDiscardChanges'#4'left'#3'H'#1#3
-  +'top'#2#24#0#13'TIntegerField'#19'seriesQRYPLUEMPRESA'#12'DisplayWidth'#2#10
-  +#9'FieldKind'#7#6'fkData'#9'FieldName'#6#10'PLUEMPRESA'#5'Index'#2#0#11'Look'
-  +'upCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8
-  +#8'Required'#9#0#0#14'TIBStringField'#13'seriesQRYTIPO'#12'DisplayWidth'#2#2
-  +#9'FieldKind'#7#6'fkData'#9'FieldName'#6#4'TIPO'#5'Index'#2#1#11'LookupCache'
+  +#9#10'OnValidate'#7#31'CorrelativosVendQRYTIPOValidate'#4'Size'#2#2#0#0#14'T'
+  +'IBStringField'#30'CorrelativosVendQRYCORRELATIVO'#12'DisplayWidth'#2#15#9'F'
+  +'ieldKind'#7#6'fkData'#9'FieldName'#6#11'CORRELATIVO'#5'Index'#2#3#11'Lookup'
+  +'Cache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
+  +'Required'#8#4'Size'#2#15#0#0#13'TIntegerField'#25'CorrelativosVendQRYNUMERO'
+  +#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'NUMERO'#5'I'
+  +'ndex'#2#4#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
+  +#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TIBStringField'#28'CorrelativosVendQRY'
+  +'FACTURADO'#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'F'
+  +'ACTURADO'#5'Index'#2#5#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'
+  +#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#1#0#0#10'TDateField'#31
+  +'CorrelativosVendQRYFECHA_ASIGNA'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkD'
+  +'ata'#9'FieldName'#6#12'FECHA_ASIGNA'#5'Index'#2#6#11'LookupCache'#8#13'Prov'
+  +'iderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0
+  +#14'TIBStringField!CorrelativosVendQRYUSUARIO_ASIGNA'#12'DisplayWidth'#2#10#9
+  +'FieldKind'#7#6'fkData'#9'FieldName'#6#14'USUARIO_ASIGNA'#5'Index'#2#7#11'Lo'
+  +'okupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'
+  +#8#8'Required'#8#4'Size'#2#10#0#0#10'TDateField'#28'CorrelativosVendQRYFECHA'
+  +'_LIQ'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'FECHA'
+  +'_LIQ'#5'Index'#2#8#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TIBStringField'#30'Correlat'
+  +'ivosVendQRYUSUARIO_LIQ'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'Fi'
+  +'eldName'#6#11'USUARIO_LIQ'#5'Index'#2#9#11'LookupCache'#8#13'ProviderFlags'
+  +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#10#0
+  +#0#13'TLongintField'#25'CorrelativosVendQRYFINAL1'#12'DisplayWidth'#2#10#9'F'
+  +'ieldKind'#7#6'fkData'#9'FieldName'#6#5'FINAL'#5'Index'#2#10#11'LookupCache'
   +#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Requir'
-  +'ed'#9#4'Size'#2#2#0#0#13'TIntegerField'#16'seriesQRYINICIAL'#12'DisplayWidt'
-  +'h'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#7'INICIAL'#5'Index'#2#2#11
-  +'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnl'
-  +'y'#8#8'Required'#8#0#0#13'TIntegerField'#14'seriesQRYFINAL'#12'DisplayWidth'
-  +#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'FINAL'#5'Index'#2#3#11'Looku'
-  +'pCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
-  +'Required'#8#0#0#13'TIntegerField'#15'seriesQRYACTUAL'#12'DisplayWidth'#2#10
-  +#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'ACTUAL'#5'Index'#2#4#11'LookupCac'
-  +'he'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Re'
-  +'quired'#8#0#0#14'TIBStringField'#20'seriesQRYCORRELATIVO'#12'DisplayWidth'#2
-  +#15#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'CORRELATIVO'#5'Index'#2#5#11
-  +'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnl'
-  +'y'#8#8'Required'#8#4'Size'#2#15#0#0#0#0
+  +'ed'#8#0#0#0#11'TDataSource'#18'CorrelativosVendDS'#7'DataSet'#7#19'Correlat'
+  +'ivosVendQRY'#4'left'#3#0#1#3'top'#2'@'#0#0#12'TIBUpdateSQL'#14'CorrelativoS'
+  +'QL'#18'RefreshSQL.Strings'#1#6#168'Select A.IDCORRELATIVO, A.IDVENDEDOR, A.'
+  +'TIPO, A.CORRELATIVO, A.NUMERO, A.FACTURADO, A.FECHA_ASIGNA, A.USUARIO_ASIGN'
+  +'A, A.FECHA_LIQ, A.USUARIO_LIQ From VEND_CORRELATIVO A'#6'&Where A.IDCORRELA'
+  +'TIVO = :IDCORRELATIVO'#0#17'ModifySQL.Strings'#1#6#30'Update VEND_CORRELATI'
+  +'VO A Set '#6'#  A.IDCORRELATIVO = :IDCORRELATIVO,'#6#29'  A.IDVENDEDOR = :I'
+  +'DVENDEDOR,'#6#17'  A.TIPO = :TIPO,'#6#31'  A.CORRELATIVO = :CORRELATIVO,'#6
+  +#21'  A.NUMERO = :NUMERO,'#6#27'  A.FACTURADO = :FACTURADO,'#6'!  A.FECHA_AS'
+  +'IGNA = :FECHA_ASIGNA,'#6'%  A.USUARIO_ASIGNA = :USUARIO_ASIGNA,'#6#27'  A.F'
+  +'ECHA_LIQ = :FECHA_LIQ,'#6#30'  A.USUARIO_LIQ = :USUARIO_LIQ'#6'*Where A.IDC'
+  +'ORRELATIVO = :OLD_IDCORRELATIVO'#0#17'InsertSQL.Strings'#1#6'SInsert Into V'
+  +'END_CORRELATIVO(IDCORRELATIVO, IDVENDEDOR, TIPO, CORRELATIVO, NUMERO, '#6'('
+  +'FACTURADO, FECHA_ASIGNA, USUARIO_ASIGNA)'#6']Values(:IDCORRELATIVO, :IDVEND'
+  +'EDOR, :TIPO, :CORRELATIVO, :NUMERO, :FACTURADO, :FECHA_ASIGNA, '#6#16':USUA'
+  +'RIO_ASIGNA)'#0#17'DeleteSQL.Strings'#1#6#30'Delete From VEND_CORRELATIVO A'
+  +#6'&Where A.IDCORRELATIVO = :IDCORRELATIVO'#0#4'left'#3'*'#1#3'top'#2'o'#0#0
+  +#8'TIBQuery'#9'seriesQRY'#8'Database'#7#7'dm.fbdb'#11'Transaction'#7#17'dm.I'
+  +'BTransaction1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8#18'GeneratePara'
+  +'mNames'#8#27'GeneratorField.ApplyOnEvent'#7#14'gaeOnNewRecord'#11'SQL.Strin'
+  +'gs'#1#6',select * from correlativos order by tipo asc'#0#6'Params'#14#0#18
+  +'DataSetCloseAction'#7#16'dcDiscardChanges'#4'left'#3'H'#1#3'top'#2#24#0#13
+  +'TIntegerField'#19'seriesQRYPLUEMPRESA'#12'DisplayWidth'#2#10#9'FieldKind'#7
+  +#6'fkData'#9'FieldName'#6#10'PLUEMPRESA'#5'Index'#2#0#11'LookupCache'#8#13'P'
+  +'roviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#0
+  +#0#14'TIBStringField'#13'seriesQRYTIPO'#12'DisplayWidth'#2#2#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#4'TIPO'#5'Index'#2#1#11'LookupCache'#8#13'ProviderFl'
+  +'ags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#4'Size'#2
+  +#2#0#0#13'TIntegerField'#16'seriesQRYINICIAL'#12'DisplayWidth'#2#10#9'FieldK'
+  +'ind'#7#6'fkData'#9'FieldName'#6#7'INICIAL'#5'Index'#2#2#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8
+  +#0#0#13'TIntegerField'#14'seriesQRYFINAL'#12'DisplayWidth'#2#10#9'FieldKind'
+  +#7#6'fkData'#9'FieldName'#6#5'FINAL'#5'Index'#2#3#11'LookupCache'#8#13'Provi'
+  +'derFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0
+  +#13'TIntegerField'#15'seriesQRYACTUAL'#12'DisplayWidth'#2#10#9'FieldKind'#7#6
+  ,'fkData'#9'FieldName'#6#6'ACTUAL'#5'Index'#2#4#11'LookupCache'#8#13'Provider'
+  +'Flags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14
+  +'TIBStringField'#20'seriesQRYCORRELATIVO'#12'DisplayWidth'#2#15#9'FieldKind'
+  +#7#6'fkData'#9'FieldName'#6#11'CORRELATIVO'#5'Index'#2#5#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8
+  +#4'Size'#2#15#0#0#0#0
 ]);
