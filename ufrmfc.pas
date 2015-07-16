@@ -52,6 +52,7 @@ type
     FACTMOBSERVACIONES: TStringField;
     FACTMPAGADO: TStringField;
     FACTMPC_CREA: TStringField;
+    FACTMPC_IMPRIME1: TStringField;
     FACTMPENDIENTE: TFloatField;
     FACTMPLUCLIENTE: TLongintField;
     FACTMPLUDOCCLIENTES: TLongintField;
@@ -460,6 +461,7 @@ begin
       FACTM.FieldByName('id').VALUE := DM.PeriodoQRYID.Value;
       FACTM.FieldByName('dia').VALUE := 1;//CDM.CORTEdQRYDIA.VALUE;
       FACTM.FieldByName('OBSERVACIONES').VALUE := 'NUEVA FACTURACION';
+      FACTM.FieldByName('PC_IMPRIME').VALUE :=DM.UserQRYUSUARIO.AsString;
       FACTM.Post;
 
       if chRVend.Checked then

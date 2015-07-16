@@ -164,223 +164,229 @@ LazarusResources.Add('TfrmFC2','FORMDATA',[
   +'ente,a.nombre,'#6'?a.esexento,a.gravado,a.iva,a.post,a.total,b.nombre as ve'
   +'ndedor,'#6'=a.pluempresas,a.plusucursales,a.flete,a.pagado,a.diascredito,'#6
   +'Aa.legal,a.formapago,a.plufacturanc,a.direccion_envio,a.pendiente,'#6'4a.im'
-  +'preso,a.v_exento,a.anulado,a.pc_crea,a.id,a.dia,'#6#29'A.CONDICIONES,A.OBSE'
-  +'RVACIONES'#6#19'from docclientesm a'#6'9inner join empleados b on (a.pluemp'
-  +'leados=b.pluempleados)'#6#16'where a.codigo=0'#0#6'Params'#14#0#12'UpdateOb'
-  +'ject'#7#8'FACTMSQL'#18'DataSetCloseAction'#7#16'dcDiscardChanges'#4'left'#3
-  +#200#0#3'top'#2#24#0#13'TIntegerField'#19'FACTMPLUDOCCLIENTES'#12'DisplayWid'
-  +'th'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#14'PLUDOCCLIENTES'#5'Index'
-  +#2#0#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8
-  +'ReadOnly'#8#8'Required'#9#0#0#10'TDateField'#10'FACTMFECHA'#12'DisplayWidth'
-  +#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'FECHA'#5'Index'#2#1#11'Looku'
-  +'pCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
-  +'Required'#9#0#0#13'TIntegerField'#17'FACTMPLUEMPLEADOS'#12'DisplayWidth'#2
-  +#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#12'PLUEMPLEADOS'#5'Index'#2#2#11
-  +'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnl'
-  +'y'#8#8'Required'#9#0#0#13'TIntegerField'#11'FACTMCODIGO'#12'DisplayWidth'#2
-  +#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'CODIGO'#5'Index'#2#3#11'Lookup'
-  +'Cache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
-  +'Required'#9#0#0#14'TIBStringField'#16'FACTMCORRELATIVO'#12'DisplayWidth'#2
-  +#15#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'CORRELATIVO'#5'Index'#2#4#11
-  +'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnl'
-  +'y'#8#8'Required'#8#4'Size'#2#15#0#0#14'TIBStringField'#9'FACTMTIPO'#12'Disp'
-  +'layWidth'#2#3#9'FieldKind'#7#6'fkData'#9'FieldName'#6#4'TIPO'#5'Index'#2#5
-  +#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Read'
-  +'Only'#8#8'Required'#9#4'Size'#2#3#0#0#13'TIntegerField'#15'FACTMPLUCLIENTE'
-  +#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#10'PLUCLIENTE'
-  +#5'Index'#2#6#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWh'
-  +'ere'#0#8'ReadOnly'#8#8'Required'#9#0#0#14'TIBStringField'#11'FACTMNOMBRE'#12
-  +'DisplayWidth'#3#250#0#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'NOMBRE'#5'I'
-  +'ndex'#2#7#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
-  +#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#250#0#0#0#14'TIBStringField'#13'FAC'
-  ,'TMESEXENTO'#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#8
-  +'ESEXENTO'#5'Index'#2#8#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'
-  +#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#1#0#0#11'TFloatField'
-  +#12'FACTMGRAVADO'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'
-  +#6#7'GRAVADO'#5'Index'#2#9#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpd'
-  +'ate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#8'MaxValue'#5#0#0#0#0#0#0#0
-  +#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#2#0#0#11'TFloatField'
-  +#8'FACTMIVA'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#3
-  +'IVA'#5'Index'#2#10#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
-  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8
-  +'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#2#0#0#14'TIBStringField'#9'F'
-  +'ACTMPOST'#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#4'PO'
-  +'ST'#5'Index'#2#11#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'p'
-  +'fInWhere'#0#8'ReadOnly'#8#8'Required'#9#4'Size'#2#1#0#0#11'TFloatField'#10
-  +'FACTMTOTAL'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5
-  +'TOTAL'#5'Index'#2#12#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
-  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8
-  +'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#2#0#0#14'TIBStringField'#13
-  +'FACTMVENDEDOR'#12'DisplayWidth'#2'<'#9'FieldKind'#7#6'fkData'#9'FieldName'#6
-  +#8'VENDEDOR'#5'Index'#2#13#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpd'
-  +'ate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'<'#0#0#13'TIntege'
-  +'rField'#16'FACTMPLUEMPRESAS'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'
-  +#9'FieldName'#6#11'PLUEMPRESAS'#5'Index'#2#14#11'LookupCache'#8#13'ProviderF'
-  +'lags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#13'T'
-  +'IntegerField'#18'FACTMPLUSUCURSALES'#12'DisplayWidth'#2#10#9'FieldKind'#7#6
-  +'fkData'#9'FieldName'#6#13'PLUSUCURSALES'#5'Index'#2#15#11'LookupCache'#8#13
-  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9
-  +#0#0#11'TFloatField'#10'FACTMFLETE'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'f'
-  +'kData'#9'FieldName'#6#5'FLETE'#5'Index'#2#16#11'LookupCache'#8#13'ProviderF'
-  +'lags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#8'MaxVal'
-  +'ue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#2
-  +#0#0#14'TIBStringField'#11'FACTMPAGADO'#12'DisplayWidth'#2#2#9'FieldKind'#7#6
-  +'fkData'#9'FieldName'#6#6'PAGADO'#5'Index'#2#17#11'LookupCache'#8#13'Provide'
-  +'rFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'
-  +#2#2#0#0#13'TIntegerField'#16'FACTMDIASCREDITO'#12'DisplayWidth'#2#10#9'Fiel'
-  +'dKind'#7#6'fkData'#9'FieldName'#6#11'DIASCREDITO'#5'Index'#2#18#11'LookupCa'
-  +'che'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'R'
-  +'equired'#8#0#0#14'TIBStringField'#10'FACTMLEGAL'#12'DisplayWidth'#2#1#9'Fie'
-  +'ldKind'#7#6'fkData'#9'FieldName'#6#5'LEGAL'#5'Index'#2#19#11'LookupCache'#8
-  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
-  +#8#4'Size'#2#1#0#0#14'TIBStringField'#14'FACTMFORMAPAGO'#12'DisplayWidth'#2
-  +'('#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'FORMAPAGO'#5'Index'#2#20#11'Lo'
-  +'okupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'
-  +#8#8'Required'#8#4'Size'#2'('#0#0#13'TIntegerField'#17'FACTMPLUFACTURANC'#12
-  +'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#12'PLUFACTURANC'
-  +#5'Index'#2#21#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInW'
-  +'here'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TIBStringField'#20'FACTMDIRECCIO'
-  +'N_ENVIO'#12'DisplayWidth'#3#250#0#9'FieldKind'#7#6'fkData'#9'FieldName'#6#15
-  +'DIRECCION_ENVIO'#5'Index'#2#22#11'LookupCache'#8#13'ProviderFlags'#11#10'pf'
-  +'InUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#250#0#0#0#11
-  +'TFloatField'#14'FACTMPENDIENTE'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkDa'
-  +'ta'#9'FieldName'#6#9'PENDIENTE'#5'Index'#2#23#11'LookupCache'#8#13'Provider'
-  +'Flags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#8'MaxVa'
-  +'lue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2
-  +#2#0#0#14'TIBStringField'#12'FACTMIMPRESO'#12'DisplayWidth'#2#1#9'FieldKind'
-  +#7#6'fkData'#9'FieldName'#6#7'IMPRESO'#5'Index'#2#24#11'LookupCache'#8#13'Pr'
-  +'oviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4
-  +'Size'#2#1#0#0#11'TFloatField'#13'FACTMV_EXENTO'#12'DisplayWidth'#2#10#9'Fie'
-  +'ldKind'#7#6'fkData'#9'FieldName'#6#8'V_EXENTO'#5'Index'#2#25#11'LookupCache'
-  +#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Requir'
-  +'ed'#8#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9
-  +'Precision'#2#2#0#0#14'TIBStringField'#12'FACTMANULADO'#12'DisplayWidth'#2#1
-  +#9'FieldKind'#7#6'fkData'#9'FieldName'#6#7'ANULADO'#5'Index'#2#26#11'LookupC'
+  +'preso,a.v_exento,a.anulado,a.pc_crea,a.id,a.dia,'#6'*A.CONDICIONES,A.OBSERV'
+  +'ACIONES,a.pc_imprime'#6#19'from docclientesm a'#6'9inner join empleados b o'
+  +'n (a.pluempleados=b.pluempleados)'#6#16'where a.codigo=0'#0#6'Params'#14#0
+  +#12'UpdateObject'#7#8'FACTMSQL'#18'DataSetCloseAction'#7#16'dcDiscardChanges'
+  +#4'left'#3#200#0#3'top'#2#24#0#13'TIntegerField'#19'FACTMPLUDOCCLIENTES'#12
+  +'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#14'PLUDOCCLIENTE'
+  +'S'#5'Index'#2#0#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfI'
+  +'nWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#10'TDateField'#10'FACTMFECHA'#12
+  +'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'FECHA'#5'Index'
+  +#2#1#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8
+  +'ReadOnly'#8#8'Required'#9#0#0#13'TIntegerField'#17'FACTMPLUEMPLEADOS'#12'Di'
+  +'splayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#12'PLUEMPLEADOS'#5
+  +'Index'#2#2#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWher'
+  +'e'#0#8'ReadOnly'#8#8'Required'#9#0#0#13'TIntegerField'#11'FACTMCODIGO'#12'D'
+  +'isplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'CODIGO'#5'Index'
+  +#2#3#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8
+  +'ReadOnly'#8#8'Required'#9#0#0#14'TIBStringField'#16'FACTMCORRELATIVO'#12'Di'
+  +'splayWidth'#2#15#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'CORRELATIVO'#5
+  +'Index'#2#4#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWher'
+  +'e'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#15#0#0#14'TIBStringField'#9'FACT'
+  +'MTIPO'#12'DisplayWidth'#2#3#9'FieldKind'#7#6'fkData'#9'FieldName'#6#4'TIPO'
+  +#5'Index'#2#5#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWh'
+  +'ere'#0#8'ReadOnly'#8#8'Required'#9#4'Size'#2#3#0#0#13'TIntegerField'#15'FAC'
+  +'TMPLUCLIENTE'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6
+  +#10'PLUCLIENTE'#5'Index'#2#6#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInU'
+  +'pdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#14'TIBStringField'#11
+  +'FACTMNOMBRE'#12'DisplayWidth'#3#250#0#9'FieldKind'#7#6'fkData'#9'FieldName'
+  +#6#6'NOMBRE'#5'Index'#2#7#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpda'
+  +'te'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#250#0#0#0#14'TIBSt'
+  ,'ringField'#13'FACTMESEXENTO'#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9
+  +'FieldName'#6#8'ESEXENTO'#5'Index'#2#8#11'LookupCache'#8#13'ProviderFlags'#11
+  +#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#1#0#0#11
+  +'TFloatField'#12'FACTMGRAVADO'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'
+  +#9'FieldName'#6#7'GRAVADO'#5'Index'#2#9#11'LookupCache'#8#13'ProviderFlags'
+  +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#8'MaxValue'#5#0
+  +#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#2#0#0#11
+  +'TFloatField'#8'FACTMIVA'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'F'
+  +'ieldName'#6#3'IVA'#5'Index'#2#10#11'LookupCache'#8#13'ProviderFlags'#11#10
+  +'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#8'MaxValue'#5#0#0#0#0
+  +#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#2#0#0#14'TIBSt'
+  +'ringField'#9'FACTMPOST'#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'Fie'
+  +'ldName'#6#4'POST'#5'Index'#2#11#11'LookupCache'#8#13'ProviderFlags'#11#10'p'
+  +'fInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#4'Size'#2#1#0#0#11'TF'
+  +'loatField'#10'FACTMTOTAL'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9
+  +'FieldName'#6#5'TOTAL'#5'Index'#2#12#11'LookupCache'#8#13'ProviderFlags'#11
+  +#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#8'MaxValue'#5#0#0
+  +#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#2#0#0#14'T'
+  +'IBStringField'#13'FACTMVENDEDOR'#12'DisplayWidth'#2'<'#9'FieldKind'#7#6'fkD'
+  +'ata'#9'FieldName'#6#8'VENDEDOR'#5'Index'#2#13#11'LookupCache'#8#13'Provider'
+  +'Flags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'
+  +#2'<'#0#0#13'TIntegerField'#16'FACTMPLUEMPRESAS'#12'DisplayWidth'#2#10#9'Fie'
+  +'ldKind'#7#6'fkData'#9'FieldName'#6#11'PLUEMPRESAS'#5'Index'#2#14#11'LookupC'
   +'ache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
-  ,'Required'#8#4'Size'#2#1#0#0#14'TIBStringField'#12'FACTMPC_CREA'#12'DisplayW'
-  +'idth'#2#25#9'FieldKind'#7#6'fkData'#9'FieldName'#6#7'PC_CREA'#5'Index'#2#27
+  +'Required'#9#0#0#13'TIntegerField'#18'FACTMPLUSUCURSALES'#12'DisplayWidth'#2
+  +#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#13'PLUSUCURSALES'#5'Index'#2#15
   +#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Read'
-  +'Only'#8#8'Required'#8#4'Size'#2#25#0#0#13'TIntegerField'#7'FACTMID'#12'Disp'
-  +'layWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#2'ID'#5'Index'#2#28
-  +#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Read'
-  +'Only'#8#8'Required'#9#0#0#13'TIntegerField'#8'FACTMDIA'#12'DisplayWidth'#2
-  +#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#3'DIA'#5'Index'#2#29#11'LookupCa'
-  +'che'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'R'
-  +'equired'#8#0#0#14'TIBStringField'#16'FACTMCONDICIONES'#12'DisplayWidth'#2#10
-  +#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'CONDICIONES'#5'Index'#2#30#11'Lo'
+  +'Only'#8#8'Required'#9#0#0#11'TFloatField'#10'FACTMFLETE'#12'DisplayWidth'#2
+  +#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'FLETE'#5'Index'#2#16#11'Lookup'
+  +'Cache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
+  +'Required'#8#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0
+  +#0#0#9'Precision'#2#2#0#0#14'TIBStringField'#11'FACTMPAGADO'#12'DisplayWidth'
+  +#2#2#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'PAGADO'#5'Index'#2#17#11'Look'
+  +'upCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8
+  +#8'Required'#8#4'Size'#2#2#0#0#13'TIntegerField'#16'FACTMDIASCREDITO'#12'Dis'
+  +'playWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'DIASCREDITO'#5'I'
+  +'ndex'#2#18#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWher'
+  +'e'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TIBStringField'#10'FACTMLEGAL'#12'D'
+  +'isplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'LEGAL'#5'Index'#2
+  +#19#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'R'
+  +'eadOnly'#8#8'Required'#8#4'Size'#2#1#0#0#14'TIBStringField'#14'FACTMFORMAPA'
+  +'GO'#12'DisplayWidth'#2'('#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'FORMAPA'
+  +'GO'#5'Index'#2#20#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'p'
+  +'fInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'('#0#0#13'TIntegerField'
+  +#17'FACTMPLUFACTURANC'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'Fiel'
+  +'dName'#6#12'PLUFACTURANC'#5'Index'#2#21#11'LookupCache'#8#13'ProviderFlags'
+  +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TIBStri'
+  +'ngField'#20'FACTMDIRECCION_ENVIO'#12'DisplayWidth'#3#250#0#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#15'DIRECCION_ENVIO'#5'Index'#2#22#11'LookupCache'#8
+  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
+  +#8#4'Size'#3#250#0#0#0#11'TFloatField'#14'FACTMPENDIENTE'#12'DisplayWidth'#2
+  +#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'PENDIENTE'#5'Index'#2#23#11'Lo'
   +'okupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'
-  +#8#8'Required'#8#4'Size'#2#10#0#0#14'TIBStringField'#18'FACTMOBSERVACIONES'
-  +#12'DisplayWidth'#3#250#0#9'FieldKind'#7#6'fkData'#9'FieldName'#6#13'OBSERVA'
-  +'CIONES'#5'Index'#2#31#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'
-  +#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#250#0#0#0#0#12'TIBUpda'
-  +'teSQL'#8'FACTMSQL'#18'RefreshSQL.Strings'#1#12#171#4#0#0'Select A.PLUDOCCLI'
-  +'ENTES, A.CODIGO, A.CONDICIONES, A.DESCUENTO, A.FECHA, A.NOMBRE, A.OBSERVACI'
-  +'ONES, A.ESEXENTO, A.GRAVADO, A.IVA, A.POST, A.TIPO, A.TOTAL, A.PLUCLIENTE, '
-  +'A.PLUEMPLEADOS, A.PLUEMPRESAS, A.PLUSUCURSALES, A.FLETE, A.OCOMPRA, A.TIEMP'
-  +'OCREDITO, A.PAGADO, A.NOCHEQUE, A.PLUBANCO, A.NOMBRETARJETA, A.NOTARJETA, A'
-  +'.TELTARJETA, A.FECHATARJETA, A.PLUTARJETACRED, A.NOQUEDAN, A.FECHAEMISIONQ,'
-  +' A.FECHAPAGOQ, A.MONTOTARJETA, A.DIASCREDITO, A.TIEMPOENTREGA, A.IVAPOST, A'
-  +'.LEGAL, A.VALIDEZ, A.FORMAPAGO, A.FORMAORDENAR, A.PLUFACTURANC, A.DIRECCION'
-  +'_ENVIO, A.NOTA_ENVIO, A.ENVIO, A.FECHA_ENVIO, A.DEPTO_ENVIO, A.CIUDAD_ENVIO'
-  +', A.TEL_ENVIO, A.CONTACTO_ENVIO, A.HORA_ENVIO, A.FORMA_ENVIO, A.ENTREGADO_E'
-  +'NVIO, A.ENTREGADO, A.POSTREMISION, A.DESCUENTO2, A.PLUTIPOVENTA, A.NOTA, A.'
-  +'NOTA2, A.CUENTABANCO, A.SALIDABODEGA, A.PLUCLIENTESSUC, A.FACTORCAMBIO, A.F'
-  +'ECHAPAGO, A.GANADO, A.RAZON, A.PLUOPORTUNIDAD, A.PENDIENTE, A.PLUPAGO, A.PL'
-  +'UQUEDAN, A.TARJETA_AUTORIZ, A.CHEQUE_AUTORIZ, A.AI, A.IMPRESO, A.CORRELATIV'
-  +'O, A.V_EXENTO, A.FECHA_ULT_PAGO, A.ANULADO, A.PLUMOTORISTA, A.PLUPARTIDA, A'
-  +'.POST2, A.FECHA_ANULADA, A.PLUCAJERO, A.FECHA_IMPRESION, A.PC_CREA, A.PC_IM'
-  +'PRIME, A.ID, A.DIA, A.PERCEPCION From DOCCLIENTESM A'#6'(Where A.PLUDOCCLIE'
-  +'NTES = :PLUDOCCLIENTES'#0#17'ModifySQL.Strings'#1#6#26'Update DOCCLIENTESM '
-  +'A Set '#6'%  A.PLUDOCCLIENTES = :PLUDOCCLIENTES,'#6#21'  A.CODIGO = :CODIGO'
-  +','#6#31'  A.CONDICIONES = :CONDICIONES,'#6#27'  A.DESCUENTO = :DESCUENTO,'#6
-  +#19'  A.FECHA = :FECHA,'#6#21'  A.NOMBRE = :NOMBRE,'#6'#  A.OBSERVACIONES = '
-  +':OBSERVACIONES,'#6#25'  A.ESEXENTO = :ESEXENTO,'#6#23'  A.GRAVADO = :GRAVAD'
-  +'O,'#6#15'  A.IVA = :IVA,'#6#17'  A.POST = :POST,'#6#17'  A.TIPO = :TIPO,'#6
-  +#19'  A.TOTAL = :TOTAL,'#6#29'  A.PLUCLIENTE = :PLUCLIENTE,'#6'!  A.PLUEMPLE'
-  +'ADOS = :PLUEMPLEADOS,'#6#31'  A.PLUEMPRESAS = :PLUEMPRESAS,'#6'#  A.PLUSUCU'
-  +'RSALES = :PLUSUCURSALES,'#6#19'  A.FLETE = :FLETE,'#6#23'  A.OCOMPRA = :OCO'
-  +'MPRA,'#6'#  A.TIEMPOCREDITO = :TIEMPOCREDITO,'#6#21'  A.PAGADO = :PAGADO,'#6
-  +#25'  A.NOCHEQUE = :NOCHEQUE,'#6#25'  A.PLUBANCO = :PLUBANCO,'#6'#  A.NOMBRE'
-  +'TARJETA = :NOMBRETARJETA,'#6#27'  A.NOTARJETA = :NOTARJETA,'#6#29'  A.TELTA'
-  +'RJETA = :TELTARJETA,'#6'!  A.FECHATARJETA = :FECHATARJETA,'#6'%  A.PLUTARJE'
-  +'TACRED = :PLUTARJETACRED,'#6#25'  A.NOQUEDAN = :NOQUEDAN,'#6'#  A.FECHAEMIS'
-  +'IONQ = :FECHAEMISIONQ,'#6#29'  A.FECHAPAGOQ = :FECHAPAGOQ,'#6'!  A.MONTOTAR'
-  +'JETA = :MONTOTARJETA,'#6#31'  A.DIASCREDITO = :DIASCREDITO,'#6'#  A.TIEMPOE'
-  +'NTREGA = :TIEMPOENTREGA,'#6#23'  A.IVAPOST = :IVAPOST,'#6#19'  A.LEGAL = :L'
-  +'EGAL,'#6#23'  A.VALIDEZ = :VALIDEZ,'#6#27'  A.FORMAPAGO = :FORMAPAGO,'#6'! '
-  +' A.FORMAORDENAR = :FORMAORDENAR,'#6'!  A.PLUFACTURANC = :PLUFACTURANC,'#6
-  +'''  A.DIRECCION_ENVIO = :DIRECCION_ENVIO,'#6#29'  A.NOTA_ENVIO = :NOTA_ENVI'
-  +'O,'#6#19'  A.ENVIO = :ENVIO,'#6#31'  A.FECHA_ENVIO = :FECHA_ENVIO,'#6#31'  '
-  +'A.DEPTO_ENVIO = :DEPTO_ENVIO,'#6'!  A.CIUDAD_ENVIO = :CIUDAD_ENVIO,'#6#27' '
-  +' A.TEL_ENVIO = :TEL_ENVIO,'#6'%  A.CONTACTO_ENVIO = :CONTACTO_ENVIO,'#6#29
-  +'  A.HORA_ENVIO = :HORA_ENVIO,'#6#31'  A.FORMA_ENVIO = :FORMA_ENVIO,'#6'''  '
-  +'A.ENTREGADO_ENVIO = :ENTREGADO_ENVIO,'#6#27'  A.ENTREGADO = :ENTREGADO,'#6
-  +'!  A.POSTREMISION = :POSTREMISION,'#6#29'  A.DESCUENTO2 = :DESCUENTO2,'#6'!'
-  +'  A.PLUTIPOVENTA = :PLUTIPOVENTA,'#6#17'  A.NOTA = :NOTA,'#6#19'  A.NOTA2 ='
-  +' :NOTA2,'#6#31'  A.CUENTABANCO = :CUENTABANCO,'#6'!  A.SALIDABODEGA = :SALI'
-  +'DABODEGA,'#6'%  A.PLUCLIENTESSUC = :PLUCLIENTESSUC,'#6'!  A.FACTORCAMBIO = '
-  +':FACTORCAMBIO,'#6#27'  A.FECHAPAGO = :FECHAPAGO,'#6#21'  A.GANADO = :GANADO'
-  +','#6#19'  A.RAZON = :RAZON,'#6'%  A.PLUOPORTUNIDAD = :PLUOPORTUNIDAD,'#6#27
-  ,'  A.PENDIENTE = :PENDIENTE,'#6#23'  A.PLUPAGO = :PLUPAGO,'#6#27'  A.PLUQUED'
-  +'AN = :PLUQUEDAN,'#6'''  A.TARJETA_AUTORIZ = :TARJETA_AUTORIZ,'#6'%  A.CHEQU'
-  +'E_AUTORIZ = :CHEQUE_AUTORIZ,'#6#13'  A.AI = :AI,'#6#23'  A.IMPRESO = :IMPRE'
-  +'SO,'#6#31'  A.CORRELATIVO = :CORRELATIVO,'#6#25'  A.V_EXENTO = :V_EXENTO,'#6
-  +'%  A.FECHA_ULT_PAGO = :FECHA_ULT_PAGO,'#6#23'  A.ANULADO = :ANULADO,'#6'!  '
-  +'A.PLUMOTORISTA = :PLUMOTORISTA,'#6#29'  A.PLUPARTIDA = :PLUPARTIDA,'#6#19' '
-  +' A.POST2 = :POST2,'#6'#  A.FECHA_ANULADA = :FECHA_ANULADA,'#6#27'  A.PLUCAJ'
-  +'ERO = :PLUCAJERO,'#6'''  A.FECHA_IMPRESION = :FECHA_IMPRESION,'#6#23'  A.PC'
-  +'_CREA = :PC_CREA,'#6#29'  A.PC_IMPRIME = :PC_IMPRIME,'#6#13'  A.ID = :ID,'#6
-  +#15'  A.DIA = :DIA,'#6#28'  A.PERCEPCION = :PERCEPCION'#6',Where A.PLUDOCCLI'
-  +'ENTES = :OLD_PLUDOCCLIENTES'#0#17'InsertSQL.Strings'#1#12#252#3#0#0'Insert '
-  +'Into DOCCLIENTESM(PLUDOCCLIENTES, CODIGO, CONDICIONES, DESCUENTO, FECHA, NO'
-  +'MBRE, OBSERVACIONES, ESEXENTO, GRAVADO, IVA, POST, TIPO, TOTAL, PLUCLIENTE,'
-  +' PLUEMPLEADOS, PLUEMPRESAS, PLUSUCURSALES, FLETE, OCOMPRA, TIEMPOCREDITO, P'
-  +'AGADO, NOCHEQUE, PLUBANCO, NOMBRETARJETA, NOTARJETA, TELTARJETA, FECHATARJE'
-  +'TA, PLUTARJETACRED, NOQUEDAN, FECHAEMISIONQ, FECHAPAGOQ, MONTOTARJETA, DIAS'
-  +'CREDITO, TIEMPOENTREGA, IVAPOST, LEGAL, VALIDEZ, FORMAPAGO, FORMAORDENAR, P'
-  +'LUFACTURANC, DIRECCION_ENVIO, NOTA_ENVIO, ENVIO, FECHA_ENVIO, DEPTO_ENVIO, '
-  +'CIUDAD_ENVIO, TEL_ENVIO, CONTACTO_ENVIO, HORA_ENVIO, FORMA_ENVIO, ENTREGADO'
-  +'_ENVIO, ENTREGADO, POSTREMISION, DESCUENTO2, PLUTIPOVENTA, NOTA, NOTA2, CUE'
-  +'NTABANCO, SALIDABODEGA, PLUCLIENTESSUC, FACTORCAMBIO, FECHAPAGO, GANADO, RA'
-  +'ZON, PLUOPORTUNIDAD, PENDIENTE, PLUPAGO, PLUQUEDAN, TARJETA_AUTORIZ, CHEQUE'
-  +'_AUTORIZ, AI, IMPRESO, CORRELATIVO, V_EXENTO, FECHA_ULT_PAGO, ANULADO, PLUM'
-  +'OTORISTA, PLUPARTIDA, POST2, FECHA_ANULADA, PLUCAJERO, FECHA_IMPRESION, PC_'
-  +'CREA, PC_IMPRIME, ID, DIA, PERCEPCION)'#12'A'#4#0#0'Values(:PLUDOCCLIENTES,'
-  +' :CODIGO, :CONDICIONES, :DESCUENTO, :FECHA, :NOMBRE, :OBSERVACIONES, :ESEXE'
-  +'NTO, :GRAVADO, :IVA, :POST, :TIPO, :TOTAL, :PLUCLIENTE, :PLUEMPLEADOS, :PLU'
-  +'EMPRESAS, :PLUSUCURSALES, :FLETE, :OCOMPRA, :TIEMPOCREDITO, :PAGADO, :NOCHE'
-  +'QUE, :PLUBANCO, :NOMBRETARJETA, :NOTARJETA, :TELTARJETA, :FECHATARJETA, :PL'
-  +'UTARJETACRED, :NOQUEDAN, :FECHAEMISIONQ, :FECHAPAGOQ, :MONTOTARJETA, :DIASC'
-  +'REDITO, :TIEMPOENTREGA, :IVAPOST, :LEGAL, :VALIDEZ, :FORMAPAGO, :FORMAORDEN'
-  +'AR, :PLUFACTURANC, :DIRECCION_ENVIO, :NOTA_ENVIO, :ENVIO, :FECHA_ENVIO, :DE'
-  +'PTO_ENVIO, :CIUDAD_ENVIO, :TEL_ENVIO, :CONTACTO_ENVIO, :HORA_ENVIO, :FORMA_'
-  +'ENVIO, :ENTREGADO_ENVIO, :ENTREGADO, :POSTREMISION, :DESCUENTO2, :PLUTIPOVE'
-  +'NTA, :NOTA, :NOTA2, :CUENTABANCO, :SALIDABODEGA, :PLUCLIENTESSUC, :FACTORCA'
-  +'MBIO, :FECHAPAGO, :GANADO, :RAZON, :PLUOPORTUNIDAD, :PENDIENTE, :PLUPAGO, :'
-  +'PLUQUEDAN, :TARJETA_AUTORIZ, :CHEQUE_AUTORIZ, :AI, :IMPRESO, :CORRELATIVO, '
-  +':V_EXENTO, :FECHA_ULT_PAGO, :ANULADO, :PLUMOTORISTA, :PLUPARTIDA, :POST2, :'
-  +'FECHA_ANULADA, :PLUCAJERO, :FECHA_IMPRESION, :PC_CREA, :PC_IMPRIME, :ID, :D'
-  +'IA, :PERCEPCION)'#0#17'DeleteSQL.Strings'#1#6#26'Delete From DOCCLIENTESM A'
-  +#6'(Where A.PLUDOCCLIENTES = :PLUDOCCLIENTES'#0#4'left'#3#251#0#3'top'#2','#0
-  +#0#8'TIBQuery'#14'CorrelativoQRY'#8'Database'#7#7'dm.fbdb'#11'Transaction'#7
-  +#17'dm.IBTransaction1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8#10'DataS'
-  +'ource'#7#12'dm.EmpresaDS'#18'GenerateParamNames'#8#27'GeneratorField.ApplyO'
-  +'nEvent'#7#14'gaeOnNewRecord'#11'SQL.Strings'#1#6'Hselect INICIAL,FINAL,corr'
-  +'elativo from correlativos where tipo=:tipo AND '#6#22'PLUEMPRESA=:PLUEMPRES'
-  +'A'#0#6'Params'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#4'tipo'#9'ParamTyp'
-  +'e'#7#7'ptInput'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#10'PLUEMPRESA'#9'P'
-  +'aramType'#7#7'ptInput'#0#0#18'DataSetCloseAction'#7#16'dcDiscardChanges'#4
-  +'left'#3'@'#1#3'top'#2'h'#9'ParamData'#14#1#8'DataType'#7#9'ftUnknown'#4'Nam'
-  +'e'#6#4'tipo'#9'ParamType'#7#7'ptInput'#0#1#8'DataType'#7#9'ftUnknown'#4'Nam'
-  +'e'#6#10'PLUEMPRESA'#9'ParamType'#7#7'ptInput'#0#0#0#13'TIntegerField'#21'Co'
-  +'rrelativoQRYINICIAL'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'Field'
-  +'Name'#6#7'INICIAL'#5'Index'#2#0#11'LookupCache'#8#13'ProviderFlags'#11#10'p'
-  +'fInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#13'TIntegerField'
-  +#19'CorrelativoQRYFINAL'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'Fi'
-  +'eldName'#6#5'FINAL'#5'Index'#2#1#11'LookupCache'#8#13'ProviderFlags'#11#10
-  +'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TIBStringFiel'
-  +'d'#25'CorrelativoQRYCORRELATIVO'#12'DisplayWidth'#2#15#9'FieldKind'#7#6'fkD'
-  +'ata'#9'FieldName'#6#11'CORRELATIVO'#5'Index'#2#2#11'LookupCache'#8#13'Provi'
-  +'derFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Si'
-  +'ze'#2#15#0#0#0#0
+  +#8#8'Required'#8#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0
+  +#0#0#0#0#9'Precision'#2#2#0#0#14'TIBStringField'#12'FACTMIMPRESO'#12'Display'
+  +'Width'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#7'IMPRESO'#5'Index'#2#24
+  +#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Read'
+  +'Only'#8#8'Required'#8#4'Size'#2#1#0#0#11'TFloatField'#13'FACTMV_EXENTO'#12
+  +'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#8'V_EXENTO'#5'In'
+  +'dex'#2#25#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
+  +#0#8'ReadOnly'#8#8'Required'#8#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'
+  +#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#2#0#0#14'TIBStringField'#12'FACTMANULA'
+  +'DO'#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#7'ANULADO'
+  +#5'Index'#2#26#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInW'
+  ,'here'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#1#0#0#14'TIBStringField'#12'F'
+  +'ACTMPC_CREA'#12'DisplayWidth'#2#25#9'FieldKind'#7#6'fkData'#9'FieldName'#6#7
+  +'PC_CREA'#5'Index'#2#27#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'
+  +#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#25#0#0#13'TIntegerFiel'
+  +'d'#7'FACTMID'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6
+  +#2'ID'#5'Index'#2#28#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#9#0#0#13'TIntegerField'#8'FACTMDIA'
+  +#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#3'DIA'#5'Inde'
+  +'x'#2#29#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0
+  +#8'ReadOnly'#8#8'Required'#8#0#0#14'TIBStringField'#16'FACTMCONDICIONES'#12
+  +'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'CONDICIONES'#5
+  +'Index'#2#30#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhe'
+  +'re'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#10#0#0#14'TIBStringField'#18'FA'
+  +'CTMOBSERVACIONES'#12'DisplayWidth'#3#250#0#9'FieldKind'#7#6'fkData'#9'Field'
+  +'Name'#6#13'OBSERVACIONES'#5'Index'#2#31#11'LookupCache'#8#13'ProviderFlags'
+  +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#250#0
+  +#0#0#12'TStringField'#16'FACTMPC_IMPRIME1'#12'DisplayWidth'#2#25#9'FieldKind'
+  +#7#6'fkData'#9'FieldName'#6#10'PC_IMPRIME'#5'Index'#2' '#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8
+  +#4'Size'#2#25#0#0#0#12'TIBUpdateSQL'#8'FACTMSQL'#18'RefreshSQL.Strings'#1#12
+  +#171#4#0#0'Select A.PLUDOCCLIENTES, A.CODIGO, A.CONDICIONES, A.DESCUENTO, A.'
+  +'FECHA, A.NOMBRE, A.OBSERVACIONES, A.ESEXENTO, A.GRAVADO, A.IVA, A.POST, A.T'
+  +'IPO, A.TOTAL, A.PLUCLIENTE, A.PLUEMPLEADOS, A.PLUEMPRESAS, A.PLUSUCURSALES,'
+  +' A.FLETE, A.OCOMPRA, A.TIEMPOCREDITO, A.PAGADO, A.NOCHEQUE, A.PLUBANCO, A.N'
+  +'OMBRETARJETA, A.NOTARJETA, A.TELTARJETA, A.FECHATARJETA, A.PLUTARJETACRED, '
+  +'A.NOQUEDAN, A.FECHAEMISIONQ, A.FECHAPAGOQ, A.MONTOTARJETA, A.DIASCREDITO, A'
+  +'.TIEMPOENTREGA, A.IVAPOST, A.LEGAL, A.VALIDEZ, A.FORMAPAGO, A.FORMAORDENAR,'
+  +' A.PLUFACTURANC, A.DIRECCION_ENVIO, A.NOTA_ENVIO, A.ENVIO, A.FECHA_ENVIO, A'
+  +'.DEPTO_ENVIO, A.CIUDAD_ENVIO, A.TEL_ENVIO, A.CONTACTO_ENVIO, A.HORA_ENVIO, '
+  +'A.FORMA_ENVIO, A.ENTREGADO_ENVIO, A.ENTREGADO, A.POSTREMISION, A.DESCUENTO2'
+  +', A.PLUTIPOVENTA, A.NOTA, A.NOTA2, A.CUENTABANCO, A.SALIDABODEGA, A.PLUCLIE'
+  +'NTESSUC, A.FACTORCAMBIO, A.FECHAPAGO, A.GANADO, A.RAZON, A.PLUOPORTUNIDAD, '
+  +'A.PENDIENTE, A.PLUPAGO, A.PLUQUEDAN, A.TARJETA_AUTORIZ, A.CHEQUE_AUTORIZ, A'
+  +'.AI, A.IMPRESO, A.CORRELATIVO, A.V_EXENTO, A.FECHA_ULT_PAGO, A.ANULADO, A.P'
+  +'LUMOTORISTA, A.PLUPARTIDA, A.POST2, A.FECHA_ANULADA, A.PLUCAJERO, A.FECHA_I'
+  +'MPRESION, A.PC_CREA, A.PC_IMPRIME, A.ID, A.DIA, A.PERCEPCION From DOCCLIENT'
+  +'ESM A'#6'(Where A.PLUDOCCLIENTES = :PLUDOCCLIENTES'#0#17'ModifySQL.Strings'
+  +#1#6#26'Update DOCCLIENTESM A Set '#6'%  A.PLUDOCCLIENTES = :PLUDOCCLIENTES,'
+  +#6#21'  A.CODIGO = :CODIGO,'#6#31'  A.CONDICIONES = :CONDICIONES,'#6#27'  A.'
+  +'DESCUENTO = :DESCUENTO,'#6#19'  A.FECHA = :FECHA,'#6#21'  A.NOMBRE = :NOMBR'
+  +'E,'#6'#  A.OBSERVACIONES = :OBSERVACIONES,'#6#25'  A.ESEXENTO = :ESEXENTO,'
+  +#6#23'  A.GRAVADO = :GRAVADO,'#6#15'  A.IVA = :IVA,'#6#17'  A.POST = :POST,'
+  +#6#17'  A.TIPO = :TIPO,'#6#19'  A.TOTAL = :TOTAL,'#6#29'  A.PLUCLIENTE = :PL'
+  +'UCLIENTE,'#6'!  A.PLUEMPLEADOS = :PLUEMPLEADOS,'#6#31'  A.PLUEMPRESAS = :PL'
+  +'UEMPRESAS,'#6'#  A.PLUSUCURSALES = :PLUSUCURSALES,'#6#19'  A.FLETE = :FLETE'
+  +','#6#23'  A.OCOMPRA = :OCOMPRA,'#6'#  A.TIEMPOCREDITO = :TIEMPOCREDITO,'#6
+  +#21'  A.PAGADO = :PAGADO,'#6#25'  A.NOCHEQUE = :NOCHEQUE,'#6#25'  A.PLUBANCO'
+  +' = :PLUBANCO,'#6'#  A.NOMBRETARJETA = :NOMBRETARJETA,'#6#27'  A.NOTARJETA ='
+  +' :NOTARJETA,'#6#29'  A.TELTARJETA = :TELTARJETA,'#6'!  A.FECHATARJETA = :FE'
+  +'CHATARJETA,'#6'%  A.PLUTARJETACRED = :PLUTARJETACRED,'#6#25'  A.NOQUEDAN = '
+  +':NOQUEDAN,'#6'#  A.FECHAEMISIONQ = :FECHAEMISIONQ,'#6#29'  A.FECHAPAGOQ = :'
+  +'FECHAPAGOQ,'#6'!  A.MONTOTARJETA = :MONTOTARJETA,'#6#31'  A.DIASCREDITO = :'
+  +'DIASCREDITO,'#6'#  A.TIEMPOENTREGA = :TIEMPOENTREGA,'#6#23'  A.IVAPOST = :I'
+  +'VAPOST,'#6#19'  A.LEGAL = :LEGAL,'#6#23'  A.VALIDEZ = :VALIDEZ,'#6#27'  A.F'
+  +'ORMAPAGO = :FORMAPAGO,'#6'!  A.FORMAORDENAR = :FORMAORDENAR,'#6'!  A.PLUFAC'
+  +'TURANC = :PLUFACTURANC,'#6'''  A.DIRECCION_ENVIO = :DIRECCION_ENVIO,'#6#29
+  +'  A.NOTA_ENVIO = :NOTA_ENVIO,'#6#19'  A.ENVIO = :ENVIO,'#6#31'  A.FECHA_ENV'
+  +'IO = :FECHA_ENVIO,'#6#31'  A.DEPTO_ENVIO = :DEPTO_ENVIO,'#6'!  A.CIUDAD_ENV'
+  +'IO = :CIUDAD_ENVIO,'#6#27'  A.TEL_ENVIO = :TEL_ENVIO,'#6'%  A.CONTACTO_ENVI'
+  +'O = :CONTACTO_ENVIO,'#6#29'  A.HORA_ENVIO = :HORA_ENVIO,'#6#31'  A.FORMA_EN'
+  +'VIO = :FORMA_ENVIO,'#6'''  A.ENTREGADO_ENVIO = :ENTREGADO_ENVIO,'#6#27'  A.'
+  +'ENTREGADO = :ENTREGADO,'#6'!  A.POSTREMISION = :POSTREMISION,'#6#29'  A.DES'
+  +'CUENTO2 = :DESCUENTO2,'#6'!  A.PLUTIPOVENTA = :PLUTIPOVENTA,'#6#17'  A.NOTA'
+  +' = :NOTA,'#6#19'  A.NOTA2 = :NOTA2,'#6#31'  A.CUENTABANCO = :CUENTABANCO,'#6
+  ,'!  A.SALIDABODEGA = :SALIDABODEGA,'#6'%  A.PLUCLIENTESSUC = :PLUCLIENTESSUC'
+  +','#6'!  A.FACTORCAMBIO = :FACTORCAMBIO,'#6#27'  A.FECHAPAGO = :FECHAPAGO,'#6
+  +#21'  A.GANADO = :GANADO,'#6#19'  A.RAZON = :RAZON,'#6'%  A.PLUOPORTUNIDAD ='
+  +' :PLUOPORTUNIDAD,'#6#27'  A.PENDIENTE = :PENDIENTE,'#6#23'  A.PLUPAGO = :PL'
+  +'UPAGO,'#6#27'  A.PLUQUEDAN = :PLUQUEDAN,'#6'''  A.TARJETA_AUTORIZ = :TARJET'
+  +'A_AUTORIZ,'#6'%  A.CHEQUE_AUTORIZ = :CHEQUE_AUTORIZ,'#6#13'  A.AI = :AI,'#6
+  +#23'  A.IMPRESO = :IMPRESO,'#6#31'  A.CORRELATIVO = :CORRELATIVO,'#6#25'  A.'
+  +'V_EXENTO = :V_EXENTO,'#6'%  A.FECHA_ULT_PAGO = :FECHA_ULT_PAGO,'#6#23'  A.A'
+  +'NULADO = :ANULADO,'#6'!  A.PLUMOTORISTA = :PLUMOTORISTA,'#6#29'  A.PLUPARTI'
+  +'DA = :PLUPARTIDA,'#6#19'  A.POST2 = :POST2,'#6'#  A.FECHA_ANULADA = :FECHA_'
+  +'ANULADA,'#6#27'  A.PLUCAJERO = :PLUCAJERO,'#6'''  A.FECHA_IMPRESION = :FECH'
+  +'A_IMPRESION,'#6#23'  A.PC_CREA = :PC_CREA,'#6#29'  A.PC_IMPRIME = :PC_IMPRI'
+  +'ME,'#6#13'  A.ID = :ID,'#6#15'  A.DIA = :DIA,'#6#28'  A.PERCEPCION = :PERCE'
+  +'PCION'#6',Where A.PLUDOCCLIENTES = :OLD_PLUDOCCLIENTES'#0#17'InsertSQL.Stri'
+  +'ngs'#1#6'>Insert Into DOCCLIENTESM(PLUDOCCLIENTES, CODIGO, CONDICIONES, '#6
+  +#26'DESCUENTO, FECHA, NOMBRE, '#6':OBSERVACIONES, ESEXENTO, GRAVADO, IVA, PO'
+  +'ST, TIPO, TOTAL, '#6#26'PLUCLIENTE, PLUEMPLEADOS, '#6';PLUEMPRESAS, PLUSUCU'
+  +'RSALES, FLETE, OCOMPRA, TIEMPOCREDITO, '#6#28'PAGADO, NOCHEQUE, PLUBANCO, '
+  +#6'4NOMBRETARJETA, NOTARJETA, TELTARJETA, FECHATARJETA, '#6#26'PLUTARJETACRE'
+  +'D, NOQUEDAN, '#6'6FECHAEMISIONQ, FECHAPAGOQ, MONTOTARJETA, DIASCREDITO, '#6
+  +#31'TIEMPOENTREGA, IVAPOST, LEGAL, '#6'0VALIDEZ, FORMAPAGO, FORMAORDENAR, PL'
+  +'UFACTURANC, '#6'$DIRECCION_ENVIO, NOTA_ENVIO, ENVIO, '#6'3FECHA_ENVIO, DEPT'
+  +'O_ENVIO, CIUDAD_ENVIO, TEL_ENVIO, '#6#28'CONTACTO_ENVIO, HORA_ENVIO, '#6'7F'
+  +'ORMA_ENVIO, ENTREGADO_ENVIO, ENTREGADO, POSTREMISION, '#6' DESCUENTO2, PLUT'
+  +'IPOVENTA, NOTA, '#6'2NOTA2, CUENTABANCO, SALIDABODEGA, PLUCLIENTESSUC, '#6
+  +'!FACTORCAMBIO, FECHAPAGO, GANADO, '#6'6RAZON, PLUOPORTUNIDAD, PENDIENTE, PL'
+  +'UPAGO, PLUQUEDAN, '#6'!TARJETA_AUTORIZ, CHEQUE_AUTORIZ, '#6'=AI, IMPRESO, C'
+  +'ORRELATIVO, V_EXENTO, FECHA_ULT_PAGO, ANULADO, '#6#26'PLUMOTORISTA, PLUPART'
+  +'IDA, '#6';POST2, FECHA_ANULADA, PLUCAJERO, FECHA_IMPRESION, PC_CREA, '#6#21
+  +'PC_IMPRIME, ID, DIA, '#6#11'PERCEPCION)'#6'CValues(:PLUDOCCLIENTES, :CODIGO'
+  +', :CONDICIONES, :DESCUENTO, :FECHA, '#6#25':NOMBRE, :OBSERVACIONES, '#6'>:E'
+  +'SEXENTO, :GRAVADO, :IVA, :POST, :TIPO, :TOTAL, :PLUCLIENTE, '#6#29':PLUEMPL'
+  +'EADOS, :PLUEMPRESAS, '#6';:PLUSUCURSALES, :FLETE, :OCOMPRA, :TIEMPOCREDITO,'
+  +' :PAGADO, '#6#22':NOCHEQUE, :PLUBANCO, '#6'8:NOMBRETARJETA, :NOTARJETA, :TE'
+  +'LTARJETA, :FECHATARJETA, '#6#28':PLUTARJETACRED, :NOQUEDAN, '#6'::FECHAEMIS'
+  +'IONQ, :FECHAPAGOQ, :MONTOTARJETA, :DIASCREDITO, '#6'":TIEMPOENTREGA, :IVAPO'
+  +'ST, :LEGAL, '#6'4:VALIDEZ, :FORMAPAGO, :FORMAORDENAR, :PLUFACTURANC, '#6''''
+  +':DIRECCION_ENVIO, :NOTA_ENVIO, :ENVIO, '#6'7:FECHA_ENVIO, :DEPTO_ENVIO, :CI'
+  +'UDAD_ENVIO, :TEL_ENVIO, '#6#30':CONTACTO_ENVIO, :HORA_ENVIO, '#6';:FORMA_EN'
+  +'VIO, :ENTREGADO_ENVIO, :ENTREGADO, :POSTREMISION, '#6#28':DESCUENTO2, :PLUT'
+  +'IPOVENTA, '#6'=:NOTA, :NOTA2, :CUENTABANCO, :SALIDABODEGA, :PLUCLIENTESSUC,'
+  +' '#6#27':FACTORCAMBIO, :FECHAPAGO, '#6'8:GANADO, :RAZON, :PLUOPORTUNIDAD, :'
+  +'PENDIENTE, :PLUPAGO, '#6#30':PLUQUEDAN, :TARJETA_AUTORIZ, '#6'9:CHEQUE_AUTO'
+  +'RIZ, :AI, :IMPRESO, :CORRELATIVO, :V_EXENTO, '#6#27':FECHA_ULT_PAGO, :ANULA'
+  +'DO, '#6'@:PLUMOTORISTA, :PLUPARTIDA, :POST2, :FECHA_ANULADA, :PLUCAJERO, '#6
+  +#28':FECHA_IMPRESION, :PC_CREA, '#6'$:PC_IMPRIME, :ID, :DIA, :PERCEPCION)'#0
+  +#17'DeleteSQL.Strings'#1#6#26'Delete From DOCCLIENTESM A'#6'(Where A.PLUDOCC'
+  +'LIENTES = :PLUDOCCLIENTES'#0#4'left'#3#251#0#3'top'#2','#0#0#8'TIBQuery'#14
+  +'CorrelativoQRY'#8'Database'#7#7'dm.fbdb'#11'Transaction'#7#17'dm.IBTransact'
+  +'ion1'#12'BufferChunks'#3#232#3#13'CachedUpdates'#8#10'DataSource'#7#12'dm.E'
+  +'mpresaDS'#18'GenerateParamNames'#8#27'GeneratorField.ApplyOnEvent'#7#14'gae'
+  +'OnNewRecord'#11'SQL.Strings'#1#6'Hselect INICIAL,FINAL,correlativo from cor'
+  +'relativos where tipo=:tipo AND '#6#22'PLUEMPRESA=:PLUEMPRESA'#0#6'Params'#14
+  +#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#4'tipo'#9'ParamType'#7#7'ptInput'#0#1
+  +#8'DataType'#7#9'ftUnknown'#4'Name'#6#10'PLUEMPRESA'#9'ParamType'#7#7'ptInpu'
+  +'t'#0#0#18'DataSetCloseAction'#7#16'dcDiscardChanges'#4'left'#3'@'#1#3'top'#2
+  +'h'#9'ParamData'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#4'tipo'#9'ParamTy'
+  +'pe'#7#7'ptInput'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#10'PLUEMPRESA'#9
+  +'ParamType'#7#7'ptInput'#0#0#0#13'TIntegerField'#21'CorrelativoQRYINICIAL'#12
+  +'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#7'INICIAL'#5'Ind'
+  +'ex'#2#0#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0
+  +#8'ReadOnly'#8#8'Required'#8#0#0#13'TIntegerField'#19'CorrelativoQRYFINAL'#12
+  +'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'FINAL'#5'Index'
+  +#2#1#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8
+  ,'ReadOnly'#8#8'Required'#8#0#0#14'TIBStringField'#25'CorrelativoQRYCORRELATI'
+  +'VO'#12'DisplayWidth'#2#15#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'CORREL'
+  +'ATIVO'#5'Index'#2#2#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#15#0#0#0#0
 ]);
